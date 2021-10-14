@@ -80,7 +80,7 @@ $ git add README
 
 ## Лог
 
-```bash
+```shell
 # all commits order by desc
 git log
 # show patch -p or --patch
@@ -123,7 +123,7 @@ git checkout -- filename
 
 ## Remote
 
-```
+```shell
 # check remote repos with links
 $ git remote -v
 # check remote repo info
@@ -132,14 +132,12 @@ git remote show origin
 
 ## Fetch/Pull
 
-```
+```shell
 # get data from origin repo
 git fetch origin
 # get + merge data from origin repo
 git pull 
 ```
-
-
 
 ## Tag
 
@@ -164,3 +162,6 @@ $ git checkout v2.0.0
 # create branch with tag (recommend)
 $ git checkout -b version2 v2.0.0
 ```
+
+\
+\
