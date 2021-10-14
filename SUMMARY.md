@@ -4,7 +4,7 @@
 
 ## languages
 
-* [Python](languages/python/README.md)
+* [🐍 Python](languages/python/README.md)
   * [Virtual env](languages/python/virtual-env.md)
   * [List comprehension](languages/python/list-comprehension.md)
   * [Nested lists](languages/python/nested-lists.md)
@@ -35,9 +35,9 @@
 
 ## 🔨 Tools
 
-* [Command line](tools/terminal.md)
+* [💻 Command line](tools/terminal.md)
 * [📖 Git](tools/developer-roadmap.md)
-* [HomeBrew](tools/homebrew.md)
+* [🍻 HomeBrew](tools/homebrew.md)
 * [Apache JMeter](tools/apache-jmeter.md)
 * [PostMan](tools/postman.md)
 * [Xcode](tools/xcode.md)

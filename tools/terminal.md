@@ -1,4 +1,4 @@
-# Command line
+# 💻 Command line
 
 Shortcuts - [https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac](https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac)
 
