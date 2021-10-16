@@ -36,6 +36,15 @@ git commit -m "commit name"
 git push
 ```
 
+## config
+
+```
+# check settings
+git config --list --show-origin
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
 ## Commit
 
 ```bash
