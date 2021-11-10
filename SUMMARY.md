@@ -7,6 +7,7 @@
 * [🐍 Python](languages/python/README.md)
   * [Virtual env](languages/python/virtual-env.md)
   * [List comprehension](languages/python/list-comprehension.md)
+  * [Testing](languages/python/testing.md)
   * [Nested lists](languages/python/nested-lists.md)
 * [Java](languages/java+intellij-idea.md)
 * [C#](languages/c.md)

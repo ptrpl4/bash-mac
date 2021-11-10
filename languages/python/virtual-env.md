@@ -4,9 +4,9 @@ Go to project folder
 
 ```bash
 # create env
-$ python -m venv env_name
+$ python -m venv env
 # activate env
-$ source env_name/bin/activate
+$ source env/bin/activate
 # to deactivate
 $ deactivate
 ```
