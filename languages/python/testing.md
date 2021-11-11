@@ -8,5 +8,26 @@ project\_folder
 
 * **tests **- folder for tests
   * **test.py **- test files
+  * def test\_name
 * **config.py** - config data
+* readme.md - helper
+
+### common modules
+
+requests -&#x20;
+
+pprint -&#x20;
+
+```
+from pprint import pprint
+
+
+def pretty_print(msg, indent=2):
+    print()
+    pprint(msg, indent=indent)
+```
+
+json -&#x20;
+
+pytest -&#x20;
 

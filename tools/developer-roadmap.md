@@ -25,7 +25,7 @@ $ brew install git
 #install git
 ```
 
-Есть достаточно много альтернатив, позволяющих работать с Git  в графическом интерфейсе. Но для лучшего понимания изначальной задумки и структуры лучше начать с этого. 
+Есть достаточно много альтернатив, позволяющих работать с Git  в графическом интерфейсе. Но для лучшего понимания изначальной задумки и структуры лучше начать с этого.&#x20;
 
 ### fast start
 
@@ -109,6 +109,8 @@ git log -S function_name
 git log -- path/to/file
 # exclude merges --no-merges
 git log --no-merges
+# branches and changes
+git log --oneline --decorate
 ```
 
 ## Добавление в последний коммит
@@ -172,5 +174,44 @@ $ git checkout v2.0.0
 $ git checkout -b version2 v2.0.0
 ```
 
-\
-\
+## Branch
+
+### basic
+
+```
+# current branches
+git branch
+# create branch
+git branch test_branch
+# switch to branch
+git checkout test_branch
+# create and switch
+git checkout -b test_branch
+# delete branch (-d, --delete)
+git branch -d test_branch
+# all branches + all last commits
+git branch -v
+# all not merged branches
+git branch --no-merged
+# all merged branches
+git branch --merged
+```
+
+### renaming
+
+```
+# rename localy
+$ git branch --move bad-branch-name corrected-branch-name
+# push changes
+$ git push --set-upstream origin corrected-branch-name
+# delete branch
+$ git push origin --delete bad-branch-name
+```
+
+## Merge
+
+```
+# add test_branch to current branch
+git merge test_branch
+
+```

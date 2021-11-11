@@ -1,6 +1,8 @@
 # Virtual env
 
-Go to project folder
+### venv
+
+Go to project folder&#x20;
 
 ```bash
 # create env
@@ -10,3 +12,5 @@ $ source env/bin/activate
 # to deactivate
 $ deactivate
 ```
+
+### pypi
