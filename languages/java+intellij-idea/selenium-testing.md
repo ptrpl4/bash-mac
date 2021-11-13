@@ -4,12 +4,15 @@
 
 project
 
+* resources
+  * chromedriver
 * src
   * main
-    * project code
+    * java
+      * pages - page elements
   * test
-    * test code
+    * java
+      * test code
 * .gitignore
-* chromedriver
 * pom.xml
 * readme.md
