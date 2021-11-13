@@ -9,7 +9,8 @@
   * [List comprehension](languages/python/list-comprehension.md)
   * [Testing](languages/python/testing.md)
   * [Nested lists](languages/python/nested-lists.md)
-* [Java](languages/java+intellij-idea.md)
+* [Java](languages/java+intellij-idea/README.md)
+  * [Selenium Testing](languages/java+intellij-idea/selenium-testing.md)
 * [C#](languages/c.md)
 
 ## Additional info

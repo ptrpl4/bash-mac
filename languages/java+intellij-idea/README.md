@@ -2,9 +2,9 @@
 
 ## Writing, compiling and running Java programs
 
-![Main logic](<../.gitbook/assets/1 (2) (2).jpg>)
+![Main logic](<../../.gitbook/assets/1 (2) (2).jpg>)
 
-![JVM, JRE and JDK](<../.gitbook/assets/JVM-JRE-JDK  (1).jpg>)
+![JVM, JRE and JDK](<../../.gitbook/assets/JVM-JRE-JDK  (1).jpg>)
 
 * **JVM** executes compiled Java programs;
 * **JRE** includes **JVM** and standard libraries: it is needed **to run** Java programs;
@@ -16,7 +16,7 @@
 
 ## **Terminal commands**
 
-### create + run 
+### create + run&#x20;
 
 ```bash
 javac Main.java 
@@ -42,7 +42,7 @@ class Main {
 }
 ```
 
-##  Printing data
+## &#x20;Printing data
 
 The `println` method displays the passed string followed by a new line on the screen (**print-line**).
 
@@ -242,7 +242,7 @@ System.out.println(b); // 4
 
 In this case, the value of `a` has been assigned to `b` and then incremented by 1. So, `b` is 4.
 
-##  Characters
+## &#x20;Characters
 
 The `char` type is used to represent letters (both uppercase and lowercase), digits, and other symbols. Each character is just a symbol enclosed in single quotes.
 
@@ -279,7 +279,7 @@ System.out.print('\n'); // go to the new line
 System.out.print('c');  // prints 'c'
 ```
 
-##  String
+## &#x20;String
 
 * **immutable type**: it's impossible to change a character in a string;
 * it has methods for getting individual characters and extracting substrings;

@@ -25,7 +25,7 @@ console.log("Hello, JS!");
 **declaration**\
 ****The name of a variable can contain only letters, numbers or symbols `$` and `_` and it _cannot_ begin with a number.
 
-JavaScript uses two keywords to create variables:    
+JavaScript uses two keywords to create variables:   &#x20;
 
 * `let` defines a **mutable variable** the value of which_ _can be changed as many times as needed;
 * `const`  declares a** constant** the value of which_ _cannot be changed.
@@ -224,7 +224,7 @@ An _implicit_ conversion occurs when using logical operators (`||&&` `!`):
 "Master" && "Margarita"  // "Margarita"
 ```
 
-## Functions 
+## Functions&#x20;
 
 ### **built-in**
 
@@ -352,7 +352,7 @@ To access the properties, we use a record with the object name and a dot.
 console.log(country.name); // Netherlands
 ```
 
-Properties can be added using the dot symbol and the `=` assignment symbol. 
+Properties can be added using the dot symbol and the `=` assignment symbol.&#x20;
 
 ```
 сountry.capital = "Amsterdam";
@@ -366,7 +366,7 @@ delete country.population;
 
 ### Audio Object <a href="step-title" id="step-title"></a>
 
- `Audio Object` can be created by using the following syntax:
+&#x20;`Audio Object` can be created by using the following syntax:
 
 ```javascript
 let audio = document.createElement("AUDIO");
@@ -382,7 +382,7 @@ let audio = document.getElementById("myAudioID");
 
 #### Properties
 
-[https://www.w3schools.com/jsref/dom_obj_audio.asp](https://www.w3schools.com/jsref/dom_obj_audio.asp)
+[https://www.w3schools.com/jsref/dom\_obj\_audio.asp](https://www.w3schools.com/jsref/dom\_obj\_audio.asp)
 
 ```javascript
 let audio = getElementById("myObjectID");
@@ -399,7 +399,7 @@ console.log(duration);
 
 #### Methods
 
-[https://www.w3schools.com/jsref/dom_obj_audio.asp](https://www.w3schools.com/jsref/dom_obj_audio.asp)
+[https://www.w3schools.com/jsref/dom\_obj\_audio.asp](https://www.w3schools.com/jsref/dom\_obj\_audio.asp)
 
 The following method is responsible for reloading the `<audio>` element:
 
@@ -434,7 +434,7 @@ short version of the `if...else` block
 const getColour = colour => colour === 'white' ? 'white' : 'black';
 ```
 
-##  Browser events
+## &#x20;Browser events
 
 [https://developer.mozilla.org/en-US/docs/Web/Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 
@@ -468,9 +468,9 @@ document.getElementById("myBtn").addEventListener("keypress", function() {
 
 Javascript has a property `event.code` that allows you to get the code for the specific keyboard character. Each key has its own code which depends on its location on the keyboard:
 
-*     letter codes are composed according to a `Key<letter>` scheme;
-*     numeric key codes are built on the principle `Digit<number>`;
-*     the code for special keys is their name, for instance, `Enter` for the _Enter_ key.
+* &#x20;   letter codes are composed according to a `Key<letter>` scheme;
+* &#x20;   numeric key codes are built on the principle `Digit<number>`;
+* &#x20;   the code for special keys is their name, for instance, `Enter` for the _Enter_ key.
 
 Use `event.code` when you do not care about case and vice versa, use `event.key` when you care about case.
 
