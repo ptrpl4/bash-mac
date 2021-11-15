@@ -1,25 +1,27 @@
 # Table of contents
 
-* [2021](README.md)
+* [ReadMe](README.md)
 
 ## languages
 
 * [🐍 Python](languages/python/README.md)
+  * [🐘 Django](languages/python/django.md)
   * [Virtual env](languages/python/virtual-env.md)
   * [List comprehension](languages/python/list-comprehension.md)
   * [Testing](languages/python/testing.md)
   * [Nested lists](languages/python/nested-lists.md)
 * [Java](languages/java+intellij-idea/README.md)
-  * [Selenium Testing](languages/java+intellij-idea/selenium-testing.md)
+  * [😖 Selenium](languages/java+intellij-idea/selenium.md)
 * [C#](languages/c.md)
+* [JS](languages/js.md)
 
 ## Additional info
 
-* [Info](additional-info/info/README.md)
-  * [Static/Dynamic sites](additional-info/info/untitled.md)
-  * [SOLID, YAGNI, KISS](additional-info/info/solid-yagni-kiss.md)
-  * [hash](additional-info/info/hash.md)
-  * [Shortcuts](additional-info/info/shortcuts.md)
+* [😩 Other](additional-info/other/README.md)
+  * [Static/Dynamic sites](additional-info/other/untitled.md)
+  * [SOLID, YAGNI, KISS](additional-info/other/solid-yagni-kiss.md)
+  * [hash](additional-info/other/hash.md)
+  * [Shortcuts](additional-info/other/shortcuts.md)
 * [SQL](additional-info/sql/README.md)
   * [Examples](additional-info/sql/examples.md)
 * [Web Development](additional-info/web-development/README.md)
@@ -27,20 +29,14 @@
   * [Links/Apps](additional-info/web-development/links-apps.md)
   * [HTML](additional-info/web-development/html.md)
   * [CSS](additional-info/web-development/css.md)
-  * [JS](additional-info/web-development/js.md)
   * [JSON](additional-info/web-development/json.md)
-* [Компьютерные сети](additional-info/kompyuternye-seti/README.md)
-  * [HTTP](additional-info/kompyuternye-seti/http.md)
-
-## 🔧 Frameworks
-
-* [🐘 Django](frameworks/django.md)
+* [Компьютерные сети](additional-info/kompyuternye-seti.md)
 
 ## 🔨 Tools
 
-* [💻 Command line](tools/terminal.md)
-* [📖 Git](tools/developer-roadmap.md)
-* [🍻 HomeBrew](tools/homebrew.md)
+* [💻 Command line](tools/cli.md)
+* [📖 Git](tools/git.md)
+* [🍻 HomeBrew](tools/brew.md)
 * [Apache JMeter](tools/apache-jmeter.md)
 * [PostMan](tools/postman.md)
 * [Xcode](tools/xcode.md)
