@@ -5,6 +5,7 @@
 ## languages
 
 * [🐍 Python](languages/python/README.md)
+  * [macOS Hints](languages/python/macos-hints.md)
   * [Selenium](languages/python/selenium.md)
   * [🐘 Django](languages/python/django.md)
   * [Virtual env](languages/python/virtual-env.md)
