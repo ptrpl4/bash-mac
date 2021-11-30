@@ -5,6 +5,7 @@
 ## languages
 
 * [🐍 Python](languages/python/README.md)
+  * [Selenium](languages/python/selenium.md)
   * [🐘 Django](languages/python/django.md)
   * [Virtual env](languages/python/virtual-env.md)
   * [List comprehension](languages/python/list-comprehension.md)
