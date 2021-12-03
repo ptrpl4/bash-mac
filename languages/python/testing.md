@@ -6,8 +6,8 @@
 
 project\_folder
 
-* **tests **- folder for tests
-  * **test.py **- test files
+* **tests** - folder for tests
+  * **test.py** - test files
   * def test\_name
 * **config.py** - config data
 * readme.md - helper

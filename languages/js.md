@@ -4,13 +4,13 @@
 
 ## Comments
 
-### One-line comments <a href="one-line-comments" id="one-line-comments"></a>
+### One-line comments <a href="#one-line-comments" id="one-line-comments"></a>
 
 ```javascript
 console.log("Nice to see you!"); // This code outputs the message to the console
 ```
 
-### Multi-line comments <a href="multi-line-comments" id="multi-line-comments"></a>
+### Multi-line comments <a href="#multi-line-comments" id="multi-line-comments"></a>
 
 ```javascript
 /*  
@@ -27,20 +27,20 @@ console.log("Hello, JS!");
 
 JavaScript uses two keywords to create variables:   &#x20;
 
-* `let` defines a **mutable variable** the value of which_ _can be changed as many times as needed;
-* `const`  declares a** constant** the value of which_ _cannot be changed.
+* `let` defines a **mutable variable** the value of which __ can be changed as many times as needed;
+* `const`  declares a **constant** the value of which __ cannot be changed.
 * `var` - is an outdated way of declaring a variable, and we do not recommend using it.
 
 ## Data types
 
-### _typeof_ operator  <a href="em-typeof-em-operator" id="em-typeof-em-operator"></a>
+### _typeof_ operator  <a href="#em-typeof-em-operator" id="em-typeof-em-operator"></a>
 
 ```javascript
 console.log(typeof(9)); // number
 console.log(typeof 9); // number
 ```
 
-### _null_ <a href="em-null-em" id="em-null-em"></a>
+### _null_ <a href="#em-null-em" id="em-null-em"></a>
 
 `null` means that the variable was explicitly assigned an empty or non-existent value. If the variable is `null`, we know that it does not contain an acceptable number, string or other data type:
 
@@ -49,7 +49,7 @@ let name = null;
 console.log(name); // null
 ```
 
-### _undefined_ <a href="em-undefined-em" id="em-undefined-em"></a>
+### _undefined_ <a href="#em-undefined-em" id="em-undefined-em"></a>
 
 The `undefined` value is returned when a variable was declared, but its value wasn't set. Let's consider the following example:
 
@@ -129,7 +129,7 @@ The list below is sorted from the highest to the lowest precedence level:
 
 ## Boolean and logical operators
 
-### Comparison operators <a href="step-title" id="step-title"></a>
+### Comparison operators <a href="#step-title" id="step-title"></a>
 
 ****[**https://hyperskill.org/learn/step/8580**](https://hyperskill.org/learn/step/8580)****
 
@@ -160,7 +160,7 @@ console.log(!true);  // false
 
 Among the numerical values, `0` is considered `false`, and all other numbers are true. Strings are considered true.
 
-Expression is always calculated from left to right. `&&` returns** **_false_ as soon as it finds the first occurring** **_false_, and the operator `||` returns** **_true_ as soon as it sees the first** **_true_:
+Expression is always calculated from left to right. `&&` returns **** _false_ as soon as it finds the first occurring **** _false_, and the operator `||` returns **** _true_ as soon as it sees the first **** _true_:
 
 ```
 console.log(true || 0);      // true
@@ -196,7 +196,7 @@ Remember the order of arithmetic operations. If there are several numbers before
 3 + 10 + "1" // "131", not "3101"
 ```
 
-### Numeric conversion <a href="numeric-conversion" id="numeric-conversion"></a>
+### Numeric conversion <a href="#numeric-conversion" id="numeric-conversion"></a>
 
 When converting a string to a number, spaces and characters `\n,` `\t` at the beginning and the end of the string are cut off. If the string turns out to be empty, the result will be `0`. The boolean type behaves as expected: `false` turns into `0`, `true` turns into `1`.
 
@@ -212,7 +212,7 @@ true + 43 // 44
 +"85"     // 85
 ```
 
-### Boolean conversion <a href="boolean-conversion" id="boolean-conversion"></a>
+### Boolean conversion <a href="#boolean-conversion" id="boolean-conversion"></a>
 
 The rules for using this function are simple: values that imply "empty", like `0` or an empty string `""` turn into `false`. All other values turn into `true`.
 
@@ -344,7 +344,7 @@ let сountry = {
 };
 ```
 
-### Properties <a href="properties" id="properties"></a>
+### Properties <a href="#properties" id="properties"></a>
 
 To access the properties, we use a record with the object name and a dot.
 
@@ -364,7 +364,7 @@ To delete a property, we can use the `delete` operator and a dot.
 delete country.population;
 ```
 
-### Audio Object <a href="step-title" id="step-title"></a>
+### Audio Object <a href="#step-title" id="step-title"></a>
 
 &#x20;`Audio Object` can be created by using the following syntax:
 
@@ -426,7 +426,7 @@ if (condition) {
 }
 ```
 
-### ternary operator "? :" <a href="the-ternary-operator" id="the-ternary-operator"></a>
+### ternary operator "? :" <a href="#the-ternary-operator" id="the-ternary-operator"></a>
 
 short version of the `if...else` block
 
@@ -438,13 +438,13 @@ const getColour = colour => colour === 'white' ? 'white' : 'black';
 
 [https://developer.mozilla.org/en-US/docs/Web/Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 
-### Mouse events <a href="mouse-events" id="mouse-events"></a>
+### Mouse events <a href="#mouse-events" id="mouse-events"></a>
 
 * `click` is the event that occurs when a user clicks on an item with the left mouse button;
 * `dblclick`  is responsible for events occurring after double clicking with the left mouse button;
 * `contextmenu` is when a user clicks on an element with the right mouse button.
 
-### Keyboard events  <a href="keyboard-events" id="keyboard-events"></a>
+### Keyboard events  <a href="#keyboard-events" id="keyboard-events"></a>
 
 * `keydown` is the event that occurs when the user presses a key;
 * `keyup` is the event that happens when the any key is released;
@@ -464,7 +464,7 @@ document.getElementById("myBtn").addEventListener("keypress", function() {
 });
 ```
 
-### Key Codes <a href="key-codes" id="key-codes"></a>
+### Key Codes <a href="#key-codes" id="key-codes"></a>
 
 Javascript has a property `event.code` that allows you to get the code for the specific keyboard character. Each key has its own code which depends on its location on the keyboard:
 
@@ -474,7 +474,7 @@ Javascript has a property `event.code` that allows you to get the code for the s
 
 Use `event.code` when you do not care about case and vice versa, use `event.key` when you care about case.
 
-### Event handling <a href="event-handling" id="event-handling"></a>
+### Event handling <a href="#event-handling" id="event-handling"></a>
 
 ```javascript
 document.addEventListener("keydown", function(event) {

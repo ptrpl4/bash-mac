@@ -1,10 +1,8 @@
 # Table of contents
 
-* [ReadMe](README.md)
-
 ## languages
 
-* [🐍 Python](languages/python/README.md)
+* [🐍 Python](README.md)
   * [macOS Hints](languages/python/macos-hints.md)
   * [Selenium](languages/python/selenium.md)
   * [🐘 Django](languages/python/django.md)
@@ -16,6 +14,10 @@
   * [😖 Selenium](languages/java+intellij-idea/selenium.md)
 * [C#](languages/c.md)
 * [JS](languages/js.md)
+
+***
+
+* [ReadMe](<README (1).md>)
 
 ## Additional info
 

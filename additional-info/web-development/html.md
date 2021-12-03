@@ -31,9 +31,9 @@ description: HyperText Markup Language
 </html>
 ```
 
-[https://www.w3schools.com/tags/tag_head.asp](https://www.w3schools.com/tags/tag_head.asp)
+[https://www.w3schools.com/tags/tag\_head.asp](https://www.w3schools.com/tags/tag\_head.asp)
 
-[https://www.w3schools.com/tags/ref_keyboardshortcuts.asp](https://www.w3schools.com/tags/ref_keyboardshortcuts.asp)
+[https://www.w3schools.com/tags/ref\_keyboardshortcuts.asp](https://www.w3schools.com/tags/ref\_keyboardshortcuts.asp)
 
 ### Tags
 
@@ -105,21 +105,21 @@ each consists of **names** and **values**. The following example shows the synta
 <h1 id="title">Good Morning!</h1>
 ```
 
-all list - [https://www.w3schools.com/tags/ref_attributes.asp](https://www.w3schools.com/tags/ref_attributes.asp)
+all list - [https://www.w3schools.com/tags/ref\_attributes.asp](https://www.w3schools.com/tags/ref\_attributes.asp)
 
 #### Some examples
 
 `enctype` — encoding type.\
-`http-equiv `— HTTP equivalent.
+`http-equiv` — HTTP equivalent.
 
-### id attribute <a href="id-attribute" id="id-attribute"></a>
+### id attribute <a href="#id-attribute" id="id-attribute"></a>
 
-* When creating a unique name, you can use only Latin alphabet characters (A-Z, a-z), numbers, hyphens, and underscores. For example, names `Navbar`, `nav_item `and `margin-b-40` will be correct. 
+* When creating a unique name, you can use only Latin alphabet characters (A-Z, a-z), numbers, hyphens, and underscores. For example, names `Navbar`, `nav_item` and `margin-b-40` will be correct.&#x20;
 * The `id` name should not contain spaces. That is, names like `our products` will not be valid.
 * The `id` can be used for only one element; you will not be able to work with multiple elements that have identifiers with the same name.
 * Identifiers are case-sensitive: `id="FirstHeader"` and `id="firstheader"` are different identifiers.
 
-### class attribute <a href="class-attribute" id="class-attribute"></a>
+### class attribute <a href="#class-attribute" id="class-attribute"></a>
 
 When you need to give many different elements the same look, `class` attribute comes in handy. As a value, it takes any name you come up with. Unlike the `id` attribute, a web page can have many elements with the same value for the `class` attribute. Consider an example:
 
@@ -141,7 +141,7 @@ In this example, the p element has two classes at once: `black` and `big-text`.
 ## Block-level Elements
 
 **Block-level elements** are mostly used to create the structure of web pages or logically divide an HTML document into parts.\
-[https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements)
+[https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level\_elements#Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level\_elements#Elements)
 
 ![](<../../.gitbook/assets/изображение (6).png>)
 
@@ -180,7 +180,7 @@ CSS styles can be written directly in HTML markup instead of a separate file. Su
   </head>
 ```
 
-### Connecting JavaScript <a href="connecting-javascript-to-html" id="connecting-javascript-to-html"></a>
+### Connecting JavaScript <a href="#connecting-javascript-to-html" id="connecting-javascript-to-html"></a>
 
 ```markup
 <!DOCTYPE html>
@@ -195,9 +195,9 @@ CSS styles can be written directly in HTML markup instead of a separate file. Su
 </html>
 ```
 
-### DOM <a href="briefly-about-dom" id="briefly-about-dom"></a>
+### DOM <a href="#briefly-about-dom" id="briefly-about-dom"></a>
 
-**DOM** (**Document Object Model) **is the representation of an HTML document as a tree structure that various programs can work with. 
+**DOM** (**Document Object Model)** is the representation of an HTML document as a tree structure that various programs can work with.&#x20;
 
 ![](<../../.gitbook/assets/image (11).png>)
 
