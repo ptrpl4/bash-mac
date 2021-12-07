@@ -34,4 +34,4 @@ Examples:
 
 Tutor:
 
-[https://testautomationu.applitools.com/selenium-webdriver-python-tutorial/chapter9.html](https://testautomationu.applitools.com/selenium-webdriver-python-tutorial/chapter9.html)
+Selenium - [https://testautomationu.applitools.com/selenium-webdriver-python-tutorial/](https://testautomationu.applitools.com/selenium-webdriver-python-tutorial/chapter9.html)

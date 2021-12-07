@@ -4,7 +4,8 @@
 
 * [🐍 Python](README.md)
   * [macOS Hints](languages/python/macos-hints.md)
-  * [Selenium](languages/python/selenium/README.md)
+  * [Selenium](languages/python/selenium.md)
+    * [Tests in Parallel](languages/python/selenium/tests-in-parallel.md)
     * [Locating Elements](languages/python/selenium/locating-elements.md)
     * [Configs](languages/python/selenium/configs.md)
     * [Test Run](languages/python/selenium/test-run.md)
