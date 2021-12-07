@@ -1,30 +1,21 @@
-# Selenium
+# Configs
 
-## Preparing
+## config.json
 
-requirements:
+Example:
 
-* git
-* python3
-* pipenv
+```python
+config.json
 
-File structure
+{
+    "browser": "Headless Chrome",
+    "implicit_wait": 10
+}
+```
 
-* Project\_name
-  * tests
-    * conftest.py - config file
-    * test\_name.py - test file
-  * config.json - local config file
+## conftest.py (pytest)
 
-WebDrivers
-
-Chrome - [https://chromedriver.chromium.org/home](https://chromedriver.chromium.org/home)
-
-Gecko - [https://github.com/mozilla/geckodriver/releases](https://github.com/mozilla/geckodriver/releases)
-
-## Test Fixtures
-
-based on pytest
+Example:
 
 ```python
 tests/conftest.py
@@ -79,26 +70,4 @@ def browser(config):
 
     # Quit the test driver instance
     browser.quit()
-```
-
-## Config
-
-```
-config.json
-
-{
-    "browser": "Headless Chrome",
-    "implicit_wait": 10
-}
-```
-
-## Locating elements
-
-{% embed url="https://www.selenium.dev/documentation/webdriver/locating_elements" %}
-
-
-
-```python
-cheese = driver.find_element(By.ID, "cheese")
-
 ```

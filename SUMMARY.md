@@ -4,7 +4,10 @@
 
 * [🐍 Python](README.md)
   * [macOS Hints](languages/python/macos-hints.md)
-  * [Selenium](languages/python/selenium.md)
+  * [Selenium](languages/python/selenium/README.md)
+    * [Locating Elements](languages/python/selenium/locating-elements.md)
+    * [Configs](languages/python/selenium/configs.md)
+    * [Test Run](languages/python/selenium/test-run.md)
   * [🐘 Django](languages/python/django.md)
   * [Virtual env](languages/python/virtual-env.md)
   * [List comprehension](languages/python/list-comprehension.md)
