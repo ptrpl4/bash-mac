@@ -21,6 +21,7 @@
 * **Shift-Command-D**: открытие папки рабочего стола.
 * **Option-Command-D**: отображение или скрытие панели Dock.&#x20;
 * **Control-Стрелка вниз**: отображение всех окон активной программы.
+* **Command + Shift + .** :How to see hidden files in macOS
 
 ### Texts
 
