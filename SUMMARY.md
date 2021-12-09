@@ -3,6 +3,7 @@
 ## languages
 
 * [🐍 Python](README.md)
+  * [PyTest](languages/python/pytest.md)
   * [macOS Hints](languages/python/macos-hints.md)
   * [Selenium](languages/python/selenium.md)
     * [Tests in Parallel](languages/python/selenium/tests-in-parallel.md)
