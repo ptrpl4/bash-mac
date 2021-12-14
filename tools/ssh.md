@@ -21,7 +21,7 @@ Setup (macOS)
 Create First Key
 
 ```
-$ ssh-keygen
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 # Generating public/private rsa key pair.
 # Enter file in which to save the key (/home/username/.ssh/id_rsa):
 # Press Enter^
