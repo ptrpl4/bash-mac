@@ -32,6 +32,7 @@
   * [hash](additional-info/other/hash.md)
   * [Shortcuts](additional-info/other/shortcuts.md)
 * [SQL](additional-info/sql/README.md)
+  * [CLI](additional-info/sql/cli.md)
   * [Examples](additional-info/sql/examples.md)
 * [Web Development](additional-info/web-development/README.md)
   * [URL](additional-info/web-development/url.md)
