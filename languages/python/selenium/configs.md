@@ -33,7 +33,9 @@ from selenium.webdriver import ChromeOptions
 
 @pytest.fixture
 def config(scope='session'):
-
+    # ^means that function runs one time per 'session' and add value to each case
+    
+    
     # Read File
     with open('config.json') as config_file:
         config = json.load(config_file)

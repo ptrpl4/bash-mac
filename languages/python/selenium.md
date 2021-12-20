@@ -12,7 +12,7 @@ File structure
 
 * Project\_name
   * tests
-    * conftest.py - config file
+    * conftest.py - pytest config file
     * test\_name.py - test file
   * config.json - local config file
 

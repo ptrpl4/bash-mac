@@ -3,7 +3,9 @@
 ## languages
 
 * [🐍 Python](README.md)
-  * [PyTest](languages/python/pytest.md)
+  * [PyTest](languages/python/pytest/README.md)
+    * [mark.parametrize](languages/python/pytest/mark.parametrize.md)
+    * [fixtures](languages/python/pytest/fixtures.md)
   * [macOS Hints](languages/python/macos-hints.md)
   * [Selenium](languages/python/selenium.md)
     * [Tests in Parallel](languages/python/selenium/tests-in-parallel.md)
