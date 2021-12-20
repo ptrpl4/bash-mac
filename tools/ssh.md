@@ -76,6 +76,12 @@ Change passphrase
 $ ssh-keygen -p
 ```
 
+## Copy Public Key
+
+```
+$ cat ~/.ssh/id_rsa.pub | pbcopy
+```
+
 ## SSH Connect
 
 ```bash
