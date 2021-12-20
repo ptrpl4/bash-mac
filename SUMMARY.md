@@ -1,8 +1,10 @@
 # Table of contents
 
+* [README](README.md)
+
 ## languages
 
-* [🐍 Python](README.md)
+* [🐍 Python](<README (1).md>)
   * [PyTest](languages/python/pytest/README.md)
     * [mark.parametrize](languages/python/pytest/mark.parametrize.md)
     * [fixtures](languages/python/pytest/fixtures.md)
@@ -21,10 +23,6 @@
   * [😖 Selenium](languages/java+intellij-idea/selenium.md)
 * [C#](languages/c.md)
 * [JS](languages/js.md)
-
-***
-
-* [ReadMe](<README (1).md>)
 
 ## Additional info
 
