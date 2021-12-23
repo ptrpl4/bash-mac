@@ -6,6 +6,7 @@
 
 * [🐍 Python](<README (1).md>)
   * [PyTest](languages/python/pytest/README.md)
+    * [Configs](languages/python/pytest/configs.md)
     * [mark.parametrize](languages/python/pytest/mark.parametrize.md)
     * [fixtures](languages/python/pytest/fixtures.md)
   * [macOS Hints](languages/python/macos-hints.md)
