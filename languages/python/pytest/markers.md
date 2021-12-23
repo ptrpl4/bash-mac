@@ -1,4 +1,40 @@
-# mark.parametrize
+# Markers
+
+## Custom Markers
+
+Step 1 add marker to tests
+
+```
+@pytest.mark.webtest
+def test_send_http():
+    pass  # perform some webtest test for your app
+
+
+def test_something_quick():
+    pass
+```
+
+Step 2 add markers to pytest.ini file
+
+```
+[pytest]
+markers =
+    webtest: mark a test as a webtest.
+    slow: mark test as slow.
+```
+
+Step 3 run marked tests
+
+```
+# run marked tests
+$ pytest -v -m webtest
+# run unmarked tests
+$ pytest -v -m "not webtest"
+```
+
+## Default Markers
+
+### parametrize
 
 link - [https://docs.pytest.org/en/stable/parametrize.html#parametrize-basics](https://docs.pytest.org/en/stable/parametrize.html#parametrize-basics)
 
