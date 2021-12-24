@@ -1,12 +1,12 @@
-# Компьютерные сети
+# Networking
 
 ## Materials:
 
 &#x20;Курс - [https://www.youtube.com/playlist?list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1](https://www.youtube.com/playlist?list=PLtPJ9lKvJ4oiNMvYbOzCmWy6cRzYAh9B1)
 
-![сетевая модель стека сетевых протоколов OSI](<../.gitbook/assets/image (6).png>)
+![сетевая модель стека сетевых протоколов OSI](<../../../.gitbook/assets/image (6).png>)
 
-![Уровни стека TCP/IP](<../.gitbook/assets/image (7).png>)
+![Уровни стека TCP/IP](<../../../.gitbook/assets/image (7).png>)
 
 ## Glossaries&#x20;
 
@@ -83,7 +83,7 @@ DNS использует UDP
 
 ****[**https://developer.mozilla.org/en-US/docs/Web/HTTP**](https://developer.mozilla.org/en-US/docs/Web/HTTP)****
 
-![](../.gitbook/assets/client-server.svg)
+![](../../../.gitbook/assets/client-server.svg)
 
 HTTP keep-alive - постоянное соединение&#x20;
 
@@ -101,7 +101,7 @@ HTTP позволяет браузеру и серверу договорить�
 Пространство имен разделено на зоны (домены)\
 За каждую зону отвечает регистратор.
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../../../.gitbook/assets/image (2).png>)
 
 #### Команды:
 
@@ -111,15 +111,15 @@ HTTP позволяет браузеру и серверу договорить�
 
 #### Режим работы DNS
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (3).png>)
 
 #### Типы ответов
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../../../.gitbook/assets/image (4).png>)
 
 #### Возможности DNS
 
-![](<../.gitbook/assets/image (5).png>)
+![](<../../../.gitbook/assets/image (5).png>)
 
 #### FTP
 

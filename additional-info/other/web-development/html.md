@@ -6,7 +6,7 @@ description: HyperText Markup Language
 
 Структура
 
-![](<../../.gitbook/assets/изображение (2).png>)
+![](<../../../.gitbook/assets/изображение (2).png>)
 
 ## Sample
 
@@ -90,7 +90,7 @@ most commonly used attributes:
 * `loop` cycles the audio file
 * `muted` mutes the sound when playing an audio file
 
-![](<../../.gitbook/assets/image (13).png>)
+![](<../../../.gitbook/assets/image (13).png>)
 
 ### Attributes
 
@@ -143,9 +143,9 @@ In this example, the p element has two classes at once: `black` and `big-text`.
 **Block-level elements** are mostly used to create the structure of web pages or logically divide an HTML document into parts.\
 [https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level\_elements#Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level\_elements#Elements)
 
-![](<../../.gitbook/assets/изображение (6).png>)
+![](<../../../.gitbook/assets/изображение (6).png>)
 
-![](<../../.gitbook/assets/изображение (7).png>)
+![](<../../../.gitbook/assets/изображение (7).png>)
 
 In HTML5, however, the elements are not just divided into block-level and inline, but also grouped by meaning and purpose, representing **categories of content**.
 
@@ -155,7 +155,7 @@ They can contain only data and other inline items. The exception to this rule is
 
 Before and after, the browser doesn't make a line break. Take a look at the behavior of inline elements and compare it with that of block-level elements:
 
-![](<../../.gitbook/assets/изображение (8).png>)
+![](<../../../.gitbook/assets/изображение (8).png>)
 
 ## External CSS
 
@@ -199,7 +199,7 @@ CSS styles can be written directly in HTML markup instead of a separate file. Su
 
 **DOM** (**Document Object Model)** is the representation of an HTML document as a tree structure that various programs can work with.&#x20;
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../../.gitbook/assets/image (11).png>)
 
 ## Fonts
 
