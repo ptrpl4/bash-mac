@@ -5,6 +5,7 @@
 ## languages
 
 * [🐍 Python](languages/python3/README.md)
+  * [yield](languages/python3/yield.md)
   * [pytest](languages/python3/pytest/README.md)
     * [Configs](languages/python3/pytest/configs.md)
     * [Markers](languages/python3/pytest/markers.md)
