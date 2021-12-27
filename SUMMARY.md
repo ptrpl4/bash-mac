@@ -34,6 +34,7 @@
 * [💻 Command line](tools/cli.md)
 * [📖 Git](tools/git.md)
 * [🍻 HomeBrew](tools/brew.md)
+* [Jenkins](tools/jenkins.md)
 * [Apache JMeter](tools/apache-jmeter.md)
 * [PostMan](tools/postman.md)
 * [Xcode](tools/xcode.md)
