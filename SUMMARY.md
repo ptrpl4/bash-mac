@@ -12,6 +12,7 @@
     * [fixtures](languages/python3/pytest/fixtures.md)
   * [macOS Hints](languages/python3/macos-hints.md)
   * [Selenium](languages/python3/selenium/README.md)
+    * [Waiting](languages/python3/selenium/waiting.md)
     * [Tests in Parallel](languages/python3/selenium/tests-in-parallel.md)
     * [Locating Elements](languages/python3/selenium/locating-elements.md)
     * [Configs](languages/python3/selenium/configs.md)
