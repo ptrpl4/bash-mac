@@ -44,6 +44,7 @@
 ## Additional info
 
 * [😩 Other](additional-info/other/README.md)
+  * [🤓 regexp](additional-info/other/regexp.md)
   * [SOLID](additional-info/other/solid.md)
   * [hash](additional-info/other/hash.md)
   * [Hotkeys](additional-info/other/hotkeys.md)
