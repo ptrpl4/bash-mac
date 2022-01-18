@@ -22,10 +22,9 @@
   * [List comprehension](languages/python3/list-comprehension.md)
   * [Testing](languages/python3/testing.md)
   * [Nested lists](languages/python3/nested-lists.md)
-* [Java](languages/java+intellij-idea/README.md)
-  * [😖 Selenium](languages/java+intellij-idea/selenium.md)
-* [C#](languages/c.md)
-* [JS](languages/js.md)
+* [Java](languages/java/README.md)
+  * [😖 Selenium](languages/java/selenium.md)
+* [JavaScript](languages/js.md)
 
 ## 🔨 Tools
 
@@ -43,6 +42,7 @@
 
 ## Additional info
 
+* [QA Job Interview (RU)](additional-info/qa-job-interview-ru.md)
 * [😩 Other](additional-info/other/README.md)
   * [🤓 regexp](additional-info/other/regexp.md)
   * [SOLID](additional-info/other/solid.md)

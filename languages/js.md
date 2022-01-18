@@ -1,4 +1,10 @@
-# JS
+---
+description: >-
+  JS is a lightweight, interpreted, or just-in-time compiled programming
+  language
+---
+
+# JavaScript
 
 ## Build in functions
 
