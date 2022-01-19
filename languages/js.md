@@ -29,17 +29,17 @@ console.log("Hello, JS!");
 ## Variables
 
 **declaration**\
-****The name of a variable can contain only letters, numbers or symbols `$` and `_` and it _cannot_ begin with a number.
+\*\*\*\*The name of a variable can contain only letters, numbers or symbols `$` and `_` and it _cannot_ begin with a number.
 
-JavaScript uses two keywords to create variables:   &#x20;
+JavaScript uses two keywords to create variables:
 
-* `let` defines a **mutable variable** the value of which __ can be changed as many times as needed;
-* `const`  declares a **constant** the value of which __ cannot be changed.
+* `let` defines a **mutable variable** the value of which \_\_ can be changed as many times as needed;
+* `const` declares a **constant** the value of which \_\_ cannot be changed.
 * `var` - is an outdated way of declaring a variable, and we do not recommend using it.
 
 ## Data types
 
-### _typeof_ operator  <a href="#em-typeof-em-operator" id="em-typeof-em-operator"></a>
+### _typeof_ operator <a href="#em-typeof-em-operator" id="em-typeof-em-operator"></a>
 
 ```javascript
 console.log(typeof(9)); // number
@@ -137,7 +137,7 @@ The list below is sorted from the highest to the lowest precedence level:
 
 ### Comparison operators <a href="#step-title" id="step-title"></a>
 
-****[**https://hyperskill.org/learn/step/8580**](https://hyperskill.org/learn/step/8580)****
+[**https://hyperskill.org/learn/step/8580**](https://hyperskill.org/learn/step/8580)
 
 There are only three of them in JavaScript: logical AND (`&&`), logical OR (`||`) and NOT (`!`).
 
@@ -166,7 +166,7 @@ console.log(!true);  // false
 
 Among the numerical values, `0` is considered `false`, and all other numbers are true. Strings are considered true.
 
-Expression is always calculated from left to right. `&&` returns **** _false_ as soon as it finds the first occurring **** _false_, and the operator `||` returns **** _true_ as soon as it sees the first **** _true_:
+Expression is always calculated from left to right. `&&` returns \*\*\*\* _false_ as soon as it finds the first occurring \*\*\*\* _false_, and the operator `||` returns \*\*\*\* _true_ as soon as it sees the first \*\*\*\* _true_:
 
 ```
 console.log(true || 0);      // true
@@ -174,7 +174,7 @@ console.log(false && "sun"); // false
 console.log(1 || 0);         // 1
 ```
 
-The priority of `!` is higher than that of `&&`, and  the priority of `&&` is higher than that of `||`. If you need to change the priority, use parentheses:
+The priority of `!` is higher than that of `&&`, and the priority of `&&` is higher than that of `||`. If you need to change the priority, use parentheses:
 
 ```
 console.log(!false && !true);   // false
@@ -204,7 +204,7 @@ Remember the order of arithmetic operations. If there are several numbers before
 
 ### Numeric conversion <a href="#numeric-conversion" id="numeric-conversion"></a>
 
-When converting a string to a number, spaces and characters `\n,` `\t` at the beginning and the end of the string are cut off. If the string turns out to be empty, the result will be `0`. The boolean type behaves as expected: `false` turns into `0`, `true` turns into `1`.
+When converting a string to a number, spaces and characters `\n,`  at the beginning and the end of the string are cut off. If the string turns out to be empty, the result will be `0`. The boolean type behaves as expected: `false` turns into `0`, `true` turns into `1`.
 
 If the values ​​cannot be cast to a number, the result of the conversion will be `NaN`. For example, `Number("apple")` will return a `NaN` value, which means **Not-a-Number**. Usually, this value is returned when an operation with numbers is performed incorrectly.
 
@@ -230,7 +230,7 @@ An _implicit_ conversion occurs when using logical operators (`||&&` `!`):
 "Master" && "Margarita"  // "Margarita"
 ```
 
-## Functions&#x20;
+## Functions
 
 ### **built-in**
 
@@ -290,8 +290,8 @@ With the `querySelector()` method it is possible to return the first document el
 </script>
 ```
 
-`querySelectorAll()` \
-****gets all elements that match the specified selector:
+`querySelectorAll()`\
+\*\*\*\*gets all elements that match the specified selector:
 
 ```
 <p>Tell me</p>
@@ -358,7 +358,7 @@ To access the properties, we use a record with the object name and a dot.
 console.log(country.name); // Netherlands
 ```
 
-Properties can be added using the dot symbol and the `=` assignment symbol.&#x20;
+Properties can be added using the dot symbol and the `=` assignment symbol.
 
 ```
 сountry.capital = "Amsterdam";
@@ -372,7 +372,7 @@ delete country.population;
 
 ### Audio Object <a href="#step-title" id="step-title"></a>
 
-&#x20;`Audio Object` can be created by using the following syntax:
+`Audio Object` can be created by using the following syntax:
 
 ```javascript
 let audio = document.createElement("AUDIO");
@@ -440,17 +440,17 @@ short version of the `if...else` block
 const getColour = colour => colour === 'white' ? 'white' : 'black';
 ```
 
-## &#x20;Browser events
+## Browser events
 
 [https://developer.mozilla.org/en-US/docs/Web/Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 
 ### Mouse events <a href="#mouse-events" id="mouse-events"></a>
 
 * `click` is the event that occurs when a user clicks on an item with the left mouse button;
-* `dblclick`  is responsible for events occurring after double clicking with the left mouse button;
+* `dblclick` is responsible for events occurring after double clicking with the left mouse button;
 * `contextmenu` is when a user clicks on an element with the right mouse button.
 
-### Keyboard events  <a href="#keyboard-events" id="keyboard-events"></a>
+### Keyboard events <a href="#keyboard-events" id="keyboard-events"></a>
 
 * `keydown` is the event that occurs when the user presses a key;
 * `keyup` is the event that happens when the any key is released;
@@ -474,9 +474,9 @@ document.getElementById("myBtn").addEventListener("keypress", function() {
 
 Javascript has a property `event.code` that allows you to get the code for the specific keyboard character. Each key has its own code which depends on its location on the keyboard:
 
-* &#x20;   letter codes are composed according to a `Key<letter>` scheme;
-* &#x20;   numeric key codes are built on the principle `Digit<number>`;
-* &#x20;   the code for special keys is their name, for instance, `Enter` for the _Enter_ key.
+* letter codes are composed according to a `Key<letter>` scheme;
+* numeric key codes are built on the principle `Digit<number>`;
+* the code for special keys is their name, for instance, `Enter` for the _Enter_ key.
 
 Use `event.code` when you do not care about case and vice versa, use `event.key` when you care about case.
 
