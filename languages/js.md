@@ -6,6 +6,12 @@ description: >-
 
 # JavaScript
 
+## Links
+
+Styleguide - [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)&#x20;
+
+ESLint statically analyzes your code - [https://eslint.org/](https://eslint.org)&#x20;
+
 ## Build in functions
 
 ## Comments
