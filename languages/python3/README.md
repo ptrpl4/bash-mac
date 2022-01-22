@@ -6,30 +6,29 @@ description: Интерпретируемый язык с неявной сил�
 
 ![](<../../.gitbook/assets/изображение (5).png>)
 
-## About
+## Links
 
-[https://docs.python.org/3/genindex-all.html](https://docs.python.org/3/genindex-all.html)&#x20;
+Доки - [https://docs.python.org/3/genindex-all.html](https://docs.python.org/3/genindex-all.html)
 
-[https://docs.python.org/3/reference/index.html](https://docs.python.org/3/reference/index.html)
+Доки - [https://docs.python.org/3/reference/index.html](https://docs.python.org/3/reference/index.html)
 
-[https://www.w3schools.com/python/python\_reference.asp](https://www.w3schools.com/python/python\_reference.asp)
+Доки - [https://www.w3schools.com/python/python\_reference.asp](https://www.w3schools.com/python/python\_reference.asp)
 
-[https://repl.it/languages/python3](https://repl.it/languages/python3) - виртуалка
+Виртуалка - [https://repl.it/languages/python3](https://repl.it/languages/python3)
 
-[https://devpractice.ru/python/](https://devpractice.ru/python/) - статьи
-
-PEP - Python Enhancement Proposal
-
-[https://docs.python.org/3.8/reference/index.html](https://docs.python.org/3.8/reference/index.html) - прочитать
+Статьи - [https://devpractice.ru/python/](https://devpractice.ru/python/)&#x20;
 
 ## Основные типы данных
 
 ### immutable/mutable
 
-К неизменяемым (**immutable**) типам относятся: \
-целые числа (**int**), числа с плавающей точкой (**float**), комплексные числа (**complex**), логические переменные (**bool**), кортежи (**tuple**), строки (**str**) и неизменяемые множества (**frozen set**).\
-К изменяемым (**mutable**) типам относятся: \
-списки (**list**), множества (**set**), словари (dict).
+К неизменяемым (**immutable**) типам относятся:\
+целые числа (**int**), с плавающей точкой (**float**), комплексные числа (**complex**)\
+логические переменные (**bool**), кортежи (**tuple**), строки (**str**) \
+неизменяемые множества (**frozen set**).
+
+К изменяемым (**mutable**) типам относятся:\
+списки (**list**), множества (**set**), словари (**dict**).
 
 ### None
 
@@ -133,7 +132,7 @@ There is also `list.extend(another_list)` operation which adds all the elements 
 
 insert(1, 'elementname') - добавление в список на определенное место. остальные элементы сдвигаются на 1 вправо
 
-pop() - удаляет последний элемент списка, но позволяет к нему обратиться. Если элемент еще может понадобиться  - не использовать команду del
+pop() - удаляет последний элемент списка, но позволяет к нему обратиться. Если элемент еще может понадобиться - не использовать команду del
 
 The following example demonstrates the difference between using `list` and `[]` when creating a list:
 
@@ -223,7 +222,7 @@ b  # 2
 c  # 3
 ```
 
-Используя множественное присваивание, можно провернуть интересный трюк: обмен значениями между двумя переменными.&#x20;
+Используя множественное присваивание, можно провернуть интересный трюк: обмен значениями между двумя переменными.
 
 ```
 a = 100
@@ -238,7 +237,7 @@ b  # 100
 
 #### Строки (str)
 
-`"This is a string."` \
+`"This is a string."`\
 `'This is also a string.'`
 
 #### **The str. format() method**
@@ -317,13 +316,11 @@ normal_string.strip("is")  # "ncomprehensibilitie"
 
 Вид:
 
-`someVar = { "color" : "green", "points" : 5}`
+`some_dict = { "color" : "green", "points" : 5}`\
+``название = { "атрибут" : "значение"}
 
-название = { "атрибут" : "значение"}
-
-Получить значение атрибута
-
-`someVar["color"]`
+Получить значение атрибута\
+`some_dict["color"]`
 
 Пример из docs:
 
@@ -343,14 +340,14 @@ True
 del sample_dict["points"] # how to delete 
 ```
 
- Один ключ может иметь список(массив?) значений
+Один ключ может иметь список(массив?) значений
 
 `dict_example = { "pizza": ["peperoni", "cheese"]}`
 
 \n - разрыв строки\
 \t - табуляция
 
-&#x20;\# - символ для обозначения комментария в строке
+\# - символ для обозначения комментария в строке
 
 ### Набор (set)
 
@@ -388,11 +385,11 @@ print(1 in nums, 4 not in nums)  # True True
 * `//` [целочисленное деление](https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5\_%D1%81\_%D0%BE%D1%81%D1%82%D0%B0%D1%82%D0%BA%D0%BE%D0%BC#%D0%92\_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8)
 * `%` [остаток от деления](https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5\_%D1%81\_%D0%BE%D1%81%D1%82%D0%B0%D1%82%D0%BA%D0%BE%D0%BC)
 
-\+= \
+\+=\
 _увеличение на 1_
 
 Naturally, similar assignment forms exist for the rest of arithmetic operations:\
-`-=`, `*=`, `/=`, `//=`, `%=`, `**=`.&#x20;
+`-=`, `*=`, `/=`, `//=`, `%=`, `**=`.
 
 ### Операторы сравнения
 
@@ -409,7 +406,7 @@ Naturally, similar assignment forms exist for the rest of arithmetic operations:
 
 The result of applying these operators is always `bool`.
 
-\+= \
+\+=\
 _обьединяет строки_
 
 ```python
@@ -425,7 +422,7 @@ prompt += "\nWhat is your first name? "
 
 `continue` - возвращает цикл к началу
 
-## Функции&#x20;
+## Функции
 
 _именованный блок кода с одной определенной задачей_
 
@@ -433,7 +430,7 @@ _именованный блок кода с одной определенной
 
 ### Импорт функций в файл
 
-для импортирования функции&#x20;
+для импортирования функции
 
 `import filename`\
 `filename.funcName(arg1, arg2)`\
@@ -446,7 +443,7 @@ _именованный блок кода с одной определенной
 
 ### **built-in**
 
-[https://docs.python.org/3/library/functions.html](https://docs.python.org/3/library/functions.html)  -полный список
+[https://docs.python.org/3/library/functions.html](https://docs.python.org/3/library/functions.html) -полный список
 
 ![in Python 3.8.2](../../.gitbook/assets/image.png)
 
@@ -456,7 +453,7 @@ _именованный блок кода с одной определенной
 
 `len()` - определение длинны (для списка кол-во элементов)
 
-`range()` - перебор&#x20;
+`range()` - перебор
 
 `str()` - преобразование числовых значений в строку
 
@@ -468,7 +465,7 @@ _именованный блок кода с одной определенной
 `max()`\
 `sum()` - для работы с числовыми списками
 
-`set()` - извлечение уникальных значений&#x20;
+`set()` - извлечение уникальных значений
 
 `input()` - ввод пользовательских данных. все полученные данные преобразует в `str`
 
@@ -494,7 +491,7 @@ age >= 18
 True
 ```
 
-`lstrip()` \
+`lstrip()`\
 `lstrip()`\
 _стирает пробелы слева, справа_
 
@@ -504,12 +501,12 @@ _стирает все пробелы_
 `type()`\
 _определяет тип переменной_
 
-`abs()`  \
-__It pertains to Python built-ins and returns the absolute value of a number (that is, value regardless of its sign)
+`abs()`\
+\_\_It pertains to Python built-ins and returns the absolute value of a number (that is, value regardless of its sign)
 
 `set()`
 
-A **set** is an **unordered** container of **hashable** objects**.**&#x20;
+A **set** is an **unordered** container of **hashable** objects\*\*.\*\*
 
 удаляет дубликаты и выводит набор в произвольном порядке
 
@@ -627,7 +624,7 @@ Each object can be characterized by a state and behavior. An object keeps the cu
 
 **Инкапсуляция** - разбивка на самодостаточные детали с возможностью изменить одну не сломав структуру. Взаимодействие с данными происходит через публичные методы. Позволяет защитить обьект от несогласованности
 
-**Абстракция** - обьект представляет только необходимые данные. Наиболее простые для понимания и нужные для взаимодейстивия.&#x20;
+**Абстракция** - обьект представляет только необходимые данные. Наиболее простые для понимания и нужные для взаимодейстивия.
 
 **Наследование** - возможность создания на базе существующих классов новые, с дополнителнительными атрибутами и методами
 
@@ -685,7 +682,7 @@ for river in River.all_rivers:
 # Nile
 ```
 
-The `__init__` method specifies what attributes we want the instances of our class to have from the very beginning. In our example, they are **name** and **length.**&#x20;
+The `__init__` method specifies what attributes we want the instances of our class to have from the very beginning. In our example, they are **name** and **length.**
 
 Note that when we actually call an object's method we don't write the `self` argument in the brackets. The `self` parameter (that represents a particular instance of the class) is passed to the instance method **implicitly** when it is called. So there are actually two ways to call an instance method: `self.method()` or `class.method(self)`. In our example it would look like this:
 
@@ -751,10 +748,10 @@ print(my_tesla.get_descriptive_name())
 `#предварительно уже имеем созданный класс "ClassName"`\
 `#в новом классе "OtherClass" определяем одним из атрибутов другой класс "ClassName"`\
 `class OtherClass:`\
-&#x20;   `def...`\
-&#x20;   `...`\
-&#x20;   `self.atr_name = ClassName()`\
-``\
+`def...`\
+`...`\
+`self.atr_name = ClassName()`\
+\`\`\
 `#после обращаемся к нему как к атрибуту "OtherClass"`\
 `OtherClass.ClassName.class_method`\
 `#можем обратиться и к атрибуту`\
@@ -788,11 +785,11 @@ it is recommended to define all possible attributes in the `__init__`. This can 
 
 **`__new__`**
 
-New objects of the class are in fact created by the **`__new__`** method that in its turn calls the `__init__` method.&#x20;
+New objects of the class are in fact created by the **`__new__`** method that in its turn calls the `__init__` method.
 
 The first argument of the `__new__` method is `cls`. It represents the class itself, similar to how `self` represents an instance of the class. This also makes `__new__` a different kind of method since it doesn't require an instance of the class.
 
-Usually, there is no need to define a special `__new__` method, but it can be useful if we want to return instances of other classes or restrict the number of objects in our class.&#x20;
+Usually, there is no need to define a special `__new__` method, but it can be useful if we want to return instances of other classes or restrict the number of objects in our class.
 
 ```python
 class Sun:
@@ -879,7 +876,7 @@ Importantly, loop `else` runs if and only if the loop is exited normally (withou
 
 [https://docs.python.org/3/reference/compound\_stmts.html#the-for-statement](https://docs.python.org/3/reference/compound\_stmts.html#the-for-statement)
 
-### **while**&#x20;
+### **while**
 
 цикл, проверяющий условие. условием к примеру может быть непустой список
 
@@ -922,14 +919,14 @@ while a < 10:
 ### Проверка условий (and) (or)
 
 and\
-выдает true если оба условия совпадают&#x20;
+выдает true если оба условия совпадают
 
 or\
 выдает true если хотябы 1 верно
 
-### Проверка наличия в списке (in)&#x20;
+### Проверка наличия в списке (in)
 
-in \
+in\
 `kitty2 in kitty_list`\
 `true`
 
@@ -937,7 +934,7 @@ in \
 
 ### Проверка остуствия в списке (not in)
 
-not in&#x20;
+not in
 
 `if user not in banned_users`
 
@@ -951,7 +948,7 @@ listname = \[var+1 for var in range (1,11)]
 
 _Генератор списка объединяет цикл for и создание новых элементов в одну строку и автоматически присоединяет к списку все новые элементы_
 
-## &#x20;Scopes
+## Scopes
 
 A **scope** is a part of the program where a certain variable can be reached by its name. The scope is a very important concept in programming because it defines the visibility of a name within the code block.
 
@@ -1066,9 +1063,9 @@ print(template.format(greeting, first_name))
 
 В Python импортировать модули можно несколькими способами:
 
-1. &#x20;импортировать сам модуль
-2. &#x20;импортировать отдельные определения из модуля
-3. &#x20;импортировать всё содержимое модуля сразу
+1. импортировать сам модуль
+2. импортировать отдельные определения из модуля
+3. импортировать всё содержимое модуля сразу
 
 В модуле (файле) с именем _greeting.py_ определим функцию `say_hi` и переменную `name`:
 
