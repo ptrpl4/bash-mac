@@ -50,6 +50,7 @@
   * [Hotkeys](additional-info/other/hotkeys.md)
   * [Web](additional-info/other/web-development/README.md)
     * [Networking](additional-info/other/web-development/networking.md)
+    * [🔧 HTTP](additional-info/other/web-development/http.md)
     * [URL](additional-info/other/web-development/url.md)
     * [Links/Apps](additional-info/other/web-development/links-apps.md)
     * [HTML](additional-info/other/web-development/html.md)
