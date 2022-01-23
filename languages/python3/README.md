@@ -32,7 +32,7 @@ description: Интерпретируемый язык с неявной сил�
 
 ### None
 
-```
+```python
 res = None
 res is None
 True

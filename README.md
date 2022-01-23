@@ -2,17 +2,20 @@
 description: Personal Wiki Space
 ---
 
-# ReadMe
+# 🍞 README
 
-Hi, its my personal IT-Wiki Space
+### Greetings!
 
-Half english, half русские notes about Programming languages, frameworks and many other tech things
+Hi, its my personal Wiki Space.
 
-Welcome!
+Half english, half русские notes about programming languages, frameworks and other tech stuff.
 
-<mark style="color:orange;">p.s. most of this content is written as a way to remember and may contain errors and reductions.</mark>
 
-_Edit tool -  app.gitbook.com_
 
-_Hosted by - github.com_
+<mark style="color:red;">Most of this content is written as a way to memorize and may contain errors and reductions</mark>
 
+### Links
+
+Created with [gitbook.com](https://gitbook.com)
+
+Hosted on [github.com](http://github.com)

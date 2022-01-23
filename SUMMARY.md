@@ -1,6 +1,6 @@
 # Table of contents
 
-* [README](README.md)
+* [🍞 README](README.md)
 
 ## languages
 
@@ -22,14 +22,14 @@
   * [List comprehension](languages/python3/list-comprehension.md)
   * [Testing](languages/python3/testing.md)
   * [Nested lists](languages/python3/nested-lists.md)
-* [Java](languages/java/README.md)
+* [☕ Java](languages/java/README.md)
   * [😖 Selenium](languages/java/selenium.md)
-* [JavaScript](languages/js.md)
-* [SQL](languages/sql/README.md)
+* [🔞 JavaScript](languages/js.md)
+* [📑 SQL](languages/sql/README.md)
   * [CLI](languages/sql/cli.md)
   * [Examples](languages/sql/examples.md)
 
-## 🔨 Tools
+## Tools
 
 * [💻 Command line](tools/cli.md)
 * [📖 Git](tools/git.md)
@@ -38,11 +38,12 @@
 * [Apache JMeter](tools/apache-jmeter.md)
 * [PostMan](tools/postman.md)
 * [Xcode](tools/xcode.md)
+* [🦄 UNIX](tools/unix.md)
 
 ## Additional info
 
-* [QA Job Interview (RU)](additional-info/qa-job-interview-ru.md)
-* [Web](additional-info/web-development/README.md)
+* [⚒ QA Job Interview (RU)](additional-info/qa-job-interview-ru.md)
+* [🕸 Web](additional-info/web-development/README.md)
   * [Networking](additional-info/web-development/networking.md)
   * [🔧 HTTP](additional-info/web-development/http.md)
   * [URL](additional-info/web-development/url.md)
