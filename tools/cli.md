@@ -27,18 +27,18 @@ $command [params.z..] [-options…]
 ```
 
 _params_ are **command parameters**\
-****_-options_ are **command line options** or **flags**,  that modify the operation
+\*\*\*\*_-options_ are **command line options** or **flags**, that modify the operation
 
-Options may also start with a double hyphen(--). \
-Usually, options starting with single hyphen have abbreviated names, like _-a_ or _-R_, while options starting with double hyphen have full names, like _--version_ or _--help_. \
+Options may also start with a double hyphen(--).\
+Usually, options starting with single hyphen have abbreviated names, like _-a_ or _-R_, while options starting with double hyphen have full names, like _--version_ or _--help_.\
 Command line syntax is **case-sensitive**.
 
-In command manuals, required parameters are written in angle brackets _\<param>_, and optional ones – in square brackets _\[param]_. To indicate that a parameter can be repeated, ellipses are used _\[params...]_. \
+In command manuals, required parameters are written in angle brackets _\<param>_, and optional ones – in square brackets _\[param]_. To indicate that a parameter can be repeated, ellipses are used _\[params...]_.\
 If only one of several parameters can be chosen, vertical bars are used: _\[param 1|param 2]_.
 
-To display all available built-in system commands, type _man builtin_ 
+To display all available built-in system commands, type _man builtin_
 
-**To quit manual, press **_**q**_**.**
+**To quit manual, press \_q**\_**.**
 
 `man command`\
 Для выхода из режима просмотра нажмите q, для просмотра вперёд f (forward), назад — b (backward).
@@ -50,19 +50,19 @@ cd ..
 
 `pwd` - **p**rint **w**orking **d**irectory
 
-`cd`  - **c**hange **d**irectory
+`cd` - **c**hange **d**irectory
 
 `ls` - list directory contents
 
-`stat `- display file or file system status
+`stat` - display file or file system status
 
-`hier` or `man hier `- layout of filesystems
+`hier` or `man hier` - layout of filesystems
 
 `cat` -- concatenate and print files
 
-`grep` - (**g**lobal **r**egular **e**xpression **p**rint) searching 
+`grep` - (**g**lobal **r**egular **e**xpression **p**rint) searching
 
-`touch `- file creating (not main function, but typical)
+`touch` - file creating (not main function, but typical)
 
 ## Manual
 
@@ -105,7 +105,16 @@ rm -rf one
 
 Permissions
 
-Кроме имени пользователя и группы, с каждым файлом ассоциированы права доступа: **r** — чтение, **w** — запись и **x** — исполнение. Причём эти права задаются для трёх типов пользователей: владельца (Owner), пользователей, входящих в ту же группу (Group) и остальных (Other) — тех, кто не попал в предыдущие две. 
+Кроме имени пользователя и группы, с каждым файлом ассоциированы права доступа: **r** — чтение, **w** — запись и **x** — исполнение. Причём эти права задаются для трёх типов пользователей: владельца (Owner), пользователей, входящих в ту же группу (Group) и остальных (Other) — тех, кто не попал в предыдущие две.
 
 ![](<../.gitbook/assets/image (14).png>)
 
+## **TLDR command**
+
+**TLDR** stands for **T**oo **L**ong **D**idn'**t R**ead and is described as "a collection of simplified and community-driven man pages."
+
+```
+brew install tldr
+tldr ls
+tldr cd
+```

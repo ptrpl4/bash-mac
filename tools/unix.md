@@ -51,3 +51,9 @@ The most common sets presented as octal numbers are as follows:
 * **644** means only the owner can read and write. Everyone else can only read. No one can execute this file.
 * **655** means only the owner can read and write and cannot execute the file. Everyone else can read and execute and cannot modify the file.
 * **777** means every user can read, write, and execute. Because it grants full permission, it should be used with caution. However, in some cases, you will need to set the 777 permissions before you can upload any file to the server.
+
+|             | **File**                                | **Directory**                                                 |
+| ----------- | --------------------------------------- | ------------------------------------------------------------- |
+| **Read**    | One can open a file and see its content | One can view files in directories without opening these files |
+| **Write**   | One can change the contents of the file | One can rename files                                          |
+| **Execute** | One can run a file                      | One can have access to files                                  |
