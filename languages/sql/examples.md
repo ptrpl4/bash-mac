@@ -10,13 +10,3 @@ where groups.LogonName = 'logon_name' and items.Status = 4 and groups.Status != 
 order by OrderNumber desc
 ```
 
-| WORKER\_ID | FIRST\_NAME | LAST\_NAME | SALARY | JOINING\_DATE | DEPARTMENT |
-| ---------- | ----------- | ---------- | ------ | ------------- | ---------- |
-
-Table1 - Worker Table2 – Title\
-Write an SQL query to print First name of the Workers who are also Managers
-
-| WORKER\_REF\_ID | WORKER\_TITLE | AFFECTED\_FROM |
-| --------------- | ------------- | -------------- |
-
-select work.worker\__id, work.first\__name
