@@ -8,7 +8,7 @@ description: Personal Wiki Space
 
 Hi, its my personal Wiki Space.
 
-Half english, half русские notes about programming languages, frameworks and other tech stuff.
+Half english, half russian notes about programming languages, frameworks and other tech stuff.
 
 
 

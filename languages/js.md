@@ -4,7 +4,7 @@ description: >-
   language
 ---
 
-# JavaScript
+# 🔞 JavaScript
 
 ## Links
 

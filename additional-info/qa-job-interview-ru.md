@@ -2,7 +2,7 @@
 description: Основные вопросы и темы, встречающиеся во время интервью
 ---
 
-# QA Job Interview (RU)
+# ⚒ QA Job Interview (RU)
 
 ## Тестирование
 
