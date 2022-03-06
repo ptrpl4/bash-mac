@@ -25,6 +25,8 @@
 * [☕ Java](languages/java/README.md)
   * [😖 Selenium](languages/java/selenium.md)
 * [🔞 JavaScript](languages/js.md)
+* [TypeScript](languages/typescript/README.md)
+  * [Playwright](languages/typescript/playwright.md)
 * [📑 SQL](languages/sql/README.md)
   * [CLI](languages/sql/cli.md)
   * [Examples](languages/sql/examples.md)
