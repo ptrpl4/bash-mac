@@ -30,6 +30,8 @@
 * [📑 SQL](languages/sql/README.md)
   * [CLI](languages/sql/cli.md)
   * [Examples](languages/sql/examples.md)
+* [NoSQL](languages/nosql/README.md)
+  * [MongoDB](languages/nosql/mongodb.md)
 
 ## Tools
 
