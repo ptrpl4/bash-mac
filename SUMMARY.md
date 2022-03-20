@@ -48,6 +48,7 @@
 
 * [⚒ QA Job Interview (RU)](additional-info/qa-job-interview-ru.md)
 * [🕸 Web](additional-info/web-development/README.md)
+  * [Security](additional-info/web-development/security.md)
   * [Networking](additional-info/web-development/networking.md)
   * [🔧 HTTP](additional-info/web-development/http.md)
   * [URL](additional-info/web-development/url.md)
