@@ -59,6 +59,7 @@
   * [SSH](additional-info/web-development/ssh.md)
   * [Static/Dynamic sites](additional-info/web-development/untitled.md)
 * [😩 Other](additional-info/other/README.md)
+  * [Authentication and Authorization](additional-info/other/authentication-and-authorization.md)
   * [🤓 regexp](additional-info/other/regexp.md)
   * [SOLID](additional-info/other/solid.md)
   * [hash](additional-info/other/hash.md)
