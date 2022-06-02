@@ -49,6 +49,9 @@
 
 * [⚒ QA Job Interview (RU)](additional-info/qa-job-interview-ru.md)
 * [🕸 Web](additional-info/web-development/README.md)
+  * [OSI Model](additional-info/web-development/osi-model.md)
+  * [CI/CD](additional-info/web-development/ci-cd.md)
+  * [Authentication and Authorization](additional-info/web-development/authentication-and-authorization.md)
   * [Security](additional-info/web-development/security.md)
   * [Networking](additional-info/web-development/networking.md)
   * [🔧 HTTP](additional-info/web-development/http.md)
@@ -59,7 +62,6 @@
   * [SSH](additional-info/web-development/ssh.md)
   * [Static/Dynamic sites](additional-info/web-development/untitled.md)
 * [😩 Other](additional-info/other/README.md)
-  * [Authentication and Authorization](additional-info/other/authentication-and-authorization.md)
   * [🤓 regexp](additional-info/other/regexp.md)
   * [SOLID](additional-info/other/solid.md)
   * [hash](additional-info/other/hash.md)

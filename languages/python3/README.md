@@ -4,7 +4,7 @@ description: Интерпретируемый язык с неявной сил�
 
 # 🐍 Python
 
-## ![](<../../.gitbook/assets/image (18).png>)
+## <img src="../../.gitbook/assets/image (18).png" alt="" data-size="original">
 
 ## Links
 
