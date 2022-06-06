@@ -27,11 +27,13 @@
 * [🔞 JavaScript](languages/js/README.md)
   * [Playwright](languages/js/playwright.md)
   * [TypeScript](languages/js/typescript.md)
-* [📑 SQL](languages/sql/README.md)
-  * [CLI](languages/sql/cli.md)
-  * [Examples](languages/sql/examples.md)
-* [NoSQL](languages/nosql/README.md)
-  * [MongoDB](languages/nosql/mongodb.md)
+* [DB](languages/db/README.md)
+  * [📑 SQL](languages/db/sql/README.md)
+    * [CLI](languages/db/sql/cli.md)
+    * [Examples](languages/db/sql/examples.md)
+  * [NoSQL](languages/db/nosql/README.md)
+    * [MongoDB](languages/db/nosql/mongodb.md)
+    * [Redis](languages/db/nosql/redis.md)
 
 ## Tools
 

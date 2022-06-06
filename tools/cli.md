@@ -4,7 +4,7 @@ Shortcuts - [https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlsht
 
 Explain Shell - [https://explainshell.com/explain?cmd=curl+-fsSL+example.org](https://explainshell.com/explain?cmd=curl+-fsSL+example.org)
 
-More shortcuts - [http://macmy.ru/pages/terminal-commands-macosx#](http://macmy.ru/pages/terminal-commands-macosx#)
+More shortcuts - [http://macmy.ru/pages/terminal-commands-macosx#](http://macmy.ru/pages/terminal-commands-macosx)
 
 Filesystem Hierarchy Standard - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)
 
@@ -23,11 +23,15 @@ Terminal - приложение для macOS, позволяющее взаим�
 Опции можно комбинировать. Чтобы вывести все файлы, включая скрытые, с подробным описанием, нужно набрать `ls -a -l`. Bash позволяет объединять опции и писать так `ls -al` или даже так `ls -la`.
 
 ```bash
-$command [params.z..] [-options…]
+$command [params.z..] [-options…] | command_two [params.z..] [-options…]
 ```
 
 _params_ are **command parameters**\
 \*\*\*\*_-options_ are **command line options** or **flags**, that modify the operation
+
+`$ cat ~/.ssh/id_rsa.pub | pbcopy`
+
+&#x20;pipe - connect output first command to input next command
 
 Options may also start with a double hyphen(--).\
 Usually, options starting with single hyphen have abbreviated names, like _-a_ or _-R_, while options starting with double hyphen have full names, like _--version_ or _--help_.\
