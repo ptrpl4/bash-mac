@@ -1,5 +1,11 @@
 # Examples
 
+## Select
+
+```sql
+select * from clients where name = 'Peter Pan'
+```
+
 ## Join
 
 ```sql
