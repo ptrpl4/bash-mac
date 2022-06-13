@@ -330,21 +330,29 @@ With the `querySelector()` method it is possible to return the first document el
 
 ### **user-defined**
 
-**old style**
+**default style**
 
 ```javascript
-function name(parameters) {
-  return parameters;
-}
-```
-
-#### new style
-
-```javascript
-const name = (parameters) => {
-  return parameters;
+function name(a, b) {
+  var result = a + b
+  return result;
 };
 ```
+
+#### **arrow functions** style
+
+```javascript
+const name = (a, b) => {
+  const result = a + b
+  return result;
+};
+```
+
+* Arrow functions don't have their own bindings to [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments) or [`super`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super), and should not be used as [methods](https://developer.mozilla.org/en-US/docs/Glossary/Method).
+* Arrow functions don't have access to the [`new.target`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
+* Arrow functions aren't suitable for [`call`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Function/call), [`apply`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Function/apply) and [`bind`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Function/bind) methods, which generally rely on establishing a [scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope).
+* Arrow functions cannot be used as [constructors](https://developer.mozilla.org/en-US/docs/Glossary/Constructor).
+* Arrow functions cannot use [`yield`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield), within its body.
 
 **Формальными параметрами** функции называются имена переменных в _определении функции_. Например у функции `const f = (a, b) => a - b;` формальные параметры — это `a` и `b`.
 
