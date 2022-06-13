@@ -448,6 +448,23 @@ audio.play();
 audio.pause();
 ```
 
+## Classes
+
+```javascript
+class Human { // class name with Capital Letter
+    constructor(name, gender){
+        this.name = name;
+        this.gender = gender; 
+    }
+    sayMyName() { // add method to class
+        console.log("My name is " + this.name);
+    } 
+}
+const idealHuman = new Human("John", "investigating"); // create new instance
+
+idealHuman.sayMyName(); // call method 
+```
+
 ## Conditional operators
 
 ### if
