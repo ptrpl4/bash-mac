@@ -17,13 +17,13 @@ Online IDE - [https://replit.com/](https://replit.com/)
 
 ## Comments
 
-### One-line comments <a href="#one-line-comments" id="one-line-comments"></a>
+#### One-line comments <a href="#one-line-comments" id="one-line-comments"></a>
 
 ```javascript
 console.log("Nice to see you!"); // This code outputs the message to the console
 ```
 
-### Multi-line comments <a href="#multi-line-comments" id="multi-line-comments"></a>
+#### Multi-line comments <a href="#multi-line-comments" id="multi-line-comments"></a>
 
 ```javascript
 /*  
@@ -40,17 +40,28 @@ console.log("Hello, JS!");
 
 JavaScript uses two keywords to create variables:
 
-* `let` defines a **mutable variable** the value of which \_\_ can be changed as many times as needed;
-* `const` declares a **constant** the value of which \_\_ cannot be changed.
-* `var` - is an outdated way of declaring a variable, and we do not recommend using it.
+`let` defines a **mutable variable** the value of which \_\_ can be changed as many times as needed;
+
+`const` declares a **constant** the value of which \_\_ cannot be changed.
+
+`var` - is an outdated way of declaring a variable, and we do not recommend using it.
+
+```javascript
+let letters, &ampersand, _underscore
+
+let 1number
+// SyntaxError: Invalid or unexpected token
+```
 
 ## Data types
 
-### _typeof_ operator <a href="#em-typeof-em-operator" id="em-typeof-em-operator"></a>
+#### _typeof_ operator <a href="#em-typeof-em-operator" id="em-typeof-em-operator"></a>
 
 ```javascript
-console.log(typeof(9)); // number
-console.log(typeof 9); // number
+console.log(typeof(9)); 
+// number
+console.log(typeof 9); 
+// number
 ```
 
 ### _null_ <a href="#em-null-em" id="em-null-em"></a>
@@ -59,22 +70,24 @@ console.log(typeof 9); // number
 
 ```
 let name = null; 
-console.log(name); // null
+console.log(name); 
+// null
 ```
 
 ### _undefined_ <a href="#em-undefined-em" id="em-undefined-em"></a>
 
-The `undefined` value is returned when a variable was declared, but its value wasn't set. Let's consider the following example:
+The `undefined` value is returned when a variable was declared, but its value wasn't set. Let's consider the following example
 
 ```javascript
 let count; 
-console.log(count); // undefined
-
+console.log(count); 
+// undefined
 let person = {
   age: 27
 };
  
-console.log(person.name); // undefined
+console.log(person.name); 
+// undefined
 ```
 
 But that's not all! The `undefined` value is also returned when a function has a missing parameter:
@@ -84,7 +97,8 @@ function getDetails(a) {
   console.log(a);
 }
 
-getDetails(); // undefined
+getDetails(); 
+// undefined
 ```
 
 ### Array
@@ -105,41 +119,48 @@ The JavaScript programming language provides operators to perform arithmetic ope
 
 ```javascript
 console.log(12 + 26); // 38
-console.log("My name is " + "John"); // My name is John
+console.log("My name is " + "John"); 
+// My name is John
 ```
 
 * subtraction `-`
 
 ```
-console.log(5 - 3); // 2
+console.log(5 - 3); 
+// 2
 ```
 
 * multiplication `*`
 
 ```
-console.log(10 * 4); // 40
+console.log(10 * 4); 
+// 40
 ```
 
 * integer division `/`
 
 ```
-console.log(8 / 2); // 4
+console.log(8 / 2); 
+// 4
 ```
 
 * remainder `%`. This operator finds the residue from the division:
 
 ```
-console.log(10 % 3); // 1, because 10 divided by 3 leaves a remainder of 1
-console.log(12 % 4); // 0, because 12 divided by 4 leaves no remainder
+console.log(10 % 3); 
+// 1, because 10 divided by 3 leaves a remainder of 1
+console.log(12 % 4); 
+// 0, because 12 divided by 4 leaves no remainder
 ```
 
 * exponentiation `**`
 
 ```
-console.log(2 ** 3); // 8, because (2 * 2 * 2) is 8
+console.log(2 ** 3); 
+// 8, because (2 * 2 * 2) is 8
 ```
 
-### Order
+#### Order
 
 The list below is sorted from the highest to the lowest precedence level:
 
