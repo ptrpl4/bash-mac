@@ -88,6 +88,26 @@ function getDetails(a) {
 getDetails(); // undefined
 ```
 
+### Array
+
+`const companies = ["Apple", "Google", "Amazon"];`
+
+add new:
+
+`companies.push("Yandex");`
+
+delete last:
+
+`companies.pop();`
+
+get by index
+
+`const firstPlace = companies[0]`
+
+check length
+
+`companies.length`
+
 ## Arithmetic operators
 
 The JavaScript programming language provides operators to perform arithmetic operations. They are called **binary** because they apply to two **operands** (objects over which the operation is performed).
