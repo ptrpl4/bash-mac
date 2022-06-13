@@ -377,12 +377,14 @@ const answer = factorial(3);
 
 ## Objects
 
-An **object** is a _non-primitive_ data type that represents an unordered collection of _properties_.A **property** is a part of the object that imitates a variable. It consists of a **key** and a **value** separated by a colon. A key can only be a string, but the value may be of any data type.
+An **object** is a _non-primitive_ data type that represents an **unordered** collection of _properties_.A **property** is a part of the object that imitates a variable. It consists of a **key** and a **value** separated by a colon. A key can only be a string, but the value may be of any data type.
 
 ```javascript
-let сountry = {
+const сountry = {
   name: "Netherlands",
-  population: 17.18
+  population: 17.18,
+  stillExist: true,
+  "friendly name": "Holland" // key could be in " " we can use whitespace between words
 };
 ```
 
@@ -390,8 +392,9 @@ let сountry = {
 
 To access the properties, we use a record with the object name and a dot.
 
-```
+```javascript
 console.log(country.name); // Netherlands
+console.log(country.["name"]); // Netherlands - alternative 
 ```
 
 Properties can be added using the dot symbol and the `=` assignment symbol.
