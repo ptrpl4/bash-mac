@@ -2,6 +2,7 @@
 description: >-
   JS is a lightweight, interpreted, or just-in-time compiled programming
   language
+coverY: 0
 ---
 
 # 🔞 JavaScript
@@ -12,7 +13,7 @@ Styleguide - [https://github.com/airbnb/javascript](https://github.com/airbnb/ja
 
 ESLint statically analyzes your code - [https://eslint.org/](https://eslint.org)&#x20;
 
-## Build in functions
+Online IDE - [https://replit.com/](https://replit.com/)
 
 ## Comments
 
@@ -65,12 +66,10 @@ console.log(name); // null
 
 The `undefined` value is returned when a variable was declared, but its value wasn't set. Let's consider the following example:
 
-```
+```javascript
 let count; 
 console.log(count); // undefined
-```
 
-```
 let person = {
   age: 27
 };
@@ -80,33 +79,23 @@ console.log(person.name); // undefined
 
 But that's not all! The `undefined` value is also returned when a function has a missing parameter:
 
-```
+```javascript
 function getDetails(a) {
   console.log(a);
 }
- 
+
 getDetails(); // undefined
 ```
 
 ### Array
 
-`const companies = ["Apple", "Google", "Amazon"];`
-
-add new:
-
-`companies.push("Yandex");`
-
-delete last:
-
-`companies.pop();`
-
-get by index
-
-`const firstPlace = companies[0]`
-
-check length
-
-`companies.length`
+```javascript
+const companies = ["Apple", "Google", "Amazon"];
+companies.push("Yandex"); // add new:
+companies.pop(); // delete last:
+const firstPlace = companies[0] // get by index
+companies.length // check length
+```
 
 ## Arithmetic operators
 
