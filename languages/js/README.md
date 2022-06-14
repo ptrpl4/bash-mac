@@ -503,6 +503,17 @@ short version of the `if...else` block
 const getColour = colour => colour === 'white' ? 'white' : 'black';
 ```
 
+## Loops
+
+### for
+
+```
+const names = ["JD", "DJ", "Dr. D"]
+for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}
+```
+
 ## Browser events
 
 [https://developer.mozilla.org/en-US/docs/Web/Events](https://developer.mozilla.org/en-US/docs/Web/Events)
