@@ -7,7 +7,7 @@ coverY: 0
 
 # 🔞 JavaScript
 
-## Links
+#### Links
 
 Styleguide - [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)&#x20;
 
@@ -171,31 +171,23 @@ The list below is sorted from the highest to the lowest precedence level:
 
 ## Boolean and logical operators
 
-### Comparison operators <a href="#step-title" id="step-title"></a>
+#### Comparison operators <a href="#step-title" id="step-title"></a>
 
 [**https://hyperskill.org/learn/step/8580**](https://hyperskill.org/learn/step/8580)
 
 There are only three of them in JavaScript: logical AND (`&&`), logical OR (`||`) and NOT (`!`).
 
-```
+```javascript
 console.log(true && true);   // true
 console.log(true && false);  // false
 console.log(false && true);  // false
 console.log(false && false); // false
-```
-
-`||` returns _false_ if both operands are false and _true_ in all other cases:
-
-```
+// || returns false if both operands are false and true in all other cases:
 console.log(true || true);   // true
 console.log(true || false);  // true
 console.log(false || true);  // true
 console.log(false || false); // false
-```
-
-`!` returns _false_ to true and _true_ to false:
-
-```
+// ! returns false to true and true to false: 
 console.log(!false); // true
 console.log(!true);  // false
 ```
