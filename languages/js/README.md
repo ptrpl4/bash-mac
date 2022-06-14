@@ -491,10 +491,15 @@ idealHuman.sayMyName(); // call method
 ### if
 
 ```javascript
-let condition = true; 
+let condition = null; 
  
-if (condition) {
-    console.log(“True!”);
+if (condition == null) {
+    console.log("True!");
+} else if (condition == 10) {
+    console.log("Wow its 10!")
+}
+else {
+    console.log("Not True");   
 }
 ```
 
