@@ -507,11 +507,39 @@ const getColour = colour => colour === 'white' ? 'white' : 'black';
 
 ### for
 
-```
+```javascript
 const names = ["JD", "DJ", "Dr. D"]
 for (let i = 0; i < names.length; i++) {
     console.log(names[i]);
 }
+```
+
+### while
+
+```javascript
+let answer = "sun";
+let guess = "";
+
+while (guess != answer) {
+    guess = prompt("What do you see?");
+}
+
+alert("Yep!");
+```
+
+### do while
+
+```javascript
+let factorial = 1;
+let number = 5;
+let original = number;
+
+do {
+    factorial = factorial * number;
+    number--
+} while (number > 0);
+
+console.log(original + " factorial is " + factorial);
 ```
 
 ## Browser events
