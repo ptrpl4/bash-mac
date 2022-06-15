@@ -7,7 +7,7 @@ coverY: 0
 
 # 🔞 JavaScript
 
-#### Links
+## Links
 
 Styleguide - [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)&#x20;
 
@@ -171,23 +171,31 @@ The list below is sorted from the highest to the lowest precedence level:
 
 ## Boolean and logical operators
 
-#### Comparison operators <a href="#step-title" id="step-title"></a>
+### Comparison operators <a href="#step-title" id="step-title"></a>
 
 [**https://hyperskill.org/learn/step/8580**](https://hyperskill.org/learn/step/8580)
 
 There are only three of them in JavaScript: logical AND (`&&`), logical OR (`||`) and NOT (`!`).
 
-```javascript
+```
 console.log(true && true);   // true
 console.log(true && false);  // false
 console.log(false && true);  // false
 console.log(false && false); // false
-// || returns false if both operands are false and true in all other cases:
+```
+
+`||` returns _false_ if both operands are false and _true_ in all other cases:
+
+```
 console.log(true || true);   // true
 console.log(true || false);  // true
 console.log(false || true);  // true
 console.log(false || false); // false
-// ! returns false to true and true to false: 
+```
+
+`!` returns _false_ to true and _true_ to false:
+
+```
 console.log(!false); // true
 console.log(!true);  // false
 ```
@@ -483,15 +491,10 @@ idealHuman.sayMyName(); // call method
 ### if
 
 ```javascript
-let condition = null; 
+let condition = true; 
  
-if (condition == null) {
-    console.log("True!");
-} else if (condition == 10) {
-    console.log("Wow its 10!")
-}
-else {
-    console.log("Not True");   
+if (condition) {
+    console.log(“True!”);
 }
 ```
 
@@ -501,45 +504,6 @@ short version of the `if...else` block
 
 ```javascript
 const getColour = colour => colour === 'white' ? 'white' : 'black';
-```
-
-## Loops
-
-### for
-
-```javascript
-const names = ["JD", "DJ", "Dr. D"]
-for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
-}
-```
-
-### while
-
-```javascript
-let answer = "sun";
-let guess = "";
-
-while (guess != answer) {
-    guess = prompt("What do you see?");
-}
-
-alert("Yep!");
-```
-
-### do while
-
-```javascript
-let factorial = 1;
-let number = 5;
-let original = number;
-
-do {
-    factorial = factorial * number;
-    number--
-} while (number > 0);
-
-console.log(original + " factorial is " + factorial);
 ```
 
 ## Browser events

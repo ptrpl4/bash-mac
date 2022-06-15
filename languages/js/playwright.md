@@ -2,16 +2,20 @@
 
 ## Installation
 
-req: node.js npm
+#### Requirements&#x20;
 
-```
+node.js&#x20;
+
+npm
+
+```bash
 # Run from your project's root directory
-npm init playwright
+npm init playwright@latest
 # Or create a new project
 npm init playwright new-project
 ```
 
-notes:
+notes
 
 ```
 Inside that directory, you can run several commands:
@@ -40,4 +44,10 @@ And check out the following files:
 Visit https://playwright.dev/docs/intro for more information. ✨
 
 Happy hacking
+```
+
+run
+
+```
+npx playwright test
 ```
