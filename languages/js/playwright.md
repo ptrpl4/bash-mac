@@ -1,29 +1,17 @@
 # Playwright
 
-## Links
-
-FAQ - [https://applitools.com/blog/top-playwright-questions-answered](https://applitools.com/blog/top-playwright-questions-answered/)
-
-Tutor - [https://testautomationu.applitools.com/js-playwright-tutorial](https://testautomationu.applitools.com/js-playwright-tutorial)
-
-Webinar - [https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web](https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web/)
-
 ## Installation
 
-#### Requirements&#x20;
+req: node.js npm
 
-node.js&#x20;
-
-npm
-
-```bash
+```
 # Run from your project's root directory
-npm init playwright@latest
+npm init playwright
 # Or create a new project
 npm init playwright new-project
 ```
 
-notes
+notes:
 
 ```
 Inside that directory, you can run several commands:
@@ -52,10 +40,4 @@ And check out the following files:
 Visit https://playwright.dev/docs/intro for more information. ✨
 
 Happy hacking
-```
-
-run
-
-```
-npx playwright test
 ```

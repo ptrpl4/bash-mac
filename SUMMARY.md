@@ -25,6 +25,8 @@
 * [☕ Java](languages/java/README.md)
   * [😖 Selenium](languages/java/selenium.md)
 * [🔞 JavaScript](languages/js/README.md)
+  * [Node](languages/js/node.md)
+  * [NPM](languages/js/npm.md)
   * [Playwright](languages/js/playwright.md)
   * [TypeScript](languages/js/typescript.md)
 * [DB](languages/db/README.md)
