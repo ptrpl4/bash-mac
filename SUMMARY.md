@@ -29,11 +29,11 @@
   * [NPM](languages/js/npm.md)
   * [Playwright](languages/js/playwright.md)
   * [TypeScript](languages/js/typescript.md)
-* [DB](languages/db/README.md)
+* [📑 DB](languages/db/README.md)
   * [📑 SQL](languages/db/sql/README.md)
     * [CLI](languages/db/sql/cli.md)
     * [Examples](languages/db/sql/examples.md)
-  * [NoSQL](languages/db/nosql/README.md)
+  * [📖 NoSQL](languages/db/nosql/README.md)
     * [MongoDB](languages/db/nosql/mongodb.md)
     * [Redis](languages/db/nosql/redis.md)
 
