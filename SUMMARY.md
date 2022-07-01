@@ -39,7 +39,7 @@
 
 ## Tools
 
-* [Docker](tools/docker.md)
+* [🐋 Docker](tools/docker.md)
 * [💻 Command line](tools/cli.md)
 * [📖 Git](tools/git.md)
 * [🍻 HomeBrew](tools/brew.md)
