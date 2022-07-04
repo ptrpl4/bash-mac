@@ -522,6 +522,8 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 console.log(found)
+// reverse for
+for (let i = Name.length-1; i >= 0; i--)   
 ```
 
 ### while
