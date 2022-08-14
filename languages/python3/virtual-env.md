@@ -2,7 +2,7 @@
 
 ### venv
 
-Go to project folder&#x20;
+Go to project folder
 
 ```bash
 # create env
@@ -13,4 +13,16 @@ $ source env/bin/activate
 $ deactivate
 ```
 
-### pypi
+### pipenv
+
+```
+# install
+pip install --user pipenv
+# install package
+pipenv install requests
+# install all packeges from Pipfile
+pipenv install
+# run app
+pipenv run python main.py
+```
+
