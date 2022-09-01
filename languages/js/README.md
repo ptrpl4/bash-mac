@@ -481,6 +481,32 @@ audio.play();
 audio.pause();
 ```
 
+## Promises <a href="#promises-in-javascript" id="promises-in-javascript"></a>
+
+a Promise is an object. There are 3 states of the Promise object:
+
+* **Pending:** Initial State, before the Promise succeeds or fails
+* **Resolved:** Completed Promise
+* **Rejected:** Failed Promise
+
+![](<../../.gitbook/assets/изображение (9).png>)
+
+It takes two parameters, one for success (resolve) and one for fail (reject):
+
+Finally, there will be a condition. If the condition is met, the Promise will be resolved, otherwise it will be rejected:
+
+```javascript
+const myPromise = new Promise((resolve, reject) => {  
+    let condition;  
+    
+    if(condition is met) {    
+        resolve('Promise is resolved successfully.');  
+    } else {    
+        reject('Promise is rejected');  
+    }
+});
+```
+
 ## Classes
 
 ```javascript
