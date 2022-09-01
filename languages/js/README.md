@@ -397,7 +397,7 @@ setTimeout(() => {
 }, 3000);
 ```
 
-## async <a href="#async_and_await" id="async_and_await"></a>
+## async-await
 
 The [`async`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async\_function) keyword gives you a simpler way to work with asynchronous promise-based code. Adding `async` at the start of a function makes it an async function.
 
@@ -422,7 +422,21 @@ async function fetchProducts() {
   }
 }
 
-fetchProducts();a
+fetchProducts();
+```
+
+```javascript
+async function getStarWarsMovie(id) {
+  const response = await fetch(`https://swapi.dev/api/films/${id}/`)
+  console.log("ответ получен", response) // *1
+  return response.json()
+}
+
+const movies = getStarWarsMovie(1).then((movie) => {
+  console.log(movie.title)
+}) // *2
+console.log("результат вызова функции", movies) // *3
+
 ```
 
 ## Objects
@@ -517,7 +531,7 @@ a Promise is an object. There are 3 states of the Promise object:
 * **Resolved:** Completed Promise
 * **Rejected:** Failed Promise
 
-![](<../../.gitbook/assets/изображение (2).png>)
+![](<../../.gitbook/assets/изображение (1).png>)
 
 It takes two parameters, one for success (resolve) and one for fail (reject):
 

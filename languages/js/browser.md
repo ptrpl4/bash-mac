@@ -8,4 +8,4 @@ In a browser it is named `window`, for Node.js it is `global`, for other environ
 
 
 
-![](../../.gitbook/assets/изображение.png)
+![](<../../.gitbook/assets/изображение (2).png>)
