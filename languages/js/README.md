@@ -397,6 +397,34 @@ setTimeout(() => {
 }, 3000);
 ```
 
+## async <a href="#async_and_await" id="async_and_await"></a>
+
+The [`async`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async\_function) keyword gives you a simpler way to work with asynchronous promise-based code. Adding `async` at the start of a function makes it an async function.
+
+Inside an async function, you can use the `await` keyword before a call to a function that returns a promise. This makes the code wait at that point until the promise is settled, at which point the fulfilled value of the promise is treated as a return value, or the rejected value is thrown.
+
+```javascript
+async function fetchProducts() {
+  try {
+    // after this line, our function will wait for the `fetch()` call to be settled
+    // the `fetch()` call will either return a Response or throw an error
+    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    // after this line, our function will wait for the `response.json()` call to be settled
+    // the `response.json()` call will either return the parsed JSON object or throw an error
+    const data = await response.json();
+    console.log(data[0].name);
+  }
+  catch (error) {
+    console.error(`Could not get products: ${error}`);
+  }
+}
+
+fetchProducts();a
+```
+
 ## Objects
 
 An **object** is a _non-primitive_ data type that represents an **unordered** collection of _properties_.A **property** is a part of the object that imitates a variable. It consists of a **key** and a **value** separated by a colon. A key can only be a string, but the value may be of any data type.
@@ -489,7 +517,7 @@ a Promise is an object. There are 3 states of the Promise object:
 * **Resolved:** Completed Promise
 * **Rejected:** Failed Promise
 
-![](<../../.gitbook/assets/изображение (9).png>)
+![](<../../.gitbook/assets/изображение (2).png>)
 
 It takes two parameters, one for success (resolve) and one for fail (reject):
 

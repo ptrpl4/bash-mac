@@ -6,7 +6,7 @@ description: HyperText Markup Language
 
 Структура
 
-![](<../../.gitbook/assets/изображение (2).png>)
+![](<../../.gitbook/assets/изображение (2) (1).png>)
 
 ## Sample
 
