@@ -377,6 +377,26 @@ const factorial = (n) => {
 const answer = factorial(3);
 ```
 
+## Callback Functions
+
+the way to create a callback function is to pass it as a parameter to another function, and then to call it back right after something has happened or some task is completed
+
+```javascript
+const message = function() {  
+    console.log("This message is shown after 3 seconds");
+}
+setTimeout(message, 3000);
+
+//Anonymous Function
+setTimeout(function() {  
+    console.log("This message is shown after 3 seconds");
+}, 3000);
+//Arrow Function
+setTimeout(() => { 
+    console.log("This message is shown after 3 seconds");
+}, 3000);
+```
+
 ## Objects
 
 An **object** is a _non-primitive_ data type that represents an **unordered** collection of _properties_.A **property** is a part of the object that imitates a variable. It consists of a **key** and a **value** separated by a colon. A key can only be a string, but the value may be of any data type.
