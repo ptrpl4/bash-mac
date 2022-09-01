@@ -19,6 +19,7 @@
   * [Nested lists](languages/python3/nested-lists.md)
 * [☕ Java](languages/java.md)
 * [🔞 JavaScript](languages/js/README.md)
+  * [Browser](languages/js/browser.md)
   * [Node](languages/js/node.md)
   * [NPM](languages/js/npm.md)
   * [TypeScript](languages/js/typescript.md)

@@ -6,7 +6,7 @@ description: HyperText Markup Language
 
 Структура
 
-![](<../../../.gitbook/assets/изображение (2).png>)
+![](<../../.gitbook/assets/изображение (2) (1).png>)
 
 ## Sample
 
@@ -90,11 +90,11 @@ most commonly used attributes:
 * `loop` cycles the audio file
 * `muted` mutes the sound when playing an audio file
 
-![](<../../../.gitbook/assets/image (13).png>)
+![](<../../.gitbook/assets/image (13).png>)
 
 ### Attributes
 
-The syntax of HTML attributes is also simple: \
+The syntax of HTML attributes is also simple:\
 each consists of **names** and **values**. The following example shows the syntax of attributes.
 
 ```markup
@@ -114,7 +114,7 @@ all list - [https://www.w3schools.com/tags/ref\_attributes.asp](https://www.w3sc
 
 ### id attribute <a href="#id-attribute" id="id-attribute"></a>
 
-* When creating a unique name, you can use only Latin alphabet characters (A-Z, a-z), numbers, hyphens, and underscores. For example, names `Navbar`, `nav_item` and `margin-b-40` will be correct.&#x20;
+* When creating a unique name, you can use only Latin alphabet characters (A-Z, a-z), numbers, hyphens, and underscores. For example, names `Navbar`, `nav_item` and `margin-b-40` will be correct.
 * The `id` name should not contain spaces. That is, names like `our products` will not be valid.
 * The `id` can be used for only one element; you will not be able to work with multiple elements that have identifiers with the same name.
 * Identifiers are case-sensitive: `id="FirstHeader"` and `id="firstheader"` are different identifiers.
@@ -143,9 +143,9 @@ In this example, the p element has two classes at once: `black` and `big-text`.
 **Block-level elements** are mostly used to create the structure of web pages or logically divide an HTML document into parts.\
 [https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level\_elements#Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level\_elements#Elements)
 
-![](<../../../.gitbook/assets/изображение (6).png>)
+![](<../../.gitbook/assets/изображение (6).png>)
 
-![](<../../../.gitbook/assets/изображение (7).png>)
+![](<../../.gitbook/assets/изображение (7).png>)
 
 In HTML5, however, the elements are not just divided into block-level and inline, but also grouped by meaning and purpose, representing **categories of content**.
 
@@ -155,12 +155,12 @@ They can contain only data and other inline items. The exception to this rule is
 
 Before and after, the browser doesn't make a line break. Take a look at the behavior of inline elements and compare it with that of block-level elements:
 
-![](<../../../.gitbook/assets/изображение (8).png>)
+![](<../../.gitbook/assets/изображение (8).png>)
 
 ## External CSS
 
 CSS styles written in a separate file are called **External Style Sheets**. To include External Style Sheets in an HTML document, use an unpaired `<link>` tag.\
-The `href` attribute specifies the file's address,  and the `rel` attribute with the `stylesheet` value tells the browser that we are connecting styles and not something else.
+The `href` attribute specifies the file's address, and the `rel` attribute with the `stylesheet` value tells the browser that we are connecting styles and not something else.
 
 ```markup
     <link rel="stylesheet" href="style.css">
@@ -197,9 +197,9 @@ CSS styles can be written directly in HTML markup instead of a separate file. Su
 
 ### DOM <a href="#briefly-about-dom" id="briefly-about-dom"></a>
 
-**DOM** (**Document Object Model)** is the representation of an HTML document as a tree structure that various programs can work with.&#x20;
+**DOM** (**Document Object Model)** is the representation of an HTML document as a tree structure that various programs can work with.
 
-![](<../../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (11).png>)
 
 ## Fonts
 
@@ -217,4 +217,3 @@ Comments can be used anywhere on the page **except** the `<title>` tag.
 ```
 <!-- Any text -->
 ```
-
