@@ -63,11 +63,11 @@ $ ssh-keygen
 $ /home/username/.ssh/second
 ```
 
-Add passphrases for Keys to KeyChain
+Add passphrases for Keys to KeyChain (flag -K - depricated)
 
 ```bash
-$ ssh-add -K ~/.ssh/id_rsa
-$ ssh-add -K ~/.ssh/second
+$ ssh-add --apple-use-keychain ~/.ssh/id_rsa
+$ ssh-add --apple-use-keychain ~/.ssh/second
 ```
 
 Change passphrase
@@ -90,4 +90,4 @@ $ ssh username@remote_host
 
 ## Links
 
-doc - [https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys#ssh-overview](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys#ssh-overview)\
+doc - [https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys#ssh-overview](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys#ssh-overview)\\
