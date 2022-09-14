@@ -22,6 +22,8 @@ target … : prerequisites …
 
 example
 
+!use TAB insted spaces to avoid run errors
+
 ```makefile
 say_hello:
         @echo "Hello World"
