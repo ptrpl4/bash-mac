@@ -52,6 +52,7 @@
 * [Jenkins](tools/jenkins.md)
 * [Apache JMeter](tools/apache-jmeter.md)
 * [Xcode](tools/xcode.md)
+* [Make](tools/make.md)
 
 ## Additional info
 

@@ -80,17 +80,6 @@ $say [-v voice] [-r rate] [-o outfile [audio format options] | -n name:port | -a
 
 Когда мы запускали `man`, то перед нами открывался `less` с загруженным туда контентом.
 
-## Multiple commands in one line
-
-<pre class="language-bash"><code class="lang-bash"># No matter the first command run successfully or not, run the second command cmd2:
-<strong>$ cd; ls
-</strong><strong># Only when the first command cmd1 run successfully, run the second command cmd2
-</strong><strong>$ cd &#x26;&#x26; ls
-</strong># Only when the first command cmd1 failed to run, run the second command cmd2
-$ cd || ls
-
-</code></pre>
-
 ### Renaming
 
 ```
