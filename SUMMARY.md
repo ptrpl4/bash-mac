@@ -72,6 +72,7 @@
   * [SSH](additional-info/web-development/ssh.md)
   * [Static/Dynamic sites](additional-info/web-development/untitled.md)
 * [😩 Other](additional-info/other/README.md)
+  * [😖 Scrum](additional-info/other/scrum.md)
   * [🤓 regexp](additional-info/other/regexp.md)
   * [SOLID](additional-info/other/solid.md)
   * [hash](additional-info/other/hash.md)
