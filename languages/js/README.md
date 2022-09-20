@@ -531,7 +531,7 @@ a Promise is an object. There are 3 states of the Promise object:
 * **Resolved:** Completed Promise
 * **Rejected:** Failed Promise
 
-![](../../.gitbook/assets/изображение.png)
+![](<../../.gitbook/assets/изображение (1).png>)
 
 It takes two parameters, one for success (resolve) and one for fail (reject):
 

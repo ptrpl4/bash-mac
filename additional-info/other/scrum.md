@@ -2,7 +2,11 @@
 
 ### _links_ <a href="#scrum-definition" id="scrum-definition"></a>
 
-__[_https://scrumguides.org/scrum-guide.html_](https://scrumguides.org/scrum-guide.html)__
+__[_https://scrumguides.org/scrum-guide.html_](https://scrumguides.org/scrum-guide.html)__\
+__[_https://www.scrum.org/resources/scrum-glossary_](https://www.scrum.org/resources/scrum-glossary)__\
+__
+
+<figure><img src="../../.gitbook/assets/изображение (3).png" alt=""><figcaption><p>Scrum Framework</p></figcaption></figure>
 
 ### Scrum Definition <a href="#scrum-definition" id="scrum-definition"></a>
 
@@ -36,6 +40,8 @@ If any aspects of a process deviate outside acceptable limits or if the resultin
 Adaptation becomes more difficult when the people involved are not empowered or self-managing. A Scrum Team is expected to adapt the moment it learns anything new through inspection.
 
 ### Scrum Values
+
+<figure><img src="../../.gitbook/assets/изображение (9).png" alt=""><figcaption></figcaption></figure>
 
 Successful use of Scrum depends on people becoming more proficient in living five values:
 
@@ -203,4 +209,9 @@ The moment a Product Backlog item meets the Definition of Done, an Increment is 
 
 The Definition of Done creates transparency by providing everyone a shared understanding of what work was completed as part of the Increment. If a Product Backlog item does not meet the Definition of Done, it cannot be released or even presented at the Sprint Review. Instead, it returns to the Product Backlog for future consideration.
 
-\
+## Manifesto for Agile Software Development
+
+* Individuals and interactions over processes and tools&#x20;
+* Working software over comprehensive documentation&#x20;
+* Customer collaboration over contract negotiation&#x20;
+* Responding to change over following a plan\

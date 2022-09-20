@@ -6,7 +6,7 @@ Web browsers communicate with [web servers](https://developer.mozilla.org/en-US/
 
 A _static site_ is one that returns the same hard coded content from the server whenever a particular resource is requested
 
-![](<../../.gitbook/assets/изображение (1).png>)
+![](<../../.gitbook/assets/изображение (1) (2).png>)
 
 ### Dynamic sites <a href="#dynamic_sites" id="dynamic_sites"></a>
 
