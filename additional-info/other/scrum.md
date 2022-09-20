@@ -6,7 +6,7 @@ __[_https://scrumguides.org/scrum-guide.html_](https://scrumguides.org/scrum-gui
 
 ### Scrum Definition <a href="#scrum-definition" id="scrum-definition"></a>
 
-In a nutshell, Scrum requires a Scrum Master to foster an environment where:
+Structure:
 
 1. A Product Owner orders the work for a complex problem into a Product Backlog.
 2. The Scrum Team turns a selection of the work into an Increment of value during a Sprint.
@@ -136,3 +136,71 @@ Selecting how much can be completed within a Sprint may be challenging. However,
 **Topic Three: How will the chosen work get done?**
 
 For each selected Product Backlog item, the Developers plan the work necessary to create an Increment that meets the Definition of Done. This is often done by decomposing Product Backlog items into smaller work items of one day or less. How this is done is at the sole discretion of the Developers. No one else tells them how to turn Product Backlog items into Increments of value.
+
+### Daily Scrum <a href="#daily-scrum" id="daily-scrum"></a>
+
+The purpose of the Daily Scrum is to inspect progress toward the Sprint Goal and adapt the Sprint Backlog as necessary, adjusting the upcoming planned work.
+
+The Daily Scrum is a 15-minute event for the Developers of the Scrum Team. To reduce complexity, it is held at the same time and place every working day of the Sprint.
+
+### Sprint Review <a href="#sprint-review" id="sprint-review"></a>
+
+The purpose of the Sprint Review is to inspect the outcome of the Sprint and determine future adaptations. The Scrum Team presents the results of their work to key stakeholders and progress toward the Product Goal is discussed.
+
+During the event, the Scrum Team and stakeholders review what was accomplished in the Sprint and what has changed in their environment. Based on this information, attendees collaborate on what to do next. The Product Backlog may also be adjusted to meet new opportunities. The Sprint Review is a working session and the Scrum Team should avoid limiting it to a presentation.
+
+### Sprint Retrospective <a href="#sprint-retrospective" id="sprint-retrospective"></a>
+
+The purpose of the Sprint Retrospective is to plan ways to increase quality and effectiveness.
+
+The Scrum Team inspects how the last Sprint went with regards to individuals, interactions, processes, tools, and their Definition of Done. Inspected elements often vary with the domain of work. Assumptions that led them astray are identified and their origins explored. The Scrum Team discusses what went well during the Sprint, what problems it encountered, and how those problems were (or were not) solved.
+
+The Scrum Team identifies the most helpful changes to improve its effectiveness. The most impactful improvements are addressed as soon as possible. They may even be added to the Sprint Backlog for the next Sprint.
+
+## Scrum Artifacts <a href="#scrum-artifacts" id="scrum-artifacts"></a>
+
+Scrum’s artifacts represent work or value. They are designed to maximize transparency of key information. Thus, everyone inspecting them has the same basis for adaptation.
+
+Each artifact contains a commitment to ensure it provides information that enhances transparency and focus against which progress can be measured:
+
+* For the Product Backlog it is the Product Goal.
+* For the Sprint Backlog it is the Sprint Goal.
+* For the Increment it is the Definition of Done.
+
+### Product Backlog <a href="#product-backlog" id="product-backlog"></a>
+
+The Product Backlog is an emergent, ordered list of what is needed to improve the product. It is the single source of work undertaken by the Scrum Team.
+
+Product Backlog items that can be Done by the Scrum Team within one Sprint are deemed ready for selection in a Sprint Planning event. They usually acquire this degree of transparency after refining activities. Product Backlog refinement is the act of breaking down and further defining Product Backlog items into smaller more precise items. This is an ongoing activity to add details, such as a description, order, and size. Attributes often vary with the domain of work.
+
+**Commitment: Product Goal**
+
+The Product Goal describes a future state of the product which can serve as a target for the Scrum Team to plan against. The Product Goal is in the Product Backlog. The rest of the Product Backlog emerges to define “what” will fulfill the Product Goal.
+
+### Sprint Backlog <a href="#sprint-backlog" id="sprint-backlog"></a>
+
+The Sprint Backlog is composed of the Sprint Goal (why), the set of Product Backlog items selected for the Sprint (what), as well as an actionable plan for delivering the Increment (how).
+
+The Sprint Backlog is a plan by and for the Developers. It is a highly visible, real-time picture of the work that the Developers plan to accomplish during the Sprint in order to achieve the Sprint Goal. Consequently, the Sprint Backlog is updated throughout the Sprint as more is learned. It should have enough detail that they can inspect their progress in the Daily Scrum.
+
+**Commitment: Sprint Goal**
+
+The Sprint Goal is the single objective for the Sprint.&#x20;
+
+The Sprint Goal is created during the Sprint Planning event and then added to the Sprint Backlog. As the Developers work during the Sprint, they keep the Sprint Goal in mind. If the work turns out to be different than they expected, they collaborate with the Product Owner to negotiate the scope of the Sprint Backlog within the Sprint without affecting the Sprint Goal.
+
+### Increment
+
+An Increment is a concrete stepping stone toward the Product Goal. Each Increment is additive to all prior Increments and thoroughly verified, ensuring that all Increments work together. In order to provide value, the Increment must be usable.
+
+Work cannot be considered part of an Increment unless it meets the Definition of Done.
+
+**Commitment: Definition of Done**
+
+The Definition of Done is a formal description of the state of the Increment when it meets the quality measures required for the product.
+
+The moment a Product Backlog item meets the Definition of Done, an Increment is born.
+
+The Definition of Done creates transparency by providing everyone a shared understanding of what work was completed as part of the Increment. If a Product Backlog item does not meet the Definition of Done, it cannot be released or even presented at the Sprint Review. Instead, it returns to the Product Backlog for future consideration.
+
+\
