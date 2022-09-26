@@ -256,3 +256,13 @@ DROP VIEW <view_name>;
 #### Вложенные подзапросы
 
 Вложенные подзапросы — это SQL-запросы, которые включают выражения `SELECT`, `FROM` и `WHERE`, вложенные в другой запрос.
+
+## Command types
+
+* DDL – Data Definition Language
+* DQl – Data Query Language
+* DML – Data Manipulation Language
+* DCL – Data Control Language
+* TCL – Transaction Control Language
+
+<figure><img src="../../../.gitbook/assets/изображение (5).png" alt=""><figcaption></figcaption></figure>
