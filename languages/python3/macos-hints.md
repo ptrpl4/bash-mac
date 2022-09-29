@@ -1,22 +1,18 @@
-# macOS Hints
+# Python Setup
 
-## python2=>python3 transition
+## macOS Hints
 
-Until we have preinstalled python2 in macOS...
+### python2=>python3 transition
 
-Just add two new lines to zsh configuration file
+Until we have preinstalled python2 in macOS... Just add two new lines to zsh configuration file
 
-```
+```bash
+# check path before changing
 $ echo "alias pip=/usr/bin/pip3" >> ~/.zshrc  
 $ echo "alias python=/usr/bin/python3" >> ~/.zshrc
-# and check results
+# open new term. session and check results
 $ python --version && pip --version  
 ```
 
-! check path before changing
 
-How to use an old one?
 
-pip - no way!
-
-python2 - $ \python

@@ -11,7 +11,7 @@
     * [Configs](languages/python3/pytest/configs.md)
     * [Markers](languages/python3/pytest/markers.md)
     * [fixtures](languages/python3/pytest/fixtures.md)
-  * [macOS Hints](languages/python3/macos-hints.md)
+  * [Python Setup](languages/python3/macos-hints.md)
   * [🐘 Django](languages/python3/django.md)
   * [Virtual env](languages/python3/virtual-env.md)
   * [List comprehension](languages/python3/list-comprehension.md)
