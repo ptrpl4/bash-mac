@@ -20,7 +20,7 @@ description: Developer Roadmap
 
 ### About
 
-Это система контроля версий.  Пример - у нас есть файлы с которыми мы взаимодействуем, пишем данный текст в документе хрень.txt, соответственно данная система должна контролировать когда, кто и что записал в этот файл.
+Это система контроля версий. Пример - у нас есть файлы с которыми мы взаимодействуем, пишем данный текст в документе хрень.txt, соответственно данная система должна контролировать когда, кто и что записал в этот файл.
 
 Для установки git на mac нам будут нужны две вещи. Terminal и HomeBrew.
 
@@ -31,7 +31,7 @@ $ brew install git
 #install git
 ```
 
-Есть достаточно много альтернатив, позволяющих работать с Git  в графическом интерфейсе. Но для лучшего понимания изначальной задумки и структуры лучше начать с этого.&#x20;
+Есть достаточно много альтернатив, позволяющих работать с Git в графическом интерфейсе. Но для лучшего понимания изначальной задумки и структуры лучше начать с этого.
 
 ### fast start
 
@@ -44,11 +44,17 @@ git push
 
 ## config
 
-```
+```bash
 # check settings
 git config --list --show-origin
+
+# set global
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
+
+# set local
+git config --local user.name "Petr V."
+git config --local user.email ptrpl4@ya.ru
 ```
 
 ## Commit
@@ -219,5 +225,4 @@ $ git push origin --delete bad-branch-name
 ```
 # add test_branch to current branch
 git merge test_branch
-
 ```

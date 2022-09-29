@@ -48,7 +48,7 @@
 * [🐋 Docker](tools/docker.md)
 * [💻 Command line](tools/cli.md)
 * [📖 Git](tools/git.md)
-* [🛶 SSH](tools/ssh.md)
+* [🛶 SSH](additional-info/web-development/ssh.md)
 * [🖇 CI/CD](tools/ci-cd/README.md)
   * [🦊 Gitlab pipelines](tools/ci-cd/gitlab-pipelines.md)
 * [🍻 HomeBrew](tools/brew.md)
