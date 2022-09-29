@@ -1,20 +1,12 @@
 # 🦊 Gitlab pipelines
 
-#### Info
+### Info
 
 A pipeline is composed of independent jobs that run scripts, grouped into stages. Stages run in sequential order, but jobs within stages run in parallel.
 
-#### Links
+### .gitlab-ci.yml
 
-doc - [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
-
-#### Filename
-
-```
-.gitlab-ci.yml
-```
-
-#### File Structure
+structure
 
 ```yaml
 # List of stages for jobs, and their order of execution
@@ -53,29 +45,3 @@ deploy-job:
     - echo "Deploying application..."
     - echo "Application successfully deployed.
 ```
-
-## Jobs
-
-### Job name limitations
-
-You can’t use these keywords as job names:
-
-* `image`
-* `services`
-* `stages`
-* `types`
-* `before_script`
-* `after_script`
-* `variables`
-* `cache`
-* `include`
-* `true`
-* `false`
-* `nil`
-
-Job names must be 255 characters or fewer.
-
-Use unique names for your jobs. If multiple jobs have the same name, only one is added to the pipeline, and it’s difficult to predict which one is chosen.
-
-
-

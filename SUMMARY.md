@@ -46,7 +46,7 @@
     * [MongoDB](tools/db/nosql/mongodb.md)
     * [Redis](tools/db/nosql/redis.md)
 * [🐋 Docker](tools/docker.md)
-* [💻 CMD](tools/cli.md)
+* [💻 Shell](tools/cli.md)
 * [📖 Git](tools/git.md)
 * [🛶 SSH](additional-info/web-development/ssh.md)
 * [🖇 CI/CD](tools/ci-cd/README.md)
