@@ -1,12 +1,16 @@
 # 🦊 Gitlab pipelines
 
-### Info
+## Info
 
 A pipeline is composed of independent jobs that run scripts, grouped into stages. Stages run in sequential order, but jobs within stages run in parallel.
 
-### .gitlab-ci.yml
+### Filename
 
-structure
+```
+.gitlab-ci.yml
+```
+
+### File Structure
 
 ```yaml
 # List of stages for jobs, and their order of execution
