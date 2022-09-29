@@ -8,7 +8,7 @@
   * [requirements](languages/python3/requirements.md)
   * [Generators and yield](languages/python3/generators-and-yield.md)
   * [pytest](languages/python3/pytest/README.md)
-    * [Configs](languages/python3/pytest/configs.md)
+    * [pytest Setup](languages/python3/pytest/configs.md)
     * [Markers](languages/python3/pytest/markers.md)
     * [fixtures](languages/python3/pytest/fixtures.md)
   * [Python Setup](languages/python3/macos-hints.md)
