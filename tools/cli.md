@@ -1,4 +1,8 @@
-# 💻 Command line
+---
+description: Bash/ZSH
+---
+
+# 💻 CMD
 
 Shortcuts - [https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac](https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac)
 
@@ -110,8 +114,9 @@ cp renamed-file renamed-file-copy
 
 `-f` all without question
 
-```
-rm -rf one
+```bash
+rm folder/filename
+rm -rf foder/foldername
 ```
 
 ### History
