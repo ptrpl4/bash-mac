@@ -12,12 +12,17 @@ docker run -d -p 80:80 docker/getting-started
 docker run -i -t ubuntu bash # one more example
 ```
 
-build
+### build
 
 ```bash
 docker build -t getting-started .
 # -t flag tags image. We named the image and we can refer to that.
 # . means Docker should look for the Dockerfile in the current directory.
+
+# example when file not in root folder
+docker build --file build/Dockerfile --tag ptrpl4/repo:ci-cd-test-app-1.0  .
+# dont forget "." in the end!
+
 ```
 
 ## `Dockerfile`
