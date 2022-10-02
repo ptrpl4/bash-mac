@@ -18,13 +18,21 @@ Database and OS scripting - [https://ss64.com/](https://ss64.com)
 
 ## Syntax
 
-### model
+### man example
 
 ```bash
+$ say [-v voice] [-r rate] [-o outfile [audio format options] | -n name:port | -a device] [-f file | string ...]
+
+# one more
 $ command [params...] [-options…] | command_two <param> [-options…]
+
 # another example
 $ cmd [param 1|param 2] 
 ```
+
+Квадратные скобки `[]` обозначают необязательность. Например, опция `-v` необязательна, то же самое касается и любых других опций этой программы. Вертикальная черта `|` обозначает операцию "или", причём именно **исключающее или**. Посмотрите на последний блок `[-f file | string ...]`. Он означает, что `say` может либо произносить текст из файла, либо произносить строчку, переданную как аргумент, но не то и другое одновременно. Бывают и другие вариации описания способов вызова: значение по умолчанию, выбор из конкретных элементов, отрицание.
+
+Значение опции указывается через пробел от самой опции. Если значение опции содержит в себе специальные или пробельные символы, то его нужно оборачивать в кавычки, двойные или одинарные - не важно.
 
 #### params
 
@@ -36,18 +44,6 @@ If only one of several parameters can be chosen, vertical bars are used: \[param
 #### options
 
 _-options_ are **command line options** or **flags**, that modify the operation
-
-#### pipe
-
-&#x20;\| pipe - connect output first command to input next command
-
-```bash
-# copy public key to clipboard 
-$ cat ~/.ssh/id_rsa.pub | pbcopy
-
-# find keyword in ls results
-$ ls ~/.ssh | grep digital
-```
 
 ## Buit in
 
@@ -75,17 +71,17 @@ cd ..
 
 `touch` - file creating (not main function, but typical)
 
-## Model - ru
+#### pipe
+
+&#x20;\| pipe - connect output first command to input next command
 
 ```bash
-$say [-v voice] [-r rate] [-o outfile [audio format options] | -n name:port | -a device] [-f file | string ...]
+# copy public key to clipboard 
+$ cat ~/.ssh/id_rsa.pub | pbcopy
+
+# find keyword in ls results
+$ ls ~/.ssh | grep digital
 ```
-
-Квадратные скобки `[]` обозначают необязательность. Например, опция `-v` необязательна, то же самое касается и любых других опций этой программы. Вертикальная черта `|` обозначает операцию "или", причём именно **исключающее или**. Посмотрите на последний блок `[-f file | string ...]`. Он означает, что `say` может либо произносить текст из файла, либо произносить строчку, переданную как аргумент, но не то и другое одновременно. Бывают и другие вариации описания способов вызова: значение по умолчанию, выбор из конкретных элементов, отрицание.
-
-Значение опции указывается через пробел от самой опции. Если значение опции содержит в себе специальные или пробельные символы, то его нужно оборачивать в кавычки, двойные или одинарные - не важно.
-
-Когда мы запускали `man`, то перед нами открывался `less` с загруженным туда контентом.
 
 ## Multiple commands in one line
 
