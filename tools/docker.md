@@ -94,3 +94,14 @@ docker ps # get id
 docker stop <the-container-id>
 docker rm <the-container-id>
 ```
+
+## Docker on remote pc
+
+```bash
+# connect, login, delete existed, run new in background (example from gitlab ci)
+script:
+    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY root@138.68.92.11 "
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD &&
+        docker ps -aq | xargs docker stop | xargs docker rm && 
+        docker run -d -p 5000:5000 $IMAGE_NAME:$IMAGE_TAG "
+```
