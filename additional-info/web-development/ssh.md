@@ -2,7 +2,7 @@
 
 ## SSH Keys
 
-Structure
+### Structure
 
 /Users/current\_user/.ssh
 
@@ -16,22 +16,18 @@ Structure
 └── known_hosts
 ```
 
-Setup (macOS)
+### Setup (macOS)
 
 Create First Key
 
-```
+```bash
+# create key with rsa type, 4096 bits, with email in comment
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-# Generating public/private rsa key pair.
-# Enter file in which to save the key (/home/username/.ssh/id_rsa):
-# Press Enter^
-$ Enter passphrase (empty for no passphrase):
-# then add passphrase
 ```
 
 Edit Config
 
-```
+```bash
 $ nano ~/.ssh/config
 ```
 
@@ -46,35 +42,42 @@ Host github
   
 Host bitbucket-corporate
   HostName bitbucket.org
-  User second
+  User corporate
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/second
+  IdentityFile ~/.ssh/corporate_key
   UseKeychain yes
   IdentitiesOnly yes
 ```
 
 Create second key
 
-```
-$ ssh-keygen
+```bash
+$ ssh-keygen -t rsa -b 4096 -C "your_corporate_email@example.com"
 # Generating public/private rsa key pair.
 # Enter file in which to save the key (/home/username/.ssh/id_rsa):
 # add path and name for key^
-$ /home/username/.ssh/second
+$ /home/username/.ssh/corporate_key
 ```
 
 Add passphrases for Keys to KeyChain (flag -K - depricated)
 
 ```bash
-$ ssh-add --apple-use-keychain ~/.ssh/id_rsa
-$ ssh-add --apple-use-keychain ~/.ssh/second
+ssh-add --apple-use-keychain ~/.ssh/id_rsa
+ssh-add --apple-use-keychain ~/.ssh/corporate_key
 ```
 
-Change passphrase
+Change passphrase (if needed)
 
 ```bash
-$ ssh-keygen -p
+ssh-keygen -p
 ```
+
+Use chosen key
+
+<pre class="language-bash"><code class="lang-bash"># ssh with identity_file
+<strong>ssh -i ~/.ssh/corporate_key root@192.168.1.1
+</strong><strong># use default
+</strong>ssh root@138.68.92.49</code></pre>
 
 ## Copy Public Key
 
@@ -85,7 +88,9 @@ $ cat ~/.ssh/id_rsa.pub | pbcopy
 ## SSH Connect
 
 ```bash
-$ ssh username@remote_host
+ssh username@remote_host
+# without checking host
+ssh -o StrictHostKeyChecking=no username@remote_host 
 ```
 
 ## Links
