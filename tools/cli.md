@@ -16,23 +16,24 @@ Filesystem Hierarchy Standard - [https://ru.wikipedia.org/wiki/FHS](https://ru.w
 
 Database and OS scripting - [https://ss64.com/](https://ss64.com)
 
-## Commands syntax
+## Syntax
 
 ### model
 
 ```bash
 $ command [params...] [-options…] | command_two <param> [-options…]
+# another example
 $ cmd [param 1|param 2] 
 ```
 
-#### _params_
+#### params
 
-Required parameters are written in angle brackets _\<param>_ \
-optional – in square brackets _\[param]_\
-To indicate that a parameter can be repeated, ellipses are used _\[params...]_\
-If only one of several parameters can be chosen, vertical bars are used: _\[param 1|param 2]_
+Required parameters are written in angle brackets \<param> \
+optional – in square brackets \[param]\
+To indicate that a parameter can be repeated, ellipses are used \[params...]\
+If only one of several parameters can be chosen, vertical bars are used: \[param 1|param 2]
 
-#### _options_
+#### options
 
 _-options_ are **command line options** or **flags**, that modify the operation
 
@@ -48,13 +49,13 @@ $ cat ~/.ssh/id_rsa.pub | pbcopy
 $ ls ~/.ssh | grep digital
 ```
 
-To display all available built-in system commands, type _man builtin_
+## Buit in
 
-To quit manual, press q
-
-`man command` для выхода из режима просмотра нажмите q, для просмотра вперёд f (forward), назад — b (backward).
+To display all available built-in system commands, type `man builtin`\
+__To quit manual press q,  f (forward),  b (backward).
 
 ```bash
+# cd - change directory
 cd {folder/path} 
 cd ~/.ssh
 cd ..
@@ -62,21 +63,19 @@ cd ..
 
 `pwd` - **p**rint **w**orking **d**irectory
 
-`cd` - **c**hange **d**irectory
-
 `ls` - list directory contents
 
 `stat` - display file or file system status
 
 `hier` or `man hier` - layout of filesystems
 
-`cat` -- concatenate and print files
+`cat` - concatenate and print files
 
 `grep` - (**g**lobal **r**egular **e**xpression **p**rint) searching
 
 `touch` - file creating (not main function, but typical)
 
-## Manual
+## Model - ru
 
 ```bash
 $say [-v voice] [-r rate] [-o outfile [audio format options] | -n name:port | -a device] [-f file | string ...]
@@ -95,9 +94,7 @@ $say [-v voice] [-r rate] [-o outfile [audio format options] | -n name:port | -a
 </strong><strong># Only when the first command cmd1 run successfully, run the second command cmd2
 </strong><strong>$ cd &#x26;&#x26; ls
 </strong># Only when the first command cmd1 failed to run, run the second command cmd2
-$ cd || ls
-
-</code></pre>
+$ cd || ls</code></pre>
 
 ### Renaming
 
