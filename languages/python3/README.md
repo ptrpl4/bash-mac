@@ -442,7 +442,7 @@ _именованный блок кода с одной определенной
 
 [https://docs.python.org/3/library/functions.html](https://docs.python.org/3/library/functions.html) -полный список
 
-![in Python 3.8.2](../../.gitbook/assets/image.png)
+![in Python 3.8.2](<../../.gitbook/assets/image (20).png>)
 
 `print()`
 

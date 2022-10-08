@@ -56,6 +56,7 @@
 * [Apache JMeter](tools/apache-jmeter.md)
 * [Xcode](tools/xcode.md)
 * [Make](tools/make.md)
+* [🐇 Message Brokers](tools/message-brokers.md)
 
 ## Additional info
 
@@ -72,6 +73,7 @@
   * [JSON](additional-info/web-development/json.md)
   * [Static/Dynamic sites](additional-info/web-development/untitled.md)
 * [😩 Other](additional-info/other/README.md)
+  * [🪨 Monolith and Microservices](additional-info/other/monolith-and-microservices.md)
   * [😖 Scrum](additional-info/other/scrum.md)
   * [🤓 regexp](additional-info/other/regexp.md)
   * [SOLID](additional-info/other/solid.md)
