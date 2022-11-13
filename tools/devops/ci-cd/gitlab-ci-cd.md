@@ -1,4 +1,4 @@
-# 🦊 Gitlab pipelines
+# 🦊 GitLab CI/CD
 
 ## Info
 
@@ -131,7 +131,7 @@ build_image:
 
 ### Docker
 
-doc - [https://app.gitbook.com/s/-LcfwXJnDmljkkxrOjKD/\~/changes/5SZzGUfIdp4URfMFYILq/tools/ci-cd/gitlab-pipelines#info](gitlab-pipelines.md#info)
+doc - [https://app.gitbook.com/s/-LcfwXJnDmljkkxrOjKD/\~/changes/5SZzGUfIdp4URfMFYILq/tools/ci-cd/gitlab-pipelines#info](gitlab-ci-cd.md#info)
 
 ```yaml
 # build, and push to registry
