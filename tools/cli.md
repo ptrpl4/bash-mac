@@ -45,6 +45,14 @@ If only one of several parameters can be chosen, vertical bars are used: \[param
 
 _-options_ are **command line options** or **flags**, that modify the operation
 
+### variables
+
+```bash
+TASK="project-1955"
+TOKEN="bblablatoken64"
+open https://main-url-$TASK.nl-k8s-stage.srv.local\?token=$TOKEN
+```
+
 ## Buit in
 
 To display all available built-in system commands, type `man builtin`\
@@ -90,7 +98,8 @@ $ ls ~/.ssh | grep digital
 </strong><strong># Only when the first command cmd1 run successfully, run the second command cmd2
 </strong><strong>$ cd &#x26;&#x26; ls
 </strong># Only when the first command cmd1 failed to run, run the second command cmd2
-$ cd || ls</code></pre>
+$ cd || ls
+</code></pre>
 
 ### Renaming
 
