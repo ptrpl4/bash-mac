@@ -13,7 +13,8 @@ sqlMaterials:
 
 #### Basic:
 
-СУБД - система управления базами данных
+СУБД - система управления базами данных\
+RDBMS - Relational Database Management System
 
 ### Правила проектирования:
 
@@ -35,7 +36,8 @@ USE &#x3C;database_name>;
 # Импорт SQL-команд из файла .sql
 SOURCE &#x3C;path_of_.sql_file>; 
 # Удаление базы данных
-DROP DATABASE &#x3C;database_name>;</code></pre>
+DROP DATABASE &#x3C;database_name>;
+</code></pre>
 
 ### Работа с таблицами
 
