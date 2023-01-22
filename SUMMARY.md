@@ -64,12 +64,11 @@
 
 * [⚒ QA Job Interview (RU)](additional-info/qa-job-interview-ru.md)
 * [🕸 Web](additional-info/web-development/README.md)
+  * [🔧 HTTP](additional-info/web-development/http.md)
   * [CORS](additional-info/web-development/cors.md)
-  * [OSI Model](additional-info/web-development/osi-model.md)
   * [Authentication and Authorization](additional-info/web-development/authentication-and-authorization.md)
   * [Security](additional-info/web-development/security.md)
   * [Networking](additional-info/web-development/networking.md)
-  * [🔧 HTTP](additional-info/web-development/http.md)
   * [URL](additional-info/web-development/url.md)
   * [HTML](additional-info/web-development/html.md)
   * [CSS](additional-info/web-development/css.md)

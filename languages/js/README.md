@@ -339,6 +339,7 @@ Syntax
 ```javascript
 fetch(resource)
 fetch(resource, options)
+// response - Promise with Response object
 ```
 
 **example**
@@ -351,6 +352,8 @@ fetch('https://domain.com/api/v1/purchases?limit=50&offset=50',
               'Authorization': 'Bearer blalax'
           }
 })
+  .then((response) => response.json())
+  .then((data) => data)
 ```
 
 ### **user-defined**
@@ -546,7 +549,26 @@ audio.play();
 audio.pause();
 ```
 
-## Promises <a href="#promises-in-javascript" id="promises-in-javascript"></a>
+### XMLHttpRequest (XHR)
+
+objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh.
+
+`XMLHttpRequest` is used heavily in [AJAX](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX) programming.
+
+Despite its name, `XMLHttpRequest` can be used to retrieve any type of data, not just XML.
+
+```javascript
+function reqListener() {
+  console.log(this.responseText);
+}
+
+const req = new XMLHttpRequest();
+req.addEventListener("load", reqListener);
+req.open("GET", "http://www.example.org/example.txt");
+req.send();
+```
+
+### Promises <a href="#promises-in-javascript" id="promises-in-javascript"></a>
 
 a Promise is an object. There are 3 states of the Promise object:
 
@@ -721,4 +743,36 @@ document.addEventListener("keydown", function(event) {
     console.log("W Pressed");
   }
 });
+```
+
+## XHR vs fetch
+
+<figure><img src="../../.gitbook/assets/85825.png" alt=""><figcaption></figcaption></figure>
+
+Instead of having to write code like this
+
+```javascript
+function reqListener() {
+    var data = JSON.parse(this.responseText);
+}
+
+function reqError(err) { ... }
+
+var oReq = new XMLHttpRequest();
+oReq.onload = reqListener;
+oReq.onerror = reqError;
+oReq.open('get', './api/some.json', true);
+oReq.send();
+```
+
+we can clean things up and write something a little more concise and readable with promises and modern syntax
+
+```javascript
+fetch('./api/some.json')
+    .then((response) => {
+        response.json().then((data) => { 
+            ... 
+        });
+    })
+    .catch((err) => { ... });
 ```

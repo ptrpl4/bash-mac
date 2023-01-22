@@ -27,7 +27,15 @@ The **start line** and the **header** are required attributes, so the other part
 | **4xx: Client Error**  | It reports errors on the client's side.                                                                              |
 | **5xx: Server Error**  | The code indicates that the operation was unsuccessful due to the fault of the server.                               |
 
-****
+## HTTP Request Methods
+
+### **Options**
+
+The **HTTP `OPTIONS` method** requests permitted communication options for a given URL or server. A client can specify a URL with this method, or an asterisk (`*`) to refer to the entire server.
+
+
+
+
 
 ## Links
 
