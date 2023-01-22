@@ -336,9 +336,21 @@ The global **`fetch()`** method starts the process of fetching a resource from t
 
 Syntax
 
-```
+```javascript
 fetch(resource)
 fetch(resource, options)
+```
+
+**example**
+
+```javascript
+fetch('https://domain.com/api/v1/purchases?limit=50&offset=50', 
+      {
+          headers: 
+          {
+              'Authorization': 'Bearer blalax'
+          }
+})
 ```
 
 ### **user-defined**
