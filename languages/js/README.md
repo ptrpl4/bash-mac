@@ -330,6 +330,17 @@ With the `querySelector()` method it is possible to return the first document el
 </script>
 ```
 
+#### `fetch()`
+
+The global **`fetch()`** method starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
+
+Syntax
+
+```
+fetch(resource)
+fetch(resource, options)
+```
+
 ### **user-defined**
 
 **default style**
