@@ -1,3 +1,7 @@
+---
+description: Uniform Resource Locator
+---
+
 # URL
 
 URL address has a certain structure based on the following template:
