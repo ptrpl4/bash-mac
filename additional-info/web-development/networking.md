@@ -6,9 +6,9 @@
 
 Web-App на низком уровне - [https://www.youtube.com/watch?v=4haMUvUxUJI](https://www.youtube.com/watch?v=4haMUvUxUJI)
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-![сетевая модель стека сетевых протоколов OSI](<../../.gitbook/assets/image (6) (1).png>)
+![сетевая модель стека сетевых протоколов OSI](<../../.gitbook/assets/image (6).png>)
 
 ![Уровни стека TCP/IP](<../../.gitbook/assets/image (7).png>)
 
@@ -108,7 +108,7 @@ HTTP позволяет браузеру и серверу договорить�
 Пространство имен разделено на зоны (домены)\
 За каждую зону отвечает регистратор.
 
-![](<../../.gitbook/assets/image (2) (1).png>)
+![](<../../.gitbook/assets/image (2).png>)
 
 #### Команды:
 
@@ -118,7 +118,7 @@ HTTP позволяет браузеру и серверу договорить�
 
 #### Режим работы DNS
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 #### Типы ответов
 
