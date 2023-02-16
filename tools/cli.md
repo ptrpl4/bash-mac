@@ -144,3 +144,19 @@ brew install tldr
 tldr ls
 tldr cd
 ```
+
+## Aliases
+
+```bash
+# to save it in shell zsh - ~/.zshrc
+nano ~/.bashrc
+# add alias
+
+# Add ssh key
+alias key='ssh-add --apple-use-keychain ~/.ssh/id_rsa'
+
+# save it
+
+# add to current session
+source ~/.bashrc
+```
