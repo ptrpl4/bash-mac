@@ -6,7 +6,7 @@
 
 Web-App на низком уровне - [https://www.youtube.com/watch?v=4haMUvUxUJI](https://www.youtube.com/watch?v=4haMUvUxUJI)
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ![сетевая модель стека сетевых протоколов OSI](<../../.gitbook/assets/image (6).png>)
 
@@ -14,7 +14,7 @@ Web-App на низком уровне - [https://www.youtube.com/watch?v=4haMUv
 
 ## Glossaries
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Теримины
 
@@ -118,11 +118,11 @@ HTTP позволяет браузеру и серверу договорить�
 
 #### Режим работы DNS
 
-![](<../../.gitbook/assets/image (3) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1).png>)
 
 #### Типы ответов
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4) (1).png>)
 
 #### Возможности DNS
 
