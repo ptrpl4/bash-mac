@@ -43,17 +43,16 @@ docker rm <the-container-id>
 ### build
 
 ```bash
-# list all images
-# docker images [OPTIONS] [REPOSITORY[:TAG]]
-docker images
-
 # docker pull [OPTIONS] NAME[:TAG|@DIGEST]
 docker pull nginx:1.23
+
+# docker images [OPTIONS] [REPOSITORY[:TAG]]
+docker images
 
 # delete image
 docker image rm <image-id>
 
-# -t flag tags image. We named the image and we can refer to that.
+# -t We named the image and we can refer to that.
 # . means Docker should look for the Dockerfile in the current directory.
 docker build -t getting-started .
 
@@ -75,23 +74,30 @@ script:
 
 ## Dockerfile
 
+ref - [https://docs.docker.com/engine/reference/builder](https://docs.docker.com/engine/reference/builder)
+
 #### Example
 
 ```docker
 # syntax=docker/dockerfile:1
-FROM node:12-alpine 
+
 # choose image
-RUN apk add --no-cache python2 g++ make
+FROM node:12-alpine 
+
+# choose default direcory for container 
 WORKDIR /app
-# choose workdir
-COPY . .
+
 # copy files to workdir
-RUN yarn install --production
+COPY . .
+
 # install deps
+RUN yarn install --production
+
+# Final command for run the app
 CMD ["node", "src/index.js"]
-# run smthg
-EXPOSE 3000
+
 # choose port
+EXPOSE 3000
 ```
 
 #### Python + Pipenv example <a href="#remove-a-container-using-the-cli" id="remove-a-container-using-the-cli"></a>
