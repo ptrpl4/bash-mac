@@ -1,29 +1,24 @@
 ---
-description: Node package manager
+description: Node package manager / Yarn
 ---
 
-# NPM
+# NPM & Yarn
 
 ### Links
 
 * Official - [https://www.npmjs.com](https://www.npmjs.com/)
+* off - [https://yarnpkg.com](https://yarnpkg.com/)
 
 ### Installation
 
 **npm** is installed with **Node.js**
 
-```
+```bash
 # install latest
 npm install -g npm
 # check version
 npm -v
 ```
-
-### Package.JSON
-
-The content of package.json must be written in **JSON**.
-
-At least two fields must be present in the definition file: **name** and **version**.
 
 ```bash
 # init new
@@ -35,6 +30,31 @@ npm install express
 # install projects deps
 npm install
 ```
+
+```bash
+# yarn installation
+# if Node.js >=16.10
+corepack enable
+yarn set version stable
+yarn -v
+
+# Add a package to your existing package
+yarn add
+
+yarn init
+
+# Installs all of the package's dependencies in the package.json file
+yarn install
+
+# Removes an unnecessary package from the current package.
+yarn remove
+```
+
+### Package.JSON
+
+The content of package.json must be written in **JSON**.
+
+At least two fields must be present in the definition file: **name** and **version**.
 
 ```
 {

@@ -21,7 +21,7 @@
 * [🔞 JavaScript](languages/js/README.md)
   * [Browser](languages/js/browser.md)
   * [Node](languages/js/node.md)
-  * [NPM](languages/js/npm.md)
+  * [NPM & Yarn](languages/js/npm-and-yarn.md)
   * [TypeScript](languages/js/typescript.md)
 
 ## QA Tools
