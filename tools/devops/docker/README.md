@@ -4,9 +4,9 @@
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-image - an artifact/package which includes all nessesery info for run final application
+image - an artifact/package which includes all necessary information to run the final application
 
-image tag - version of choosen image
+image tag - version of chosen image
 
 * latest
 
@@ -16,42 +16,76 @@ docker registry - image storage. official docker - [https://hub.docker.com/](htt
 
 ## Basic commands
 
+## Container operations
+
 ### run
 
+creates a new container every time
+
 ```bash
+# docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+# -d run the container in detached mode (in the background)
+# -p 80:80 binds port 80 of the host to port 80 in the container
 docker run -d -p 80:80 docker/getting-started
-# -d - run the container in detached mode (in the background)
-# -p 80:80 - map port 80 of the host to port 80 in the container
-# docker/getting-started - the image to use
-docker run -i -t ubuntu bash # one more example
+
+# one more example
+docker run -i -t ubuntu bash
+
+# docker ps [OPTIONS] 
+# -a include stopped
+docker ps -a 
+
+# start/stop container
+docker stop <the-container-id>
+docker start <the-container-id>
+
+# get logs from container (if container runs in -d mode for example)
+# docker logs [OPTIONS] CONTAINER
+docker logs 87sd7v8sd7f8
+
+#stop and delete container
+docker stop <the-container-id>
+docker rm <the-container-id>
 ```
+
+## Image operations
 
 ### build
 
 ```bash
-docker build -t getting-started .
+# list all images
+# docker images [OPTIONS] [REPOSITORY[:TAG]]
+docker images
+
+# docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+docker pull nginx:1.23
+
+# delete image
+docker image rm <image-id>
+
 # -t flag tags image. We named the image and we can refer to that.
 # . means Docker should look for the Dockerfile in the current directory.
+docker build -t getting-started .
 
 # example when file not in root folder
 docker build --file build/Dockerfile --tag ptrpl4/repo:ci-cd-test-app-1.0  .
 # dont forget "." in the end!
 ```
 
-### other commands
+### Docker on remote pc
 
 ```bash
-# list all images
-docker images
-# all runing containers 
-docker ps
-# docker pull [OPTIONS] NAME[:TAG|@DIGEST]
-docker pull nginx:1.23
+# connect, login, delete existed, run new in background (example from gitlab ci)
+script:
+    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY root@138.68.92.11 "
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD &&
+        docker ps -aq | xargs docker stop | xargs docker rm && 
+        docker run -d -p 5000:5000 $IMAGE_NAME:$IMAGE_TAG " 
 ```
 
 ## `Dockerfile`
 
-`Example`
+Example
 
 ```docker
 # syntax=docker/dockerfile:1
@@ -110,23 +144,3 @@ COPY . .
 ENTRYPOINT ["python", "-m", "http.server"]
 CMD ["--directory", "directory", "8000"]
 ```
-
-## Remove a container <a href="#remove-a-container-using-the-cli" id="remove-a-container-using-the-cli"></a>
-
-```bash
-docker ps # get id
-docker stop <the-container-id>
-docker rm <the-container-id>
-```
-
-## Docker on remote pc
-
-```bash
-# connect, login, delete existed, run new in background (example from gitlab ci)
-script:
-    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY root@138.68.92.11 "
-        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD &&
-        docker ps -aq | xargs docker stop | xargs docker rm && 
-        docker run -d -p 5000:5000 $IMAGE_NAME:$IMAGE_TAG " 
-```
-
