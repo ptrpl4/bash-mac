@@ -4,23 +4,13 @@
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-image - an artifact/package which includes all necessary information to run the final application
-
-image tag - version of chosen image
-
-* latest
-
-container - running instance of an image
-
+image - an artifact/package which includes all necessary information to run the final application\
+image tag - version of chosen image\
+\- latest\
+container - running instance of an image\
 docker registry - image storage. official docker - [https://hub.docker.com/](https://hub.docker.com/)
 
-## Basic commands
-
 ## Container operations
-
-### run
-
-creates a new container every time
 
 ```bash
 # docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
@@ -83,9 +73,9 @@ script:
         docker run -d -p 5000:5000 $IMAGE_NAME:$IMAGE_TAG " 
 ```
 
-## `Dockerfile`
+## Dockerfile
 
-Example
+#### Example
 
 ```docker
 # syntax=docker/dockerfile:1
@@ -104,7 +94,7 @@ EXPOSE 3000
 # choose port
 ```
 
-Python + Pipenv example
+#### Python + Pipenv example <a href="#remove-a-container-using-the-cli" id="remove-a-container-using-the-cli"></a>
 
 ```docker
 FROM python:3.9-slim as base

@@ -25,6 +25,17 @@ The content of package.json must be written in **JSON**.
 
 At least two fields must be present in the definition file: **name** and **version**.
 
+```bash
+# init new
+npm init
+
+# install new dep
+npm install express
+
+# install projects deps
+npm install
+```
+
 ```
 {
 "name" : "foo",
