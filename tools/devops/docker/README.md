@@ -1,8 +1,22 @@
 # 🐋 Docker
 
+## Theory
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+image - an artifact/package which includes all nessesery info for run final application
+
+image tag - version of choosen image
+
+* latest
+
+container - running instance of an image
+
+docker registry - image storage. official docker - [https://hub.docker.com/](https://hub.docker.com/)
+
 ## Basic commands
 
-run
+### run
 
 ```bash
 docker run -d -p 80:80 docker/getting-started
@@ -22,7 +36,17 @@ docker build -t getting-started .
 # example when file not in root folder
 docker build --file build/Dockerfile --tag ptrpl4/repo:ci-cd-test-app-1.0  .
 # dont forget "." in the end!
+```
 
+### other commands
+
+```bash
+# list all images
+docker images
+# all runing containers 
+docker ps
+# docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+docker pull nginx:1.23
 ```
 
 ## `Dockerfile`
@@ -103,5 +127,6 @@ script:
     - ssh -o StrictHostKeyChecking=no -i $SSH_KEY root@138.68.92.11 "
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD &&
         docker ps -aq | xargs docker stop | xargs docker rm && 
-        docker run -d -p 5000:5000 $IMAGE_NAME:$IMAGE_TAG "
+        docker run -d -p 5000:5000 $IMAGE_NAME:$IMAGE_TAG " 
 ```
+
