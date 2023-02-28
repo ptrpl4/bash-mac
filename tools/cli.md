@@ -16,6 +16,8 @@ Filesystem Hierarchy Standard - [https://ru.wikipedia.org/wiki/FHS](https://ru.w
 
 Database and OS scripting - [https://ss64.com/](https://ss64.com)
 
+60 commands - [https://www.youtube.com/watch?v=gd7BXuUQ91w](https://www.youtube.com/watch?v=gd7BXuUQ91w)&#x20;
+
 ## Syntax
 
 ### man example
@@ -78,6 +80,8 @@ cd ..
 `grep` - (**g**lobal **r**egular **e**xpression **p**rint) searching
 
 `touch` - file creating (not main function, but typical)
+
+`env` - current shell env vars. [link](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)
 
 #### pipe
 
