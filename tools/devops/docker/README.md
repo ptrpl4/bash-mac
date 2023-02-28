@@ -4,10 +4,12 @@
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-container image - an artifact/package which includes all necessary information to run the container\
-image tag - name:version of chosen image\
-container - running instance of an image\
-registry - image storage. official docker - [https://hub.docker.com/](https://hub.docker.com/)
+container **image** - an artifact/package which includes all necessary information to run the container\
+**container** eviroment - running instance of an image
+
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+**registry** - image storage. official docker - [https://hub.docker.com/](https://hub.docker.com/)
 
 ### Inside container
 
@@ -65,7 +67,7 @@ docker image rm <image-id>
 docker build -t getting-started .
 
 # example when file not in root folder
-docker build --file build/Dockerfile --tag ptrpl4/repo:ci-cd-test-app-1.0  .
+docker build --file build/Dockerfile --tag ci-cd-test-app:1.0  .
 # dont forget "." in the end!
 ```
 
