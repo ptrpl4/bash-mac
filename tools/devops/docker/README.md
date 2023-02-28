@@ -28,8 +28,10 @@ if smthg changes - inside container will be updated/changed only image layers wi
 # -p 80:80 binds port 80 of the host to port 80 in the container
 docker run -d -p 80:80 docker/getting-started
 
-# one more example
+# --interactive, --tty creating an interactive shell
 docker run -i -t ubuntu bash
+# --detach, -p bind port, Assign a name to the container
+docker run -d -p 3000:3000 --name myapp-new redis:4.0
 
 # docker ps [OPTIONS] 
 # -a include stopped
