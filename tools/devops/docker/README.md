@@ -4,11 +4,19 @@
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-image - an artifact/package which includes all necessary information to run the final application\
-image tag - version of chosen image\
-\- latest\
+container image - an artifact/package which includes all necessary information to run the container\
+image tag - name:version of chosen image\
 container - running instance of an image\
-docker registry - image storage. official docker - [https://hub.docker.com/](https://hub.docker.com/)
+registry - image storage. official docker - [https://hub.docker.com/](https://hub.docker.com/)
+
+### Inside container
+
+layers of images
+
+* linux base image
+* application image
+
+if smthg changes - inside container will be updated/changed only image layers with changes
 
 ## Container operations
 
