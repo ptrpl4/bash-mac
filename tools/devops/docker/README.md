@@ -11,6 +11,8 @@ container **image** - an artifact/package which includes all necessary informati
 
 **registry** - image storage. official docker - [https://hub.docker.com/](https://hub.docker.com/)
 
+**Isolated docker network** - docker network for containers. containers clold communicate using container name instead ip:port connections
+
 ### Inside container
 
 layers of images
@@ -48,6 +50,9 @@ docker logs 87sd7v8sd7f8
 #stop and delete container
 docker stop <the-container-id>
 docker rm <the-container-id>
+
+# check docker network
+docker network ls
 ```
 
 ## Image operations
