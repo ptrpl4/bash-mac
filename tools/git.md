@@ -1,37 +1,22 @@
 ---
-description: Developer Roadmap
+description: version control system
 ---
 
 # 📖 Git
 
 ## links
 
-{% embed url="https://git-scm.com" %}
+[https://git-scm.com/](https://git-scm.com/) официальная дока
 
-^ официальная дока
+[https://github.com/github/gitignore](https://github.com/github/gitignore) подборка файлов .gitignore
 
-{% embed url="https://github.com/github/gitignore" %}
+[https://ohshitgit.com/](https://ohshitgit.com/)
 
-^ подборка файлов .gitignore на гитхабе
-
-{% embed url="https://ohshitgit.com" %}
-
-{% embed url="https://gitexplorer.com" %}
+[https://gitexplorer.com/](https://gitexplorer.com/)&#x20;
 
 ### About
 
 Это система контроля версий. Пример - у нас есть файлы с которыми мы взаимодействуем, пишем данный текст в документе хрень.txt, соответственно данная система должна контролировать когда, кто и что записал в этот файл.
-
-Для установки git на mac нам будут нужны две вещи. Terminal и HomeBrew.
-
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#install homebrew
-$ brew install git
-#install git
-```
-
-Есть достаточно много альтернатив, позволяющих работать с Git в графическом интерфейсе. Но для лучшего понимания изначальной задумки и структуры лучше начать с этого.
 
 ### fast start
 
@@ -76,8 +61,6 @@ git push origin master
 ## Теория
 
 подход Git’а к хранению данных больше похож на набор снимков миниатюрной файловой системы
-
-q - hotkey to close current viewer
 
 ## .gitignore
 
