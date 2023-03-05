@@ -35,6 +35,15 @@ docker run -i -t ubuntu bash
 # --detach, -p bind port, Assign a name to the container
 docker run -d -p 3000:3000 --name myapp-new redis:4.0
 
+# mongo example
+docker run -d \
+    -p 27017:27017 \
+    -e MONGO_INITDB_ROOT_USERNAME=admin \
+    -e MONGO_INITDB_ROOT_PASSWORD=password \
+    --name mongodb \
+    --net mongo-network \
+    mongo
+
 # docker ps [OPTIONS] 
 # -a include stopped
 docker ps -a 
@@ -76,6 +85,16 @@ docker build -t getting-started .
 # example when file not in root folder
 docker build --file build/Dockerfile --tag ci-cd-test-app:1.0  .
 # dont forget "." in the end!
+```
+
+### Network
+
+```bash
+# check current
+docker network
+
+# create new network - docker network create [OPTIONS] NETWORK
+docker network create mongo-network
 ```
 
 ### Docker on remote pc
