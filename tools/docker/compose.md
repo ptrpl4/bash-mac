@@ -33,4 +33,10 @@ notes:
 ```sh
 # up
 docker compose up -d
+# stop
+docker compose stop
+# restart
+docker compose start
+# remove
+docker compose down
 ```
