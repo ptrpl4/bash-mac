@@ -63,6 +63,9 @@ docker rm <the-container-id>
 
 # check docker network
 docker network ls
+
+# exec smthg inside container
+docker exec -it 87sd7v8sd7f8 /bin/bash
 ```
 
 ## Image operations
