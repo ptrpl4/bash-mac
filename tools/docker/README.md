@@ -2,16 +2,17 @@
 
 ## Theory
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 container **image** - an artifact/package which includes all necessary information to run the container\
 **container** eviroment - running instance of an image
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 **registry** - image storage. official docker - [https://hub.docker.com/](https://hub.docker.com/)
 
-**Isolated docker network** - docker network for containers. containers clold communicate using container name instead ip:port connections
+**Isolated docker network** - docker network for containers. containers clold communicate using container name instead ip:port connections\
+it automatically used in docker-compose
 
 ### Inside container
 
