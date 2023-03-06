@@ -111,6 +111,17 @@ const firstPlace = companies[0] // get by index
 companies.length // check length
 ```
 
+## Strings
+
+### Variable Substitutions
+
+```javascript
+let firstName = "John";
+let lastName = "Doe";
+
+let text = `Welcome ${firstName}, ${lastName}!`
+```
+
 ## Arithmetic operators
 
 The JavaScript programming language provides operators to perform arithmetic operations. They are called **binary** because they apply to two **operands** (objects over which the operation is performed).
