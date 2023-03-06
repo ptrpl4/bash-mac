@@ -6,24 +6,27 @@ description: version control system
 
 ## links
 
-[https://git-scm.com/](https://git-scm.com/) официальная дока
+[https://git-scm.com/](https://git-scm.com/)&#x20;
 
-[https://github.com/github/gitignore](https://github.com/github/gitignore) подборка файлов .gitignore
+[https://github.com/github/gitignore](https://github.com/github/gitignore)  .gitignore
 
 [https://ohshitgit.com/](https://ohshitgit.com/)
 
-[https://gitexplorer.com/](https://gitexplorer.com/)&#x20;
+[https://gitexplorer.com/](https://gitexplorer.com/) &#x20;
 
-### About
+commits:
 
-Это система контроля версий. Пример - у нас есть файлы с которыми мы взаимодействуем, пишем данный текст в документе хрень.txt, соответственно данная система должна контролировать когда, кто и что записал в этот файл.
+[https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
+
+[https://conventionalcomments.org/](https://conventionalcomments.org/)
+
+[https://www.youtube.com/watch?v=uBhpBOX8VYg](https://www.youtube.com/watch?v=uBhpBOX8VYg) \
+
 
 ### fast start
 
 ```bash
-cd {path/project}
-git add .
-git commit -m "commit name"
+git commit -a -m "init commit"
 git push
 ```
 
@@ -49,18 +52,37 @@ git config --local user.email ptrpl4@ya.ru
 git commit -a -m "text"
 ```
 
+### Semantic Commit Messages
+
+Format: `<type>(<scope>): <subject>`
+
+`<scope>` is optional
+
+```
+feat: add hat wobble
+^--^  ^------------^
+|     |
+|     +-> Summary in present tense.
+|
++-------> Type: chore, docs, feat, fix, refactor, style, or test.
+```
+
+More Examples:
+
+* `feat`: (new feature for the user, not a new feature for build script)
+* `fix`: (bug fix for the user, not a fix to a build script)
+* `docs`: (changes to the documentation)
+* `style`: (formatting, missing semi colons, etc; no production code change)
+* `refactor`: (refactoring production code, eg. renaming a variable)
+* `test`: (adding missing tests, refactoring tests; no production code change)
+* `chore`: (updating grunt tasks etc; no production code change)
+
 ## Push
 
-```
-# sent to remote repo
+```bash
+# sent to remote repo origin master
 git push
-# dafult = git push
-git push origin master
 ```
-
-## Теория
-
-подход Git’а к хранению данных больше похож на набор снимков миниатюрной файловой системы
 
 ## .gitignore
 
@@ -113,6 +135,8 @@ git log --oneline --decorate
 ```bash
 # add some chaged in last commit --amend
 git commit --amend
+# example
+git commit README.md --amend -m 'update instructions'             
 ```
 
 ## Отмена индексации
@@ -173,7 +197,7 @@ $ git checkout -b version2 v2.0.0
 
 ### basic
 
-```
+```bash
 # current branches
 git branch
 # create branch
