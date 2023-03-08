@@ -44,6 +44,13 @@ docker run -d \
     --name mongodb \
     --net mongo-network \
     mongo
+    
+# one more example
+docker run -d \
+    -p 3000:3000 \
+    --name ci-cd-app \
+    --net ci-cd-test-project_default \
+    ci-cd-app:1.0
 
 # docker ps [OPTIONS] 
 # -a include stopped
@@ -82,9 +89,8 @@ docker images
 # delete image
 docker image rm <image-id>
 
-# -t We named the image and we can refer to that.
-# . means Docker should look for the Dockerfile in the current directory.
-docker build -t getting-started .
+# -t name the image . look for the Dockerfile in the current directory
+docker build -t my-app:1.0 .
 
 # example when file not in root folder
 docker build --file build/Dockerfile --tag ci-cd-test-app:1.0  .
@@ -119,25 +125,24 @@ ref - [https://docs.docker.com/engine/reference/builder](https://docs.docker.com
 #### Example
 
 ```docker
-# syntax=docker/dockerfile:1
+FROM node
 
-# choose image
-FROM node:12-alpine 
+ENV MONGO_DB_USERNAME=admin \
+    MONGO_DB_PWD=password
 
-# choose default direcory for container 
-WORKDIR /app
+RUN mkdir -p /home/app
 
-# copy files to workdir
-COPY . .
+# copy from host to conainer
+COPY ./app /home/app
 
-# install deps
-RUN yarn install --production
+# set default dir so that next commands executes in /home/app dir
+WORKDIR /home/app
 
-# Final command for run the app
-CMD ["node", "src/index.js"]
+# will execute npm install in /home/app because of WORKDIR
+RUN npm install
 
-# choose port
-EXPOSE 3000
+# no need for /home/app/server.js because of WORKDIR
+CMD ["node", "server.js"]
 ```
 
 #### Python + Pipenv example <a href="#remove-a-container-using-the-cli" id="remove-a-container-using-the-cli"></a>
