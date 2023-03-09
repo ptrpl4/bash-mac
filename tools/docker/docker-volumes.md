@@ -33,3 +33,14 @@ docker run -v mysql-storage:/container/app/dir/data/mysql
 ```
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+## In Compose
+
+```yaml
+mongodb:
+    image: mysql
+    volumes:
+      - mysql-storage:/container/app/dir/data/mysql
+volumes:
+    mysql-storage
+```
