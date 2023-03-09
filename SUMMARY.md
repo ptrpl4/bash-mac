@@ -48,6 +48,7 @@
     * [MongoDB](tools/db/nosql/mongodb.md)
     * [Redis](tools/db/nosql/redis.md)
 * [🐋 Docker](tools/docker/README.md)
+  * [Docker Volumes](tools/docker/docker-volumes.md)
   * [Compose](tools/docker/compose.md)
   * [VM vs Docker](tools/docker/vm-vs-docker.md)
 * [⚙ Kubernetes](tools/kubernetes.md)

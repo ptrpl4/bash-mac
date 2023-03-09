@@ -18,11 +18,11 @@ Now let’s look into the basic components of a message broker:
 
 **Queue/topic** — Message broker store messages here.
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Point-to-Point <a href="#907b" id="907b"></a>
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 * message queues have a one-to-one relationship with the message’s sender (Producer) and receiver (Consumer).
 * Each message in the queue is only sent to one recipient and is received only once.

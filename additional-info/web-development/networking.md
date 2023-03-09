@@ -6,7 +6,7 @@
 
 Web-App на низком уровне - [https://www.youtube.com/watch?v=4haMUvUxUJI](https://www.youtube.com/watch?v=4haMUvUxUJI)
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ![сетевая модель стека сетевых протоколов OSI](<../../.gitbook/assets/image (6).png>)
 
@@ -126,7 +126,7 @@ HTTP позволяет браузеру и серверу договорить�
 
 #### Возможности DNS
 
-![](<../../.gitbook/assets/image (5).png>)
+![](<../../.gitbook/assets/image (5) (1).png>)
 
 #### FTP
 

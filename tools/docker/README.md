@@ -2,7 +2,7 @@
 
 ## Theory
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 container **image** - an artifact/package which includes all necessary information to run the container\
 **container** eviroment - running instance of an image
