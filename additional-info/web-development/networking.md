@@ -10,7 +10,7 @@ Web-App на низком уровне - [https://www.youtube.com/watch?v=4haMUv
 
 ![сетевая модель стека сетевых протоколов OSI](<../../.gitbook/assets/image (6).png>)
 
-![Уровни стека TCP/IP](<../../.gitbook/assets/image (7).png>)
+![Уровни стека TCP/IP](<../../.gitbook/assets/image (7) (1).png>)
 
 ## Glossaries
 

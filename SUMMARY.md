@@ -49,7 +49,7 @@
     * [Redis](tools/db/nosql/redis.md)
 * [🐋 Docker](tools/docker/README.md)
   * [Compose](tools/docker/compose.md)
-  * [Docker Volumes](tools/docker/docker-volumes.md)
+  * [🗄 Docker Volumes](tools/docker/docker-volumes.md)
   * [VM vs Docker](tools/docker/vm-vs-docker.md)
 * [⚙ Kubernetes](tools/kubernetes.md)
 * [🖇 CI/CD](tools/ci-cd/README.md)
