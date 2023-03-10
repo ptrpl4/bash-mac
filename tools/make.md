@@ -44,6 +44,35 @@ run-locally:
 	python3 ./webserver.py
 ```
 
+ONE MORE
+
+```makefile
+STAGE_URL = https://url-$(TASK).k8s-stage.local\?$(SAVED_TOKEN)
+
+MY_TOKEN = $(shell curl 'https://secure.local/MyTest/index.php?sec=Tools&ext=Token' \
+	--data-raw 'json=blabla&mode=generate_token' \
+	--compressed | grep -o -E 'token=([^" <]+)' | sort | uniq)
+SAVE_TOKEN = $(shell curl 'https://secure.local/MyTest/index.php?sec=Tools&ext=Token' \
+	--data-raw 'json=blabla&mode=generate_token' \
+	--compressed | grep -o -E 'token=([^" <]+)' | sort | uniq > output.txt)
+COPY_TOKEN = $(shell curl 'https://secure.local/MyTest/index.php?sec=Tools&ext=Token' \
+	--data-raw 'json=blabla&mode=generate_token' \
+	--compressed | grep -o -E 'token=([^" <]+)' | sort | uniq | pbcopy)
+
+SAVED_TOKEN = $(shell grep x output.txt | tail -1)
+COPYED_TOKEN = $(shell grep x output.txt | tail -1 | pbcopy)
+
+TASK = 2020-exclusive
+
+run:
+	open -a Google\ Chrome $(STAGE_URL)
+	open -a Safari $(STAGE_URL)
+
+upd-and-save:
+	$(SAVE_TOKEN)
+
+```
+
 run
 
 ```bash
