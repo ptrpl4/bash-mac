@@ -6,27 +6,24 @@ description: Orchestration tool
 
 Also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 
-Node - virtual or physical machine
+#### Therms
 
-Master Node
+Node or "Worker Node" - virtual or physical machine
+
+Master Node - Main Node
 
 ## Components
 
-Pod - abstraction over container. Usually 1 Pod = 1 App
+<figure><img src="../.gitbook/assets/изображение (1).png" alt=""><figcaption></figcaption></figure>
 
-Service
-
-Ingress
-
-ConfigMap
-
-Secret
-
-Deployment
-
-StatefulSet
-
-DaemonSet
+* Pod - abstraction over container. Usually 1 Pod = 1 App
+* Service
+* Ingress
+* ConfigMap
+* Secret
+* Deployment
+* StatefulSet
+* DaemonSet
 
 ## Architecture
 
@@ -43,14 +40,16 @@ K8s cluster contains of:
 
 On Master Node are running **Main k8s Processes** to run and manage cluster. Better to use multiple.
 
-Processes:
+#### Master Node Processes
+
+<figure><img src="../.gitbook/assets/изображение (3).png" alt=""><figcaption></figcaption></figure>
 
 * API Server entrypoint to cluster
-  * Access through UI/API/CLI
+  * Access through **UI/API/CLI**
 * Controller Manager
   * Monitoring what's going on in cluster
 * Scheduler
-  * ensures Pods placements
+  * controls the placement of the pods depending on the load
 * etcd
   * key-value storage\
     storing info and configs. etcd snapshots are using for backup

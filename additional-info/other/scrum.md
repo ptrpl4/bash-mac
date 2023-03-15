@@ -6,7 +6,7 @@ __[_https://scrumguides.org/scrum-guide.html_](https://scrumguides.org/scrum-gui
 __[_https://www.scrum.org/resources/scrum-glossary_](https://www.scrum.org/resources/scrum-glossary)__\
 __
 
-<figure><img src="../../.gitbook/assets/изображение (3).png" alt=""><figcaption><p>Scrum Framework</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (3) (2).png" alt=""><figcaption><p>Scrum Framework</p></figcaption></figure>
 
 ### Scrum Definition <a href="#scrum-definition" id="scrum-definition"></a>
 
