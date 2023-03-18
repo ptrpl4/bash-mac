@@ -53,7 +53,7 @@ volumes:
 
 ## Volume Location
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 ! on mac data stores on linux VM machine
 

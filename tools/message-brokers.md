@@ -30,7 +30,7 @@ Now let’s look into the basic components of a message broker:
 
 ### Publish-Subscribe <a href="#344d" id="344d"></a>
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
 
 * This message model is also known as “pub/sub”.
 * In this model, message queues have a one-to-many relationship with the message sender and receiver. Also, the sender is known as the publisher and the receiver is known as the subscribe.

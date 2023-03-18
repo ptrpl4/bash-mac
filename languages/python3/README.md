@@ -872,7 +872,7 @@ Importantly, loop `else` runs if and only if the loop is exited normally (withou
 
 цикл, проверяющий условие. условием к примеру может быть непустой список
 
-![](<../../.gitbook/assets/image (1) (1).png>)
+![](<../../.gitbook/assets/image (1) (1) (1).png>)
 
 ```python
 def print_numbers(last_number):

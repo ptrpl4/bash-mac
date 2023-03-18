@@ -6,21 +6,18 @@ description: Orchestration tool
 
 Also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 
-#### Therms
-
-Node or "Worker Node" - virtual or physical machine
-
-Master Node - Main Node
-
 ## Components
 
 <figure><img src="../.gitbook/assets/изображение (1).png" alt=""><figcaption></figcaption></figure>
 
+* Node or "Worker Node" - virtual or physical machine
+* Master Node - Main Node
 * Pod - abstraction over container. Usually 1 Pod = 1 App
-* Service
-* Ingress
-* ConfigMap
-* Secret
+* Service - static address for Pod (not connected with Pod lifecycle)
+* Ingress - collects external requests to k8s services and sends to services inside k8s
+* ConfigMap - keeps external config of application. could keep env. vars
+* Secret - same as config map, encoded in base64 + should be secure encoded
+* Volume - storage for data local (inside Node) or remote
 * Deployment
 * StatefulSet
 * DaemonSet
@@ -54,6 +51,24 @@ On Master Node are running **Main k8s Processes** to run and manage cluster. Bet
   * key-value storage\
     storing info and configs. etcd snapshots are using for backup
   * makes snapshots for recovering proccees&#x20;
+
+### Pod
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+### Service
+
+Could be internal or external.&#x20;
+
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+### Config Map and Secrets
+
+<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+
+### Volume
+
+![](<../.gitbook/assets/image (1).png>)
 
 ### Virtual Network
 

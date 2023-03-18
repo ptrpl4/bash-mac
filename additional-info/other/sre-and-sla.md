@@ -36,4 +36,4 @@ Service Level Objectives - is an agreement within an SLA about a specific metric
 
 Service Level Indicator - measures compliance with an SLO.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (3).png" alt=""><figcaption></figcaption></figure>
