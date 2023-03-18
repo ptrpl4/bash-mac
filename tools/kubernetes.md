@@ -68,7 +68,7 @@ Could be internal or external.&#x20;
 
 ### Volume
 
-![](<../.gitbook/assets/image (1).png>)
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Virtual Network
 
