@@ -19,3 +19,8 @@ Half english, half russian notes about programming languages, frameworks and oth
 Created with [gitbook.com](https://gitbook.com)
 
 Hosted on [github.com](http://github.com)
+
+#### Commit types
+
+* `docs`: (main changes to the documentation)
+* `style`: (formatting changes)
