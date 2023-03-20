@@ -45,6 +45,12 @@ git config --local user.name "Petr V."
 git config --local user.email ptrpl4@ya.ru
 ```
 
+## Add
+
+<pre class="language-bash"><code class="lang-bash"># add --patch (parts of changes to commit)
+<strong>git add -p index.html 
+</strong></code></pre>
+
 ## Commit
 
 ```bash
