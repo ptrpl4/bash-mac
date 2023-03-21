@@ -89,3 +89,7 @@
   * [hash](additional-info/other/hash.md)
   * [Hotkeys](additional-info/other/hotkeys.md)
   * [🦄 UNIX](additional-info/other/unix.md)
+
+***
+
+* [💻 comfy macOS](comfy-macos.md)
