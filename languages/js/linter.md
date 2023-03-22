@@ -1,5 +1,11 @@
 # 🖊 Linter
 
+## Online tools
+
+check and fix - [https://validatejavascript.com/](https://validatejavascript.com/)
+
+## ESlint
+
 link - [https://eslint.org](https://eslint.org/)
 
 ### Setup
