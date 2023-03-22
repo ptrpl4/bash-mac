@@ -54,7 +54,7 @@ On Master Node are running **Main k8s Processes** to run and manage cluster. Bet
 
 ### Pod
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ### Service
 

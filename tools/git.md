@@ -239,3 +239,20 @@ $ git push origin --delete bad-branch-name
 # add test_branch to current branch
 git merge test_branch
 ```
+
+### Branching strategy
+
+### GitHub Flow&#x20;
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+long-live main branch + short-live feature branches
+
+### GitFlow
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+develop => feature => develop => release branch => master + tag version
+
+link - [https://nvie.com/posts/a-successful-git-branching-model](https://nvie.com/posts/a-successful-git-branching-model/)
+
