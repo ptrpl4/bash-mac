@@ -15,11 +15,18 @@ pm.environment.set("variable_key", "variable_value");
 </strong>    var jsonData = pm.response.json();
     pm.expect(jsonData.value).to.eql(100);
 });
-// check body is not null
+
+// body is not null check
 pm.test("Check that response body is not null", ()=>{
    pm.response.to.be.have.body
     })
-// setting variable from JSON response Body
+    
+// get variable from JSON response
 var jsonData = pm.response.json();
 pm.environment.set("newToken", jsonData.headers['postman-token']);
+
+// status 200 check
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
 </code></pre>
