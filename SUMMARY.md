@@ -69,6 +69,7 @@
 * [⚒ QA Job Interview (RU)](additional-info/qa-job-interview-ru.md)
 * [🕸 Web](additional-info/web-development/README.md)
   * [🔧 HTTP](additional-info/web-development/http.md)
+  * [🪝 Webhook](additional-info/web-development/webhook.md)
   * [CORS mechanism](additional-info/web-development/cors-mechanism.md)
   * [URL](additional-info/web-development/url.md)
   * [Ident/Auth/Auth/](additional-info/web-development/authentication-and-authorization.md)
