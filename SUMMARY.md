@@ -37,6 +37,7 @@
     * [Configs](qa-tools/selenium/selenium-1/configs.md)
     * [Test Run](qa-tools/selenium/selenium-1/test-run.md)
 * [Postman](qa-tools/postman.md)
+* [Other apps/tools](qa-tools/other-apps-tools.md)
 
 ## Tools
 
