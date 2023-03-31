@@ -11,15 +11,15 @@ Also known as K8s, is an open-source system for automating deployment, scaling, 
 <figure><img src="../.gitbook/assets/изображение (1).png" alt=""><figcaption></figcaption></figure>
 
 * Node or "Worker Node" - virtual or physical machine
-* Master Node - Main Node
+* Master Node - Main Node for cluster
 * Pod - abstraction over container. Usually 1 Pod = 1 App
 * Service - static address for Pod (not connected with Pod lifecycle)
-* Ingress - collects external requests to k8s services and sends to services inside k8s
+* Ingress - routs traffic to k8s cluster and sends to services inside k8s
 * ConfigMap - keeps external config of application. could keep env. vars
 * Secret - same as config map, encoded in base64 + should be secure encoded
 * Volume - storage for data local (inside Node) or remote
-* Deployment
-* StatefulSet
+* Deployment - 'blueprint' for Pods configuration
+* StatefulSet 'sts' - component for stateful apps or DB
 * DaemonSet
 
 ## Architecture
@@ -60,6 +60,8 @@ On Master Node are running **Main k8s Processes** to run and manage cluster. Bet
 
 Could be internal or external.&#x20;
 
+Has permanent ip address and works as load balancer if there is more than one Pod
+
 <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 ### Config Map and Secrets
@@ -69,6 +71,8 @@ Could be internal or external.&#x20;
 ### Volume
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+Stores data. Could be local or remote
 
 ### Virtual Network
 
