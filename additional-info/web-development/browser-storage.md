@@ -2,7 +2,7 @@
 
 ## Types
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ### console examples
 
@@ -17,8 +17,7 @@ console.log(localStorage.removeItem('key')
 sessionStorage.setItem('key', 'val')
 
 // cookies
-document.cookie = 'key=val')
-
+document.cookie = 'key=val'
 
 ```
 
