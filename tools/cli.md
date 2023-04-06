@@ -58,7 +58,7 @@ open https://main-url-$TASK.nl-k8s-stage.srv.local\?token=$TOKEN
 ## Buit in
 
 To display all available built-in system commands, type `man builtin`\
-__To quit manual press q,  f (forward),  b (backward).
+To quit manual press q,  f (forward),  b (backward).
 
 ```bash
 # cd - change directory

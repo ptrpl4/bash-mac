@@ -314,7 +314,7 @@ normal_string.strip("is")  # "ncomprehensibilitie"
 Вид:
 
 `some_dict = { "color" : "green", "points" : 5}`\
-``название = { "атрибут" : "значение"}
+название = { "атрибут" : "значение"}
 
 Получить значение атрибута\
 `some_dict["color"]`

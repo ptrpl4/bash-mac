@@ -41,9 +41,9 @@ description: base for Linux kernel
 
 Permission set `-rwxrw-r--`
 
-the first **`-`** implies that we have selected a certain file. If it were a directory, `d` **** would have been used instead of the first `-`.&#x20;
+the first **`-`** implies that we have selected a certain file. If it were a directory, `d` would have been used instead of the first `-`.&#x20;
 
-3 triplets of symbols. Each of them defines permissions for owner, group, and other users correspondingly. So, in the example, the owner can read, write and execute the file. The group can read and write, while the __ other can only read the file.
+3 triplets of symbols. Each of them defines permissions for owner, group, and other users correspondingly. So, in the example, the owner can read, write and execute the file. The group can read and write, while the other can only read the file.
 
 The most common sets presented as octal numbers are as follows:
 

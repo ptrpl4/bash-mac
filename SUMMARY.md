@@ -69,6 +69,7 @@
 
 * [⚒ QA Job Interview (RU)](additional-info/qa-job-interview-ru.md)
 * [🕸 Web](additional-info/web-development/README.md)
+  * [Browser storage](additional-info/web-development/browser-storage.md)
   * [🔧 HTTP](additional-info/web-development/http.md)
   * [🪝 Webhook](additional-info/web-development/webhook.md)
   * [CORS mechanism](additional-info/web-development/cors-mechanism.md)

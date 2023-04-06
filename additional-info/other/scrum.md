@@ -2,9 +2,9 @@
 
 ### _links_ <a href="#scrum-definition" id="scrum-definition"></a>
 
-__[_https://scrumguides.org/scrum-guide.html_](https://scrumguides.org/scrum-guide.html)__\
-__[_https://www.scrum.org/resources/scrum-glossary_](https://www.scrum.org/resources/scrum-glossary)__\
-__
+[_https://scrumguides.org/scrum-guide.html_](https://scrumguides.org/scrum-guide.html)\
+[_https://www.scrum.org/resources/scrum-glossary_](https://www.scrum.org/resources/scrum-glossary)\
+
 
 <figure><img src="../../.gitbook/assets/изображение (3) (2).png" alt=""><figcaption><p>Scrum Framework</p></figcaption></figure>
 
