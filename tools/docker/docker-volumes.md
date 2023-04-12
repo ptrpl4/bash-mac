@@ -21,7 +21,7 @@ All data replicated. Container will use data from host when starts. Container wi
 docker run -v /home/dir/dir/data:/var/lib/mysql
 ```
 
-<figure><img src="../../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ### Anonymous Volumes
 
@@ -37,7 +37,7 @@ docker run -v /var/lib/mysql
 docker run -v mysql-storage:/var/lib/mysql
 ```
 
-<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## In Compose
 
