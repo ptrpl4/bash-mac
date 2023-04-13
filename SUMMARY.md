@@ -91,6 +91,7 @@
   * [SOLID](additional-info/other/solid.md)
   * [hash](additional-info/other/hash.md)
   * [Hotkeys](additional-info/other/hotkeys.md)
+  * [💳 Card Payments](additional-info/other/card-payments.md)
   * [🦄 UNIX](additional-info/other/unix.md)
 
 ***
