@@ -12,7 +12,9 @@ Acquiring Bank (**Acquirer**) - bank that processes card payments on behalf of a
 
 **MII** - major industry identifier (2 - MIR, 3 - American Express, 4 - Visa, 5 -  MasterCard, 6 UnionPay)
 
-### Card Number
+**PAN** - Primary Account Number - Card Number
+
+### Card Data
 
 <figure><img src="../../.gitbook/assets/изображение.png" alt=""><figcaption></figcaption></figure>
 
