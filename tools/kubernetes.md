@@ -70,7 +70,7 @@ Has permanent ip address and works as load balancer if there is more than one Po
 
 ### Volume
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 Stores data. Could be local or remote
 

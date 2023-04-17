@@ -38,6 +38,10 @@ CNP Types:
 
 **MCC** - Merchant Category Code
 
+**DAN** - Digital Account Number
+
+**TSP** - Token Service Provider
+
 ### Card Data
 
 <figure><img src="../../.gitbook/assets/изображение (5).png" alt=""><figcaption></figcaption></figure>
@@ -77,3 +81,8 @@ PCI-DSS Compliance rules include:
 
 MCC - four-digit number that classifies the type of goods or services a business offers
 
+Tokenization - when used Digital Account Number instead of Primary Account Number.&#x20;
+
+#### Apple Pay Payment
+
+Apple Pay Card (DAN) => POS => Bank Merchant => Payment System => Token Service Provirder (PAN) => Payment System => Bank Issuer&#x20;
