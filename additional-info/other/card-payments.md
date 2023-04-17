@@ -18,6 +18,10 @@ Acquiring Bank (**Acquirer**) - bank that processes card payments on behalf of a
 
 **PAN** - Primary Account Number - Card Number
 
+**CVV/CVC** - Card Verification Value/Code
+
+**PCI DSS** -  Payment Card Industry Data Security Standard
+
 #### Online Card Payments
 
 **CNP** - Card Not Present
@@ -27,6 +31,12 @@ CNP Types:
 * **CIT** - Customer Initiated Transaction
 * **MIT** - Merchant Initiated Transaction
 * **COF** - Card On File&#x20;
+
+**3DS** - 3 Domain Server
+
+**PSP** - Payment System Platform (Stripe)
+
+**MCC** - Merchant Category Code
 
 ### Card Data
 
@@ -47,10 +57,23 @@ CNP Types:
 
 ### Online Payments
 
-Main types:&#x20;
+Payments type:&#x20;
 
 * CIT - triggered by Customer
 * MIT - triggered by Merchant
 * Recurrent Payment - triggered by Merchant, based on previous payments
 * COF - could be triggered by Merchant or Customer, using already saved to service card data (without CVV)
+
+PCI-DSS Compliance rules include:
+
+1. Maintain secure network and system.
+2. Protect cardholder data.
+3. Maintain vulnerability management program.
+4. Implement strong access control measures.
+5. Regularly monitor and test networks.
+6. Maintain information security policies.
+
+3DS involves three parties: the Acquirer Domain, the Issuer Domain, and the Interoperability Domain
+
+MCC - four-digit number that classifies the type of goods or services a business offers
 
