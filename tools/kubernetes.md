@@ -118,3 +118,18 @@ spec:
 
 
 
+## minikube
+
+tool for running and testing k8s locally
+
+{% embed url="https://github.com/kubernetes/minikube" %}
+
+Master node processes and Node processes inside one Virtual Node on your machine.
+
+minikube works as container (docker, etc) or as virtual machine (virtualbox, etc)
+
+## Tools
+
+<figure><img src="../.gitbook/assets/изображение (10).png" alt=""><figcaption></figcaption></figure>
+
+**kubectl** - to have CLI access to cluster API Server
