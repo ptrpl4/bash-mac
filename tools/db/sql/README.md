@@ -267,4 +267,4 @@ DROP VIEW <view_name>;
 * DQl – Data Query Language
 * DCL – Data Control Language
 
-<figure><img src="../../../.gitbook/assets/изображение (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/изображение (5) (2).png" alt=""><figcaption></figcaption></figure>

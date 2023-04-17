@@ -130,6 +130,6 @@ minikube works as container (docker, etc) or as virtual machine (virtualbox, etc
 
 ## Tools
 
-<figure><img src="../.gitbook/assets/изображение (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/изображение.png" alt=""><figcaption></figcaption></figure>
 
 **kubectl** - to have CLI access to cluster API Server

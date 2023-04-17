@@ -16,7 +16,7 @@ Acquiring Bank (**Acquirer**) - bank that processes card payments on behalf of a
 
 ### Card Data
 
-<figure><img src="../../.gitbook/assets/изображение.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (5).png" alt=""><figcaption></figcaption></figure>
 
 * First digit is the major industry identifier (MII)
 * A six or eight-digit Issuer Identification Number (IIN/BIN)
