@@ -4,6 +4,7 @@
 
 ## languages
 
+* [🤓 Basic Knowledge](languages/basic-knowledge.md)
 * [🐍 Python](languages/python3/README.md)
   * [requirements](languages/python3/requirements.md)
   * [Generators and yield](languages/python3/generators-and-yield.md)

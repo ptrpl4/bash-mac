@@ -8,7 +8,7 @@ Also known as K8s, is an open-source system for automating deployment, scaling, 
 
 ## Components
 
-<figure><img src="../.gitbook/assets/изображение (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/изображение (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 * Node or "Worker Node" - virtual or physical machine
 * Master Node - Main Node for cluster
@@ -39,7 +39,7 @@ On Master Node are running **Main k8s Processes** to run and manage cluster. Bet
 
 #### Master Node Processes
 
-<figure><img src="../.gitbook/assets/изображение (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/изображение (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 * API Server entrypoint to cluster
   * Access through **UI/API/CLI**
