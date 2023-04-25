@@ -39,7 +39,7 @@ On Master Node are running **Main k8s Processes** to run and manage cluster. Bet
 
 #### Master Node Processes
 
-<figure><img src="../.gitbook/assets/изображение (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/изображение (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * API Server entrypoint to cluster
   * Access through **UI/API/CLI**
@@ -118,18 +118,137 @@ spec:
 
 
 
-## minikube
+## Tools and Apps
 
-tool for running and testing k8s locally
+### minikube
 
 {% embed url="https://github.com/kubernetes/minikube" %}
+
+**minikube** - tool for running and testing k8s locally
+
+<figure><img src="../.gitbook/assets/изображение (9).png" alt=""><figcaption></figcaption></figure>
 
 Master node processes and Node processes inside one Virtual Node on your machine.
 
 minikube works as container (docker, etc) or as virtual machine (virtualbox, etc)
 
-## Tools
+is mainly used to start/delete a local cluster. all other interactions take place via kubectl
+
+#### commands
+
+```bash
+# start and define driver
+minikube start --driver docker
+# check current status
+minikube status
+```
+
+### **kubectl**
+
+<figure><img src="../.gitbook/assets/изображение (1).png" alt=""><figcaption></figcaption></figure>
+
+**kubectl** - Kubernetes command-line tool. to have CLI access to cluster API Server, autoinstalled with minikube
+
+#### commands
+
+```bash
+# get active nodes
+kubectl get node
+# get created pods
+kubectl get pod
+# get pods, deployments, services
+kubectl get all
+```
+
+### configuration
+
+#### ConfigMap file
+
+doc - [https://kubernetes.io/docs/concepts/configuration/configmap](https://kubernetes.io/docs/concepts/configuration/configmap/)
+
+/mongo-config.yaml
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-config
+data:
+  mongo-url: mongo-service
+```
+
+#### Secret file
+
+doc - [https://kubernetes.io/docs/concepts/configuration/secret](https://kubernetes.io/docs/concepts/configuration/secret)
+
+/mongo-secret.yaml
+
+```bash
+# create example user and encode to base64
+echo -n mongouser | base64
+echo -n mongopassword | base64
+```
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mongo-secret
+type: Opaque
+data:
+  mongo-user: bW9uZ291c2Vy
+  mongo-password: bW9uZ29wYXNzd29yZA==
+```
+
+### Deployment & Service file
 
 <figure><img src="../.gitbook/assets/изображение.png" alt=""><figcaption></figcaption></figure>
 
-**kubectl** - to have CLI access to cluster API Server
+doc - [https://kubernetes.io/docs/concepts/workloads/controllers/deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+
+/mongo.yaml
+
+deployment part
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-deployment
+  labels:
+    app: mongo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongo
+  template:
+    metadata:
+      labels:
+        app: mongo
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo:5.0
+        ports:
+        - containerPort: 27017
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-service
+spec:
+  selector:
+    app.kubernetes.io/name: mongo
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 27017
+```
+
+service part^
+
+<figure><img src="../.gitbook/assets/изображение (3).png" alt=""><figcaption></figcaption></figure>
+
+doc - [https://kubernetes.io/docs/concepts/services-networking/service/](https://kubernetes.io/docs/concepts/services-networking/service/)
+

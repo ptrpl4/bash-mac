@@ -41,7 +41,7 @@ Adaptation becomes more difficult when the people involved are not empowered or 
 
 ### Scrum Values
 
-<figure><img src="../../.gitbook/assets/изображение (9) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (9) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Successful use of Scrum depends on people becoming more proficient in living five values:
 
