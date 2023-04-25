@@ -10,7 +10,7 @@
 
 ### Type checking
 
-<figure><img src="../.gitbook/assets/изображение (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/изображение (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Static type-checking - checking types during compilation process.
 

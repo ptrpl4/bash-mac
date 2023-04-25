@@ -39,7 +39,7 @@ On Master Node are running **Main k8s Processes** to run and manage cluster. Bet
 
 #### Master Node Processes
 
-<figure><img src="../.gitbook/assets/изображение (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/изображение (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * API Server entrypoint to cluster
   * Access through **UI/API/CLI**
@@ -248,7 +248,7 @@ spec:
 
 service part^
 
-<figure><img src="../.gitbook/assets/изображение (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/изображение (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 doc - [https://kubernetes.io/docs/concepts/services-networking/service/](https://kubernetes.io/docs/concepts/services-networking/service/)
 

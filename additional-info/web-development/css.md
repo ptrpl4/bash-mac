@@ -6,7 +6,7 @@ description: Cascading Style Sheets
 
 ## Basic syntax
 
-![](<../../.gitbook/assets/изображение (3) (1) (1) (1).png>)
+![](<../../.gitbook/assets/изображение (3) (1) (1) (1) (1).png>)
 
 CSS syntax consists of two main parts: a **selector** and a **declaration block** that is put in curly brackets.
 
