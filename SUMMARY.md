@@ -29,6 +29,7 @@
 ## QA Tools
 
 * [Playwright - JS](qa-tools/playwright-js.md)
+* [API Testing - JS](qa-tools/api-testing-js.md)
 * [Selenium](qa-tools/selenium/README.md)
   * [Selenium - Java](qa-tools/selenium/selenium.md)
   * [Selenium - Python](qa-tools/selenium/selenium-1/README.md)
