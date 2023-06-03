@@ -40,6 +40,7 @@
     * [Test Run](qa-tools/selenium/selenium-1/test-run.md)
 * [Postman](qa-tools/postman.md)
 * [Other apps/tools](qa-tools/other-apps-tools.md)
+* [Other manuals/articles](qa-tools/other-manuals-articles.md)
 
 ## Tools
 
@@ -85,6 +86,7 @@
   * [JSON](additional-info/web-development/json.md)
   * [Static/Dynamic sites](additional-info/web-development/untitled.md)
 * [😩 Other](additional-info/other/README.md)
+  * [Software Engineering](additional-info/other/software-engineering.md)
   * [🔧 SRE and SLA](additional-info/other/sre-and-sla.md)
   * [😎 TDD, BDD](additional-info/other/tdd-bdd.md)
   * [🪨 Monolith and Microservices](additional-info/other/monolith-and-microservices.md)

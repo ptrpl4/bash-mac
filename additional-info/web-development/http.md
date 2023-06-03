@@ -20,12 +20,7 @@ The **start line** and the **header** are required attributes, so the other part
 
 ## **Status codes**
 
-| **1xx: Informational** | Codes beginning with "1" are called information codes. They report on how client requests are processed.             |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **2xx: Success**       | Messages of this class inform that the action requested by the client has been successfully accepted for processing. |
-| **3xx: Redirection**   | It means further action must be taken in order to complete the request.                                              |
-| **4xx: Client Error**  | It reports errors on the client's side.                                                                              |
-| **5xx: Server Error**  | The code indicates that the operation was unsuccessful due to the fault of the server.                               |
+<table data-header-hidden><thead><tr><th width="226.9054581894219"></th><th></th></tr></thead><tbody><tr><td><strong>1xx: Informational</strong></td><td>Codes beginning with "1" are called information codes. They report on how client requests are processed.</td></tr><tr><td><strong>2xx: Success</strong></td><td>Messages of this class inform that the action requested by the client has been successfully accepted for processing.</td></tr><tr><td><strong>3xx: Redirection</strong></td><td>It means further action must be taken in order to complete the request.</td></tr><tr><td><strong>4xx: Client Error</strong></td><td>It reports errors on the client's side.</td></tr><tr><td><strong>5xx: Server Error</strong></td><td>The code indicates that the operation was unsuccessful due to the fault of the server.</td></tr></tbody></table>
 
 ## HTTP Request Methods
 

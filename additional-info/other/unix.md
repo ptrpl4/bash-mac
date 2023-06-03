@@ -23,16 +23,7 @@ description: base for Linux kernel
 
 **Table**
 
-| Number | Permission Type        | Symbol |
-| ------ | ---------------------- | ------ |
-| 0      | No Permission          | ---    |
-| 1      | Execute                | --x    |
-| 2      | Write                  | -w-    |
-| 3      | Execute + Write        | -wx    |
-| 4      | Read                   | r--    |
-| 5      | Read + Execute         | r-x    |
-| 6      | Read + Write           | rw-    |
-| 7      | Read + Write + Execute | rwx    |
+<table><thead><tr><th width="200.33333333333331">Number</th><th>Permission Type</th><th>Symbol</th></tr></thead><tbody><tr><td>0</td><td>No Permission</td><td>---</td></tr><tr><td>1</td><td>Execute</td><td>--x</td></tr><tr><td>2</td><td>Write</td><td>-w-</td></tr><tr><td>3</td><td>Execute + Write</td><td>-wx</td></tr><tr><td>4</td><td>Read</td><td>r--</td></tr><tr><td>5</td><td>Read + Execute</td><td>r-x</td></tr><tr><td>6</td><td>Read + Write</td><td>rw-</td></tr><tr><td>7</td><td>Read + Write + Execute</td><td>rwx</td></tr></tbody></table>
 
 `-` - no permission\
 `r` - read\
