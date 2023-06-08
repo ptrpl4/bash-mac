@@ -4,14 +4,14 @@ description: Structured Query Language
 
 # 📑 SQL
 
-sqlMaterials:
+links:
 
-[https://tproger.ru/translations/sql-recap/](https://tproger.ru/translations/sql-recap/) - прочитать\
-[https://postgrespro.ru/docs/postgresql/12/index](https://postgrespro.ru/docs/postgresql/12/index) - документация
+[https://tproger.ru/translations/sql-recap/](https://tproger.ru/translations/sql-recap/) - recap \[ru]\
+[https://postgrespro.ru/docs/postgresql/12/index](https://postgrespro.ru/docs/postgresql/12/index) - docs \[ru]\
+[https://geekbrains.ru/chapters/1157](https://geekbrains.ru/chapters/1157) - course\
+[https://www.youtube.com/playlist?list=PLtPJ9lKvJ4oh5SdmGVusIVDPcELrJ2bsT](https://www.youtube.com/playlist?list=PLtPJ9lKvJ4oh5SdmGVusIVDPcELrJ2bsT) - lections
 
-Курс - [https://geekbrains.ru/chapters/1157](https://geekbrains.ru/chapters/1157)
-
-#### Basic:
+### Therms
 
 СУБД - система управления базами данных\
 RDBMS - Relational Database Management System
@@ -24,6 +24,19 @@ RDBMS - Relational Database Management System
 * Правило №4 Все предыдущие правила, и плюс то, что любой функциональный атрибут зависит только от первичного ключа.
 
 ## Синтаксис
+
+### Comments
+
+```sql
+-- line comment
+
+COUNT(*) -- inline comment
+
+/* 
+Multiline
+comment
+ */
+```
 
 ### Работа с базами данных
 
@@ -166,7 +179,13 @@ SELECT <col_name1>, <col_name2>, …
 SELECT <col_name1>, <col_name2>, ...
   FROM <table_name>
   GROUP BY <column_namex>
-  HAVING <condition> 
+  HAVING <condition>;
+  
+-- example
+SELECT hair, COUNT(*) FROM superheroes
+WHERE gender='Female Characters'
+GROUP BY hair
+HAVING COUNT(*) BETWEEN 50 AND 300;
 ```
 
 #### ORDER BY
