@@ -19,9 +19,9 @@ Online IDE - [https://replit.com/](https://replit.com/)
 
 #### One-line comments <a href="#one-line-comments" id="one-line-comments"></a>
 
-```javascript
-console.log("Nice to see you!"); // This code outputs the message to the console
-```
+<pre class="language-javascript"><code class="lang-javascript"><strong>// Coment on new line
+</strong><strong>console.log("Nice to see you!"); // This code outputs the message to the console
+</strong></code></pre>
 
 #### Multi-line comments <a href="#multi-line-comments" id="multi-line-comments"></a>
 
@@ -33,72 +33,59 @@ console.log("Nice to see you!"); // This code outputs the message to the console
 console.log("Hello, JS!");
 ```
 
-## Variables
+## Data types & Variables
 
-**declaration**\
-\*\*\*\*The name of a variable can contain only letters, numbers or symbols `$` and `_` and it _cannot_ begin with a number.
+The name of a variable can contain only letters, numbers or symbols `$` and `_` and it _cannot_ begin with a number.
 
-JavaScript uses two keywords to create variables:
+JavaScript uses keywords to create variables:
 
-`let` defines a **mutable variable** the value of which \_\_ can be changed as many times as needed;
-
-`const` declares a **constant** the value of which \_\_ cannot be changed.
-
-`var` - is an outdated way of declaring a variable, and we do not recommend using it.
+* `let` defines a **mutable variable** the value of which can be changed as many times as needed;
+* `const` declares a **constant** the value of which cannot be changed.
+* `var` - is an **outdated** way of declaring a variable
 
 ```javascript
-let letters, &ampersand, _underscore
+let letters, &ampersand, _underscore; // variable examples
 
-let 1number
-// SyntaxError: Invalid or unexpected token
+let 1number; // SyntaxError: Invalid or unexpected token
 ```
 
-## Data types
+### Basic Data types
 
-#### _typeof_ operator <a href="#em-typeof-em-operator" id="em-typeof-em-operator"></a>
+#### Numbers, strings, boolean, null, undefined
 
 ```javascript
-console.log(typeof(9)); 
-// number
-console.log(typeof 9); 
-// number
-```
+// JavaScript supports several types of values
+x = 1; // Numbers.
+x = 0.01; // Numbers can be integers or reals.
+x = "hello world"; // Strings of text in quotation marks.
+x = 'JavaScript'; // Single quote marks also delimit strings.
+x = true; // A Boolean value.
+x = false; // The other Boolean value.
+x = null; // Null is a special value that means "no value."
+x = undefined; // Undefined is another special value like null.
 
-### _null_ <a href="#em-null-em" id="em-null-em"></a>
-
-`null` means that the variable was explicitly assigned an empty or non-existent value. If the variable is `null`, we know that it does not contain an acceptable number, string or other data type:
-
-```
-let name = null; 
-console.log(name); 
-// null
-```
-
-### _undefined_ <a href="#em-undefined-em" id="em-undefined-em"></a>
-
-The `undefined` value is returned when a variable was declared, but its value wasn't set. Let's consider the following example
-
-```javascript
+// more undefined examples
 let count; 
-console.log(count); 
-// undefined
+console.log(count); // undefined
+
 let person = {
   age: 27
-};
- 
-console.log(person.name); 
-// undefined
-```
+}; 
+console.log(person.name); // undefined
 
-But that's not all! The `undefined` value is also returned when a function has a missing parameter:
-
-```javascript
 function getDetails(a) {
   console.log(a);
 }
+getDetails(); // undefined value returned when a function has a missing parameter:
+```
 
-getDetails(); 
-// undefined
+#### Variable String Substitutions
+
+```javascript
+let firstName = "John";
+let lastName = "Doe";
+
+let text = `Welcome ${firstName}, ${lastName}!`;
 ```
 
 ### Array
@@ -111,64 +98,70 @@ const firstPlace = companies[0] // get by index
 companies.length // check length
 ```
 
-## Strings
+### Objects
 
-### Variable Substitutions
+An **object** is a _non-primitive_ data type that represents an **unordered** collection of _properties_. A **property** is a part of the object that imitates a variable. It consists of a **key** and a **value** separated by a colon. A key can only be a string, but the value may be of any data type.
 
 ```javascript
-let firstName = "John";
-let lastName = "Doe";
+// An object is a collection of name/value pairs, or a string to value map.
+let book = { // Objects are enclosed in curly braces.
+topic: "JavaScript", // The property "topic" has value  "JavaScript."
+edition: 7 // The property "edition" has value 7
+}; // The curly brace marks the end of the object.
 
-let text = `Welcome ${firstName}, ${lastName}!`
+// Access the properties of an object with . or []:
+book.topic // => "JavaScript" 
+book["edition"] // => 7: another way to access property values.
+book.author = "Flanagan"; // Create new properties by assignment.
+book.contents = {}; // {} is an empty object with no properties.
+
+// Conditionally access properties with ?. (ES2020): 
+book.contents?.ch01?.sect1 // => undefined: book.contents has no ch01 property.
 ```
 
-## Arithmetic operators
+To **delete** a property, we can use the `delete` operator and a dot.
+
+```javascript
+delete country.population;
+```
+
+## Operators
+
+Operators act on values (the operands) to produce a new value.
+
+#### _typeof_ operator <a href="#em-typeof-em-operator" id="em-typeof-em-operator"></a>
+
+```javascript
+console.log(typeof(9)); // number
+console.log(typeof 9); // number
+```
+
+### Arithmetic operators
 
 The JavaScript programming language provides operators to perform arithmetic operations. They are called **binary** because they apply to two **operands** (objects over which the operation is performed).
 
-* addition `+`
-
 ```javascript
-console.log(12 + 26); // 38
-console.log("My name is " + "John"); 
-// My name is John
-```
+3+2 // => 5: addition
+3-2 // => 1: subtraction
+3*2 // => 6: multiplication
+3/2 // => 1.5: division
+points[1].x - points[0].x // => 1: more complicated operands also work
+"3" + "2" // => "32": + adds numbers, concatenates strings
 
-* subtraction `-`
+// JavaScript defines some shorthand arithmetic operators
+let count = 0; 
+count++; // Increment the variable
+count--; // Decrement the variable
+count += 2; // Add 2: same as count = count + 2;
+count *= 3; // Multiply by 3: same as count = count * 3;
+count // => 6: variable names are expressions, too.
 
-```
-console.log(5 - 3); 
-// 2
-```
+// remainder %. This operator finds the residue from the division
+console.log(10 % 3); // 1, because 10 divided by 3 leaves a remainder of 1
+console.log(12 % 4); // 0, because 12 divided by 4 leaves no remainder
 
-* multiplication `*`
-
-```
-console.log(10 * 4); 
-// 40
-```
-
-* integer division `/`
-
-```
-console.log(8 / 2); 
-// 4
-```
-
-* remainder `%`. This operator finds the residue from the division:
-
-```
-console.log(10 % 3); 
-// 1, because 10 divided by 3 leaves a remainder of 1
-console.log(12 % 4); 
-// 0, because 12 divided by 4 leaves no remainder
-```
-
-* exponentiation `**`
-
-```
-console.log(2 ** 3); 
-// 8, because (2 * 2 * 2) is 8
+// exponentiation **
+console.log(2 ** 3); // 8, because (2 * 2 * 2) is 8
 ```
 
 #### Order
@@ -180,7 +173,7 @@ The list below is sorted from the highest to the lowest precedence level:
 * multiplication, division
 * addition and subtraction
 
-## Boolean and logical operators
+### Boolean and logical operators
 
 #### Comparison operators <a href="#step-title" id="step-title"></a>
 
@@ -207,7 +200,7 @@ Among the numerical values, `0` is considered `false`, and all other numbers are
 
 Expression is always calculated from left to right. `&&` returns \*\*\*\* _false_ as soon as it finds the first occurring \*\*\*\* _false_, and the operator `||` returns \*\*\*\* _true_ as soon as it sees the first \*\*\*\* _true_:
 
-```
+```javascript
 console.log(true || 0);      // true
 console.log(false && "sun"); // false
 console.log(1 || 0);         // 1
@@ -215,7 +208,7 @@ console.log(1 || 0);         // 1
 
 The priority of `!` is higher than that of `&&`, and the priority of `&&` is higher than that of `||`. If you need to change the priority, use parentheses:
 
-```
+```javascript
 console.log(!false && !true);   // false
 console.log(!(false && !true)); // true
 ```
@@ -269,24 +262,24 @@ An _implicit_ conversion occurs when using logical operators (`||&&` `!`):
 "Master" && "Margarita"  // "Margarita"
 ```
 
-## Functions
+## **built-in** Functions
 
-### **built-in**
+#### Console.log()
 
-Console.log() - print some text
+print some text
 
 ```javascript
 console.log("Learning JavaScript is easy and enjoyable!");
 ```
 
-`String()`
+#### `String()`
 
 ```javascript
 String(123);   // "123"
 String(false); // "false"
 ```
 
-`Number()`
+#### `Number()`
 
 ```javascript
 Number("1");    // 1
@@ -299,7 +292,7 @@ Number(true);   // 1
 Number(false);  // 0
 ```
 
-`Boolean()`
+#### `Boolean()`
 
 ```javascript
 Boolean(1);            // true
@@ -308,7 +301,7 @@ Boolean("Am I nice?"); // true
 Boolean("");           // false
 ```
 
-`getElementById()`
+#### `getElementById()`
 
 ```markup
 <p id="blue-text">What's your hyper skill?</p>
@@ -317,7 +310,7 @@ Boolean("");           // false
 </script>
 ```
 
-`querySelector()`
+#### `querySelector()`
 
 With the `querySelector()` method it is possible to return the first document element that corresponds to the specified selector:
 
@@ -329,7 +322,8 @@ With the `querySelector()` method it is possible to return the first document el
 </script>
 ```
 
-`querySelectorAll()`\
+#### `querySelectorAll()`
+
 \*\*\*\*gets all elements that match the specified selector:
 
 ```
@@ -349,13 +343,9 @@ Syntax
 
 ```javascript
 fetch(resource)
-fetch(resource, options)
-// response - Promise with Response object
-```
+fetch(resource, options) // response - Promise with Response object
 
-**example**
-
-```javascript
+// example
 fetch('https://domain.com/api/v1/purchases?limit=50&offset=50', 
       {
           headers: 
@@ -367,26 +357,35 @@ fetch('https://domain.com/api/v1/purchases?limit=50&offset=50',
   .then((data) => data)
 ```
 
-### **user-defined**
+## **user-defined** Functions
 
-**default style**
+### **default style**
 
 ```javascript
-function name(a, b) {
-  var result = a + b
-  return result;
-};
+function plus1(x) { // Define a function named "plus1" with parameter "x"
+    return x + 1; // Define a function named "plus1" value passed in
+}
+
+plus1(y) // => 4: y is 3, so this invocation returns 3+1
+
+let square = function (x) { // Functions are values and can be assigned to vars
+    return x * x;           // Compute the function's value
+};                         // Semicolon marks the end of the assignment.
+
+square (plus1(y)) // => 16: invoke two functions in one expression
 ```
 
-#### **arrow functions** style
+### **arrow functions** style
+
+Arrow functions are most commonly used when you want to pass an unnamed function as an argument to another function.
 
 ```javascript
 const name = (a, b) => {
   const result = a + b
   return result;
 };
-// it could be one-line function
-two = (a) => b = 2 + a;
+
+two = (a) => b = 2 + a; // it could be one-line function
 ```
 
 * Arrow functions don't have their own bindings to [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments) or [`super`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super), and should not be used as [methods](https://developer.mozilla.org/en-US/docs/Glossary/Method).
@@ -399,7 +398,7 @@ two = (a) => b = 2 + a;
 
 **Фактические параметры** — это то, что было _передано в функцию_ в момент вызова. Например если предыдущую функцию вызвать так `f(5, z)`, где `const z = 8`, то фактическими параметрами являются `5` и `z`. Результатом этого вызова будет число `-3`, а внутри функции на момент конкретного вызова параметр `a` становится равным `5`, а `b` становится равным `8`.
 
-#### recursion
+### recursion
 
 ```javascript
 const factorial = (n) => {
@@ -414,7 +413,7 @@ const factorial = (n) => {
 const answer = factorial(3);
 ```
 
-## Callback Functions
+### Callback Functions
 
 the way to create a callback function is to pass it as a parameter to another function, and then to call it back right after something has happened or some task is completed
 
@@ -434,7 +433,7 @@ setTimeout(() => {
 }, 3000);
 ```
 
-## async-await
+### async-await
 
 The [`async`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async\_function) keyword gives you a simpler way to work with asynchronous promise-based code. Adding `async` at the start of a function makes it an async function.
 
@@ -476,93 +475,9 @@ console.log("результат вызова функции", movies) // *3
 
 ```
 
-## Objects
+## XMLHttpRequest (XHR)
 
-An **object** is a _non-primitive_ data type that represents an **unordered** collection of _properties_.A **property** is a part of the object that imitates a variable. It consists of a **key** and a **value** separated by a colon. A key can only be a string, but the value may be of any data type.
-
-```javascript
-const сountry = {
-  name: "Netherlands",
-  population: 17.18,
-  stillExist: true,
-  "friendly name": "Holland" // key could be in " " we can use whitespace between words
-};
-```
-
-### Properties <a href="#properties" id="properties"></a>
-
-To access the properties, we use a record with the object name and a dot.
-
-```javascript
-console.log(country.name); // Netherlands
-console.log(country.["name"]); // Netherlands - alternative 
-```
-
-Properties can be added using the dot symbol and the `=` assignment symbol.
-
-```
-сountry.capital = "Amsterdam";
-```
-
-To delete a property, we can use the `delete` operator and a dot.
-
-```
-delete country.population;
-```
-
-### Audio Object <a href="#step-title" id="step-title"></a>
-
-`Audio Object` can be created by using the following syntax:
-
-```javascript
-let audio = document.createElement("AUDIO");
-//or
-let audio = new Audio("path/to/myAudio.mp3");
-```
-
-To get access to this object, we can use the method we're already familiar with: `getElementById()`. Let's assume that our HTML `<audio>` element has the id `myAudioID`. We call the method `getElementById()` to access that element by its id:
-
-```
-let audio = document.getElementById("myAudioID");
-```
-
-#### Properties
-
-[https://www.w3schools.com/jsref/dom\_obj\_audio.asp](https://www.w3schools.com/jsref/dom\_obj\_audio.asp)
-
-```javascript
-let audio = getElementById("myObjectID");
-let src = audio.src; // "path/to/myAudio.mp3"
-console.log(src);
-```
-
-The `duration` property lets us know the duration of the audio file in seconds:
-
-```
-let duration = audio.duration;
-console.log(duration);
-```
-
-#### Methods
-
-[https://www.w3schools.com/jsref/dom\_obj\_audio.asp](https://www.w3schools.com/jsref/dom\_obj\_audio.asp)
-
-The following method is responsible for reloading the `<audio>` element:
-
-```
-audio.load();
-```
-
-The following methods are probably the most basic ones:
-
-```
-audio.play();
-audio.pause();
-```
-
-### XMLHttpRequest (XHR)
-
-objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh.
+Objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh.
 
 `XMLHttpRequest` is used heavily in [AJAX](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX) programming.
 
@@ -579,7 +494,7 @@ req.open("GET", "http://www.example.org/example.txt");
 req.send();
 ```
 
-### Promises <a href="#promises-in-javascript" id="promises-in-javascript"></a>
+## Promises <a href="#promises-in-javascript" id="promises-in-javascript"></a>
 
 a Promise is an object. There are 3 states of the Promise object:
 
@@ -696,64 +611,6 @@ do {
 } while (number > 0);
 
 console.log(original + " factorial is " + factorial);
-```
-
-## Browser events
-
-[https://developer.mozilla.org/en-US/docs/Web/Events](https://developer.mozilla.org/en-US/docs/Web/Events)
-
-### Mouse events <a href="#mouse-events" id="mouse-events"></a>
-
-* `click` is the event that occurs when a user clicks on an item with the left mouse button;
-* `dblclick` is responsible for events occurring after double clicking with the left mouse button;
-* `contextmenu` is when a user clicks on an element with the right mouse button.
-
-### Keyboard events <a href="#keyboard-events" id="keyboard-events"></a>
-
-* `keydown` is the event that occurs when the user presses a key;
-* `keyup` is the event that happens when the any key is released;
-* `keypress` is the event that occurs when any key other than Shift, Fn, CapsLock is in the pressed position
-
-Each browser event has an **event handler**: a code block that occurs after the event operation. When the code block is executed, we can say that we register the event handler. It is thanks to these handlers that the code can react to user actions.
-
-```javascript
-document.addEventListener("click", function() {
-  console.log("There's been a browser event");
-});
-```
-
-```javascript
-document.getElementById("myBtn").addEventListener("keypress", function() {
-  // body
-});
-```
-
-### Key Codes <a href="#key-codes" id="key-codes"></a>
-
-Javascript has a property `event.code` that allows you to get the code for the specific keyboard character. Each key has its own code which depends on its location on the keyboard:
-
-* letter codes are composed according to a `Key<letter>` scheme;
-* numeric key codes are built on the principle `Digit<number>`;
-* the code for special keys is their name, for instance, `Enter` for the _Enter_ key.
-
-Use `event.code` when you do not care about case and vice versa, use `event.key` when you care about case.
-
-### Event handling <a href="#event-handling" id="event-handling"></a>
-
-```javascript
-document.addEventListener("keydown", function(event) {
-  if (event.code == "AltRight") {
-    console.log(event);
-  }
-});
-```
-
-```javascript
-document.addEventListener("keydown", function(event) {
-  if (event.key == "W") {
-    console.log("W Pressed");
-  }
-});
 ```
 
 ## XHR vs fetch
