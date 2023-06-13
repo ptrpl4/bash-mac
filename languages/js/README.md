@@ -215,7 +215,7 @@ console.log(!(false && !true)); // true
 
 ## Type conversion
 
-### String conversion
+#### String conversion
 
 In JS, an _implicit conversion_ will be called by the binary `+` operator when one of the operands is a string:
 
@@ -234,7 +234,7 @@ Remember the order of arithmetic operations. If there are several numbers before
 3 + 10 + "1" // "131", not "3101"
 ```
 
-### Numeric conversion <a href="#numeric-conversion" id="numeric-conversion"></a>
+#### Numeric conversion <a href="#numeric-conversion" id="numeric-conversion"></a>
 
 When converting a string to a number, spaces and characters `\n,`  at the beginning and the end of the string are cut off. If the string turns out to be empty, the result will be `0`. The boolean type behaves as expected: `false` turns into `0`, `true` turns into `1`.
 
@@ -250,7 +250,7 @@ true + 43 // 44
 +"85"     // 85
 ```
 
-### Boolean conversion <a href="#boolean-conversion" id="boolean-conversion"></a>
+#### Boolean conversion <a href="#boolean-conversion" id="boolean-conversion"></a>
 
 The rules for using this function are simple: values that imply "empty", like `0` or an empty string `""` turn into `false`. All other values turn into `true`.
 
@@ -272,14 +272,14 @@ print some text
 console.log("Learning JavaScript is easy and enjoyable!");
 ```
 
-#### `String()`
+#### String()
 
 ```javascript
 String(123);   // "123"
 String(false); // "false"
 ```
 
-#### `Number()`
+#### Number()
 
 ```javascript
 Number("1");    // 1
@@ -292,7 +292,7 @@ Number(true);   // 1
 Number(false);  // 0
 ```
 
-#### `Boolean()`
+#### Boolean()
 
 ```javascript
 Boolean(1);            // true
@@ -301,41 +301,7 @@ Boolean("Am I nice?"); // true
 Boolean("");           // false
 ```
 
-#### `getElementById()`
-
-```markup
-<p id="blue-text">What's your hyper skill?</p>
-<script>
-  let element = document.getElementById("blue-text"); // get the element by id
-</script>
-```
-
-#### `querySelector()`
-
-With the `querySelector()` method it is possible to return the first document element that corresponds to the specified selector:
-
-```
-<p>What's your hyper skill?</p>
- 
-<script>
-  let element = document.querySelector("p"); // get the element by selector
-</script>
-```
-
-#### `querySelectorAll()`
-
-\*\*\*\*gets all elements that match the specified selector:
-
-```
-<p>Tell me</p>
-<p>What's your hyper skill?</p>
- 
-<script>
-  let elements = document.querySelectorAll("p"); // get elements by selector
-</script>
-```
-
-#### `fetch()`
+#### fetch()
 
 The global **`fetch()`** method starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
 
@@ -475,6 +441,29 @@ console.log("результат вызова функции", movies) // *3
 
 ```
 
+## Methods
+
+When functions are assigned to the properties of an object, we call them "methods."
+
+```javascript
+// All JavaScript objects (including arrays) have methods:
+let a = []; // Create an empty array
+a.push(1,2,3); // The push() method adds elements to an array
+a.reverse(); // Another method: reverse the order of elements 
+
+// We can define our own methods, too. The "this" keyword refers to the object
+// on which the method is defined: in this case, the points array from earlier.
+points.dist = function() { // Define a method to compute distance between points
+    let p1 = this[0]; // First element of array we're invoked on
+    let p2 = this[1]; // Second element of the "this"object
+    let a = p2.x-p1.x; // Difference in x coordinates
+    let b = p2.y-p1.y; // Difference in y coordinates
+    return Math.sqrt(a*a + b*b); // Math.sqrt() computes the square root
+};
+
+points.dist() // => Math.sqrt(2): distance between our 2 points
+```
+
 ## XMLHttpRequest (XHR)
 
 Objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh.
@@ -524,15 +513,16 @@ const myPromise = new Promise((resolve, reject) => {
 
 ```javascript
 class Human { // class name with Capital Letter
-    constructor(name, gender){
+    constructor(name, gender) { // Constructor function to initialize new instances.
         this.name = name;
         this.gender = gender; 
-    }
-    sayMyName() { // add method to class
+    }                         // No return is necessary in constructor functions.
+    sayMyName() {             // add method to class
         console.log("My name is " + this.name);
     } 
 }
-const idealHuman = new Human("John", "investigating"); // create new instance
+
+let idealHuman = new Human("John", "investigating"); // create new instance
 
 idealHuman.sayMyName(); // call method 
 ```

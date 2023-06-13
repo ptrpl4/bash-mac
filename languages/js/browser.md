@@ -117,3 +117,39 @@ The following methods are probably the most basic ones:
 audio.play();
 audio.pause();
 ```
+
+## Document methods
+
+### getElementById()
+
+```markup
+<p id="blue-text">What's your hyper skill?</p>
+<script>
+  let element = document.getElementById("blue-text"); // get the element by id
+</script>
+```
+
+### querySelector()
+
+With the `querySelector()` method it is possible to return the first document element that corresponds to the specified selector:
+
+```html
+<p>What's your hyper skill?</p>
+ 
+<script>
+  let element = document.querySelector("p"); // get the element by selector
+</script>
+```
+
+#### querySelectorAll()
+
+\*\*\*\*gets all elements that match the specified selector:
+
+```html
+<p>Tell me</p>
+<p>What's your hyper skill?</p>
+ 
+<script>
+  let elements = document.querySelectorAll("p"); // get elements by selector
+</script>
+```
