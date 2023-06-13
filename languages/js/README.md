@@ -15,25 +15,22 @@ ESLint statically analyzes your code - [https://eslint.org/](https://eslint.org)
 
 Online IDE - [https://replit.com/](https://replit.com/)
 
-## Comments
+#### Comments
 
-#### One-line comments <a href="#one-line-comments" id="one-line-comments"></a>
+Example
 
 <pre class="language-javascript"><code class="lang-javascript"><strong>// Coment on new line
 </strong><strong>console.log("Nice to see you!"); // This code outputs the message to the console
-</strong></code></pre>
-
-#### Multi-line comments <a href="#multi-line-comments" id="multi-line-comments"></a>
-
-```javascript
-/*  
+</strong><strong>
+</strong>/*  
   The following code outputs the message to the console
   The console will display a line with the text "Hello, JS!"
 */
-console.log("Hello, JS!");
-```
+</code></pre>
 
-## Data types & Variables
+## Types, Values, and Variables
+
+### Variables
 
 The name of a variable can contain only letters, numbers or symbols `$` and `_` and it _cannot_ begin with a number.
 
@@ -49,7 +46,14 @@ let letters, &ampersand, _underscore; // variable examples
 let 1number; // SyntaxError: Invalid or unexpected token
 ```
 
-### Basic Data types
+### Primitive types
+
+JavaScript types can be divided into two categories: primitive types and object types. \
+Primitive types include `numbers`, `strings` of text (known as strings), and `Boolean` truth values (known as booleans).
+
+The special JavaScript values `null` and `undefined` are primitive values, but they are not numbers, strings, or booleans.
+
+Any JavaScript value that is not a number, a string, a boolean, a symbol, null, or undefined is an object.
 
 #### Numbers, strings, boolean, null, undefined
 
@@ -88,17 +92,7 @@ let lastName = "Doe";
 let text = `Welcome ${firstName}, ${lastName}!`;
 ```
 
-### Array
-
-```javascript
-const companies = ["Apple", "Google", "Amazon"];
-companies.push("Yandex"); // add new:
-companies.pop(); // delete last:
-const firstPlace = companies[0] // get by index
-companies.length // check length
-```
-
-### Objects
+### Object
 
 An **object** is a _non-primitive_ data type that represents an **unordered** collection of _properties_. A **property** is a part of the object that imitates a variable. It consists of a **key** and a **value** separated by a colon. A key can only be a string, but the value may be of any data type.
 
@@ -124,6 +118,32 @@ To **delete** a property, we can use the `delete` operator and a dot.
 ```javascript
 delete country.population;
 ```
+
+### Array
+
+Object. Ordered collection of numbered values. The JavaScript language includes special syntax for working with arrays, and arrays have some special behavior that distinguishes them from ordinary objects.
+
+```javascript
+const companies = ["Apple", "Google", "Amazon"];
+companies.push("Yandex"); // add new:
+companies.pop(); // delete last:
+const firstPlace = companies[0] // get by index
+companies.length // check length
+```
+
+### Other object types
+
+A Set object represents a set of values.&#x20;
+
+A Map object represents a mapping from keys to values.&#x20;
+
+Various “typed array” types facilitate operations on arrays of bytes and other binary data.&#x20;
+
+The RegExp type represents textual patterns and enables sophisticated matching, searching, and replacing operations on strings.&#x20;
+
+The Date type represents dates and times and supports rudimentary date arithmetic.&#x20;
+
+Error and its subtypes represent errors that can arise when executing JavaScript code.
 
 ## Operators
 
