@@ -96,6 +96,9 @@ let text = `Welcome ${firstName}, ${lastName}!`;
 
 An **object** is a _non-primitive_ data type that represents an **unordered** collection of _properties_. A **property** is a part of the object that imitates a variable. It consists of a **key** and a **value** separated by a colon. A key can only be a string, but the value may be of any data type.
 
+JavaScript’s object types are **mutable** and its primitive types are **immutable**. \
+JavaScript program can change the values of object properties and array elements.
+
 ```javascript
 // An object is a collection of name/value pairs, or a string to value map.
 let book = { // Objects are enclosed in curly braces.
@@ -192,6 +195,10 @@ The list below is sorted from the highest to the lowest precedence level:
 * unary plus/minus
 * multiplication, division
 * addition and subtraction
+
+#### equality
+
+the `==` equality operator is deprecated in favor of the strict equality operator `===`, which does no type conversions
 
 ### Boolean and logical operators
 
@@ -554,9 +561,9 @@ idealHuman.sayMyName(); // call method
 ```javascript
 let condition = null; 
  
-if (condition == null) {
+if (condition === null) {
     console.log("True!");
-} else if (condition == 10) {
+} else if (condition === 10) {
     console.log("Wow its 10!")
 }
 else {
@@ -653,4 +660,44 @@ fetch('./api/some.json')
         });
     })
     .catch((err) => { ... });
+```
+
+## Math
+
+Arithmetic in JavaScript does not raise errors in cases of overflow, underflow, or division by zero. When the result of a numeric operation is larger than the largest representable number (overflow), the result is a special infinity value, Infinity.
+
+Division by zero is not an error in JavaScript: it simply returns infinity or negative infinity. There is one exception, however: zero divided by zero does not have a well-defined value, and the result of this operation is the special not-a-number value, NaN.
+
+```javascript
+Math.pow(2,53) // => 9007199254740992: 2 to the power 53 
+Math.round(.6) // => 1.0: round to the nearest integer
+Math.ceil(.6) // => 1.0: round up to an integer
+Math.floor(.6) // => 0.0: round down to an integer
+Math.abs(-5) // => 5: absolute value
+Math.max(x,y,z) // Return the largest argument
+Math.min(x,y,z) // Return the smallest argument
+Math.random() // Pseudo-random number x where 0 <= x < 1.0
+Math.PI // π: circumference of a circle diameter
+Math.E // e: The base of the natural logarithm
+Math.sqrt(3) // => 3**0.5: the square root of 3
+Math.pow(3, 1/3) // => 3**(1/3): the cube root of 3
+Math.sin(0) // Trigonometry: also Math.cos Math.atan, etc.
+Math.log(10) // Natural logarithm of 10
+Math.log(100)/Math.LN10 // Base 10 logarithm of 100 
+Math.log(512)/Math.LN2 // Base 2 logarithm of 512 Math.exp(3)
+
+// ES6
+Math.cbrt(27) // => 3: cube root
+Math.hypot(3, 4) // => 5: square root of sum of squares of all arguments
+Math.log10(100) // => 2: Base-10 logarithm
+Math.log2(1024) // => 10: Base-2 logarithm
+Math.log1p(X) // Natural log of (1+x); accurate for very small X
+Math.expm1(x) // Math.exp(x)-1; the inverse of Math. logip ()
+Math.sign(X) // -1, 0, or 1 for arguments <, ==, or > 0
+Math.imul(2,3) // => 6: optimized multiplication of 32-bit integers
+Math.c1z32(0xf) // => 28: number of leading zero bits in a 32-bit integer
+Math.trunc(3.9) // => 3: convert to an integer by truncating fractional part
+Math.fround(x) // Round to nearest 32-bit float number
+Math.sinh(x) // Hyperbolic sine. Also Math.cosh(),Math.tanh()
+Math.asinh(x) // Hyperbolic arcsine. Also Math.acosh (),Math.atanh()
 ```
