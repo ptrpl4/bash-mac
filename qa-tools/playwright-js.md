@@ -113,7 +113,8 @@ takes two arguments: a string representing the title of the test, and an async f
 
 `expect`
 
-To make an assertion, call `expect(value)` and choose a matcher that reflects the expectation. There are many generic matchers like `toEqual`, `toContain`, and `toBeTruthy` that can be used to assert any conditions.
+To make an assertion, call `expect(value)` and choose a matcher that reflects the expectation. There are many generic matchers like `toEqual`, `toContain`, and `toBeTruthy` that can be used to assert any conditions.\
+[https://playwright.dev/docs/test-assertions](https://playwright.dev/docs/test-assertions)
 
 ```javascript
 test.describe('Pay button appearance', () => { // declare group of tests
@@ -121,27 +122,19 @@ test.describe('Pay button appearance', () => { // declare group of tests
     page, // recieve page object
     request, // recieve request object
   }) => {
-    const PayWidget = new PayWidgetComponent(page);
+    const PayWidget = new PayWidgetComponent(page); // get page elements for test
 
-    await openPayPage(page, request, token212007CommonUs, {
-      merchantId: PayTestMerchatId,
+    await openPayPage(page, request, token, { // open page with test data
+      Id: TestId,
     });
     
-    await expect(
-      PayWidget.PayButton,
-      "I don't see the Pay button"
-    ).toBeVisible();
-    await expect(
-      PayWidget.Logo,
-      "I don't see the Pay logo"
-    ).toBeVisible();
+    await expect( // assertion function
+      PayWidget.PayButton, // component
+      "I don't see the Pay button" // custom expect message
+    ).toBeVisible(); // matcher for assertion 
     await expect(
       PayWidget.ButtonSpmPreview,
       'I can see Pay SPM preview on button'
-    ).toBeHidden();
-    await expect(
-      PayWidget.ButtonCardIcon,
-      'I can see card icon on button'
     ).toBeHidden();
   });
 ```
