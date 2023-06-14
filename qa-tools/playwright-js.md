@@ -65,6 +65,7 @@ test-file should contain '.spec' in name
 
 ```javascript
 const { test, expect } = require('@playwright/test');
+
 test('check load of main page', async ({ page }) => {
   await page.goto('https://google.com/');
   // Expect a title "to contain" a substring.
@@ -99,4 +100,48 @@ const { chromium } = require('playwright');
     await page.click('#smthg');
     await browser.close();
 })();
+```
+
+### test
+
+`test.describe` is a method that declares a group of tests. \
+It takes two arguments: a string that represents the title of the group, and the second argument is a callback function that contains all the tests belonging to this group. When `test.describe` is called, it immediately runs the callback function and any tests added in this callback will belong to this group.
+
+`test`
+
+takes two arguments: a string representing the title of the test, and an async function that defines the test itself. The async function receives an object with fixtures and optional TestInfo as its argument.
+
+`expect`
+
+To make an assertion, call `expect(value)` and choose a matcher that reflects the expectation. There are many generic matchers like `toEqual`, `toContain`, and `toBeTruthy` that can be used to assert any conditions.
+
+```javascript
+test.describe('Pay button appearance', () => { // declare group of tests
+  test('Pay button is displaying if Pay Enabled', async ({ // declare test name
+    page, // recieve page object
+    request, // recieve request object
+  }) => {
+    const PayWidget = new PayWidgetComponent(page);
+
+    await openPayPage(page, request, token212007CommonUs, {
+      merchantId: PayTestMerchatId,
+    });
+    
+    await expect(
+      PayWidget.PayButton,
+      "I don't see the Pay button"
+    ).toBeVisible();
+    await expect(
+      PayWidget.Logo,
+      "I don't see the Pay logo"
+    ).toBeVisible();
+    await expect(
+      PayWidget.ButtonSpmPreview,
+      'I can see Pay SPM preview on button'
+    ).toBeHidden();
+    await expect(
+      PayWidget.ButtonCardIcon,
+      'I can see card icon on button'
+    ).toBeHidden();
+  });
 ```
