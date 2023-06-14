@@ -81,6 +81,18 @@ function getDetails(a) {
   console.log(a);
 }
 getDetails(); // undefined value returned when a function has a missing parameter:
+
+//more string examples
+'two\nlines' // A string representing 2 lines written on one line
+
+// A one-line string written on 3 lines:
+"one\
+ long\
+ line"
+ 
+// A two-line string written on two lines:
+`the newline character at the end of this line
+is included literally in this string`
 ```
 
 #### Variable String Substitutions
