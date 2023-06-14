@@ -63,20 +63,25 @@ test-file should contain '.spec' in name
 
 `example.test.spec.js` - example
 
+`tests/example.test.spec.ts` - path
+
 ```javascript
 const { test, expect } = require('@playwright/test');
 
 test('check load of main page', async ({ page }) => {
   await page.goto('https://google.com/');
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Google/);
+  await expect(page).toHaveTitle(/Google/); // Expect a title "contain" a substring
 });
 ```
 
 ### run
 
 ```bash
+# run all
 npx playwright test
+
+# run one
+npx playwright test tests/example.test.spec.ts
 ```
 
 ## code snippets
