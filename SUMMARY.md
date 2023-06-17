@@ -97,7 +97,4 @@
   * [Hotkeys](additional-info/other/hotkeys.md)
   * [💳 Card Payments](additional-info/other/card-payments.md)
   * [🦄 UNIX](additional-info/other/unix.md)
-
-***
-
-* [💻 comfy macOS](comfy-macos.md)
+* [💻 comfy macOS](additional-info/comfy-macos.md)
