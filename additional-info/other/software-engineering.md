@@ -72,3 +72,7 @@ lecture - [https://www.youtube.com/playlist?list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBs
 
 <img src="../../.gitbook/assets/image.png" alt="" data-size="original">
 
+## Processes
+
+![](<../../.gitbook/assets/image (3).png>)
+
