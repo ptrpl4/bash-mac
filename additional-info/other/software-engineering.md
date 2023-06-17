@@ -54,9 +54,21 @@ lecture - [https://www.youtube.com/playlist?list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBs
 
 ## Project components
 
+### Components
+
 * Money
 * Time
 * People
 * Features
 * Quality
+
+### Priority
+
+* Must
+* Want
+* Skip
+
+## Product specification&#x20;
+
+<img src="../../.gitbook/assets/image.png" alt="" data-size="original">
 
