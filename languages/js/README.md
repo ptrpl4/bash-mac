@@ -95,13 +95,23 @@ getDetails(); // undefined value returned when a function has a missing paramete
 is included literally in this string`
 ```
 
-#### Variable String Substitutions
+#### Strings
+
+Strings are immutable in JavaScript. Methods like replace() and toUpperCase() return new strings: they do not modify the string on which they are invoked. \
+
+
+Strings can also be treated like read-only arrays
+
+#### &#x20;Template Literals (ES 6)
 
 ```javascript
-let firstName = "John";
-let lastName = "Doe";
+let name = "Bill";
+let greeting = `Hello ${ name }.`; // greeting == "Hello Bill."
 
-let text = `Welcome ${firstName}, ${lastName}!`;
+// string as array
+let s = "hello, world";
+s[0] // => "h"
+s[s.length-1] // => "d"
 ```
 
 ### Object
