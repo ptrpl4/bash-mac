@@ -1,4 +1,4 @@
-# 🏋♂ Playwright - JS
+# 🏋 Playwright - JS
 
 ## Links
 
@@ -31,8 +31,7 @@ npx playwright install
 
 test-file should contain '.spec' in name
 
-`example.test.spec.js` - example
-
+`example.test.spec.js` - example \
 `tests/example.test.spec.ts` - path
 
 ```javascript
@@ -46,9 +45,9 @@ test('check load of main page', async ({ page }) => {
 
 ### File structure
 
-<pre><code><strong>/tests/example.spec.ts - Example end-to-end test
-</strong>/playwright.config.ts - Playwright Test configuration
-</code></pre>
+`./tests/example.spec.ts` - Example end-to-end test\
+`./playwright.config.ts` - Playwright Test configuration
+
 
 ### run
 
