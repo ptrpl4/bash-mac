@@ -51,7 +51,7 @@ let 1number; // SyntaxError: Invalid or unexpected token
 JavaScript types can be divided into two categories: primitive types and object types. \
 Primitive types include `numbers`, `strings` of text (known as strings), and `Boolean` truth values (known as booleans).
 
-The special JavaScript values `null` and `undefined` are primitive values, but they are not numbers, strings, or booleans.
+The special JavaScript values `null` and `undefined` are primitive values, but they are not numbers, strings, or booleans. undefined to represent a system-level, unexpected, or error- like absence of value and null to represent a program-level, normal, or expected absence of value.
 
 Any JavaScript value that is not a number, a string, a boolean, a symbol, null, or undefined is an object.
 
