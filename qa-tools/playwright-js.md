@@ -1,4 +1,4 @@
-# Playwright - JS
+# 🏋♂ Playwright - JS
 
 ## Links
 
@@ -10,52 +10,21 @@ Webinar - [https://applitools.com/event/playwright-a-new-test-automation-framewo
 
 ## Installation
 
-#### Requirements&#x20;
+quick init
 
-node.js+npm
+<pre class="language-bash"><code class="lang-bash"><strong># you need node.js (npm)
+</strong><strong># Run from your project's root directory
+</strong>npm init playwright@latest
 
-```bash
-# Run from your project's root directory
-npm init playwright@latest
 # Or create a new project
 npm init playwright new-project
 
 # Or install manualy 
 npm i -D @playwright/test
+
 # install supported browsers
 npx playwright install
-```
-
-notes
-
-```bash
-Inside that directory, you can run several commands:
-
-  npx playwright test
-    Runs the end-to-end tests.
-
-  npx playwright test --project=chromium
-    Runs the tests only on Desktop Chrome.
-
-  npx playwright test tests/example.spec.ts
-    Runs the tests of a specific file.
-
-  npx playwright test --debug
-    Runs the tests in debug mode.
-
-We suggest that you begin by typing:
-
-  cd new-project
-  npx playwright test
-
-And check out the following files:
-  - ./new-project/tests/example.spec.ts - Example end-to-end test
-  - ./new-project/playwright.config.ts - Playwright Test configuration
-
-Visit https://playwright.dev/docs/intro for more information. ✨
-
-Happy hacking
-```
+</code></pre>
 
 ### create
 
@@ -74,6 +43,12 @@ test('check load of main page', async ({ page }) => {
 });
 ```
 
+### File structure
+
+<pre><code><strong>/tests/example.spec.ts - Example end-to-end test
+</strong>/playwright.config.ts - Playwright Test configuration
+</code></pre>
+
 ### run
 
 ```bash
@@ -82,18 +57,21 @@ npx playwright test
 
 # run one
 npx playwright test tests/example.test.spec.ts
+
+# Runs the tests only on Desktop Chrome.
+npx playwright test --project=chromium
+
+# Runs the tests in debug mode.
+npx playwright test --debug
 ```
 
 ## code snippets
-
-`.type .goto page.$`
 
 ```javascript
 const { chromium } = require('playwright');
 // https://playwright.dev/docs/api/class-elementhandle#element-handle-type
 
-( async () => {
-    // function code
+( async () => { // => function code
     // launching browser
     const browser = await chromium.launch({ headless: false, slowMo: 100});
     const page = await browser.newPage();
@@ -107,19 +85,18 @@ const { chromium } = require('playwright');
 })();
 ```
 
-### test
+## Built in functions
 
-`test.describe` is a method that declares a group of tests. \
-It takes two arguments: a string that represents the title of the group, and the second argument is a callback function that contains all the tests belonging to this group. When `test.describe` is called, it immediately runs the callback function and any tests added in this callback will belong to this group.
+### test func.
 
-`test`
+`test()`
 
 takes two arguments: a string representing the title of the test, and an async function that defines the test itself. The async function receives an object with fixtures and optional TestInfo as its argument.
 
-`expect`
+#### methods
 
-To make an assertion, call `expect(value)` and choose a matcher that reflects the expectation. There are many generic matchers like `toEqual`, `toContain`, and `toBeTruthy` that can be used to assert any conditions.\
-[https://playwright.dev/docs/test-assertions](https://playwright.dev/docs/test-assertions)
+`test.describe` is a method that declares a group of tests. \
+It takes two arguments: a string that represents the title of the group, and the second argument is a callback function that contains all the tests belonging to this group. When `test.describe` is called, it immediately runs the callback function and any tests added in this callback will belong to this group.
 
 ```javascript
 test.describe('Pay button appearance', () => { // declare group of tests
@@ -143,3 +120,10 @@ test.describe('Pay button appearance', () => { // declare group of tests
     ).toBeHidden();
   });
 ```
+
+### expect func.
+
+`expect()`
+
+To make an assertion, call `expect(value)` and choose a matcher that reflects the expectation. There are many generic matchers like `toEqual`, `toContain`, and `toBeTruthy` that can be used to assert any conditions.\
+[https://playwright.dev/docs/test-assertions](https://playwright.dev/docs/test-assertions)
