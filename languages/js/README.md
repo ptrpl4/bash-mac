@@ -97,9 +97,13 @@ is included literally in this string`
 
 #### Strings
 
-Strings are immutable in JavaScript. Methods like replace() and toUpperCase() return new strings: they do not modify the string on which they are invoked. \
-\
-let s = "hello"; // Start with some lowercase text s.toUpperCase(); // Returns "HELLO" , but doesn't alter s s // => "hello": the original string has not  changed
+Strings are immutable in JavaScript. Methods like replace() and toUpperCase() return new strings: they do not modify the string on which they are invoked.&#x20;
+
+```javascript
+let s = "hello"; // Start with some lowercase text 
+s.toUpperCase(); // Returns "HELLO" , but doesn't alter s 
+s // => "hello": the original string has not  changed
+```
 
 Strings can also be treated like read-only arrays
 
