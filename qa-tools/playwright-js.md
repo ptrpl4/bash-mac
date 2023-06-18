@@ -12,9 +12,10 @@ Webinar - [https://applitools.com/event/playwright-a-new-test-automation-framewo
 
 quick init
 
-<pre class="language-bash"><code class="lang-bash"><strong># you need node.js (npm)
-</strong><strong># Run from your project's root directory
-</strong>npm init playwright@latest
+```bash
+# you need node.js (npm)
+# Run from your project's root directory
+npm init playwright@latest
 
 # Or create a new project
 npm init playwright new-project
@@ -24,7 +25,7 @@ npm i -D @playwright/test
 
 # install supported browsers
 npx playwright install
-</code></pre>
+```
 
 ### create
 
