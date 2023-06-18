@@ -19,14 +19,15 @@ Online IDE - [https://replit.com/](https://replit.com/)
 
 Example
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>// Coment on new line
-</strong><strong>console.log("Nice to see you!"); // This code outputs the message to the console
-</strong><strong>
-</strong>/*  
+```javascript
+// Coment on new line
+console.log("Nice to see you!"); // This code outputs the message to the console
+
+/*  
   The following code outputs the message to the console
   The console will display a line with the text "Hello, JS!"
 */
-</code></pre>
+```
 
 ## Types, Values, and Variables
 
