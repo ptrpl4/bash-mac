@@ -1,16 +1,14 @@
 # Playwright - JS
 
-## Links
+#### Links
 
-FAQ - [https://applitools.com/blog/top-playwright-questions-answered](https://applitools.com/blog/top-playwright-questions-answered/)
-
-Tutor - [https://testautomationu.applitools.com/js-playwright-tutorial](https://testautomationu.applitools.com/js-playwright-tutorial)
-
+FAQ - [https://applitools.com/blog/top-playwright-questions-answered](https://applitools.com/blog/top-playwright-questions-answered/)\
+Tutor - [https://testautomationu.applitools.com/js-playwright-tutorial](https://testautomationu.applitools.com/js-playwright-tutorial)\
 Webinar - [https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web](https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web/)
 
-## Installation
+## Basics
 
-quick init
+#### quick init
 
 ```bash
 # you need node.js (npm)
@@ -27,7 +25,7 @@ npm i -D @playwright/test
 npx playwright install
 ```
 
-### File structure
+#### File structure
 
 `./tests/example.spec.ts` - Example end-to-end test\
 `./playwright.config.ts` - Playwright Test configuration
@@ -58,100 +56,179 @@ npx playwright test --project=chromium
 npx playwright test --debug
 ```
 
-## playwright config
+### playwright config
 
 `playwright.config.ts`
 
+docs - https://playwright.dev/docs/test-configuration
+
+config example - [https://github.com/raptatinha/tau-introduction-to-playwright/blob/chapter-2/playwright.config.ts](https://github.com/raptatinha/tau-introduction-to-playwright/blob/chapter-2/playwright.config.ts)
+
 ```javascript
-import { Project, devices, PlaywrightTestConfig } from '@playwright/test';
-import dotenv from 'dotenv'; // for work witj env vars
+import { defineConfig, devices } from '@playwright/test';
+import baseEnvUrl from './utils/environmentBaseUrl';
 
-dotenv.config({ path: './tests/e2e/.env' }); // set .env file
+require('dotenv').config();
 
-const currentDir = process.env.PWD;
-const baseUrl = envVariables.BASE_URL;
+export default defineConfig({
+  testDir: './tests',
 
-const commonProjectconfig = {
-  browserName: 'chromium',
-  headless: isHeadless,
-  baseUrl,
-  contextOptions: {
-    ignoreHTTPSErrors: true,
+  fullyParallel: true, // Run tests in files in parallel
+
+  // Fail the build on CI if you accidentally left test.only in the source code
+  forbidOnly: !!process.env.CI,
+
+  /* Retry on CI only */
+  // retries: process.env.CI ? 2 : 0,
+  retries: 2,
+
+  /* Opt out of parallel tests on CI. */
+  workers: process.env.CI ? 1 : undefined,
+
+  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+  reporter: 'html',
+  // reporter: [['html', { open: 'always' }]], //always, never and on-failure (default).
+  // reporter: [['html', { outputFolder: 'my-report' }]], // report is written into the playwright-report folder in the current working directory. override it using the PLAYWRIGHT_HTML_REPORT
+  // reporter: 'dot',
+  // reporter: 'list',
+  /**
+    reporter: [
+      ['list'],
+      ['json', {  outputFile: 'test-results.json' }]
+    ],
+  */
+  /**
+   * custom reports: https://playwright.dev/docs/test-reporters#custom-reporters 
+  */
+  
+  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  use: {
+    /* Base URL to use in actions like `await page.goto('/')`. */
+    // baseURL: 'http://127.0.0.1:3000',
+
+    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    // headless: false,
+    // ignoreHTTPSErrors: true,
+    // viewport: { width: 1280, height: 720 },
+    // video: 'on-first-retry',
   },
-};
+    // timeout: 30000, //https://playwright.dev/docs/test-timeouts
+    // expect: {
+      /**
+       * Maximum time expect() should wait for the condition to be met.
+       * For example in `await expect(locator).toHaveText();`
+       */
+      // timeout: 10000,
+    // },
 
-const config: PlaywrightTestConfig = {
-  testDir: path.join(currentDir, 'tests/e2e/tests'),
-  fullyParallel: true,
-  retries: 1,
+  /* Folder for test artifacts such as screenshots, videos, traces, etc. */
+  // outputDir: 'test-results/',
+
+  /* Configure projects for major browsers */
   projects: [
-    isDesktopVersion
-      ? {
-          name: 'Desktop Chrome',
-          use: {
-            ...commonProjectconfig,
-            ...devices['Desktop Chrome'],
-            trace: 'on-first-retry',
-          },
-          testMatch: /^((?!mobile).)*\.e2e\.ts$/,
-        }
-      : null,
-    isMobileVersion
-      ? {
-          name: 'iPhone 12',
-          use: {
-            ...commonProjectconfig,
-            ...devices['iPhone 12'],
-            trace: 'on-first-retry',
-          },
-          testMatch: /^((?!desktop).)*\.e2e\.ts$/,
-        }
-      : null,
-    isAllVersion
-      ? {
-          name: 'Desktop Chrome',
-          use: {
-            ...commonProjectconfig,
-            ...devices['Desktop Chrome'],
-            trace: 'on-first-retry',
-          },
-          testMatch: /^((?!mobile).)*\.e2e\.ts$/,
-        }
-      : null,
-    isAllVersion
-      ? {
-          name: 'iPhone 12',
-          use: {
-            ...commonProjectconfig,
-            ...devices['iPhone 12'],
-            trace: 'on-first-retry',
-          },
-          testMatch: /^((?!desktop).)*\.e2e\.ts$/,
-        }
-      : null,
-  ].filter(Boolean) as Project[],
-  webServer: shouldRunServer
-    ? {
-        cwd: '../',
-        command: 'ng serve --open=false',
-        port: 4200,
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        timeout: 120 * 1000,
-        reuseExistingServer: true,
-      }
-    : undefined,
-};
+    {
+      name: 'chromium',
+      use: { 
+        ...devices['Desktop Chrome'],
+        // viewport: { width: 1280, height: 720 },
+      },
+    },
 
-export default config;
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
+
+    {
+      name: 'all-browsers-and-tests',
+      use: { 
+        baseURL: 'https://playwright.dev/',
+         ...devices['Desktop Chrome']
+      },
+    },
+
+    {
+      name: 'all-browsers-and-tests',
+      use: { 
+        baseURL: 'https://playwright.dev/',
+         ...devices['Desktop Safari']
+      },
+    },
+
+    {
+      name: 'all-browsers-and-tests',
+      use: { 
+        baseURL: 'https://playwright.dev/',
+         ...devices['Desktop Firefox']
+      },
+    },
+
+    // Example only
+    {
+      name: 'local',
+      use: { 
+        baseURL: baseEnvUrl.local.home,
+      },
+    },
+
+    // Example only
+    {
+      name: 'ci',
+      use: { 
+         baseURL: process.env.CI
+          ? baseEnvUrl.ci.prefix + process.env.GITHUB_REF_NAME + baseEnvUrl.ci.suffix //https://dev-myapp-chapter-2.mydomain.com
+          : baseEnvUrl.staging.home,
+      },
+      /**
+       * GitHub variables: https://docs.github.com/en/actions/learn-github-actions/variables
+       * GitLab variables: https://docs.gitlab.com/ee/ci/variables/predefined_variables.html#predefined-variables-reference
+       */
+    },
+
+    /* Test against mobile viewports. */
+    // {
+    //   name: 'Mobile Chrome',
+    //   use: { ...devices['Pixel 5'] },
+    // },
+    // {
+    //   name: 'Mobile Safari',
+    //   use: { ...devices['iPhone 12'] },
+    // },
+
+    /* Test against branded browsers. */
+    // {
+    //   name: 'Microsoft Edge',
+    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
+    // },
+    // {
+    //   name: 'Google Chrome',
+    //   use: { ..devices['Desktop Chrome'], channel: 'chrome' },
+    // },
+  ],
+
+  /* Run your local dev server before starting the tests */
+  // webServer: {
+  //   command: 'npm run start',
+  //   url: 'http://127.0.0.1:3000',
+  //   reuseExistingServer: !process.env.CI,
+  // },
+});
 ```
 
-## code snippets
+### code snippets
 
 ```javascript
 const { chromium } = require('playwright');
 // https://playwright.dev/docs/api/class-elementhandle#element-handle-type
 
-( async () => { // => function code
+( async () => { // => function 
     // launching browser
     const browser = await chromium.launch({ headless: false, slowMo: 100});
     const page = await browser.newPage();

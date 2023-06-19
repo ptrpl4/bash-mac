@@ -10,6 +10,4 @@
 
 ## Other
 
-[https://devutils.com/](https://devutils.com/)
-
-allInOne
+[https://devutils.com/](https://devutils.com/) - allInOne

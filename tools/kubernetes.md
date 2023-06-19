@@ -126,7 +126,7 @@ spec:
 
 **minikube** - tool for running and testing k8s locally
 
-<figure><img src="../.gitbook/assets/изображение (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/изображение (9) (2).png" alt=""><figcaption></figcaption></figure>
 
 Master node processes and Node processes inside one Virtual Node on your machine.
 

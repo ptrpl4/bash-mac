@@ -76,3 +76,8 @@ lecture - [https://www.youtube.com/playlist?list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBs
 
 ![](<../../.gitbook/assets/image (3).png>)
 
+## Methodology&#x20;
+
+### waterfall
+
+<figure><img src="../../.gitbook/assets/изображение (9).png" alt=""><figcaption></figcaption></figure>

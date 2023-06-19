@@ -10,8 +10,9 @@ pm.environment.set("variable_key", "variable_value");
 
 ### Snippets
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>// JSON value check
-</strong>pm.test('Your test name', () => {
+```javascript
+// JSON value check
+pm.test('Your test name', () => {
   const jsonData = pm.response.json()
   pm.expect(jsonData.value).to.eql(100)
 })
@@ -30,4 +31,4 @@ pm.test('Status code is 200', () => {
   pm.response.to.have.status(200)
 })
 
-</code></pre>
+```
