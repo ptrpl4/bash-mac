@@ -1,4 +1,4 @@
-# 🏋 Playwright - JS
+# Playwright - JS
 
 ## Links
 
@@ -27,14 +27,13 @@ npm i -D @playwright/test
 npx playwright install
 ```
 
-### create
+### File structure
 
-test-file should contain '.spec' in name
-
-`example.test.spec.js` - example \
-`tests/example.test.spec.ts` - path
+`./tests/example.spec.ts` - Example end-to-end test\
+`./playwright.config.ts` - Playwright Test configuration
 
 ```javascript
+// example test
 const { test, expect } = require('@playwright/test');
 
 test('check load of main page', async ({ page }) => {
@@ -43,13 +42,7 @@ test('check load of main page', async ({ page }) => {
 });
 ```
 
-### File structure
-
-`./tests/example.spec.ts` - Example end-to-end test\
-`./playwright.config.ts` - Playwright Test configuration
-
-
-### run
+### playwright runner
 
 ```bash
 # run all
@@ -63,6 +56,93 @@ npx playwright test --project=chromium
 
 # Runs the tests in debug mode.
 npx playwright test --debug
+```
+
+## playwright config
+
+`playwright.config.ts`
+
+```javascript
+import { Project, devices, PlaywrightTestConfig } from '@playwright/test';
+import dotenv from 'dotenv'; // for work witj env vars
+
+dotenv.config({ path: './tests/e2e/.env' }); // set .env file
+
+const currentDir = process.env.PWD;
+const baseUrl = envVariables.BASE_URL;
+
+const commonProjectconfig = {
+  browserName: 'chromium',
+  headless: isHeadless,
+  baseUrl,
+  contextOptions: {
+    ignoreHTTPSErrors: true,
+  },
+};
+
+const config: PlaywrightTestConfig = {
+  testDir: path.join(currentDir, 'tests/e2e/tests'),
+  fullyParallel: true,
+  retries: 1,
+  projects: [
+    isDesktopVersion
+      ? {
+          name: 'Desktop Chrome',
+          use: {
+            ...commonProjectconfig,
+            ...devices['Desktop Chrome'],
+            trace: 'on-first-retry',
+          },
+          testMatch: /^((?!mobile).)*\.e2e\.ts$/,
+        }
+      : null,
+    isMobileVersion
+      ? {
+          name: 'iPhone 12',
+          use: {
+            ...commonProjectconfig,
+            ...devices['iPhone 12'],
+            trace: 'on-first-retry',
+          },
+          testMatch: /^((?!desktop).)*\.e2e\.ts$/,
+        }
+      : null,
+    isAllVersion
+      ? {
+          name: 'Desktop Chrome',
+          use: {
+            ...commonProjectconfig,
+            ...devices['Desktop Chrome'],
+            trace: 'on-first-retry',
+          },
+          testMatch: /^((?!mobile).)*\.e2e\.ts$/,
+        }
+      : null,
+    isAllVersion
+      ? {
+          name: 'iPhone 12',
+          use: {
+            ...commonProjectconfig,
+            ...devices['iPhone 12'],
+            trace: 'on-first-retry',
+          },
+          testMatch: /^((?!desktop).)*\.e2e\.ts$/,
+        }
+      : null,
+  ].filter(Boolean) as Project[],
+  webServer: shouldRunServer
+    ? {
+        cwd: '../',
+        command: 'ng serve --open=false',
+        port: 4200,
+        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+        timeout: 120 * 1000,
+        reuseExistingServer: true,
+      }
+    : undefined,
+};
+
+export default config;
 ```
 
 ## code snippets
@@ -93,9 +173,9 @@ const { chromium } = require('playwright');
 
 takes two arguments: a string representing the title of the test, and an async function that defines the test itself. The async function receives an object with fixtures and optional TestInfo as its argument.
 
-#### methods
+#### test() methods
 
-`test.describe` is a method that declares a group of tests. \
+`test.describe` is a method that declares a group of tests.\
 It takes two arguments: a string that represents the title of the group, and the second argument is a callback function that contains all the tests belonging to this group. When `test.describe` is called, it immediately runs the callback function and any tests added in this callback will belong to this group.
 
 ```javascript

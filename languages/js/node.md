@@ -39,5 +39,23 @@ nvm use 16
 nvm uninstall 8
 ```
 
-\
-\
+### process.env
+
+Returns an object containing the user environment
+
+docs - [https://nodejs.org/docs/latest/api/process.html#process\_process\_env](https://nodejs.org/docs/latest/api/process.html#process\_process\_env)
+
+## JS modules
+
+### dotenv
+
+Loads environment variables from a .env file into process.env
+
+docs - [https://github.com/motdotla/dotenv#dotenv](https://github.com/motdotla/dotenv#dotenv-)
+
+```javascript
+require('dotenv').config()
+// import 'dotenv/config' // for ES6
+
+console.log(process.env)
+```
