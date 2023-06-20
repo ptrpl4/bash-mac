@@ -4,6 +4,7 @@
 
 FAQ - [https://applitools.com/blog/top-playwright-questions-answered](https://applitools.com/blog/top-playwright-questions-answered/)\
 Tutor - [https://testautomationu.applitools.com/js-playwright-tutorial](https://testautomationu.applitools.com/js-playwright-tutorial)\
+Basics - [https://testautomationu.applitools.com/playwright-intro/](https://testautomationu.applitools.com/playwright-intro/) \
 Webinar - [https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web](https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web/)
 
 ## Basics
@@ -373,3 +374,140 @@ test.describe('Pay button appearance', () => { // declare group of tests
 To make an assertion, call `expect(value)` and choose a matcher that reflects the expectation. There are many generic matchers like `toEqual`, `toContain`, and `toBeTruthy` that can be used to assert any conditions.\
 [https://playwright.dev/docs/test-assertions](https://playwright.dev/docs/test-assertions)
 
+## POM
+
+#### structure
+
+```
+../pages/home-page
+../pages/top-menu-page
+
+../tests/test.spec.ts
+```
+
+example test
+
+```javascript
+import { test, type Page } from '@playwright/test';
+import { HomePage } from '../pages/home-page';
+import { TopMenuPage } from '../pages/top-menu-page';
+
+const URL = 'https://playwright.dev/';
+let homePage: HomePage;
+let topMenuPage: TopMenuPage;
+const pageUrl = /.*intro/;
+
+test.beforeEach(async ({page}) => {
+    await page.goto(URL);
+    homePage = new HomePage(page);
+});
+
+async function clickGetStarted(page: Page) {
+    await homePage.clickGetStarted();
+    topMenuPage = new TopMenuPage(page);
+}
+
+test.describe('Playwright website', () => {
+
+    test('has title', async () => {
+        await homePage.assertPageTitle();
+    });
+    
+    test('get started link', async ({ page }) => {
+        // Act
+        await clickGetStarted(page);
+        // Assert
+        await topMenuPage.assertPageUrl(pageUrl);
+    });
+    
+    test('check Java page', async ({ page }) => {
+        await test.step('Act', async () => {
+            await clickGetStarted(page);
+            await topMenuPage.hoverNode();
+            await topMenuPage.clickJava();
+        });
+      
+        await test.step('Assert', async () => {
+            await topMenuPage.assertPageUrl(pageUrl);
+            await topMenuPage.assertNodeDescriptionNotVisible();
+            await topMenuPage.assertJavaDescriptionVisible();
+        });
+    });
+});
+```
+
+example pom
+
+```javascript
+import { type Locator, type Page, expect } from '@playwright/test';
+
+export class HomePage {
+    readonly page: Page;
+    readonly getStartedButton: Locator;
+    readonly pageTitle: RegExp;
+
+    constructor(page: Page) {
+        this.page = page;
+        this.getStartedButton = page.getByRole('link', { name: 'Get started' });
+        this.pageTitle = /Playwright/;
+    }
+
+    async clickGetStarted() {
+        await this.getStartedButton.click();
+    }
+
+    async assertPageTitle() {
+        await expect(this.page).toHaveTitle(this.pageTitle);
+    }
+}
+
+export default HomePage;
+```
+
+one more
+
+```javascript
+import { expect, Locator, Page } from '@playwright/test';
+
+export class TopMenuPage {
+    readonly page: Page;
+    readonly getStartedLink: Locator;
+    readonly nodeLink: Locator;
+    readonly javaLink: Locator;
+    readonly nodeLabel: Locator;
+    readonly javaLabel: Locator;
+    readonly nodeDescription: string = 'Installing Playwright';
+    readonly javaDescription: string = `Playwright is distributed as a set of Maven modules. The easiest way to use it is to add one dependency to your project's pom.xml as described below. If you're not familiar with Maven please refer to its documentation.`;
+
+    constructor(page: Page) {
+        this.page = page;
+        this.getStartedLink = page.getByRole('link', { name: 'Get started' });
+        this.nodeLink = page.getByRole('button', {name: 'Node.js'});
+        this.javaLink = page.getByRole('navigation', { name: 'Main' }).getByText('Java');
+        this.nodeLabel = page.getByText(this.nodeDescription, {exact:true});
+        this.javaLabel = page.getByText(this.javaDescription);
+    }
+
+    async hoverNode() {
+        await this.nodeLink.hover();
+    }
+    
+    async clickJava() {
+        await this.javaLink.click();
+    }
+
+    async assertPageUrl(pageUrl: RegExp) {
+        await expect(this.page).toHaveURL(pageUrl);
+    }
+
+    async assertNodeDescriptionNotVisible() {
+        await expect(this.nodeLabel).not.toBeVisible();
+    }
+
+    async assertJavaDescriptionVisible() {
+        await expect(this.javaLabel).toBeVisible();
+    }
+
+}
+export default TopMenuPage;
+```
