@@ -78,6 +78,10 @@ lecture - [https://www.youtube.com/playlist?list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBs
 
 ## Methodology&#x20;
 
-### waterfall
+### waterfall model
 
 <figure><img src="../../.gitbook/assets/изображение (9).png" alt=""><figcaption></figcaption></figure>
+
+### spiral model
+
+<figure><img src="../../.gitbook/assets/изображение (10).png" alt=""><figcaption></figcaption></figure>
