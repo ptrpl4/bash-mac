@@ -242,6 +242,94 @@ const { chromium } = require('playwright');
 })();
 ```
 
+```javascript
+import { test, expect } from '@playwright/test'; 
+
+test('has title', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle(/Playwright/);
+});
+
+test('get started link', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  // Click the get started link.
+  await page.getByRole('link', { name: 'Get started' }).click();
+
+  // Expects the URL to contain intro.
+  await expect(page).toHaveURL(/.*intro/);
+});
+```
+
+template example with AAA patern
+
+```javascript
+import { test, expect } from '@playwright/test';
+
+//AAA Pattern
+// [Arrange]
+// [Act]
+// [Assert]
+
+const password = process.env.PASSWORD;
+
+test.beforeAll(async ({ playwright }) => {
+    test.skip(
+      !!process.env.PROD,
+      'Test intentionally skipped in production due to data dependency.'
+    );
+    // start a server
+    // create a db connection
+    // reuse a sign in state
+});
+  
+test.beforeEach(async ({ page }, testInfo) => {
+    console.log(`Running ${testInfo.title}`);
+    // open a URL
+    // clean up the DB
+    // create a page object
+    // dismiss a modal
+    // load params
+});
+
+test.afterAll(async ({ page }, testInfo) => {
+    console.log('Test file completed.');
+    // close a DB connection
+});
+
+test.afterEach( async ({ page }, testInfo) => {
+    console.log(`Finished ${testInfo.title} with status ${testInfo.status}`);
+
+    if (testInfo.status !== testInfo.expectedStatus)
+        console.log(`Did not run as expected, ended up at ${page.url()}`);
+    // clean up all the data we created for this test through API calls
+});
+
+test.describe.skip('Test Case', () => {
+    test('Test Scenario One', async ({ page }) => {
+        await test.step('Step One', async () => {
+            // ...
+        });
+
+        await test.step('Step Two', async () => {
+            // ...
+        });
+
+        // ...
+    });
+  
+    test('Test Scenario Two', async ({ page }) => {
+        // Arrange
+        // Act
+        // Assert
+    });
+
+    // test.only('Test Scenario Three', async ({ p
+  });
+```
+
 ## Built in functions
 
 ### test func.
@@ -284,3 +372,4 @@ test.describe('Pay button appearance', () => { // declare group of tests
 
 To make an assertion, call `expect(value)` and choose a matcher that reflects the expectation. There are many generic matchers like `toEqual`, `toContain`, and `toBeTruthy` that can be used to assert any conditions.\
 [https://playwright.dev/docs/test-assertions](https://playwright.dev/docs/test-assertions)
+
