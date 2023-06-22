@@ -519,6 +519,20 @@ points.dist = function() { // Define a method to compute distance between points
 points.dist() // => Math.sqrt(2): distance between our 2 points
 ```
 
+### array.sort()
+
+default behavior of `sort()` is to sort values alphabetically, which doesn't work correctly for numbers.
+
+When sort() is called without any arguments, it sorts the elements of the array in lexicographic order, which means that it sorts the elements as strings.
+
+However, when sort() is called with a comparison function, it sorts the elements of the array based on the result of the comparison function. In this case, the comparison function (a, b) => a - b subtracts the second number from the first number, which produces a negative number if a is less than b, zero if a equals b, or a positive number if a is greater than b. This comparison function ensures that the resulting array will be sorted in ascending order.
+
+```javascript
+let numbers = [1, 30, 4, 21, 100000];
+console.log(numbers.sort()); // => [ 1, 100000, 21, 30, 4 ]
+console.log(numbers.sort((a, b) => a - b));// => [ 1, 100000, 21, 30, 4 ]
+```
+
 ## XMLHttpRequest (XHR)
 
 Objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh.
