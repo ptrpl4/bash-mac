@@ -54,7 +54,7 @@ On Master Node are running **Main k8s Processes** to run and manage cluster. Bet
 
 ### Pod
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (4).png" alt=""><figcaption></figcaption></figure>
 
 ### Service
 
@@ -70,7 +70,7 @@ Has permanent ip address and works as load balancer if there is more than one Po
 
 ### Volume
 
-<figure><img src="../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Stores data. Could be local or remote
 

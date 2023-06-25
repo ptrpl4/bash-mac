@@ -88,7 +88,7 @@
 * [😩 Other](additional-info/other/README.md)
   * [Software Engineering](additional-info/other/software-engineering.md)
   * [🔧 SRE and SLA](additional-info/other/sre-and-sla.md)
-  * [😎 TDD, BDD](additional-info/other/tdd-bdd.md)
+  * [😎 TDD, BDD etc](additional-info/other/tdd-bdd.md)
   * [🪨 Monolith and Microservices](additional-info/other/monolith-and-microservices.md)
   * [😖 Scrum](additional-info/other/scrum.md)
   * [🤓 regexp](additional-info/other/regexp.md)

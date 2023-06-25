@@ -8,7 +8,7 @@ Web-App на низком уровне - [https://www.youtube.com/watch?v=4haMUv
 
 <figure><img src="../../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
-![сетевая модель стека сетевых протоколов OSI](<../../.gitbook/assets/image (6).png>)
+![сетевая модель стека сетевых протоколов OSI](<../../.gitbook/assets/image (6) (1).png>)
 
 ![Уровни стека TCP/IP](<../../.gitbook/assets/image (7) (1).png>)
 

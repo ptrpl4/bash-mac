@@ -7,7 +7,7 @@
 container **image** - an artifact/package which includes all necessary information to run the container\
 **container** eviroment - running instance of an image
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
 
 **registry** - image storage. official docker - [https://hub.docker.com/](https://hub.docker.com/)
 
