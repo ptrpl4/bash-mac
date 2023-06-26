@@ -132,3 +132,14 @@ link - [http://www.extremeprogramming.org](http://www.extremeprogramming.org/)
 link - [http://www.extremeprogramming.org/rules.html](http://www.extremeprogramming.org/rules.html)
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+## Therms
+
+### **Bus Factor**
+
+Bus factor refers to the number of key people on a team who, if they were suddenly hit by a metaphorical bus, would significantly impact the team's ability to function or complete a project.
+
+1 = 1 person. Is is critical. need more knowledge sharing.
+
+2 and more - ok
+
