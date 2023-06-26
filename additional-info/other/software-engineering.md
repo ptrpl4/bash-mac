@@ -4,7 +4,7 @@ description: how and why
 
 # Software Engineering
 
-## What is Program And what is Product
+What is Program And what is Product
 
 If we're talking about the final product (for the business, for the customer), it's much more than just code or application components. And it takes a lot more time.
 
@@ -131,7 +131,11 @@ link - [http://www.extremeprogramming.org](http://www.extremeprogramming.org/)
 
 link - [http://www.extremeprogramming.org/rules.html](http://www.extremeprogramming.org/rules.html)
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+#### Main practices of XP
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ## Therms
 
@@ -139,7 +143,7 @@ link - [http://www.extremeprogramming.org/rules.html](http://www.extremeprogramm
 
 Bus factor refers to the number of key people on a team who, if they were suddenly hit by a metaphorical bus, would significantly impact the team's ability to function or complete a project.
 
-1 = 1 person. Is is critical. need more knowledge sharing.
+1 person-  is critical. need more knowledge sharing
 
-2 and more - ok
+2 and more people - more confident
 
