@@ -7,9 +7,10 @@ description: Evolution of Agile+XP methodologies
 #### _links_ <a href="#scrum-definition" id="scrum-definition"></a>
 
 [_https://scrumguides.org/scrum-guide.html_](https://scrumguides.org/scrum-guide.html)\
-[_https://www.scrum.org/resources/scrum-glossary_](https://www.scrum.org/resources/scrum-glossary)
+[_https://www.scrum.org/resources/scrum-glossary_](https://www.scrum.org/resources/scrum-glossary)\
+[_https://www.youtube.com/watch?v=MvqnTuEqr-k\&list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBsg2Mb_](https://www.youtube.com/watch?v=MvqnTuEqr-k\&list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBsg2Mb)
 
-<figure><img src="../../../.gitbook/assets/изображение (3) (2).png" alt=""><figcaption><p>Scrum Framework</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1520162476050_auto_x2.jpg" alt=""><figcaption><p>Scrum Framework</p></figcaption></figure>
 
 ## Scrum Process
 
@@ -117,11 +118,13 @@ For each selected Product Backlog item, the Developers plan the work necessary t
 
 ### Daily Scrum <a href="#daily-scrum" id="daily-scrum"></a>
 
+"What did I do, what will I do, what are the difficulties?"
+
 The purpose of the Daily Scrum is to inspect progress toward the Sprint Goal and adapt the Sprint Backlog as necessary, adjusting the upcoming planned work.
 
 The Daily Scrum is a 15-minute event for the Developers of the Scrum Team. To reduce complexity, it is held at the same time and place every working day of the Sprint.
 
-### Sprint Review <a href="#sprint-review" id="sprint-review"></a>
+### Sprint Review (Demo) <a href="#sprint-review" id="sprint-review"></a>
 
 The purpose of the Sprint Review is to inspect the outcome of the Sprint and determine future adaptations. The Scrum Team presents the results of their work to key stakeholders and progress toward the Product Goal is discussed.
 
