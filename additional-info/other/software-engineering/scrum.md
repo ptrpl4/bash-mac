@@ -1,12 +1,15 @@
-# 😖 Scrum
+---
+description: Evolution of Agile+XP methodologies
+---
+
+# 😖 Scrum framework
 
 ### _links_ <a href="#scrum-definition" id="scrum-definition"></a>
 
 [_https://scrumguides.org/scrum-guide.html_](https://scrumguides.org/scrum-guide.html)\
-[_https://www.scrum.org/resources/scrum-glossary_](https://www.scrum.org/resources/scrum-glossary)\
+[_https://www.scrum.org/resources/scrum-glossary_](https://www.scrum.org/resources/scrum-glossary)
 
-
-<figure><img src="../../.gitbook/assets/изображение (3) (2).png" alt=""><figcaption><p>Scrum Framework</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/изображение (3) (2).png" alt=""><figcaption><p>Scrum Framework</p></figcaption></figure>
 
 ### Scrum Definition <a href="#scrum-definition" id="scrum-definition"></a>
 
@@ -41,7 +44,7 @@ Adaptation becomes more difficult when the people involved are not empowered or 
 
 ### Scrum Values
 
-<figure><img src="../../.gitbook/assets/изображение (9) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/изображение (9) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Successful use of Scrum depends on people becoming more proficient in living five values:
 

@@ -248,13 +248,13 @@ git merge test_branch
 
 ### GitHub Flow&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
 
 long-live main branch + short-live feature branches
 
 ### GitFlow
 
-<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 develop => feature => develop => release branch => master + tag version
 
