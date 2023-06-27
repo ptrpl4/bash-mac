@@ -11,13 +11,11 @@ description: Evolution of Agile+XP methodologies
 
 <figure><img src="../../../.gitbook/assets/изображение (3) (2).png" alt=""><figcaption><p>Scrum Framework</p></figcaption></figure>
 
-### Scrum Definition <a href="#scrum-definition" id="scrum-definition"></a>
+### Scrum Process
 
-Structure:
-
-1. A Product Owner orders the work for a complex problem into a Product Backlog.
-2. The Scrum Team turns a selection of the work into an Increment of value during a Sprint.
-3. The Scrum Team and its stakeholders inspect the results and adjust for the next Sprint.
+1. A **Product Owner** orders the work for a complex problem into a **Product Backlog**.
+2. The **Scrum Team** turns a selection of the work into an **Increment** of value during a **Sprint**.
+3. The **Scrum Team** and its **stakeholders** **inspect** the results and **adjust** for the next Sprint.
 4. _Repeat_
 
 ### Scrum Theory <a href="#scrum-theory" id="scrum-theory"></a>
@@ -26,13 +24,13 @@ Scrum combines four formal events for inspection and adaptation within a contain
 
 #### Transparency
 
-The emergent process and work must be visible to those performing the work as well as those receiving the work. With Scrum, important decisions are based on the perceived state of its three formal artifacts. Artifacts that have low transparency can lead to decisions that diminish value and increase risk.
+The emergent process and work must be visible to those performing the work as well as those receiving the work.
 
 Transparency enables inspection. Inspection without transparency is misleading and wasteful.
 
 #### Inspection <a href="#inspection" id="inspection"></a>
 
-The Scrum artifacts and the progress toward agreed goals must be inspected frequently and diligently to detect potentially undesirable variances or problems. To help with inspection, Scrum provides cadence in the form of its five events.
+The Scrum artifacts and the progress toward agreed goals must be inspected frequently and diligently to detect potentially undesirable variances or problems.&#x20;
 
 Inspection enables adaptation. Inspection without adaptation is considered pointless. Scrum events are designed to provoke change.
 
@@ -40,21 +38,17 @@ Inspection enables adaptation. Inspection without adaptation is considered point
 
 If any aspects of a process deviate outside acceptable limits or if the resulting product is unacceptable, the process being applied or the materials being produced must be adjusted. The adjustment must be made as soon as possible to minimize further deviation.
 
-Adaptation becomes more difficult when the people involved are not empowered or self-managing. A Scrum Team is expected to adapt the moment it learns anything new through inspection.
-
 ### Scrum Values
 
 <figure><img src="../../../.gitbook/assets/изображение (9) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-Successful use of Scrum depends on people becoming more proficient in living five values:
+Successful use of Scrum depends on people becoming more proficient in living five **values**:
 
 _**Commitment, Focus, Openness, Respect, and Courage**_
 
-The Scrum Team commits to achieving its goals and to supporting each other. Their primary focus is on the work of the Sprint to make the best possible progress toward these goals. The Scrum Team and its stakeholders are open about the work and the challenges. Scrum Team members respect each other to be capable, independent people, and are respected as such by the people with whom they work. The Scrum Team members have the courage to do the right thing, to work on tough problems.
-
 ### Scrum Team
 
-The fundamental unit of Scrum is a small team of people, a Scrum Team. The Scrum Team consists of one Scrum Master, one Product Owner, and Developers. Within a Scrum Team, there are no sub-teams or hierarchies. It is a cohesive unit of professionals focused on one objective at a time, the Product Goal.
+The fundamental unit of Scrum is a small team of people, a Scrum Team. The Scrum Team consists of **one Scrum Master**, **one Product Owner**, and **Developers**. Within a Scrum Team, there are no sub-teams or hierarchies. It is a cohesive unit of professionals focused on one objective at a time, the **Product Goal**.
 
 #### Developers <a href="#developers" id="developers"></a>
 
@@ -210,11 +204,4 @@ The Definition of Done is a formal description of the state of the Increment whe
 
 The moment a Product Backlog item meets the Definition of Done, an Increment is born.
 
-The Definition of Done creates transparency by providing everyone a shared understanding of what work was completed as part of the Increment. If a Product Backlog item does not meet the Definition of Done, it cannot be released or even presented at the Sprint Review. Instead, it returns to the Product Backlog for future consideration.
-
-## Manifesto for Agile Software Development
-
-* Individuals and interactions over processes and tools&#x20;
-* Working software over comprehensive documentation&#x20;
-* Customer collaboration over contract negotiation&#x20;
-* Responding to change over following a plan\
+The Definition of Done creates transparency by providing everyone a shared understanding of what work was completed as part of the Increment. If a Product Backlog item does not meet the Definition of Done, it cannot be released or even presented at the Sprint Review. Instead, it returns to the Product Backlog for future consideration.\
