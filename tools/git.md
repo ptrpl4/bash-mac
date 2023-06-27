@@ -20,7 +20,11 @@ commits:
 
 [https://conventionalcomments.org/](https://conventionalcomments.org/)
 
-[https://www.youtube.com/watch?v=uBhpBOX8VYg](https://www.youtube.com/watch?v=uBhpBOX8VYg) \
+[https://www.youtube.com/watch?v=uBhpBOX8VYg](https://www.youtube.com/watch?v=uBhpBOX8VYg)
+
+hints and examples:
+
+[https://wiki.nikiv.dev/programming/version-control/git](https://wiki.nikiv.dev/programming/version-control/git)\
 
 
 ### fast start

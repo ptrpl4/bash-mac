@@ -55,6 +55,9 @@ npx playwright test --project=chromium
 
 # Runs the tests in debug mode.
 npx playwright test --debug
+
+# list all tests
+npx playwright test --list
 ```
 
 ### playwright config

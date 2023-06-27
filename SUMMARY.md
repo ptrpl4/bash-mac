@@ -86,6 +86,7 @@
   * [JSON](additional-info/web-development/json.md)
   * [Static/Dynamic sites](additional-info/web-development/untitled.md)
 * [😩 Other](additional-info/other/README.md)
+  * [👨🎓 I (don't) know](additional-info/other/i-dont-know.md)
   * [Software Engineering](additional-info/other/software-engineering.md)
   * [🔧 SRE and SLA](additional-info/other/sre-and-sla.md)
   * [😎 TDD, BDD etc](additional-info/other/tdd-bdd.md)
