@@ -4,14 +4,14 @@ description: Evolution of Agile+XP methodologies
 
 # 😖 Scrum framework
 
-### _links_ <a href="#scrum-definition" id="scrum-definition"></a>
+#### _links_ <a href="#scrum-definition" id="scrum-definition"></a>
 
 [_https://scrumguides.org/scrum-guide.html_](https://scrumguides.org/scrum-guide.html)\
 [_https://www.scrum.org/resources/scrum-glossary_](https://www.scrum.org/resources/scrum-glossary)
 
 <figure><img src="../../../.gitbook/assets/изображение (3) (2).png" alt=""><figcaption><p>Scrum Framework</p></figcaption></figure>
 
-### Scrum Process
+## Scrum Process
 
 1. A **Product Owner** orders the work for a complex problem into a **Product Backlog**.
 2. The **Scrum Team** turns a selection of the work into an **Increment** of value during a **Sprint**.
@@ -38,19 +38,11 @@ Inspection enables adaptation. Inspection without adaptation is considered point
 
 If any aspects of a process deviate outside acceptable limits or if the resulting product is unacceptable, the process being applied or the materials being produced must be adjusted. The adjustment must be made as soon as possible to minimize further deviation.
 
-### Scrum Values
-
-<figure><img src="../../../.gitbook/assets/изображение (9) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-Successful use of Scrum depends on people becoming more proficient in living five **values**:
-
-_**Commitment, Focus, Openness, Respect, and Courage**_
-
-### Scrum Team
+## Scrum Team
 
 The fundamental unit of Scrum is a small team of people, a Scrum Team. The Scrum Team consists of **one Scrum Master**, **one Product Owner**, and **Developers**. Within a Scrum Team, there are no sub-teams or hierarchies. It is a cohesive unit of professionals focused on one objective at a time, the **Product Goal**.
 
-#### Developers <a href="#developers" id="developers"></a>
+### Developers <a href="#developers" id="developers"></a>
 
 Developers are the people in the Scrum Team that are committed to creating any aspect of a usable Increment each Sprint.
 
@@ -59,86 +51,69 @@ Developers are the people in the Scrum Team that are committed to creating any a
 * Adapting their plan each day toward the Sprint Goal; and,
 * Holding each other accountable as professionals.
 
-#### Product Owner <a href="#product-owner" id="product-owner"></a>
+### Product Owner <a href="#product-owner" id="product-owner"></a>
 
-The Product Owner is accountable for maximizing the value of the product resulting from the work of the Scrum Team. How this is done may vary widely across organizations, Scrum Teams, and individuals.
+The Product Owner is accountable for maximizing the value of the product resulting from the work of the Scrum Team. Owns product Vision.
 
 The Product Owner is also accountable for effective Product Backlog management, which includes:
 
 * Developing and explicitly communicating the Product Goal;
 * Creating and clearly communicating Product Backlog items;
-* Ordering Product Backlog items; and,
+* Ordering Product Backlog items;
 * Ensuring that the Product Backlog is transparent, visible and understood.
 
-#### Scrum Master <a href="#scrum-master" id="scrum-master"></a>
+### Scrum Master <a href="#scrum-master" id="scrum-master"></a>
 
-The Scrum Master is accountable for establishing Scrum as defined in the Scrum Guide. They do this by helping everyone understand Scrum theory and practice, both within the Scrum Team and the organization.
+The Scrum Master helping everyone understand Scrum theory and practice, both within the Scrum Team and the organization. The Scrum Master is accountable for the Scrum Team’s **effectiveness**.
 
-The Scrum Master is accountable for the Scrum Team’s effectiveness. They do this by enabling the Scrum Team to improve its practices, within the Scrum framework.
-
-The Scrum Master serves the Scrum Team in several ways, including:
+The Scrum Master serves the **Scrum Team** in several ways, including:
 
 * Coaching the team members in self-management and cross-functionality;
 * Helping the Scrum Team focus on creating high-value Increments that meet the Definition of Done;
 * Causing the removal of impediments to the Scrum Team’s progress; and,
 * Ensuring that all Scrum events take place and are positive, productive, and kept within the timebox.
 
-The Scrum Master serves the Product Owner in several ways, including:
+The Scrum Master serves the **Product Owner** in several ways, including:
 
 * Helping find techniques for effective Product Goal definition and Product Backlog management;
 * Helping the Scrum Team understand the need for clear and concise Product Backlog items;
 * Helping establish empirical product planning for a complex environment; and,
 * Facilitating stakeholder collaboration as requested or needed.
 
-The Scrum Master serves the organization in several ways, including:
+## Sprint (Scrum Events) <a href="#scrum-events" id="scrum-events"></a>
 
-* Leading, training, and coaching the organization in its Scrum adoption;
-* Planning and advising Scrum implementations within the organization;
-* Helping employees and stakeholders understand and enact an empirical approach for complex work; and,
-* Removing barriers between stakeholders and Scrum Teams.
+The Sprint is a container for all other events. Each event in Scrum is a formal opportunity to inspect and adapt Scrum artifacts. These events are specifically designed to enable the transparency required. Events are used in Scrum to create regularity and to minimize the need for meetings not defined in Scrum.
 
-## Scrum Events <a href="#scrum-events" id="scrum-events"></a>
-
-The Sprint is a container for all other events. Each event in Scrum is a formal opportunity to inspect and adapt Scrum artifacts. These events are specifically designed to enable the transparency required. Failure to operate any events as prescribed results in lost opportunities to inspect and adapt. Events are used in Scrum to create regularity and to minimize the need for meetings not defined in Scrum.
-
-### The Sprint <a href="#the-sprint" id="the-sprint"></a>
+### Sprint
 
 Sprints are fixed length events of one month or less to create consistency. A new Sprint starts immediately after the conclusion of the previous Sprint.
-
-All the work necessary to achieve the Product Goal, including Sprint Planning, Daily Scrums, Sprint Review, and Sprint Retrospective, happen within Sprints.
 
 During the Sprint:
 
 * No changes are made that would endanger the Sprint Goal;
 * Quality does not decrease;
-* The Product Backlog is refined as needed; and,
+* The Product Backlog is refined as needed;
 * Scope may be clarified and renegotiated with the Product Owner as more is learned.
 
-Sprints enable predictability by ensuring inspection and adaptation of progress toward a Product Goal at least every calendar month. When a Sprint’s horizon is too long the Sprint Goal may become invalid, complexity may rise, and risk may increase. Shorter Sprints can be employed to generate more learning cycles and limit risk of cost and effort to a smaller time frame. Each Sprint may be considered a short project.
+Sprints enable predictability by ensuring inspection and adaptation of progress toward a Product Goal at least every calendar month.
 
 A Sprint could be cancelled if the Sprint Goal becomes obsolete. Only the Product Owner has the authority to cancel the Sprint.
 
 ### Sprint Planning <a href="#sprint-planning" id="sprint-planning"></a>
 
-Sprint Planning initiates the Sprint by laying out the work to be performed for the Sprint. This resulting plan is created by the collaborative work of the entire Scrum Team.
-
 The Product Owner ensures that attendees are prepared to discuss the most important Product Backlog items and how they map to the Product Goal. The Scrum Team may also invite other people to attend Sprint Planning to provide advice.
-
-Sprint Planning addresses the following topics:
 
 **Topic One: Why is this Sprint valuable?**
 
-The Product Owner proposes how the product could increase its value and utility in the current Sprint. The whole Scrum Team then collaborates to define a Sprint Goal that communicates why the Sprint is valuable to stakeholders. The Sprint Goal must be finalized prior to the end of Sprint Planning.
+The Product Owner proposes how the product could increase its value and utility in the current Sprint. The whole Scrum Team then collaborates to define a Sprint Goal that communicates why the Sprint is valuable to stakeholders.&#x20;
 
 **Topic Two: What can be Done this Sprint?**
 
 Through discussion with the Product Owner, the Developers select items from the Product Backlog to include in the current Sprint. The Scrum Team may refine these items during this process, which increases understanding and confidence.
 
-Selecting how much can be completed within a Sprint may be challenging. However, the more the Developers know about their past performance, their upcoming capacity, and their Definition of Done, the more confident they will be in their Sprint forecasts.
-
 **Topic Three: How will the chosen work get done?**
 
-For each selected Product Backlog item, the Developers plan the work necessary to create an Increment that meets the Definition of Done. This is often done by decomposing Product Backlog items into smaller work items of one day or less. How this is done is at the sole discretion of the Developers. No one else tells them how to turn Product Backlog items into Increments of value.
+For each selected Product Backlog item, the Developers plan the work necessary to create an Increment that meets the Definition of Done. This is often done by decomposing Product Backlog items into smaller work items of one day or less. How this is done is at the sole discretion of the Developers.
 
 ### Daily Scrum <a href="#daily-scrum" id="daily-scrum"></a>
 
@@ -174,7 +149,13 @@ Each artifact contains a commitment to ensure it provides information that enhan
 
 The Product Backlog is an emergent, ordered list of what is needed to improve the product. It is the single source of work undertaken by the Scrum Team.
 
-Product Backlog items that can be Done by the Scrum Team within one Sprint are deemed ready for selection in a Sprint Planning event. They usually acquire this degree of transparency after refining activities. Product Backlog refinement is the act of breaking down and further defining Product Backlog items into smaller more precise items. This is an ongoing activity to add details, such as a description, order, and size. Attributes often vary with the domain of work.
+Headed by the Product Owner.
+
+Product Backlog items that can be Done by the Scrum Team within one Sprint are deemed ready for selection in a Sprint Planning event. They usually acquire this degree of transparency after refining activities.&#x20;
+
+#### Product Backlog refinement&#x20;
+
+Is the act of breaking down and further defining Product Backlog items into smaller more precise items. This is an ongoing activity to add details, such as a description, order, and size.
 
 **Commitment: Product Goal**
 
@@ -184,13 +165,15 @@ The Product Goal describes a future state of the product which can serve as a ta
 
 The Sprint Backlog is composed of the Sprint Goal (why), the set of Product Backlog items selected for the Sprint (what), as well as an actionable plan for delivering the Increment (how).
 
-The Sprint Backlog is a plan by and for the Developers. It is a highly visible, real-time picture of the work that the Developers plan to accomplish during the Sprint in order to achieve the Sprint Goal. Consequently, the Sprint Backlog is updated throughout the Sprint as more is learned. It should have enough detail that they can inspect their progress in the Daily Scrum.
+It is a highly visible, real-time picture of the work that the Developers plan to accomplish during the Sprint in order to achieve the Sprint Goal. Consequently, the Sprint Backlog is updated throughout the Sprint as more is learned. It should have enough detail that they can inspect their progress in the Daily Scrum.
+
+Sprint items could be sorted by status on **Kanban** board during the Sprint.
 
 **Commitment: Sprint Goal**
 
 The Sprint Goal is the single objective for the Sprint.&#x20;
 
-The Sprint Goal is created during the Sprint Planning event and then added to the Sprint Backlog. As the Developers work during the Sprint, they keep the Sprint Goal in mind. If the work turns out to be different than they expected, they collaborate with the Product Owner to negotiate the scope of the Sprint Backlog within the Sprint without affecting the Sprint Goal.
+The Sprint Goal is created during the Sprint Planning event and then added to the Sprint Backlog.  If the work turns out to be different than they expected, they collaborate with the Product Owner to negotiate the scope of the Sprint Backlog within the Sprint without affecting the Sprint Goal.
 
 ### Increment
 
