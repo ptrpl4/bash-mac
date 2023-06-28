@@ -86,6 +86,7 @@
   * [HTML](additional-info/web-development/html.md)
   * [CSS](additional-info/web-development/css.md)
   * [JSON](additional-info/web-development/json.md)
+  * [JSON Web Token (JWT)](additional-info/web-development/json-web-token-jwt.md)
   * [Static/Dynamic sites](additional-info/web-development/untitled.md)
 * [😩 Other](additional-info/other/README.md)
   * [👨🎓 I (don't) know](additional-info/other/i-dont-know.md)
