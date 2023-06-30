@@ -70,7 +70,7 @@ lecture - [https://www.youtube.com/playlist?list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBs
 
 ## Product specification&#x20;
 
-<img src="../../../.gitbook/assets/image (2).png" alt="" data-size="original">
+<img src="../../../.gitbook/assets/image (2) (4).png" alt="" data-size="original">
 
 ## Processes
 
@@ -124,7 +124,7 @@ link - [http://www.extremeprogramming.org/rules.html](http://www.extremeprogramm
 
 #### Main practices of XP
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Therms
 

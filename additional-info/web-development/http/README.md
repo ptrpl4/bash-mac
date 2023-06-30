@@ -4,7 +4,7 @@ description: Hypertext Transfer Protocol
 
 # 🔧 HTTP
 
-![pic by hyperskill](<../../.gitbook/assets/image (18) (1).png>)
+![pic by hyperskill](<../../../.gitbook/assets/image (18) (1).png>)
 
 ## Basics
 
