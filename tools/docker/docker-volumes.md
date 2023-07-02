@@ -29,7 +29,7 @@ docker run -v /home/dir/dir/data:/var/lib/mysql
 docker run -v /var/lib/mysql
 ```
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Named Volumes
 

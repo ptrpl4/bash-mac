@@ -8,7 +8,7 @@ description: test/behavior-driven development
 
 test-driven development
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 #### process
 
@@ -18,7 +18,7 @@ create unit test => run test (failed) => create feature code =>  run test (succe
 
 behavior-driven development
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 * BDD encourages creating a ubiquitous language in the software development process, facilitating communication inside the team and organization.
 * BDD is a user-centric approach. The process starts by thinking of scenarios from the user's perspective. This helps to ensure that the team delivers what brings the most value for the end user.

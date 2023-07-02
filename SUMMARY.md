@@ -76,7 +76,7 @@
 * [🕸 Web](additional-info/web-development/README.md)
   * [Browser storage](additional-info/web-development/browser-storage.md)
   * [🔧 HTTP](additional-info/web-development/http/README.md)
-    * [Caching](additional-info/web-development/http/caching.md)
+    * [🦂 Caching](additional-info/web-development/http/caching.md)
   * [🪝 Webhook](additional-info/web-development/webhook.md)
   * [CORS mechanism](additional-info/web-development/cors-mechanism.md)
   * [URL](additional-info/web-development/url.md)

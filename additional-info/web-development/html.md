@@ -199,7 +199,7 @@ CSS styles can be written directly in HTML markup instead of a separate file. Su
 
 **DOM** (**Document Object Model)** is the representation of an HTML document as a tree structure that various programs can work with.
 
-![](<../../.gitbook/assets/image (11) (1).png>)
+![](<../../.gitbook/assets/image (11).png>)
 
 ## Fonts
 

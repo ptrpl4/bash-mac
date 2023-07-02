@@ -120,11 +120,11 @@ link - [http://www.extremeprogramming.org](http://www.extremeprogramming.org/)
 
 link - [http://www.extremeprogramming.org/rules.html](http://www.extremeprogramming.org/rules.html)
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Main practices of XP
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ## Therms
 
