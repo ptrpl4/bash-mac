@@ -14,7 +14,7 @@ description: Cross-Origin Resource Sharing
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, `XMLHttpRequest` and the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch\_API) follow the [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin\_policy). This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
 
-<figure><img src="../../.gitbook/assets/10255.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/10255.png" alt=""><figcaption></figcaption></figure>
 
 ### [What requests use CORS?](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#what\_requests\_use\_cors) <a href="#what_requests_use_cors" id="what_requests_use_cors"></a>
 

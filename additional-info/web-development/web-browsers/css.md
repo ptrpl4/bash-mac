@@ -6,7 +6,7 @@ description: Cascading Style Sheets
 
 ## Basic syntax
 
-![](<../../.gitbook/assets/изображение (3) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/изображение (3) (1) (1) (1) (1).png>)
 
 CSS syntax consists of two main parts: a **selector** and a **declaration block** that is put in curly brackets.
 
@@ -140,7 +140,7 @@ color: #FFFF00;
 
 ## Margin and padding
 
-![](<../../.gitbook/assets/image (10) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1).png>)
 
 There are four properties for setting margins/padding for each side of the element: top, right, bottom, left. Definitions can be stated in any CSS unit (px, em, %).
 

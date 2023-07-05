@@ -1,4 +1,8 @@
-# Playwright - JS
+---
+description: Code examples with JS
+---
+
+# ▶ Playwright
 
 #### Links
 
@@ -8,6 +12,8 @@ Basics - [https://testautomationu.applitools.com/playwright-intro/](https://test
 Webinar - [https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web](https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web/)
 
 ## Basics
+
+Playwright is using Chrome DevTools Protocol (CDP) to communicate with Chromium. For Firefox (Juggler) and Safari (Webinspector Protocol) implemented new protocols similar to the chrome one
 
 #### quick init
 
