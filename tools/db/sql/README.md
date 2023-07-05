@@ -238,12 +238,19 @@ SELECT <col_name1>, <col_name2>, …
 
 ![](<../../../.gitbook/assets/image (9) (1).png>)
 
-```sql
-SELECT <col_name1>, <col_name2>, …
-  FROM <table_name1>
-  JOIN <table_name2>
-  ON <table_name1.col_namex> = <table2.col_namex>; 
-```
+<pre class="language-sql"><code class="lang-sql"><strong>SELECT &#x3C;col_name1>, &#x3C;col_name2>, …
+</strong>  FROM &#x3C;table_name1>
+  JOIN &#x3C;table_name2>
+  ON &#x3C;table_name1.col_namex> = &#x3C;table2.col_namex>;
+
+-- One more example
+SELECT p.name AS product_name,
+t. type_name AS product_type, p.price AS product_price
+FROM products AS p JOIN product types AS t
+ON p.type id = t.id
+WHERE t.type name='online-lesson'
+ORDER BY p.price DESC
+</code></pre>
 
 #### View
 
