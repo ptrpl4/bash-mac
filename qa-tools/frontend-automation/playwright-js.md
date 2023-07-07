@@ -9,11 +9,14 @@ description: Code examples with JS
 FAQ - [https://applitools.com/blog/top-playwright-questions-answered](https://applitools.com/blog/top-playwright-questions-answered/)\
 Tutor - [https://testautomationu.applitools.com/js-playwright-tutorial](https://testautomationu.applitools.com/js-playwright-tutorial)\
 Basics - [https://testautomationu.applitools.com/playwright-intro/](https://testautomationu.applitools.com/playwright-intro/) \
-Webinar - [https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web](https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web/)
+Webinar - [https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web](https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web/)\
+basic info about project and examples - [https://www.youtube.com/watch?v=ttODF00XWis\&list=PLPPEvQlTaJs2fm0m3586X3cjC7VGH0ThV](https://www.youtube.com/watch?v=ttODF00XWis\&list=PLPPEvQlTaJs2fm0m3586X3cjC7VGH0ThV)
 
 ## Basics
 
-Playwright is using Chrome DevTools Protocol (CDP) to communicate with Chromium. For Firefox (Juggler) and Safari (Webinspector Protocol) implemented new protocols similar to the chrome one
+Playwright is using Chrome DevTools Protocol (CDP) to communicate with Chromium. For Firefox (Juggler) and Safari (Webinspector Protocol) implemented new protocols similar to the chrome one.
+
+Installs browsers to shared system folder and reuses it for all projects.
 
 #### quick init
 

@@ -21,7 +21,7 @@ npm -v
 ```
 
 ```bash
-# init new
+# init for new project
 npm init
 
 # install new dep

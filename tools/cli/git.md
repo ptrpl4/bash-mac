@@ -4,7 +4,7 @@ description: version control system
 
 # 📖 Git
 
-## links
+#### links
 
 [https://git-scm.com/](https://git-scm.com/)&#x20;
 
@@ -30,8 +30,19 @@ hints and examples:
 ### fast start
 
 ```bash
-git commit -a -m "init commit"
+# init and connect repo
+git init
+git remote add origin git@github.com:ptrpl4/GitBookWiki.git
+
+# create commit
+git commit -a -m 'init commit'
+# or 
+git ci -am 'init commit'
+
+# push to repo
 git push
+# or
+git push origin master
 ```
 
 ## config
@@ -59,7 +70,9 @@ git config --local user.email ptrpl4@ya.ru
 
 ```bash
 # add all staged files to commit
-git commit -a -m "text"
+git commit -a -m 'feat: add browser check'
+# or
+git ci -am 'feat: add browser check'
 ```
 
 ### Semantic Commit Messages
@@ -145,19 +158,20 @@ git log --oneline --decorate
 ```bash
 # add some chaged in last commit --amend
 git commit --amend
+
 # example
 git commit README.md --amend -m 'update instructions'             
 ```
 
 ## Отмена индексации
 
-```
+```bash
 git reset HEAD filename
 ```
 
 ## Отмена изменений
 
-```
+```bash
 git checkout -- filename
 ```
 
@@ -165,9 +179,13 @@ git checkout -- filename
 
 ```shell
 # check remote repos with links
-$ git remote -v
+git remote -v
+
 # check remote repo info
 git remote show origin
+
+# connect origin repo to git
+git remote add origin git@github.com:ptrpl4/GitBookWiki.git
 ```
 
 ## Fetch/Pull
@@ -228,7 +246,7 @@ git branch --merged
 
 ### renaming
 
-```
+```bash
 # rename localy
 $ git branch --move bad-branch-name corrected-branch-name
 # push changes
@@ -239,7 +257,7 @@ $ git push origin --delete bad-branch-name
 
 ## Merge
 
-```
+```bash
 # add test_branch to current branch
 git merge test_branch
 ```
