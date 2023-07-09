@@ -74,6 +74,8 @@
 
 * [⚒ QA Job Interview (RU)](additional-info/qa-job-interview-ru.md)
 * [🕸 Web](additional-info/web-development/README.md)
+  * [Proxy Servers](additional-info/web-development/proxy-servers/README.md)
+    * [🟩 NGINX](additional-info/web-development/proxy-servers/nginx.md)
   * [🎠 Web Browsers](additional-info/web-development/web-browsers/README.md)
     * [Browser storage](additional-info/web-development/web-browsers/browser-storage.md)
     * [CORS mechanism](additional-info/web-development/web-browsers/cors-mechanism.md)
