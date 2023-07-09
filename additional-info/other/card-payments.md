@@ -85,4 +85,8 @@ Tokenization - when used Digital Account Number instead of Primary Account Numbe
 
 #### Apple Pay Payment
 
-Apple Pay Card (DAN) => POS => Bank Merchant => Payment System => Token Service Provirder (PAN) => Payment System => Bank Issuer&#x20;
+Apple Pay Card (DAN) => POS => Bank Merchant => Payment System => Token Service Provirder (PAN) => Payment System => Bank Issuer
+
+### How do Apple Pay and Google Pay handle sensitive card info
+
+<figure><img src="../../.gitbook/assets/изображение (13).png" alt=""><figcaption><p>ref - <a href="https://twitter.com/alexxubyte/status/1572614943811440642">https://twitter.com/alexxubyte/status/1572614943811440642</a></p></figcaption></figure>
