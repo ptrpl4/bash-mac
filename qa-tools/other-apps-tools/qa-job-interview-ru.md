@@ -10,7 +10,7 @@ description: Основные вопросы и темы, встречающие
 
 ### Виды тестирования
 
-![](<../.gitbook/assets/image (16).png>)
+![](<../../.gitbook/assets/image (16).png>)
 
 #### **Классификация по доступу к коду и архитектуре:**
 
@@ -53,7 +53,7 @@ description: Основные вопросы и темы, встречающие
 
 Доклад - [https://www.youtube.com/watch?v=pTwt2wEhNB0](https://www.youtube.com/watch?v=pTwt2wEhNB0)
 
-<figure><img src="../.gitbook/assets/изображение (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (3).png" alt=""><figcaption></figcaption></figure>
 
 **Тест-дизайн** — это этап тестирования ПО, на котором проектируются и создаются тестовые случаи (тест-кейсы).
 
@@ -86,7 +86,7 @@ description: Основные вопросы и темы, встречающие
 
 ### ЖЦ (Software development lifecycle)
 
-![](<../.gitbook/assets/image (17) (1).png>)
+![](<../../.gitbook/assets/image (17) (1).png>)
 
 * **Анализ требований** отвечает на вопрос «Какие проблемы требуют решений?»
 * **Планирование** отвечает на вопрос «Что мы хотим сделать?»

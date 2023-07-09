@@ -34,5 +34,4 @@ npm init @eslint/config
     "rules": {
     }
 }
-
 ```
