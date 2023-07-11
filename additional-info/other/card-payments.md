@@ -89,4 +89,4 @@ Apple Pay Card (DAN) => POS => Bank Merchant => Payment System => Token Service 
 
 ### How do Apple Pay and Google Pay handle sensitive card info
 
-<figure><img src="../../.gitbook/assets/изображение (13).png" alt=""><figcaption><p>ref - <a href="https://twitter.com/alexxubyte/status/1572614943811440642">https://twitter.com/alexxubyte/status/1572614943811440642</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (13) (1).png" alt=""><figcaption><p>ref - <a href="https://twitter.com/alexxubyte/status/1572614943811440642">https://twitter.com/alexxubyte/status/1572614943811440642</a></p></figcaption></figure>
