@@ -2,7 +2,7 @@
 description: What is Hashing
 ---
 
-# Hash
+# 🏦 Hash
 
 #### links
 

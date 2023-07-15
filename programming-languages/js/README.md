@@ -112,7 +112,7 @@ Strings can also be treated like read-only arrays
 
 ```javascript
 let name = "Bill";
-let greeting = `Hello ${ name }.`; // greeting == "Hello Bill."
+let greeting = `Hello ${name}.`; // greeting == "Hello Bill."
 
 // string as array
 let s = "hello, world";
