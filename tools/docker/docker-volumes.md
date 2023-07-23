@@ -37,7 +37,7 @@ docker run -v /var/lib/mysql
 docker run -v mysql-storage:/var/lib/mysql
 ```
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 ## In Compose
 
