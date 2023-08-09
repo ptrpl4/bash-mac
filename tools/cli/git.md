@@ -194,7 +194,12 @@ git remote add origin git@github.com:ptrpl4/GitBookWiki.git
 # get data from origin repo
 git fetch origin
 # get + merge data from origin repo
-git pull 
+git pull
+
+# if unstashed changes
+git stash save "Temporary changes"
+git rebase
+git stash pop
 ```
 
 ## Tag
