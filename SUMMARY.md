@@ -32,6 +32,7 @@
   * [API Testing - JS](qa-tools/backend-automation/api-testing-js.md)
   * [Postman](qa-tools/backend-automation/postman.md)
 * [Frontend automation](qa-tools/frontend-automation/README.md)
+  * [Basic info](qa-tools/frontend-automation/basic-info.md)
   * [▶ Playwright](qa-tools/frontend-automation/playwright-js.md)
   * [Selenium](qa-tools/frontend-automation/selenium/README.md)
     * [Selenium - Java](qa-tools/frontend-automation/selenium/selenium.md)
