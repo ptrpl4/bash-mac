@@ -25,6 +25,7 @@
   * [NodeJS](programming-languages/js/node.md)
   * [NPM & Yarn](programming-languages/js/npm-and-yarn.md)
   * [TypeScript](programming-languages/js/typescript.md)
+* [🏃♂ Go](programming-languages/go.md)
 
 ## QA Tools
 
