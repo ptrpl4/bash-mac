@@ -10,7 +10,9 @@ Language Specification - [https://go.dev/ref/spec](https://go.dev/ref/spec)
 
 sandbox - [https://go.dev/play/](https://go.dev/play/)
 
-### Basics
+## Basics
+
+
 
 ./hello.go
 
@@ -40,3 +42,37 @@ $ ./hello
 hello everyone
 ```
 
+### Values
+
+```go
+fmt.Println("1+1 =", 1+1)
+// 1+1 = 2
+
+fmt.Println("5.0/2.0 =", 5.0/2.0)
+// 5.0/2.0 = 2.5
+fmt.Println(true && false)
+// false
+
+fmt.Println(true || false)
+// true
+
+fmt.Println(!true)
+// false
+fmt.Println("go" + "lang")
+// golang
+```
+
+### Declaration
+
+```go
+foo := 32 // is short form of
+
+var foo int
+foo = 32
+
+// OR:
+var foo int = 32
+
+// OR:
+var foo = 32
+```
