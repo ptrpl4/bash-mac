@@ -2,7 +2,7 @@
 description: Bash/ZSH
 ---
 
-# 💻 Shell
+# 💻 CLI
 
 ### links
 
@@ -82,6 +82,11 @@ cd ..
 `touch` - file creating (not main function, but typical)
 
 `env` - current shell env vars. [link](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)
+
+```bash
+# create file and add text
+echo "insert text here" > myfile.txt
+```
 
 #### pipe
 
