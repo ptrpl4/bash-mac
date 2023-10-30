@@ -32,7 +32,8 @@
 * [Backend Automation](qa-tools/backend-automation/README.md)
   * [API Testing - JS](qa-tools/backend-automation/api-testing-js.md)
   * [Postman](qa-tools/backend-automation/postman.md)
-* [Frontend automation](qa-tools/frontend-automation/README.md)
+  * [Apache JMeter](qa-tools/backend-automation/apache-jmeter.md)
+* [Frontend Automation](qa-tools/frontend-automation/README.md)
   * [Basic info](qa-tools/frontend-automation/basic-info.md)
   * [▶ Playwright](qa-tools/frontend-automation/playwright-js.md)
   * [Selenium](qa-tools/frontend-automation/selenium/README.md)
@@ -44,6 +45,9 @@
       * [Configs](qa-tools/frontend-automation/selenium/selenium-1/configs.md)
       * [Test Run](qa-tools/frontend-automation/selenium/selenium-1/test-run.md)
 * [Other apps/tools/docs](qa-tools/other-apps-tools/README.md)
+  * [Logs](qa-tools/other-apps-tools/logs/README.md)
+    * [🗒 Kibana](qa-tools/other-apps-tools/logs/kibana.md)
+    * [⛅ Google Cloud](qa-tools/other-apps-tools/logs/google-cloud.md)
   * [⚒ QA Job Interview (RU)](qa-tools/other-apps-tools/qa-job-interview-ru.md)
 
 ## Tools
@@ -70,8 +74,6 @@
   * [Make](tools/cli/make.md)
 * [Proxy Servers](tools/proxy-servers/README.md)
   * [🟩 NGINX](tools/proxy-servers/nginx.md)
-* [Apache JMeter](tools/apache-jmeter.md)
-* [Xcode](tools/xcode.md)
 * [🐇 Message Brokers](tools/message-brokers.md)
 
 ## Additional info
