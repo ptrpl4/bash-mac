@@ -102,6 +102,7 @@
       * [Hotkeys](additional-info/other/my-apps/comfy-macos/hotkeys.md)
   * [👨🎓 I (don't) know](additional-info/other/i-dont-know.md)
   * [👯 Software Engineering](additional-info/other/software-engineering/README.md)
+    * [Deployment processes](additional-info/other/software-engineering/deployment-processes.md)
     * [😎 TDD, BDD etc](additional-info/other/software-engineering/tdd-bdd.md)
     * [😖 Scrum framework](additional-info/other/software-engineering/scrum.md)
     * [🔧 SRE and SLA](additional-info/other/software-engineering/sre-and-sla.md)
