@@ -14,8 +14,8 @@
 
 * Load testing
 * Security testing
-* Tools (k8s, rabbitMQ, kibana, sentry, grafana, rabbitMQ)
+* Tools and Services (k8s, rabbitMQ, kibana, sentry, grafana)
 
 \---
 
-It doesn't mean that I don't know anything at all about load testing or can explain every detail about docker. Its just attempt to summarise my knowledges in IT-industry and make future education ways more clear
+It doesn't mean that I don't know anything at all about load testing or can explain every detail about docker. Its just attempt to summarise my knowledge in IT-industry and make future education ways more clear

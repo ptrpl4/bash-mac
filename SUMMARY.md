@@ -97,7 +97,7 @@
   * [JWT (JSON Web Token)](additional-info/web-development/jwt-json-web-token.md)
   * [Static/Dynamic sites](additional-info/web-development/untitled.md)
 * [😩 Other](additional-info/other/README.md)
-  * [Blockchain](additional-info/other/blockchain.md)
+  * [🧊 Blockchain](additional-info/other/blockchain.md)
   * [🍁 My apps](additional-info/other/my-apps/README.md)
     * [💻 comfy macOS](additional-info/other/my-apps/comfy-macos/README.md)
       * [Hotkeys](additional-info/other/my-apps/comfy-macos/hotkeys.md)
@@ -112,3 +112,4 @@
   * [🦄 UNIX-based OS](additional-info/other/unix.md)
   * [🏦 Hash](additional-info/other/hash.md)
   * [🤓 regexp](additional-info/other/regexp.md)
+  * [🔦 Therms](additional-info/other/therms.md)
