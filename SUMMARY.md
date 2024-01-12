@@ -51,7 +51,7 @@
     * [Prometheus & Grafana](qa-tools/other-apps-tools/metrics/prometheus-and-grafana.md)
   * [Logs](qa-tools/other-apps-tools/logs/README.md)
     * [🗒 Kibana](qa-tools/other-apps-tools/logs/kibana.md)
-    * [⛅ Google Cloud](qa-tools/other-apps-tools/logs/google-cloud.md)
+    * [⛅ Google Cloud Logging](qa-tools/other-apps-tools/logs/google-cloud-logging.md)
   * [⚒ QA Job Interview (RU)](qa-tools/other-apps-tools/qa-job-interview-ru.md)
 
 ## Tools
