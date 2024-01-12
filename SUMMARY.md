@@ -29,10 +29,12 @@
 
 ## QA Tools
 
+* [🌧 Load Testing](qa-tools/load-testing/README.md)
+  * [k6](qa-tools/load-testing/k6.md)
+  * [Apache JMeter](qa-tools/load-testing/apache-jmeter.md)
 * [Backend Automation](qa-tools/backend-automation/README.md)
   * [API Testing - JS](qa-tools/backend-automation/api-testing-js.md)
   * [Postman](qa-tools/backend-automation/postman.md)
-  * [Apache JMeter](qa-tools/backend-automation/apache-jmeter.md)
 * [Frontend Automation](qa-tools/frontend-automation/README.md)
   * [Basic info](qa-tools/frontend-automation/basic-info.md)
   * [▶ Playwright](qa-tools/frontend-automation/playwright-js.md)
@@ -45,6 +47,8 @@
       * [Configs](qa-tools/frontend-automation/selenium/selenium-1/configs.md)
       * [Test Run](qa-tools/frontend-automation/selenium/selenium-1/test-run.md)
 * [Other apps/tools/docs](qa-tools/other-apps-tools/README.md)
+  * [Metrics](qa-tools/other-apps-tools/metrics/README.md)
+    * [Prometheus & Grafana](qa-tools/other-apps-tools/metrics/prometheus-and-grafana.md)
   * [Logs](qa-tools/other-apps-tools/logs/README.md)
     * [🗒 Kibana](qa-tools/other-apps-tools/logs/kibana.md)
     * [⛅ Google Cloud](qa-tools/other-apps-tools/logs/google-cloud.md)
@@ -63,7 +67,7 @@
   * [Compose](tools/docker/compose.md)
   * [🗄 Docker Volumes](tools/docker/docker-volumes.md)
   * [VM vs Docker](tools/docker/vm-vs-docker.md)
-* [⚙ Kubernetes](tools/kubernetes.md)
+* [⚙ Kubernetes aka k8s](tools/kubernetes.md)
 * [🖇 CI/CD](tools/ci-cd/README.md)
   * [🦊 GitLab CI/CD](tools/ci-cd/gitlab-ci-cd.md)
   * [Jenkins](tools/ci-cd/jenkins.md)
