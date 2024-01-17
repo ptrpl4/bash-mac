@@ -83,6 +83,8 @@ cd ..
 
 `env` - current shell env vars. [link](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)
 
+`tail` - output the last part of files
+
 ```bash
 # create file and add text
 echo "insert text here" > myfile.txt
@@ -94,49 +96,47 @@ echo "insert text here" > myfile.txt
 
 ```bash
 # copy public key to clipboard 
-$ cat ~/.ssh/id_rsa.pub | pbcopy
+cat ~/.ssh/id_rsa.pub | pbcopy
 
 # find keyword in ls results
-$ ls ~/.ssh | grep digital
+ls ~/.ssh | grep digital
+
+# check last commands in history
+history | tail -20
 ```
 
 ## Multiple commands in one line
 
 <pre class="language-bash"><code class="lang-bash"># No matter the first command run successfully or not, run the second command cmd2:
-<strong>$ cd; ls
+<strong>cd; ls
 </strong><strong># Only when the first command cmd1 run successfully, run the second command cmd2
-</strong><strong>$ cd &#x26;&#x26; ls
+</strong><strong>cd &#x26;&#x26; ls
 </strong># Only when the first command cmd1 failed to run, run the second command cmd2
-$ cd || ls
+cd || ls
 </code></pre>
 
-### Renaming
+### Rename
 
-```
+```bash
+# rename
 touch file
 mv file renamed-file
-```
 
-### Copy
-
-```
+# make copy
 cp renamed-file renamed-file-copy
 ```
 
-### Deleting
+### Delete
 
-`-r` recursion
+<pre class="language-bash"><code class="lang-bash"># -r recursion
+# -f all without question
+<strong>rm folder/filename
+</strong>rm -rf foder/foldername
+</code></pre>
 
-`-f` all without question
+### Shortcuts
 
-```bash
-rm folder/filename
-rm -rf foder/foldername
-```
-
-### History
-
-`Ctrl + r` fast history suggestions
+`Ctrl + r`  - fast history search
 
 ## Permissions
 
@@ -144,27 +144,14 @@ rm -rf foder/foldername
 
 ![](<../../.gitbook/assets/image (14) (1).png>)
 
-## **TLDR command**
-
-**TLDR** stands for **T**oo **L**ong **D**idn'**t R**ead and is described as "a collection of simplified and community-driven man pages."
-
-```
-brew install tldr
-tldr ls
-tldr cd
-```
-
 ## Aliases
 
 ```bash
 # to save it in shell zsh - ~/.zshrc
 nano ~/.bashrc
-# add alias
 
-# Add ssh key
+# add alias, add ssh key, save file
 alias key='ssh-add --apple-use-keychain ~/.ssh/id_rsa'
-
-# save it
 
 # add to current session
 source ~/.bashrc
@@ -173,4 +160,17 @@ source ~/.bashrc
 ## Processes
 
 ```bash
+# report a snapshot of the current processes
+ps
+
+```
+
+## **TLDR program**
+
+**TLDR** stands for **T**oo **L**ong **D**idn'**t R**ead and is described as "a collection of simplified and community-driven man pages."
+
+```bash
+brew install tldr
+tldr ls
+tldr cd
 ```
