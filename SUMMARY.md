@@ -113,7 +113,7 @@
     * [🔧 SRE and SLA](additional-info/other/software-engineering/sre-and-sla.md)
     * [🪨 Monolith and Microservices](additional-info/other/software-engineering/monolith-and-microservices.md)
   * [💳 Card Payments](additional-info/other/card-payments.md)
-  * [🦄 UNIX-based OS](additional-info/other/unix.md)
+  * [🦄 UNIX based OS](additional-info/other/unix.md)
   * [🏦 Hash](additional-info/other/hash.md)
   * [🤓 regexp](additional-info/other/regexp.md)
   * [🧊 Blockchain](additional-info/other/blockchain.md)

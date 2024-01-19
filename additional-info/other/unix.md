@@ -1,8 +1,38 @@
----
-description: base for Linux kernel
----
+# 🦄 UNIX based OS
 
-# 🦄 UNIX
+## OS
+
+What is operation system?
+
+* Kernel
+* Shell
+* Preinstalled apps (including system GUI)
+* File System
+
+## Kernel
+
+What the kernel does&#x20;
+
+* manages processes (start, pause, stop, context switch)&#x20;
+* handles system calls&#x20;
+* manages memory&#x20;
+* works with hardware (via drivers)
+
+<figure><img src="../../.gitbook/assets/изображение (17).png" alt=""><figcaption></figcaption></figure>
+
+
+
+### POSIX
+
+POSIX stands for Portable Operating System Interface. It defines the application programming interfaces (APIs), along with command line shells and utility interfaces, for software compatibility with variants of Unix and other operating systems.&#x20;
+
+Compliance with POSIX is voluntary, and while many operating systems, including Linux, are mostly POSIX-compliant, systems such as macOS, AIX, HP-UX, and Solaris, are certified.
+
+## File System
+
+For Linux everything is file. Folder - file with list of inner files/folders.
+
+<figure><img src="../../.gitbook/assets/изображение (18).png" alt=""><figcaption></figcaption></figure>
 
 ## File modes and permissions
 
