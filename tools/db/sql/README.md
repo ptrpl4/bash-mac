@@ -234,11 +234,13 @@ SELECT <col_name1>, <col_name2>, …
 
 #### JOIN
 
-`JOIN` используется для связи двух или более таблиц с помощью общих атрибутов внутри них. На изображении ниже показаны различные способы объединения в SQL. Обратите внимание на разницу между левым внешним объединением и правым внешним объединением:
+JOIN used to join two or more tables by using common attributes within them.
 
 ![](<../../../.gitbook/assets/image (9) (1).png>)
 
-<pre class="language-sql"><code class="lang-sql"><strong>SELECT &#x3C;col_name1>, &#x3C;col_name2>, …
+<pre class="language-sql"><code class="lang-sql"><strong># JOIN = INNER JOIN
+</strong><strong>
+</strong><strong>SELECT &#x3C;col_name1>, &#x3C;col_name2>, …
 </strong>  FROM &#x3C;table_name1>
   JOIN &#x3C;table_name2>
   ON &#x3C;table_name1.col_namex> = &#x3C;table2.col_namex>;
@@ -250,9 +252,16 @@ FROM products AS p JOIN product types AS t
 ON p.type id = t.id
 WHERE t.type name='online-lesson'
 ORDER BY p.price DESC
+
+# LEFT OUTER JOIN 
+SELECT products.name, product_types.type_name
+FROM products LEFT OUTER JOIN product_types
+ON products.type_id = product_types.id
+
+# FULL OUTER JOIN - Join everything in all tables
 </code></pre>
 
-#### View
+### View
 
 `View` — это виртуальная таблица SQL, созданная в результате выполнения выражения. Она содержит строки и столбцы и очень похожа на обычную SQL-таблицу. `View` всегда показывает самую свежую информацию из базы данных.
 
