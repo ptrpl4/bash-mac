@@ -10,7 +10,7 @@ If we're talking about the final product (for the business, for the customer), i
 
 Frederick P. Brooks suggested that it would take 3 times as long as the program itself. But that was in 1975...
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-06-03 at 20.51.24.png" alt="" width="563"><figcaption><p>Evolution of the programming systems product</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-06-03 at 20.51.24.png" alt="" width="563"><figcaption><p>Evolution of the programming systems product</p></figcaption></figure>
 
 ### src
 
@@ -70,21 +70,21 @@ lecture - [https://www.youtube.com/playlist?list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBs
 
 ## Product specification&#x20;
 
-<img src="../../../.gitbook/assets/image (2).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (2).png" alt="" data-size="original">
 
 ## Processes
 
-![](<../../../.gitbook/assets/image (3) (2).png>)
+![](<../../.gitbook/assets/image (3) (2).png>)
 
 ## Methodology&#x20;
 
 ### Waterfall model
 
-<figure><img src="../../../.gitbook/assets/изображение (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (9).png" alt=""><figcaption></figcaption></figure>
 
 ### Spiral model
 
-<figure><img src="../../../.gitbook/assets/изображение (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (10).png" alt=""><figcaption></figcaption></figure>
 
 ### Agile Methodology
 
@@ -120,11 +120,11 @@ link - [http://www.extremeprogramming.org](http://www.extremeprogramming.org/)
 
 link - [http://www.extremeprogramming.org/rules.html](http://www.extremeprogramming.org/rules.html)
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Main practices of XP
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ## Therms
 
@@ -135,4 +135,22 @@ Bus factor refers to the number of key people on a team who, if they were sudden
 1 person-  is critical. need more knowledge sharing
 
 2 and more people - more confident
+
+## UI/UX
+
+<figure><img src="../../.gitbook/assets/DcFiTc0XkAA5djT_auto_x2.jpg" alt=""><figcaption></figcaption></figure>
+
+## Design Strategy
+
+### User-Centered Design
+
+UCD  is an iterative design process where designers focus on the users and their needs throughout the design process. It involves users through research, requirement definition, design creation, and evaluation. The UCD process is guided by principles such as focusing on the people, solving the right problem, recognizing everything as a system, and not rushing to a solution.
+
+#### Template
+
+_For (**target users**) who wants (**needs**) (**Product X**) is a (**product category**) that have (**one key advantage**). Unlike main competitors - (**Products A, B, C**) our (**Product X**) can do (**unique difference**)._
+
+#### Decision making
+
+Could be based on need of typical users types & typical user groups. We can create a virtual person representing a user group, write their main user stories and main anti-stories.&#x20;
 

@@ -82,6 +82,13 @@
 
 ## leftovers
 
+* [👯 Software Engineering](leftovers/software-engineering/README.md)
+  * [Deployment processes](leftovers/software-engineering/deployment-processes.md)
+  * [😎 TDD, BDD etc](leftovers/software-engineering/tdd-bdd.md)
+  * [😖 Scrum framework](leftovers/software-engineering/scrum.md)
+  * [🔧 SRE and SLA](leftovers/software-engineering/sre-and-sla.md)
+  * [🪨 Monolith and Microservices](leftovers/software-engineering/monolith-and-microservices.md)
+  * [Kanban](leftovers/software-engineering/kanban.md)
 * [🕸 Web Tech](leftovers/web-development/README.md)
   * [🎠 Web Browsers](leftovers/web-development/web-browsers/README.md)
     * [Browser storage](leftovers/web-development/web-browsers/browser-storage.md)
@@ -106,12 +113,6 @@
       * [Hotkeys](leftovers/other/my-apps/comfy-macos/hotkeys.md)
   * [👨🎓 I (don't) know](leftovers/other/i-dont-know.md)
   * [🔦 Therms](leftovers/other/therms.md)
-  * [👯 Software Engineering](leftovers/other/software-engineering/README.md)
-    * [Deployment processes](leftovers/other/software-engineering/deployment-processes.md)
-    * [😎 TDD, BDD etc](leftovers/other/software-engineering/tdd-bdd.md)
-    * [😖 Scrum framework](leftovers/other/software-engineering/scrum.md)
-    * [🔧 SRE and SLA](leftovers/other/software-engineering/sre-and-sla.md)
-    * [🪨 Monolith and Microservices](leftovers/other/software-engineering/monolith-and-microservices.md)
   * [💳 Card Payments](leftovers/other/card-payments.md)
   * [🦄 UNIX based OS](leftovers/other/unix.md)
   * [🏦 Hash](leftovers/other/hash.md)
