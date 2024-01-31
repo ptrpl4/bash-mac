@@ -303,3 +303,9 @@ DROP VIEW <view_name>;
 * DCL – Data Control Language
 
 <figure><img src="../../../.gitbook/assets/изображение (5) (2).png" alt=""><figcaption></figcaption></figure>
+
+## Scheme
+
+example scheme for online shop
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-01-31 at 15.42.36.png" alt=""><figcaption></figcaption></figure>
