@@ -142,7 +142,9 @@ Bus factor refers to the number of key people on a team who, if they were sudden
 
 ## Design Strategy
 
-### User-Centered Design
+### User-Centered Design (UCD)
+
+User-based design
 
 UCD  is an iterative design process where designers focus on the users and their needs throughout the design process. It involves users through research, requirement definition, design creation, and evaluation. The UCD process is guided by principles such as focusing on the people, solving the right problem, recognizing everything as a system, and not rushing to a solution.
 
@@ -153,4 +155,23 @@ _For (**target users**) who wants (**needs**) (**Product X**) is a (**product ca
 #### Decision making
 
 Could be based on need of typical users types & typical user groups. We can create a virtual person representing a user group, write their main user stories and main anti-stories.&#x20;
+
+### Activity-centered design (ACD)
+
+User-based design
+
+* focus on the actions that are taken to solve the problem&#x20;
+* there may be many users&#x20;
+* users may not know what they want&#x20;
+* people adapt well to technology
+
+### Data-driven design
+
+Data-based design
+
+Can be used to improve an existing product
+
+[https://designlab.com/blog/what-is-data-driven-design](https://designlab.com/blog/what-is-data-driven-design)&#x20;
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-01 at 15.19.16_auto_x2.jpg" alt=""><figcaption></figcaption></figure>
 
