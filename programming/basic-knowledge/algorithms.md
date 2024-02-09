@@ -15,6 +15,27 @@ Binary search operates with a time complexity of O(log n), where n is the number
 
 The key to binary search is that it takes advantage of the fact that the array is sorted. Each comparison helps to narrow down the search space, which allows the algorithm to quickly locate the target value if it exists within the array .
 
+```python
+# example on python
+def binary_search(list, item):
+    low = 0
+    high = len(list) - 1
+    while low <= high:
+        mid = (low + high)
+        guess = list[mid]
+        if guess == item:
+            return mid
+        if guess > item:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return None
+
+my_list = [1, 3, 5, 7, 9]
+
+print(binary_search(my_list,3)) # expect 1
+```
+
 ## Logarithm helper <a href="#firstheading" id="firstheading"></a>
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 14.04.43.jpeg" alt=""><figcaption></figcaption></figure>
