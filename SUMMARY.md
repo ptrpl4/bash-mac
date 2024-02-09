@@ -30,7 +30,8 @@
 ## QA
 
 * [🌧 Load Testing](qa/load-testing/README.md)
-  * [k6](qa/load-testing/k6.md)
+  * [k6](qa/load-testing/k6/README.md)
+    * [k6 scripts](qa/load-testing/k6/k6-scripts.md)
   * [Apache JMeter](qa/load-testing/apache-jmeter.md)
 * [🤩 Backend testing](qa/backend-testing/README.md)
   * [API Testing - JS](qa/backend-testing/api-testing-js.md)
