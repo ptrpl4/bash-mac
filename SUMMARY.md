@@ -4,7 +4,8 @@
 
 ## Programming
 
-* [🤓 Basic Knowledge](programming/basic-knowledge.md)
+* [🤓 Basic Knowledge](programming/basic-knowledge/README.md)
+  * [🔢 Algorithms](programming/basic-knowledge/algorithms.md)
 * [🐍 Python](programming/python3/README.md)
   * [🐘 Django](programming/python3/django.md)
   * [Python Setup](programming/python3/macos-hints.md)

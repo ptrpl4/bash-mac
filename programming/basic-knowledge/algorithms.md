@@ -1,0 +1,20 @@
+# 🔢 Algorithms
+
+## Binary search
+
+Binary search is an efficient search algorithm used to find a specific value within a sorted list or array.
+
+* Start with the middle element of the sorted array.
+* Compare the middle element with the target value.
+* If the target value is equal to the middle element, the search is over – the target is found.
+* If the target value is less than the middle element, repeat the process with the lower half of the array.
+* If the target value is greater than the middle element, repeat the process with the upper half of the array.
+* Repeat these steps until the target value is found or the subarray becomes empty.
+
+Binary search operates with a time complexity of O(log n), where n is the number of elements in the array. This makes it much faster than linear search (which has a time complexity of O(n)) for large datasets, as it effectively halves the search space with each comparison.
+
+The key to binary search is that it takes advantage of the fact that the array is sorted. Each comparison helps to narrow down the search space, which allows the algorithm to quickly locate the target value if it exists within the array .
+
+## Logarithm helper <a href="#firstheading" id="firstheading"></a>
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 14.04.43.jpeg" alt=""><figcaption></figcaption></figure>
