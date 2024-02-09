@@ -166,13 +166,11 @@ git commit README.md --amend -m 'update instructions'
 ## Отмена индексации
 
 ```bash
-git reset HEAD filename
 ```
 
 ## Отмена изменений
 
 ```bash
-git checkout -- filename
 ```
 
 ## Remote
