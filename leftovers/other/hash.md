@@ -12,7 +12,7 @@ description: What is Hashing
 
 ### **What is hashing?** <a href="#what-is-hashing" id="what-is-hashing"></a>
 
-Hashing means using some function or algorithm to map object data to some representative value.
+Hashing means using some algorithm to map object data to some representative value.
 
 Hash tables have to support 3 functions.
 
@@ -35,7 +35,7 @@ if we want to store and check user passwords
 
 ### Salting
 
-To avoid same hash for same data inputs we can add random keyword to input to make in uniq
+To avoid same hash for same data inputs we can add random keyword to input to make it unique&#x20;
 
 ### Peppering
 
