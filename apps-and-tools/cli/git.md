@@ -1,31 +1,25 @@
 ---
-description: version control system
+description: VCS - Version Control System
 ---
 
 # 📖 Git
 
 #### links
 
-[https://git-scm.com/](https://git-scm.com/)&#x20;
+* [https://git-scm.com](https://git-scm.com/)
+* [https://github.com/github/gitignore](https://github.com/github/gitignore)  .gitignore
+* [https://ohshitgit.com](https://ohshitgit.com/)
+* [https://gitexplorer.com](https://gitexplorer.com/)
 
-[https://github.com/github/gitignore](https://github.com/github/gitignore)  .gitignore
+commits
 
-[https://ohshitgit.com/](https://ohshitgit.com/)
+* [https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
+* [https://conventionalcomments.org](https://conventionalcomments.org/)
+* [https://www.youtube.com/watch?v=uBhpBOX8VYg](https://www.youtube.com/watch?v=uBhpBOX8VYg)
 
-[https://gitexplorer.com/](https://gitexplorer.com/) &#x20;
+hints and examples
 
-commits:
-
-[https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
-
-[https://conventionalcomments.org/](https://conventionalcomments.org/)
-
-[https://www.youtube.com/watch?v=uBhpBOX8VYg](https://www.youtube.com/watch?v=uBhpBOX8VYg)
-
-hints and examples:
-
-[https://wiki.nikiv.dev/programming/version-control/git](https://wiki.nikiv.dev/programming/version-control/git)\
-
+* [https://wiki.nikiv.dev/programming/version-control/git](https://wiki.nikiv.dev/programming/version-control/git)
 
 ### fast start
 
@@ -56,8 +50,8 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 
 # set local
-git config --local user.name "Petr V."
-git config --local user.email ptrpl4@ya.ru
+git config --local user.name "Pyotr V."
+git config --local user.email ptrpl4@example.co 
 ```
 
 ## Add
@@ -153,24 +147,26 @@ git log --no-merges
 git log --oneline --decorate
 ```
 
-## Добавление в последний коммит
+## Amend last commit
 
 ```bash
 # add some chaged in last commit --amend
+git commit -m 'Initial commit'
+git add forgotten_file.md
 git commit --amend
 
 # example
-git commit README.md --amend -m 'update instructions'             
+git commit README.md --amend -m 'update instructions' 
 ```
 
-## Отмена индексации
+## Undo
 
 ```bash
-```
+# Unstaging a Staged File
+git reset HEAD testfile.md
 
-## Отмена изменений
-
-```bash
+# Unmodifying a Modified File
+git checkout -- CONTRIBUTING.md
 ```
 
 ## Remote
@@ -226,20 +222,23 @@ $ git checkout -b version2 v2.0.0
 
 ## Branch
 
-### basic
+### Basics
 
 ```bash
-# current branches
+# list of local branches
 git branch
+
 # create branch
 git branch test_branch
+
 # switch to branch
 git checkout test_branch
 # create and switch
 git checkout -b test_branch
+
 # delete branch (-d, --delete)
 git branch -d test_branch
-# all branches + all last commits
+# local branches + last commits
 git branch -v
 # all not merged branches
 git branch --no-merged
@@ -261,23 +260,36 @@ $ git push origin --delete bad-branch-name
 ## Merge
 
 ```bash
-# add test_branch to current branch
+# add commit from test_branch to current branch
 git merge test_branch
 ```
 
-### Branching strategy
+## Rebase
+
+rebasing better to use only for local branches to not mess with changes in remote repo
+
+```bash
+# will rerite commit history
+git merge test_branch
+```
+
+## Branching strategy
 
 ### GitHub Flow&#x20;
 
 <figure><img src="../../.gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
 
-long-live main branch + short-live feature branches
+**long-live main branch + short-live feature branches**
 
 ### GitFlow
 
+Gitflow is a legacy Git workflow that was originally a disruptive and novel strategy for managing Git branches. Gitflow has fallen in popularity in favor of trunk-based workflows, which are now considered best practices for modern continuous software development and DevOps practices
+
+**develop => feature => develop => release branch => master + tag version**
+
 <figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
-develop => feature => develop => release branch => master + tag version
+link&#x20;
 
-link - [https://nvie.com/posts/a-successful-git-branching-model](https://nvie.com/posts/a-successful-git-branching-model/)
+* [https://nvie.com/posts/a-successful-git-branching-model](https://nvie.com/posts/a-successful-git-branching-model/)
 
