@@ -39,3 +39,15 @@ print(binary_search(my_list,3)) # expect 1
 ## Logarithm helper <a href="#firstheading" id="firstheading"></a>
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 14.04.43.jpeg" alt=""><figcaption></figcaption></figure>
+
+## Big _O_ notation
+
+Used to classify algorithms according to how fast the execution time of the algorithm increases with increasing input data size.
+
+Big O used worst (slowest case)
+
+* Getting an element of a collection is O(1). Whether retrieving by an index in an array, or by a key in a dictionary in Big O notation it is O(1)\\
+* Going through a collection is O(n)
+* Nested loops over the same collection is O(n^2)
+* Divide and Conquer is always O(log n).
+* Iterations that use Divide and Conquer are O(n log n)
