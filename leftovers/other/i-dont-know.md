@@ -17,11 +17,14 @@
   * k6
 * Tools and Services&#x20;
   * k8s
+  * kibana
+  * gcloud
+* Algorithms
 
 ## I don't know much about
 
 * Security testing
-* Tools and Services (rabbitMQ, kibana, sentry, grafana, prometheus, gcloud)
+* Tools and Services (rabbitMQ, sentry, grafana, prometheus)
 
 \---
 

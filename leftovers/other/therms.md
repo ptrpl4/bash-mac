@@ -1,6 +1,6 @@
 # 🔦 Therms
 
-#### Programs, Tools, Services and  Apps&#x20;
+## Programs, Tools, Services and  Apps&#x20;
 
 **Program** - any set of instructions that can be executed by a computer. Basically almost everything is a program
 

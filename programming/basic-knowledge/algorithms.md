@@ -46,8 +46,9 @@ Used to classify algorithms according to how fast the execution time of the algo
 
 Big O used worst (slowest case)
 
-* Getting an element of a collection is O(1). Whether retrieving by an index in an array, or by a key in a dictionary in Big O notation it is O(1)\\
+* Getting an element of a collection is O(1). \
+  Whether retrieving by an index in an array, or by a key in a dictionary in Big O notation it is O(1)
 * Going through a collection is O(n)
 * Nested loops over the same collection is O(n^2)
-* Divide and Conquer is always O(log n).
+* Divide and Conquer is always O(log n)
 * Iterations that use Divide and Conquer are O(n log n)
