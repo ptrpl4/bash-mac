@@ -10,6 +10,7 @@ description: VCS - Version Control System
 * [https://github.com/github/gitignore](https://github.com/github/gitignore)  .gitignore
 * [https://ohshitgit.com](https://ohshitgit.com/)
 * [https://gitexplorer.com](https://gitexplorer.com/)
+* [https://blog.gitbutler.com](https://blog.gitbutler.com)
 
 commits
 
@@ -21,7 +22,7 @@ hints and examples
 
 * [https://wiki.nikiv.dev/programming/version-control/git](https://wiki.nikiv.dev/programming/version-control/git)
 
-### fast start
+## fast start
 
 ```bash
 # init and connect repo
@@ -51,16 +52,34 @@ git config --global user.email johndoe@example.com
 
 # set local
 git config --local user.name "Pyotr V."
-git config --local user.email ptrpl4@example.co 
+git config --local user.email ptrpl4@example.co
+
+# add alias
+git config --global alias.staash 'stash --all'
+git config --global alias.script !any-script.sh
 ```
 
-## Add
+## .gitignore
+
+The following rules apply to templates in the .gitignore file:&#x20;
+
+* Blank lines, as well as lines starting with #, are ignored.&#x20;
+* Standard templates are global and are applied recursively to the entire directory tree.&#x20;
+* To avoid recursion use a slash (/) at the beginning of the template.&#x20;
+* To exclude a directory add a slash (/) at the end of the template.&#x20;
+* You can invert the template by using an exclamation point (!) as the first character.
+
+## Basic commands
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+### Add
 
 <pre class="language-bash"><code class="lang-bash"># add --patch (parts of changes to commit)
 <strong>git add -p index.html 
 </strong></code></pre>
 
-## Commit
+### Commit
 
 ```bash
 # add all staged files to commit
@@ -69,7 +88,7 @@ git commit -a -m 'feat: add browser check'
 git ci -am 'feat: add browser check'
 ```
 
-### Semantic Commit Messages
+#### Semantic Commit Messages
 
 Format: `<type>(<scope>): <subject>`
 
@@ -94,34 +113,16 @@ More Examples:
 * `test`: (adding missing tests, refactoring tests; no production code change)
 * `chore`: (updating grunt tasks etc; no production code change)
 
-## Push
+### Push
 
 ```bash
 # sent to remote repo origin master
 git push
+
+git push --force with lease
 ```
 
-## .gitignore
-
-К шаблонам в файле .gitignore применяются следующие правила:
-
-* Пустые строки, а также строки, начинающиеся с #, игнорируются.
-* Стандартные шаблоны являются глобальными и применяются рекурсивно для всего дерева каталогов.
-* Чтобы избежать рекурсии используйте символ слеш (/) в начале шаблона.
-* Чтобы исключить каталог добавьте слеш (/) в конец шаблона.
-* Можно инвертировать шаблон, использовав восклицательный знак (!) в качестве первого символа.
-
-## Переименование
-
-```bash
-$ git mv README.md README
-# equal
-$ mv README.md README
-$ git rm README.md
-$ git add README
-```
-
-## Лог
+### Log
 
 ```shell
 # all commits order by desc
@@ -145,9 +146,12 @@ git log -- path/to/file
 git log --no-merges
 # branches and changes
 git log --oneline --decorate
+
+# Reference logs
+git reflog
 ```
 
-## Amend last commit
+### Amend last commit
 
 ```bash
 # add some chaged in last commit --amend
@@ -159,17 +163,7 @@ git commit --amend
 git commit README.md --amend -m 'update instructions' 
 ```
 
-## Undo
-
-```bash
-# Unstaging a Staged File
-git reset HEAD testfile.md
-
-# Unmodifying a Modified File
-git checkout -- CONTRIBUTING.md
-```
-
-## Remote
+### Remote
 
 ```shell
 # check remote repos with links
@@ -182,7 +176,7 @@ git remote show origin
 git remote add origin git@github.com:ptrpl4/GitBookWiki.git
 ```
 
-## Fetch/Pull
+### Fetch/Pull
 
 ```shell
 # get data from origin repo
@@ -196,7 +190,7 @@ git rebase
 git stash pop
 ```
 
-## Tag
+### Tag
 
 ```shell
 # create Annotated Tags (full author info) and message
@@ -220,13 +214,33 @@ $ git checkout v2.0.0
 $ git checkout -b version2 v2.0.0
 ```
 
+## How to Rename
+
+```bash
+$ git mv README.md README
+# equal
+$ mv README.md README
+$ git rm README.md
+$ git add README
+```
+
+## How to Undo
+
+```bash
+# Unstaging a Staged File
+git reset HEAD testfile.md
+
+# Unmodifying a Modified File
+git checkout -- CONTRIBUTING.md
+```
+
 ## Branch
 
 ### Basics
 
 ```bash
 # list of local branches
-git branch
+git branch --column
 
 # create branch
 git branch test_branch
