@@ -64,7 +64,19 @@ To quit manual press q,  f (forward),  b (backward).
 # cd - change directory
 cd {folder/path} 
 cd ~/.ssh
+
+# go home
+cd
+cd ~
+
+# go up
 cd ..
+
+# go root
+cd /
+
+# go to previous dir
+cd -
 ```
 
 `pwd` - **p**rint **w**orking **d**irectory
