@@ -2,26 +2,43 @@
 
 ## Browser
 
-* **cmd + L** для выбора строки адреса
-* **cmd + shift + W** Закрыть окно
-* **control + tab** Прокрутка недавно открытых вкладок
-* **shift + delete** Удалить строку из списка автозаполнения адресов
+* open address bar\
+  **cmd-L**&#x20;
+* Delete a line from the address autocomplete list\
+  **shift-delete**
+
+### Tabs
+
+browsers, Finder etc.
+
+* switch to next tab / reverse\
+  **control-tab** / **control-tab-shift**
+* close window\
+  **cmd-shift-w**&#x20;
 
 ## System (macOS)
 
 [https://support.apple.com/ru-ru/HT201236](https://support.apple.com/ru-ru/HT201236)
 
-**Control-Command-Пробел**: отображение панели «Символы», с которой можно выбирать [эмодзи и другие символы](https://support.apple.com/ru-ru/HT201586).
+* emoji \
+  **Control-Command-Space**
+* show/hide Dock\
+  **Option-Command-D**
+* display all windows of the active program\
+  **Control-arrowDown**
 
 ### Finder
 
-* **Command-D**: создание дубликатов выделенных файлов
-* **Command-I**: отображение окна свойств для выделенного файла.
-* **Shift-Command-C**: открытие окна «Компьютер».
-* **Shift-Command-D**: открытие папки рабочего стола.
-* **Option-Command-D**: отображение или скрытие панели Dock.
-* **Control-Стрелка вниз**: отображение всех окон активной программы.
-* **Command + Shift + .** :How to see hidden files in macOS
+* duplicate\
+  **Command-D**
+* file info\
+  **Command-I**
+* open computer window\
+  **Shift-Command-C**
+* open desktop\
+  **Shift-Command-D**
+* reveal hidden files in macOS\
+  **Command-Shift-.**
 
 ### Texts
 
