@@ -198,7 +198,7 @@ It's a list of directory paths, separated by colons (`:`)
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 ```
 
-### Aliases
+### Alias
 
 ```bash
 # to save it in shell zsh - ~/.zshrc
