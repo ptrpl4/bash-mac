@@ -67,3 +67,17 @@ brew deps --tree --installed
 brew autoremove -n
 brew cleanup
 ```
+
+## Completion
+
+* [https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh](https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh)
+
+```
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+```
