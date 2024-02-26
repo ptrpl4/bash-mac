@@ -55,7 +55,7 @@ If only one of several parameters can be chosen, vertical bars are used: \[param
 
 ### options
 
-_`--options`_ are **command line options** or **flags**, that modify the operation
+`--options` are **command line options** or **flags**, that modify the operation
 
 short option `-o`
 
@@ -135,7 +135,7 @@ ls ~/.ssh | grep digital
 history | tail -20
 ```
 
-## Multiple commands in one line
+### Multiple commands in one line
 
 <pre class="language-bash"><code class="lang-bash"># No matter the first command run successfully or not, run the second command cmd2:
 <strong>cd; ls
