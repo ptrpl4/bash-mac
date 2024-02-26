@@ -4,48 +4,62 @@ description: Bash/ZSH
 
 # 💻 CLI
 
-### links
+zsh & bash -  programs that runs in Terminal, interprets Unix commands, and interacts with OS
 
-Shortcuts - [https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac](https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac)
+#### links
 
-Explain Shell - [https://explainshell.com/explain?cmd=curl+-fsSL+example.org](https://explainshell.com/explain?cmd=curl+-fsSL+example.org)
-
-More shortcuts - [http://macmy.ru/pages/terminal-commands-macosx#](http://macmy.ru/pages/terminal-commands-macosx)
-
-Filesystem Hierarchy Standard - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)
-
-Database and OS scripting - [https://ss64.com/](https://ss64.com)
-
-60 commands - [https://www.youtube.com/watch?v=gd7BXuUQ91w](https://www.youtube.com/watch?v=gd7BXuUQ91w)&#x20;
+* Shortcuts - [https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac](https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac)
+* Explain Shell - [https://explainshell.com/explain?cmd=curl+-fsSL+example.org](https://explainshell.com/explain?cmd=curl+-fsSL+example.org)
+* More shortcuts - [http://macmy.ru/pages/terminal-commands-macosx#](http://macmy.ru/pages/terminal-commands-macosx)
+* Filesystem Hierarchy Standard - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)
+* Database and OS scripting - [https://ss64.com/](https://ss64.com)
+* 60 commands - [https://www.youtube.com/watch?v=gd7BXuUQ91w](https://www.youtube.com/watch?v=gd7BXuUQ91w)&#x20;
 
 ## Syntax
 
-### man example
+### man
+
+SYNOPSIS - most common options
+
+OPTIONS - full list of options
 
 ```bash
-$ say [-v voice] [-r rate] [-o outfile [audio format options] | -n name:port | -a device] [-f file | string ...]
+# man examples
+say
+[-v voice] 
+[-r rate] 
+[-o outfile [audio format options] | -n name:port | -a device] 
+[-f file | string ...]
 
 # one more
-$ command [params...] [-options…] | command_two <param> [-options…]
+command [params...] [-options…] | command_two <param> [-options…]
 
 # another example
-$ cmd [param 1|param 2] 
+cmd [param 1|param 2] 
 ```
 
-Квадратные скобки `[]` обозначают необязательность. Например, опция `-v` необязательна, то же самое касается и любых других опций этой программы. Вертикальная черта `|` обозначает операцию "или", причём именно **исключающее или**. Посмотрите на последний блок `[-f file | string ...]`. Он означает, что `say` может либо произносить текст из файла, либо произносить строчку, переданную как аргумент, но не то и другое одновременно. Бывают и другие вариации описания способов вызова: значение по умолчанию, выбор из конкретных элементов, отрицание.
+Square brackets`[]` means optional. \
+For 'say' program `-v` is an optional command like the others in example.
 
-Значение опции указывается через пробел от самой опции. Если значение опции содержит в себе специальные или пробельные символы, то его нужно оборачивать в кавычки, двойные или одинарные - не важно.
+Pipe `|` means "OR" when there can only be one of two options. \
+`[-f file | string ...]` it could be OR file OR string, not both
 
-#### params
+The value of an option is indicated by a space after the option value itself. If the option value contains special or space characters, it must be enclosed in quotation marks, double or single.
+
+### params
 
 Required parameters are written in angle brackets \<param> \
 optional – in square brackets \[param]\
 To indicate that a parameter can be repeated, ellipses are used \[params...]\
 If only one of several parameters can be chosen, vertical bars are used: \[param 1|param 2]
 
-#### options
+### options
 
-_-options_ are **command line options** or **flags**, that modify the operation
+_`--options`_ are **command line options** or **flags**, that modify the operation
+
+short option `-o`
+
+long `--option` (dash-dash-option)
 
 ### variables
 
@@ -79,23 +93,27 @@ cd /
 cd -
 ```
 
-`pwd` - **p**rint **w**orking **d**irectory
+* `pwd` - **p**rint **w**orking **d**irectory
+* `ls` - list directory contents
+* `stat` - display file or file system status
+* `hier` or `man hier` - layout of filesystems
+* `cat` - concatenate and print files
+* `grep` - (**g**lobal **r**egular **e**xpression **p**rint) searching
+* `touch` - file creating (not main function, but typical)
+* `env` - current shell env vars. [link](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)
+* `tail` - output the last part of files
 
-`ls` - list directory contents
+### History
 
-`stat` - display file or file system status
+stores in `.zsh_history` / `.bash_history`&#x20;
 
-`hier` or `man hier` - layout of filesystems
+```bash
+# show history
+history
 
-`cat` - concatenate and print files
-
-`grep` - (**g**lobal **r**egular **e**xpression **p**rint) searching
-
-`touch` - file creating (not main function, but typical)
-
-`env` - current shell env vars. [link](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)
-
-`tail` - output the last part of files
+# clear history
+history -c 
+```
 
 ```bash
 # create file and add text
@@ -140,11 +158,12 @@ cp renamed-file renamed-file-copy
 
 ### Delete
 
-<pre class="language-bash"><code class="lang-bash"># -r recursion
-# -f all without question
-<strong>rm folder/filename
-</strong>rm -rf foder/foldername
-</code></pre>
+```bash
+rm folder/filename
+
+# -r recursion, -f all without question
+rm -rf foder/foldername
+```
 
 ### Shortcuts
 
@@ -156,7 +175,30 @@ cp renamed-file renamed-file-copy
 
 ![](<../../.gitbook/assets/image (14) (1).png>)
 
-## Aliases
+## Shell config
+
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+
+### PATCH
+
+`$PATH` environment variable. It sets the directories that the shell searches for executable files\
+It's a list of directory paths, separated by colons (`:`)
+
+`/bin` - default system executable files
+
+`/usr/bin`  - default user executable files
+
+`/usr/local/bin` - bins for manually installed user-apps (docker, WARP, etc)
+
+`/opt/homebrew/bin` - created and maintained by Brew
+
+```
+# a default $PATH looks like
+# search order from left /usr/local/bin to right /sbin
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+```
+
+### Aliases
 
 ```bash
 # to save it in shell zsh - ~/.zshrc
@@ -165,7 +207,7 @@ nano ~/.bashrc
 # add alias, add ssh key, save file
 alias key='ssh-add --apple-use-keychain ~/.ssh/id_rsa'
 
-# add to current session
+# reset shell environment
 source ~/.bashrc
 ```
 
@@ -173,8 +215,10 @@ source ~/.bashrc
 
 ```bash
 # report a snapshot of the current processes
-ps
+ps 
 
+# turn off proccess
+kill 123321
 ```
 
 ## **TLDR program**
