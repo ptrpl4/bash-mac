@@ -165,6 +165,18 @@ rm folder/filename
 rm -rf foder/foldername
 ```
 
+### eval
+
+execute a string as a shell command
+
+```bash
+# example
+command="echo \$(date)"
+eval "$command"
+
+
+```
+
 ### Shortcuts
 
 `Ctrl + r`  - fast history search

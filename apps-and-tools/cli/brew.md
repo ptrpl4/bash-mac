@@ -16,6 +16,11 @@ description: The Missing Package Manager for macOS (or Linux)
 
 or [https://github.com/Homebrew/brew/releases/latest](https://github.com/Homebrew/brew/releases/latest)
 
+### Add to shell
+
+<pre class="language-bash"><code class="lang-bash"><strong>(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zshrc
+</strong></code></pre>
+
 ### Where to find
 
 Homebrew installs packages to their own directory and then symlinks their files
@@ -68,11 +73,11 @@ brew autoremove -n
 brew cleanup
 ```
 
-## Completion
+### Completion
 
 * [https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh](https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh)
 
-```
+```bash
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
