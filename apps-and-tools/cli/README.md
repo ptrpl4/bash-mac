@@ -8,12 +8,20 @@ zsh & bash -  programs that runs in Terminal, interprets Unix commands, and inte
 
 #### links
 
-* Shortcuts - [https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac](https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac)
-* Explain Shell - [https://explainshell.com/explain?cmd=curl+-fsSL+example.org](https://explainshell.com/explain?cmd=curl+-fsSL+example.org)
+* Mac Shortcuts - [https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac](https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac)
 * More shortcuts - [http://macmy.ru/pages/terminal-commands-macosx#](http://macmy.ru/pages/terminal-commands-macosx)
+* Explain Shell - [https://explainshell.com/explain?cmd=curl+-fsSL+example.org](https://explainshell.com/explain?cmd=curl+-fsSL+example.org)
 * Filesystem Hierarchy Standard - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)
 * Database and OS scripting - [https://ss64.com/](https://ss64.com)
 * 60 commands - [https://www.youtube.com/watch?v=gd7BXuUQ91w](https://www.youtube.com/watch?v=gd7BXuUQ91w)&#x20;
+
+**fonts**
+
+```bash
+# for mac
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
+```
 
 ## Syntax
 
@@ -69,7 +77,17 @@ TOKEN="bblablatoken64"
 open https://main-url-$TASK.nl-k8s-stage.srv.local\?token=$TOKEN
 ```
 
-## Buit in
+## Permissions
+
+```
+drwx------    38 my.username  staff   1.2K Mar  4 13:07 .zsh_sessions
+```
+
+In addition to the user name and group, each file has associated access rights: r - read, w - write and x - execute. These permissions are set for three types of users: the Owner, users belonging to the same group (Group), and Other (those who are not included in the previous two groups).
+
+![](<../../.gitbook/assets/image (14) (1).png>)
+
+## Buit in commands
 
 To display all available built-in system commands, type `man builtin`\
 To quit manual press q,  f (forward),  b (backward).
@@ -91,17 +109,25 @@ cd /
 
 # go to previous dir
 cd -
+
+
+# ls - list directory contents
+
+# l-longList a-all t-sortByTime r-sortReverse h-humanReadable
+ls -latrh
 ```
 
 * `pwd` - **p**rint **w**orking **d**irectory
-* `ls` - list directory contents
 * `stat` - display file or file system status
 * `hier` or `man hier` - layout of filesystems
 * `cat` - concatenate and print files
 * `grep` - (**g**lobal **r**egular **e**xpression **p**rint) searching
 * `touch` - file creating (not main function, but typical)
 * `env` - current shell env vars. [link](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)
-* `tail` - output the last part of files
+* `head` output the first part of textfiles
+* `tail` - output the last part of textfiles
+* `cp` & `mv` - copy & move. syntax - \<target file> \<destination>
+* `compgen -c | less` - all available commands&#x20;
 
 ### History
 
@@ -156,7 +182,7 @@ mv file renamed-file
 cp renamed-file renamed-file-copy
 ```
 
-### Delete
+### rm - Delete
 
 ```bash
 rm folder/filename
@@ -173,19 +199,24 @@ execute a string as a shell command
 # example
 command="echo \$(date)"
 eval "$command"
-
-
 ```
 
 ### Shortcuts
 
-`Ctrl + r`  - fast history search
-
-## Permissions
-
-Кроме имени пользователя и группы, с каждым файлом ассоциированы права доступа: **r** — чтение, **w** — запись и **x** — исполнение. Причём эти права задаются для трёх типов пользователей: владельца (Owner), пользователей, входящих в ту же группу (Group) и остальных (Other) — тех, кто не попал в предыдущие две.
-
-![](<../../.gitbook/assets/image (14) (1).png>)
+* `Ctrl + r`  → fast history search
+* Ctrl+A → Go to front of line&#x20;
+* Ctrl+E → Go to end of line dsfkjewi j
+* Ctrl+C → Kill active process&#x20;
+* Ctrl+K → Exit shell&#x20;
+* Ctrl+L → Clear the screen&#x20;
+* Ctrl+Z → Put process in bg&#x20;
+* !! → Run previous command&#x20;
+* ! → Run prev matching cmd&#x20;
+* Ctrl+F → Go forward one character&#x20;
+* Ctrl+x Ctrl+e → Open line in SEDITOR&#x20;
+* Ctrl+B → Go back one character
+* Alf+F → Go forward one word&#x20;
+* Alt+B → Go back one word
 
 ## Shell config
 
@@ -210,7 +241,7 @@ It's a list of directory paths, separated by colons (`:`)
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 ```
 
-### Alias
+### alias - Aliases&#x20;
 
 ```bash
 # to save it in shell zsh - ~/.zshrc
@@ -223,7 +254,7 @@ alias key='ssh-add --apple-use-keychain ~/.ssh/id_rsa'
 source ~/.bashrc
 ```
 
-## Processes
+## ps - Processes
 
 ```bash
 # report a snapshot of the current processes
