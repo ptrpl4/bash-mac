@@ -222,7 +222,7 @@ eval "$command"
 
 <figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
-### PATCH
+### PATH
 
 `$PATH` environment variable. It sets the directories that the shell searches for executable files\
 It's a list of directory paths, separated by colons (`:`)
