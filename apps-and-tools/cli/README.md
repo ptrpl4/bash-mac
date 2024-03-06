@@ -220,6 +220,8 @@ eval "$command"
 
 ## Shell config
 
+* [https://github.com/ptrpl4/dotfiles](https://github.com/ptrpl4/dotfiles)
+
 <figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 ### PATH
@@ -264,7 +266,9 @@ ps
 kill 123321
 ```
 
-## **TLDR program**
+## **Thirdparty apps**
+
+### **TLDR**
 
 **TLDR** stands for **T**oo **L**ong **D**idn'**t R**ead and is described as "a collection of simplified and community-driven man pages."
 
@@ -272,4 +276,12 @@ kill 123321
 brew install tldr
 tldr ls
 tldr cd
+```
+
+### Sublime-text
+
+```bash
+brew install sublime-text
+# open current dir
+subl .
 ```
