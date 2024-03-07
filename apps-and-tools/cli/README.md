@@ -266,6 +266,20 @@ ps
 kill 123321
 ```
 
+## MacOS commands
+
+### softwareupdate
+
+```bash
+/usr/sbin/softwareupdate
+
+# list
+softwareupdate -l
+
+# update all -R => restart if needed
+sudo softwareupdate -i -a -R
+```
+
 ## **Thirdparty apps**
 
 ### **TLDR**
