@@ -158,6 +158,8 @@ git reflog
 git commit -m 'Initial commit'
 git add forgotten_file.md
 git commit --amend
+# if commit messg still actual
+git commit --amend --no-edit
 
 # example
 git commit README.md --amend -m 'update instructions' 
