@@ -276,8 +276,8 @@ kill 123321
 # list
 softwareupdate -l
 
-# update all -R => restart if needed
-softwareupdate -i -a -R
+# update all -R => restart if needed (sudo for -R option)
+sudo softwareupdate -i -a -R
 ```
 
 ## **Thirdparty apps**
