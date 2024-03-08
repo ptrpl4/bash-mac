@@ -277,7 +277,7 @@ kill 123321
 softwareupdate -l
 
 # update all -R => restart if needed
-sudo softwareupdate -i -a -R
+softwareupdate -i -a -R
 ```
 
 ## **Thirdparty apps**
@@ -292,10 +292,15 @@ tldr ls
 tldr cd
 ```
 
-### Sublime-text
+### Sublime
 
 ```bash
 brew install sublime-text
 # open current dir
 subl .
+
+# sublime merge
+brew install sublime-merge
+# open dir
+smerge .
 ```
