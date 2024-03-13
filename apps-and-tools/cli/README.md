@@ -129,6 +129,10 @@ ls -latrh
 * `cp` & `mv` - copy & move. syntax - \<target file> \<destination>
 * `compgen -c | less` - all available commands&#x20;
 
+### Top
+
+
+
 ### History
 
 stores in `.zsh_history` / `.bash_history`&#x20;
@@ -303,4 +307,12 @@ subl .
 brew install sublime-merge
 # open dir
 smerge .
+```
+
+### htop
+
+user friendly top command
+
+```bash
+brew install htop
 ```
