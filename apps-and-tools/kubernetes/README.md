@@ -2,13 +2,13 @@
 description: Orchestration tool
 ---
 
-# ⚙ Kubernetes
+# ⚙️ Kubernetes aka k8s
 
 Also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 
 ## Components
 
-<figure><img src="../.gitbook/assets/изображение (1) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 * Node or "Worker Node" - virtual or physical machine
 * Master Node - Main Node for cluster
@@ -39,7 +39,7 @@ On Master Node are running **Main k8s Processes** to run and manage cluster. Bet
 
 #### Master Node Processes
 
-<figure><img src="../.gitbook/assets/изображение (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * API Server entrypoint to cluster
   * Access through **UI/API/CLI**
@@ -54,7 +54,7 @@ On Master Node are running **Main k8s Processes** to run and manage cluster. Bet
 
 ### Pod
 
-<figure><img src="../.gitbook/assets/image (4) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (4).png" alt=""><figcaption></figcaption></figure>
 
 ### Service
 
@@ -62,15 +62,15 @@ Could be internal or external.&#x20;
 
 Has permanent ip address and works as load balancer if there is more than one Pod
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 ### Config Map and Secrets
 
-<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 ### Volume
 
-<figure><img src="../.gitbook/assets/image (1) (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Stores data. Could be local or remote
 
@@ -126,7 +126,7 @@ spec:
 
 **minikube** - tool for running and testing k8s locally
 
-<figure><img src="../.gitbook/assets/изображение (9) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (9) (2).png" alt=""><figcaption></figcaption></figure>
 
 Master node processes and Node processes inside one Virtual Node on your machine.
 
@@ -145,7 +145,7 @@ minikube status
 
 ### **kubectl**
 
-<figure><img src="../.gitbook/assets/изображение (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (1).png" alt=""><figcaption></figcaption></figure>
 
 **kubectl** - Kubernetes command-line tool. to have CLI access to cluster API Server, autoinstalled with minikube
 
@@ -202,7 +202,7 @@ data:
 
 ### Deployment & Service file
 
-<figure><img src="../.gitbook/assets/изображение.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение.png" alt=""><figcaption></figcaption></figure>
 
 doc - [https://kubernetes.io/docs/concepts/workloads/controllers/deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 
@@ -248,7 +248,7 @@ spec:
 
 service part^
 
-<figure><img src="../.gitbook/assets/изображение (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 doc - [https://kubernetes.io/docs/concepts/services-networking/service/](https://kubernetes.io/docs/concepts/services-networking/service/)
 
