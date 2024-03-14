@@ -48,15 +48,10 @@
       * [Locating Elements](qa/frontend-testing/selenium/selenium-1/locating-elements.md)
       * [Configs](qa/frontend-testing/selenium/selenium-1/configs.md)
       * [Test Run](qa/frontend-testing/selenium/selenium-1/test-run.md)
-* [Mobile Testing](qa/mobile-testing/README.md)
+* [📳 Mobile Testing](qa/mobile-testing/README.md)
   * [🟢 Android Studio](qa/mobile-testing/android-studio.md)
   * [☄️ Xcode](qa/mobile-testing/xcode.md)
 * [Other apps/tools/docs](qa/other-apps-tools/README.md)
-  * [Metrics](qa/other-apps-tools/metrics/README.md)
-    * [Prometheus & Grafana](qa/other-apps-tools/metrics/prometheus-and-grafana.md)
-  * [Logs](qa/other-apps-tools/logs/README.md)
-    * [🗒️ Kibana](qa/other-apps-tools/logs/kibana.md)
-    * [⛅ Google Cloud Logging](qa/other-apps-tools/logs/google-cloud-logging.md)
   * [⚒️ QA Job Interview (RU)](qa/other-apps-tools/qa-job-interview-ru.md)
 
 ## Apps and Tools
@@ -83,7 +78,14 @@
   * [Make](apps-and-tools/cli/make.md)
 * [🚚 Proxy Servers](apps-and-tools/proxy-servers/README.md)
   * [🟩 NGINX](apps-and-tools/proxy-servers/nginx.md)
+  * [⚖️ Load Balancers](apps-and-tools/proxy-servers/load-balancers.md)
+  * [🛤️ API Gateway](apps-and-tools/proxy-servers/api-gateway.md)
 * [🐇 Message Brokers](apps-and-tools/message-brokers.md)
+* [👨‍💻 Logs](apps-and-tools/logs/README.md)
+  * [🗒️ Kibana](apps-and-tools/logs/kibana.md)
+  * [⛅ Google Cloud Logging](apps-and-tools/logs/google-cloud-logging.md)
+* [📈 Metrics](apps-and-tools/metrics/README.md)
+  * [Prometheus & Grafana](apps-and-tools/metrics/prometheus-and-grafana.md)
 
 ## leftovers
 

@@ -1,3 +1,7 @@
+---
+description: web, reverse, load
+---
+
 # 🟩 NGINX
 
 #### links
@@ -8,6 +12,8 @@
 
 _nginx_ \[engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server.
 
+Initially a web server, now also functions as a reverse proxy and load balancer
+
 It listens :80 and :443 ports on host machine and redirects http requests to sertan applications (ports) on machine
 
-<figure><img src="../../../.gitbook/assets/изображение (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (11).png" alt=""><figcaption></figcaption></figure>
