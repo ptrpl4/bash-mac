@@ -6,7 +6,7 @@ An API Gateway is a software layer that acts as a single point of entry into a s
 
 It receives requests from an application user, routes the request to the appropriate services, gathers the appropriate data, and combines the results for the user in a single package. This setup simplifies and standardizes how applications and users can access data, business logic, or functionality from backend services. It also enhances security by protecting against threats such as Denial of Service (DoS) attacks and offers API usage monitoring.
 
-### Scheme
+### Schema
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
