@@ -86,3 +86,10 @@ then
   compinit
 fi
 ```
+
+### Helpers
+
+```bash
+# List packages sorted by creation date (installation date)
+find "$(brew --cellar)" -type d -maxdepth 0 | xargs ls -ltU
+```
