@@ -2,6 +2,10 @@
 
 links - [https://webhook.site/](https://webhook.site/)
 
+The diagram below shows a comparison between polling and webhook.
+
+<figure><img src="../../../.gitbook/assets/14369.png" alt=""><figcaption></figcaption></figure>
+
 A webhook is an HTTP-based callback function that allows lightweight, event-driven communication between 2 application programming interfaces (APIs).
 
 To set up a webhook, the client gives a unique URL to the server API and specifies which event it wants to know about. Once the webhook is set up, the client no longer needs to poll the server; the server will automatically send the relevant payload to the client’s webhook URL when the specified event occurs.&#x20;
