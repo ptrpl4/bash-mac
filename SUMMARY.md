@@ -105,6 +105,7 @@
     * [CSS](leftovers/web-development/web-browsers/css.md)
   * [Ident/Auth/Auth/](leftovers/web-development/authentication-and-authorization.md)
   * [Network](leftovers/web-development/networking/README.md)
+    * [gRPC](leftovers/web-development/networking/grpc.md)
     * [URL](leftovers/web-development/networking/url.md)
     * [🔧 HTTP](leftovers/web-development/networking/http.md)
     * [🦂 Caching](leftovers/web-development/networking/caching.md)
