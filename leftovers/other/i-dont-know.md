@@ -1,15 +1,20 @@
-# 👨🎓 I (don't) know
+---
+description: What have I done?
+---
+
+# 👨‍🎓 I (don't) know
 
 ## I know pretty much about
 
-* Basic QA stuff about web dev (plans, cases, testing approaches, testing techniques, typical error and bottlenecks)
-* How works web (sockets, TCP, UDP, HTTP)
-* How browsers works (JS-engine, html, css, js, DOM, websockets, CORS, localStorage, sessionStorage)
+* Stuff related to web development quality assurance processes (test-plans, test-cases, testing approaches and techniques, typical issues and bottlenecks)
+* What happens between servers and clients (sockets, TCP, UDP, HTTP, data exchange)
+* How browsers works (JS-engine, html, css, DOM, websockets, CORS, localStorage, sessionStorage, cookies)
 * How web-apps works (microservices, REST-API, message brokers, SQL/noSQL DB, Docker)
-* How to test web-apps (Selenium, Playwright, Postman)
+* How to test web-apps on client side and server side (Selenium, Playwright, Postman)
 * How to manage develop team (Agile, Scrum, XP, SAFe, TDD, BDD)
+* How to prepare tech documentation for developed/planned products
 * How to deliver stable features for stable product (SLA, SLO, SLI)
-* How app should look and work (UI/UX)
+* How app should look and work (UI/UX Guidelines and best practices)
 
 ## I know a bit about
 
@@ -19,12 +24,21 @@
   * k8s
   * kibana
   * gcloud
+  * sentry
 * Algorithms
+  * Big O
+  * Binary search
+* Programming
+  * python
+  * js
+* How to test mobile applications
+* How to perform load testing
 
-## I don't know much about
+## I want know more about
 
-* Security testing
-* Tools and Services (rabbitMQ, sentry, grafana, prometheus)
+* Security testing best practices
+* Golang
+* All stuff from previous sections 🤓
 
 \---
 
