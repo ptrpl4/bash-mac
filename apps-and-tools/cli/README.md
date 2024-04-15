@@ -119,7 +119,8 @@ ls -latrh
 * `head` output the first part of textfiles
 * `tail` - output the last part of textfiles
 * `cp` & `mv` - copy & move. syntax - \<target file> \<destination>
-* `compgen -c | less` - all available commands&#x20;
+* `compgen -c | less` - all available commands
+* `file` - description of the type of the specified file. Works fine for files with no file extension
 
 ### History
 
