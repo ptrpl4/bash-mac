@@ -7,7 +7,7 @@ description: VCS - Version Control System
 #### links
 
 * [https://git-scm.com](https://git-scm.com/)
-* [https://github.com/github/gitignore](https://github.com/github/gitignore)  .gitignore
+* [https://github.com/github/gitignore](https://github.com/github/gitignore)&#x20;
 * [https://ohshitgit.com](https://ohshitgit.com/)
 * [https://gitexplorer.com](https://gitexplorer.com/)
 * [https://blog.gitbutler.com](https://blog.gitbutler.com)
@@ -22,11 +22,15 @@ hints and examples
 
 * [https://wiki.nikiv.dev/programming/version-control/git](https://wiki.nikiv.dev/programming/version-control/git)
 
-## fast start
+![model of how to work with GitHub](https://ucarecdn.com/43451990-933c-4d82-892f-40c170745ede/)![](../../.gitbook/assets/local-and-remote-repos-fixed.svg)<img src="../../.gitbook/assets/Screenshot 2024-04-15 at 20.33.01.png" alt="" data-size="original">
+
+### fast start
 
 ```bash
-# init and connect repo
+# creates a .git folder
 git init
+
+# connects repo
 git remote add origin git@github.com:ptrpl4/GitBookWiki.git
 
 # create commit
@@ -38,9 +42,12 @@ git ci -am 'init commit'
 git push
 # or
 git push origin master
+
+# check status
+git status
 ```
 
-## config
+### config
 
 ```bash
 # check settings list and used config files
@@ -65,7 +72,7 @@ git config --global alias.staash 'stash --all'
 git config --global alias.script !any-script.sh
 ```
 
-## .gitignore
+### .gitignore
 
 The following rules apply to templates in the .gitignore file:&#x20;
 
@@ -83,7 +90,13 @@ The following rules apply to templates in the .gitignore file:&#x20;
 
 <pre class="language-bash"><code class="lang-bash"># add --patch (parts of changes to commit)
 <strong>git add -p index.html 
-</strong></code></pre>
+</strong><strong>
+</strong># adding one concrete file
+git add my_file.txt
+
+# adding all files from your directory
+git add -A
+</code></pre>
 
 ### Commit
 
@@ -122,7 +135,10 @@ More Examples:
 ### Push
 
 ```bash
-# sent to remote repo origin master
+# For the first time push local branch because it does not exist in the remote repo
+git push --set-upstream origin edit-readme
+
+# sent to remote repo
 git push
 
 git push --force with lease
@@ -222,7 +238,7 @@ $ git checkout v2.0.0
 $ git checkout -b version2 v2.0.0
 ```
 
-## How to Rename
+### How to Rename
 
 ```bash
 $ git mv README.md README
@@ -232,7 +248,7 @@ $ git rm README.md
 $ git add README
 ```
 
-## How to Undo
+### How to Undo
 
 ```bash
 # Unstaging a Staged File
@@ -279,14 +295,14 @@ $ git push --set-upstream origin corrected-branch-name
 $ git push origin --delete bad-branch-name
 ```
 
-## Merge
+### Merge
 
 ```bash
-# add commit from test_branch to current branch
+# add commits from test_branch to current branch
 git merge test_branch
 ```
 
-## Rebase
+### Rebase
 
 rebasing better to use only for local branches to not mess with changes in remote repo
 
@@ -295,15 +311,15 @@ rebasing better to use only for local branches to not mess with changes in remot
 git merge test_branch
 ```
 
-## Branching strategy
+### Branching strategy
 
-### GitHub Flow&#x20;
+#### GitHub Flow&#x20;
 
 <figure><img src="../../.gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
 
 **long-live main branch + short-live feature branches**
 
-### GitFlow
+#### GitFlow
 
 Gitflow is a legacy Git workflow that was originally a disruptive and novel strategy for managing Git branches. Gitflow has fallen in popularity in favor of trunk-based workflows, which are now considered best practices for modern continuous software development and DevOps practices
 
