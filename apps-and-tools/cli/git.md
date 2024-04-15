@@ -43,16 +43,22 @@ git push origin master
 ## config
 
 ```bash
-# check settings
+# check settings list and used config files
 git config --list --show-origin
 
-# set global
+# set global. stores in ~/.gitconfig file
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
+# check current settings in file
+cat ~/.gitconfig
+git config --list --global
 
-# set local
+# set local. stores in .git/config file
 git config --local user.name "Pyotr V."
 git config --local user.email ptrpl4@example.co
+# check current settings in file
+cat .git/config
+git config --list --local
 
 # add alias
 git config --global alias.staash 'stash --all'
