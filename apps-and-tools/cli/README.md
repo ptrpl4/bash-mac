@@ -195,6 +195,22 @@ command="echo \$(date)"
 eval "$command"
 ```
 
+### File redirections
+
+`>>` appends new content to the file without removing the old information.
+
+```bash
+# adding new information to a diary
+echo "Also my favorite things are ..." >> diary.txt
+```
+
+`>` overwrites the file, removing any old content.
+
+```bash
+# rewriting the file content
+echo "My new everlasting love is ..." > secret.txt
+```
+
 ## Terminal Shortcuts
 
 * `Ctrl + r`  → fast history search
@@ -244,7 +260,8 @@ run
 
 ```bash
 bash personal_data.sh Pepe 13
->>
+
+stdout:
 You provided 2 facts about yourself!
 Your name is Pepe
 Your age is 33
