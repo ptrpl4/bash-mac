@@ -78,3 +78,11 @@ The most common sets presented as octal numbers are as follows:
 | **Read**    | One can open a file and see its content | One can view files in directories without opening these files |
 | **Write**   | One can change the contents of the file | One can rename files                                          |
 | **Execute** | One can run a file                      | One can have access to files                                  |
+
+## Descriptor <a href="#what-is-a-descriptor" id="what-is-a-descriptor"></a>
+
+A **descriptor** is a non-negative number assigned to a file or other IO resource.
+
+* **Standard Input (stdin) - Descriptor 0:** is a channel where a program receives data for processing. In simple terms, stdin is like a "mailbox" where the program collects the incoming data it needs to work on. For example, when you type commands into a terminal, you're sending data through stdin to be processed by the system.
+* **Standard Output (stdout) - Descriptor 1**: This is where the program sends data after processing it.
+* **Standard Error (stderr) - Descriptor 2**: This stream is used for error messages and diagnostics.
