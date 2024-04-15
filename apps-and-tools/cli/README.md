@@ -79,7 +79,7 @@ In addition to the user name and group, each file has associated access rights: 
 
 ![](<../../.gitbook/assets/image (14) (1).png>)
 
-## Buit in commands
+## Built-in commands
 
 To display all available built-in system commands, type `man builtin`\
 To quit manual press q,  f (forward),  b (backward).
@@ -195,7 +195,7 @@ command="echo \$(date)"
 eval "$command"
 ```
 
-### Terminal Shortcuts
+## Terminal Shortcuts
 
 * `Ctrl + r`  → fast history search
 * Ctrl+A → Go to front of line&#x20;
@@ -214,7 +214,7 @@ eval "$command"
 
 ## Shell Scripts
 
-### positional parameters
+### Positional parameters
 
 null parameter `$0` is always the name of the script, and then follows user parameters passed to a script
 
@@ -250,6 +250,30 @@ Your name is Pepe
 Your age is 33
 All parameters in line: Pepe 33
 All parameters by words: Pepe 33
+```
+
+### Functions
+
+#### syntax
+
+`function function_name {}`&#x20;
+
+or
+
+`function_name() {}`
+
+example
+
+```bash
+#!/usr/bin/env bash
+
+personal_data() {
+    echo "You provided $# facts about yourself!"
+    echo "Your name is $1"
+    echo "Your age is $2"
+}
+
+personal_data "Elden Lord" 200026
 ```
 
 ## Shell config
