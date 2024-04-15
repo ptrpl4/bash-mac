@@ -50,7 +50,7 @@ HTTP methods have certain properties that define how they interact with server r
 
 The **HTTP `OPTIONS` method** requests permitted communication options for a given URL or server. A client can specify a URL with this method, or an asterisk (`*`) to refer to the entire server.
 
-### [Preflighted requests in CORS](https://developer.mozilla.org/en-US/docs/Glossary/XHR\_\(XMLHttpRequest\)#preflighted\_requests\_in\_cors) <a href="#preflighted_requests_in_cors" id="preflighted_requests_in_cors"></a>
+#### [Preflighted requests in CORS](https://developer.mozilla.org/en-US/docs/Glossary/XHR\_\(XMLHttpRequest\)#preflighted\_requests\_in\_cors) <a href="#preflighted_requests_in_cors" id="preflighted_requests_in_cors"></a>
 
 In [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), a [preflight request](https://developer.mozilla.org/en-US/docs/Glossary/Preflight\_request) is sent with the `OPTIONS` method so that the server can respond if it is acceptable to send the request.&#x20;
 
@@ -98,6 +98,8 @@ Vary: Accept-Encoding, Origin
 Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
+
+another CORS doc - [cors-mechanism.md](../web-browsers/cors-mechanism.md "mention")
 
 ## HTTP/1.1, HTTP/2, and HTTP/3
 
