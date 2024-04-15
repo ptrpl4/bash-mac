@@ -212,6 +212,46 @@ eval "$command"
 * Alf+F → Go forward one word&#x20;
 * Alt+B → Go back one word
 
+## Shell Scripts
+
+### positional parameters
+
+null parameter `$0` is always the name of the script, and then follows user parameters passed to a script
+
+#### syntax
+
+`$#` total number of the parameters
+
+`$* , $@` - all parameters&#x20;
+
+Example
+
+.sh file
+
+`personal_data.sh`
+
+```bash
+#!/usr/bin/env bash
+
+echo "You provided $# facts about yourself!"
+echo "Your name is $1"
+echo "Your age is $2"
+echo "All parameters in one var: $*"
+echo "All parameters by words in var: $@"
+```
+
+run
+
+```bash
+bash personal_data.sh Pepe 13
+>>
+You provided 2 facts about yourself!
+Your name is Pepe
+Your age is 33
+All parameters in line: Pepe 33
+All parameters by words: Pepe 33
+```
+
 ## Shell config
 
 * [https://github.com/ptrpl4/dotfiles](https://github.com/ptrpl4/dotfiles)
