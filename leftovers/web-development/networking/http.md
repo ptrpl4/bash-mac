@@ -4,6 +4,10 @@ description: Hypertext Transfer Protocol
 
 # 🔧 HTTP
 
+links
+
+* Methods - [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+
 ![pic by hyperskill](<../../../.gitbook/assets/image (18) (1).png>)
 
 ## Basics
@@ -22,13 +26,31 @@ The **start line** and the **header** are required attributes, so the other part
 
 <table data-header-hidden><thead><tr><th width="226.9054581894219"></th><th></th></tr></thead><tbody><tr><td><strong>1xx: Informational</strong></td><td>Codes beginning with "1" are called information codes. They report on how client requests are processed.</td></tr><tr><td><strong>2xx: Success</strong></td><td>Messages of this class inform that the action requested by the client has been successfully accepted for processing.</td></tr><tr><td><strong>3xx: Redirection</strong></td><td>It means further action must be taken in order to complete the request.</td></tr><tr><td><strong>4xx: Client Error</strong></td><td>It reports errors on the client's side.</td></tr><tr><td><strong>5xx: Server Error</strong></td><td>The code indicates that the operation was unsuccessful due to the fault of the server.</td></tr></tbody></table>
 
+## HTTP Headers
+
+An HTTP header consists of several fields, each with a specific role and meaning.
+
+* _Host_: This is the domain name of the server.
+* _Content-Length_: This field in the request or response header plays a crucial role in data transfer. It specifically indicates the size of the body of the request or response in bytes. This helps the receiver understand when the current message ends and potentially prepare for the next one, especially in cases where multiple HTTP messages are being sent over the same connection.&#x20;
+* _Connection_: This field is crucial in HTTP persistent connections, where a single TCP connection is used to send and receive multiple HTTP requests and responses.&#x20;
+* _Content-type_: This field tells the client the format of the data it’s receiving.
+* _Content-encoding_: This field indicates the compression format used for the data. For example, if the client sees ‘_gzip’_ encoding, it knows it needs to decompress the data.
+
 ## HTTP Request Methods
+
+HTTP protocols define various methods or ‘verbs’ to perform different actions on web resources. The commonly used ones are GET, POST, PUT, and DELETE, which are often used to read, create, update, and delete resources. Less common methods include HEAD, CONNECT, OPTIONS, TRACE, and PATCH.
+
+HTTP methods have certain properties that define how they interact with server resources. Two such properties are whether they're 'non-mutating' and 'idempotent.'
+
+**non-mutating** method doesn't alter any server resources.&#x20;
+
+**idempotent** method produces the same result, regardless of how many times it's repeated
 
 ### **Options**
 
 The **HTTP `OPTIONS` method** requests permitted communication options for a given URL or server. A client can specify a URL with this method, or an asterisk (`*`) to refer to the entire server.
 
-#### [Preflighted requests in CORS](https://developer.mozilla.org/en-US/docs/Glossary/XHR\_\(XMLHttpRequest\)#preflighted\_requests\_in\_cors) <a href="#preflighted_requests_in_cors" id="preflighted_requests_in_cors"></a>
+### [Preflighted requests in CORS](https://developer.mozilla.org/en-US/docs/Glossary/XHR\_\(XMLHttpRequest\)#preflighted\_requests\_in\_cors) <a href="#preflighted_requests_in_cors" id="preflighted_requests_in_cors"></a>
 
 In [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), a [preflight request](https://developer.mozilla.org/en-US/docs/Glossary/Preflight\_request) is sent with the `OPTIONS` method so that the server can respond if it is acceptable to send the request.&#x20;
 
@@ -77,10 +99,11 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
+## HTTP/1.1, HTTP/2, and HTTP/3
 
+* HTTP/1.0 was finalized and formally documented in 1996. This version had a key limitation: each request to the same server required a separate TCP connection.
+* HTTP/1.1 arrived next in 1997. It introduced the concept of a ‘persistent connection’, which means a TCP connection could be left open for reuse. Despite this enhancement, HTTP/1.1 couldn’t fix the issue of ‘Head-of-Line’ (HOL) blocking. In simple terms, HOL blocking happens when all parallel request slots in a browser are filled, forcing subsequent requests to wait until previous ones are complete.
+* HTTP/2.0, published in 2015, sought to tackle the HOL blocking issue. It implemented ‘request multiplexing’, a strategy to eliminate HOL blocking at the application layer. As illustrated in the diagram below, HTTP/2.0 introduced the concept of HTTP ‘streams’. This abstraction allows the multiplexing of different HTTP exchanges onto the same TCP connection, freeing us from the need to send each stream in order. However, HOL blocking could still occur at the transport (TCP) layer.
+* HTTP/3.0 made its debut with a draft published in 2020. Positioned as the successor to HTTP/2.0, it replaces TCP with [QUIC](https://en.wikipedia.org/wiki/QUIC) as the underlying transport protocol. This effectively eliminates HOL blocking at the transport layer. QUIC is based on UDP. It introduces streams as first-class citizens at the transport layer. QUIC streams share the same QUIC connection, requiring no additional handshakes or slow starts to create new ones. QUIC streams are delivered independently. It means that in most cases packet loss in one stream doesn't impact others.
 
-
-
-## Links
-
-Methods - [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+<figure><img src="../../../.gitbook/assets/27299.jpeg" alt=""><figcaption></figcaption></figure>
