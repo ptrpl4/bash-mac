@@ -151,6 +151,9 @@ ls ~/.ssh | grep digital
 
 # check last commands in history
 history | tail -20
+
+# grep all with "m"
+echo -e "Hmm...\nBrr...\nMmm..." | grep "m"
 ```
 
 ### Multiple commands in one line
@@ -209,6 +212,25 @@ echo "Also my favorite things are ..." >> diary.txt
 ```bash
 # rewriting the file content
 echo "My new everlasting love is ..." > secret.txt
+```
+
+#### stdout, stderr redirections
+
+```bash
+# program.sh
+echo "Just a normal message"
+echo "it will goes to stdout"
+# >&2 directs the "ERROR!" message to stderr, represented by descriptor 2
+echo "ERROR!" >&2
+echo "one more error" >&2
+echo "it will goes to stdout too"
+echo "one last error" >&2
+```
+
+```bash
+# 1> redirects all stdout (non-error) output to file
+# 2> redirects all stderr output to file
+bash program.sh 1> log.txt 2> errors.txt
 ```
 
 ## Terminal Shortcuts
@@ -292,6 +314,30 @@ personal_data() {
 
 personal_data "Elden Lord" 200026
 ```
+
+## User-defined shell scripts
+
+## therms
+
+`#!` - "shebang". \
+Directive for the Linux program loader that specifies a program that will run the script
+
+`#!/usr/bin/env python3` - python example
+
+## example
+
+`hello_world.sh`
+
+```no-highlight
+#!/usr/bin/env bash
+echo 'Hello, world!'
+```
+
+## Run a shell script <a href="#run-a-shell-script" id="run-a-shell-script"></a>
+
+* open the corresponding directory with file and type `bash hello_world.sh`
+* make the file executable by typing `chmod +x hello_world.sh`\
+  Then can run it `./hello_world.sh`
 
 ## Shell config
 
