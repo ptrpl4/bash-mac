@@ -15,14 +15,6 @@ zsh & bash -  programs that runs in Terminal, interprets Unix commands, and inte
 * Database and OS scripting - [https://ss64.com/](https://ss64.com)
 * 60 commands - [https://www.youtube.com/watch?v=gd7BXuUQ91w](https://www.youtube.com/watch?v=gd7BXuUQ91w)&#x20;
 
-**fonts**
-
-```bash
-# for mac
-brew tap homebrew/cask-fonts
-brew install --cask font-fira-code
-```
-
 ## Syntax
 
 ### man
@@ -129,10 +121,6 @@ ls -latrh
 * `cp` & `mv` - copy & move. syntax - \<target file> \<destination>
 * `compgen -c | less` - all available commands&#x20;
 
-### Top
-
-
-
 ### History
 
 stores in `.zsh_history` / `.bash_history`&#x20;
@@ -169,8 +157,10 @@ history | tail -20
 
 <pre class="language-bash"><code class="lang-bash"># No matter the first command run successfully or not, run the second command cmd2:
 <strong>cd; ls
+</strong><strong>
 </strong><strong># Only when the first command cmd1 run successfully, run the second command cmd2
 </strong><strong>cd &#x26;&#x26; ls
+</strong><strong>
 </strong># Only when the first command cmd1 failed to run, run the second command cmd2
 cd || ls
 </code></pre>
@@ -205,7 +195,7 @@ command="echo \$(date)"
 eval "$command"
 ```
 
-### Shortcuts
+### Terminal Shortcuts
 
 * `Ctrl + r`  → fast history search
 * Ctrl+A → Go to front of line&#x20;
@@ -260,7 +250,9 @@ alias key='ssh-add --apple-use-keychain ~/.ssh/id_rsa'
 source ~/.bashrc
 ```
 
-## ps - Processes
+## OS programs
+
+### ps - Processes
 
 ```bash
 # report a snapshot of the current processes
@@ -270,9 +262,7 @@ ps
 kill 123321
 ```
 
-## MacOS commands
-
-### softwareupdate
+### MacOS - softwareupdate
 
 ```bash
 /usr/sbin/softwareupdate
@@ -284,27 +274,30 @@ softwareupdate -l
 sudo softwareupdate -i -a -R
 ```
 
-## **Thirdparty apps**
+## Third-party programs
 
 ### **TLDR**
 
-**TLDR** stands for **T**oo **L**ong **D**idn'**t R**ead and is described as "a collection of simplified and community-driven man pages."
+**TLDR** stands for **T**oo **L**ong **D**idn'**t R**ead -  a collection of simplified and community-driven man pages.
 
 ```bash
 brew install tldr
 tldr ls
-tldr cd
+tldr git
 ```
 
 ### Sublime
 
 ```bash
 brew install sublime-text
+
 # open current dir
 subl .
 
+
 # sublime merge
 brew install sublime-merge
+
 # open dir
 smerge .
 ```
@@ -315,4 +308,12 @@ user friendly top command
 
 ```bash
 brew install htop
+```
+
+### **fonts**
+
+```bash
+# for mac
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
 ```
