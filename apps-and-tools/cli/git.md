@@ -7,7 +7,7 @@ description: VCS - Version Control System
 #### links
 
 * [https://git-scm.com](https://git-scm.com/)
-* [https://github.com/github/gitignore](https://github.com/github/gitignore)&#x20;
+* [https://github.com/github/gitignore](https://github.com/github/gitignore)
 * [https://ohshitgit.com](https://ohshitgit.com/)
 * [https://gitexplorer.com](https://gitexplorer.com/)
 * [https://blog.gitbutler.com](https://blog.gitbutler.com)
@@ -74,12 +74,12 @@ git config --global alias.script !any-script.sh
 
 ### .gitignore
 
-The following rules apply to templates in the .gitignore file:&#x20;
+The following rules apply to templates in the .gitignore file:
 
-* Blank lines, as well as lines starting with #, are ignored.&#x20;
-* Standard templates are global and are applied recursively to the entire directory tree.&#x20;
-* To avoid recursion use a slash (/) at the beginning of the template.&#x20;
-* To exclude a directory add a slash (/) at the end of the template.&#x20;
+* Blank lines, as well as lines starting with #, are ignored.
+* Standard templates are global and are applied recursively to the entire directory tree.
+* To avoid recursion use a slash (/) at the beginning of the template.
+* To exclude a directory add a slash (/) at the end of the template.
 * You can invert the template by using an exclamation point (!) as the first character.
 
 ## Basic commands
@@ -294,20 +294,32 @@ $ git push --set-upstream origin corrected-branch-name
 $ git push origin --delete bad-branch-name
 ```
 
-### Merge
+### 
 
 ```bash
 # add commits from test_branch to current branch
 git merge test_branch
 ```
 
-### Rebase
+### Merge and Rebase
 
-rebasing better to use only for local branches to not mess with changes in remote repo
+`rebase` is better to use only for local branches to not mess with changes in remote repo.
+ Git creates **new commits** for each commit in your branch, applying them on top of the main branch. This means the commit history of your branch is rewritten to start from the latest commit of the main branch.  
+
+Typical steps and cases for work with feature branch  
+1. `rebase` feature branch on top of main branch locally 
+1.1 `feature` will have all history from `main` and all new feature commits on top
+2. `merge` feature branch into main branch (`squash` commit preffered) when work is done
+2.1 main branch will save original commit history and add one "merge commit" on top (squashing case)
+2.2 main branch will save original commit history (becouse of step 1.) and will have all commit from feature branch on top (no sqashing case)
+
 
 ```bash
-# will rerite commit history
-git rebase test_branch
+# moving your current branch's commits to the tip of the main branch.
+git rebase main
+
+# will create merge commit and add all changes from 
+
 # will save history of commits
 git merge test_branch
 
