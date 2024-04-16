@@ -179,7 +179,6 @@ git reflog
 # add some chaged in last commit --amend
 git commit -m 'Initial commit'
 git add forgotten_file.md
-git commit --amend
 # if commit messg still actual
 git commit --amend --no-edit
 
@@ -308,12 +307,17 @@ rebasing better to use only for local branches to not mess with changes in remot
 
 ```bash
 # will rerite commit history
+git rebase test_branch
+# will save history of commits
 git merge test_branch
+
+# change commits when they are moved to a new branch
+git rebase -i main
 ```
 
 ### Branching strategy
 
-#### GitHub Flow&#x20;
+#### GitHub Flow
 
 <figure><img src="../../.gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
 
@@ -327,7 +331,7 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 
 <figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
-link&#x20;
+link
 
 * [https://nvie.com/posts/a-successful-git-branching-model](https://nvie.com/posts/a-successful-git-branching-model/)
 
