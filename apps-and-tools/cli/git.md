@@ -296,6 +296,8 @@ $ git push origin --delete bad-branch-name
 
 ### Merge and Rebase
 
+<figure><img src="../../.gitbook/assets/Screenshot 2024-04-16 at 14.30.13.jpeg" alt=""><figcaption></figcaption></figure>
+
 `rebase` is better to use only for local branches to not mess with changes in remote repo. Git creates **new commits** for each commit in your branch, applying them on top of the main branch. This means the commit history of your branch is rewritten to start from the latest commit of the main branch.
 
 Typical steps and cases for work with feature branch
