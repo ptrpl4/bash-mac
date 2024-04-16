@@ -17,6 +17,17 @@ zsh & bash -  programs that runs in Terminal, interprets Unix commands, and inte
 
 ## Syntax
 
+### comments
+
+```bash
+# one line
+git status # inline
+: '
+long
+comment
+'
+```
+
 ### man
 
 SYNOPSIS - most common options
