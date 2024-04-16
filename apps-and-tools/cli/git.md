@@ -72,6 +72,12 @@ git config --global alias.staash 'stash --all'
 git config --global alias.script !any-script.sh
 ```
 
+#### file stage
+
+1. _committed_, i.e., the file is already saved in your local database;
+2. _modified_, i.e., there are some unsaved changes in files;
+3. and prepared (_staged_), i.e., a modified file is marked for inclusion in the next commit.
+
 ### .gitignore
 
 The following rules apply to templates in the .gitignore file:
@@ -82,21 +88,79 @@ The following rules apply to templates in the .gitignore file:
 * To exclude a directory add a slash (/) at the end of the template.
 * You can invert the template by using an exclamation point (!) as the first character.
 
+### .git folder
+
+#### structure
+
+```
+.git
+├── hooks
+├── info
+├── logs
+│   └── refs
+│       ├── heads
+│       └── remotes
+│           └── origin
+├── objects
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    ├── remotes
+    │   └── origin
+    └── tags
+```
+
+#### contents
+
+- _HEAD_ is a file containing a pointer either to the current (for the repository) branch or to the current commit
+- _config_ – contains settings specific to that repository
+- _description_ - is used by the Gitweb interface to display a description of the repository
+- _hooks_ – this folder contains scripts that can be executed at various stages of Git execution. An example of a hook would be the style check script before pushing to the repository;
+- _info-exclude_ – files that you do not want to include in the repository are described here.
+
+```bash
+cat .git/HEAD # >> ref: refs/heads/master
+
+cat .git/config 
+: '
+[core]
+repositoryformatversion = 0
+filemode = true
+bare = false
+logallrefupdates = true
+ignorecase = true
+precomposeunicode = true
+
+[remote "origin"]
+url = git@github.com:ptrpl4/GitBookWiki.git
+fetch = +refs/heads/*:refs/remotes/origin/*
+
+[branch "master"]
+remote = origin
+merge = refs/heads/master
+
+[user]
+name = Pyotr V.
+email = ptrpl4@mail.co
+'
+```
+
 ## Basic commands
 
 <figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Add
 
-<pre class="language-bash"><code class="lang-bash"># add --patch (parts of changes to commit)
-<strong>git add -p index.html 
-</strong>
+```bash
+# add --patch (parts of changes to commit)
+git add -p index.html 
 # adding one concrete file
 git add my_file.txt
 
 # adding all files from your directory
 git add -A
-</code></pre>
+
 
 ### Commit
 
