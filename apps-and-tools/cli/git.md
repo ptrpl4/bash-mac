@@ -90,8 +90,8 @@ The following rules apply to templates in the .gitignore file:
 
 <pre class="language-bash"><code class="lang-bash"># add --patch (parts of changes to commit)
 <strong>git add -p index.html 
-</strong><strong>
-</strong># adding one concrete file
+</strong>
+# adding one concrete file
 git add my_file.txt
 
 # adding all files from your directory
@@ -294,35 +294,28 @@ $ git push --set-upstream origin corrected-branch-name
 $ git push origin --delete bad-branch-name
 ```
 
-### 
-
-```bash
-# add commits from test_branch to current branch
-git merge test_branch
-```
-
 ### Merge and Rebase
 
-`rebase` is better to use only for local branches to not mess with changes in remote repo.
- Git creates **new commits** for each commit in your branch, applying them on top of the main branch. This means the commit history of your branch is rewritten to start from the latest commit of the main branch.  
+`rebase` is better to use only for local branches to not mess with changes in remote repo. Git creates **new commits** for each commit in your branch, applying them on top of the main branch. This means the commit history of your branch is rewritten to start from the latest commit of the main branch.
 
-Typical steps and cases for work with feature branch  
-1. `rebase` feature branch on top of main branch locally 
-1.1 `feature` will have all history from `main` and all new feature commits on top
-2. `merge` feature branch into main branch (`squash` commit preffered) when work is done
-2.1 main branch will save original commit history and add one "merge commit" on top (squashing case)
-2.2 main branch will save original commit history (becouse of step 1.) and will have all commit from feature branch on top (no sqashing case)
+Typical steps and cases for work with feature branch
 
+1. `rebase` feature branch on top of main branch locally&#x20;
+   1. &#x20;`feature` will have all history from `main` and all new feature commits on top
+2. `merge` feature branch into main branch (`squash` commit preferred) when work is done&#x20;
+   1. main branch will save original commit history and add one "merge commit" on top (squashing case)&#x20;
+   2. main branch will save original commit history (because of step 1.) and will have all commit from feature branch on top (no squashing case)
 
 ```bash
-# moving your current branch's commits to the tip of the main branch.
+# moving your current branch's commits to the tip of the main branch
+git checkout feature_branch
 git rebase main
+# will create one merge commit and add all changes from 
+git merge --squash feature_branch
 
-# will create merge commit and add all changes from 
-
+## Other cases
 # will save history of commits
 git merge test_branch
-
 # change commits when they are moved to a new branch
 git rebase -i main
 ```
@@ -346,4 +339,3 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 link
 
 * [https://nvie.com/posts/a-successful-git-branching-model](https://nvie.com/posts/a-successful-git-branching-model/)
-
