@@ -22,7 +22,7 @@ hints and examples
 
 * [https://wiki.nikiv.dev/programming/version-control/git](https://wiki.nikiv.dev/programming/version-control/git)
 
-![model of how to work with GitHub](https://ucarecdn.com/43451990-933c-4d82-892f-40c170745ede/)![](../../.gitbook/assets/local-and-remote-repos-fixed.svg)<img src="../../.gitbook/assets/Screenshot 2024-04-15 at 20.33.01.png" alt="" data-size="original">
+<figure><img src="../../.gitbook/assets/git-1.png" alt=""><figcaption></figcaption></figure>
 
 ### fast start
 
