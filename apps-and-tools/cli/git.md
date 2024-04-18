@@ -329,7 +329,9 @@ $ git rm README.md
 $ git add README
 ```
 
-### How to Undo
+### How to Reset
+
+![[67871.png]]
 
 ```bash
 # Unstaging a Staged File
