@@ -113,11 +113,29 @@ The following rules apply to templates in the .gitignore file:
 
 #### contents
 
-- _HEAD_ is a file containing a pointer either to the current (for the repository) branch or to the current commit
-- _config_ – contains settings specific to that repository
-- _description_ - is used by the Gitweb interface to display a description of the repository
-- _hooks_ – this folder contains scripts that can be executed at various stages of Git execution. An example of a hook would be the style check script before pushing to the repository;
-- _info-exclude_ – files that you do not want to include in the repository are described here.
+- - **HEAD**: A reference to the currently checked-out branch or commit. It tells Git which branch you're currently working on.
+- **config**: Contains the configuration settings for the repository, including remote repository URLs and branch information.
+- **description**: Used by GitWeb to display a short description of the repository.
+- **hooks**: Contains client or server-side scripts to trigger actions at certain points in Git's execution.
+- **info**: Contains the global excludes file, which specifies intentionally untracked files that Git should ignore.
+- **objects**: Stores all the data for your database. This includes blobs (file contents), trees (directory listings), commits, and tags. Inside `objects`, there are two subfolders: `pack` and `info`. The `pack` folder contains compressed snapshots of your codebase, while the `info` folder contains metadata about those snapshots.
+- **refs**: Contains pointers to commit objects. It includes subfolders like `heads` (references to branches) and `tags` (references to specific tags).
+- **index**: Also known as the staging area, it's a binary file (generally kept in `.git/index`) containing a sorted list of path names, each with permissions and the SHA1 of a blob object; git updates the index file as necessary when you run commands such as `git add`, `git rm`, `git commit`, etc.
+- **info-exclude**: files that you do not want to include in the repository are described here.
+
+#### Git file stages
+
+1. _committed_, i.e., the file is already saved in your local database;
+2. _modified_, i.e., there are some unsaved changes in files;
+3. and prepared (_staged_), i.e., a modified file is marked for inclusion in the next commit.
+
+#### Sections of a Git project
+
+The **Git directory** (.git) is where Git stores the metadata and object base of your project. This is the most important part of Git, which gets copied when you clone a repository from another machine.  
+  
+The **working directory** is a snapshot of the project version. The files are unpacked from a compressed database into a Git directory and placed on a disk so that you can use and modify them.  
+  
+The **staging area** is a file located in your Git directory that contains information about what changes will go to the next commit. This area is also called the "_index_", but it is also common to call it the _stage area_. When you add a file, it first goes exactly to the index, and only after the commit it appears in the repository.
 
 ```bash
 cat .git/HEAD # >> ref: refs/heads/master
