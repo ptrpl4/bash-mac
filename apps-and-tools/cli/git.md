@@ -364,7 +364,7 @@ git reset @ testfile.md
 # OR
 git restore --staged testfile.md
 
-# Unmodifying a Modified File
+# restore changed but not staged file (careful!)
 git checkout -- CONTRIBUTING.md
 # OR
 git restore CONTRIBUTING.md
