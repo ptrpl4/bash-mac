@@ -331,9 +331,7 @@ $ git add README
 
 ### How to Reset
 
-![[aaa-assets/67871.png]]
-
-![[67871.png]]
+![](../../aaa-assets/22668.png)
 
 ```bash
 # Unstaging a Staged File
