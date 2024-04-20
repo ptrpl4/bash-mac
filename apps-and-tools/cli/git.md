@@ -381,6 +381,33 @@ git revert @
 git push origin main 
 ```
 
+### Diff
+
+`git diff` used to show the differences between two versions of a file, two files, branches, or commits.
+
+The main commands:
+
+- `git diff` shows the difference between files in your staging area and modified files in the working tree;
+- `git diff --staged` shows the difference between files in the staging area and the last commit;
+- `git diff <commit1>..<commit2>` and `git diff <branch1>..<branch2>` show differences between commits and branches;
+- `git diff --stat` shows a short summary of the number of changes and names of files with those changes;
+
+```bash
+git diff
+: '
+diff --git a/our-file b/our-file
+index c703f5f..891ccac 100644
+--- a/our-file
++++ b/our-file
+@@ -1 +1,2 @@
+ Now you are
++here
+'
+```
+
+The lines `--- a/our-file +++ b/our-file` show that the changes in the first file are marked by the `-` sign and changes in the second one are marked by `+`
+Line `@@ -1 +1,2 @@` tell that in the output 1-st line from the first version of the file and 1-st and next 2 lines of the second version of the file
+
 ## Branch
 
 ### Basics
