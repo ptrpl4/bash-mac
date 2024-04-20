@@ -21,15 +21,15 @@ tree /Users/$USER/.ssh
 
 ## Setup Instructions
 
-Create Keys
+### Create Keys
 
 ```bash
 cd ~/.ssh
 
 # create key with rsa type, 4096 bits, with email in comment
-ssh-keygen -t rsa -b 4096 -C "your_dev_email@example.com"
+ssh-keygen -t rsa -b 4096 -C "your_dev_email@example.com" -f ~/.ssh/dev_key
 
-ssh-keygen -t rsa -b 4096 -C "your_corporate_email@example.com"
+ssh-keygen -t rsa -b 4096 -C "your_corporate_email@example.com" -f ~/.ssh/work_key
 
 # edit config file
 nano ~/.ssh/config
@@ -42,39 +42,47 @@ cat ~/.ssh/config
 
 Host github
   HostName github.com
-  User main
+  User ptrpl4
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/dev_key
   UseKeychain yes
   IdentitiesOnly yes
   
 Host bitbucket-corporate
   HostName bitbucket.org
-  User corporate
+  User best_dev
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/corporate_key
+  IdentityFile ~/.ssh/work_key
   UseKeychain yes
   IdentitiesOnly yes
 ```
 
-Add passphrases for Keys to KeyChain (flag -K - depricated)
+### Add to ssh-agent
 
 ```bash
-ssh-add --apple-use-keychain ~/.ssh/id_rsa
-ssh-add --apple-use-keychain ~/.ssh/corporate_key
+# save passphrases to keychain
+ssh-add --apple-use-keychain ~/.ssh/dev_key
+ssh-add --apple-use-keychain ~/.ssh/work_key
 
+# load all from keychain
+ssh-add --apple-load-keychain
+
+# check added
+ssh-add -l
+
+# del active keys
+ssh-add -D
+
+
+## Others
 # change passphrase (if needed)
-ssh-keygen -p
-```
+ssh-keygen -p -f ~/.ssh/id_rsa
 
-Use chosen key
+# start an SSH Agent for the current shell:
+eval $(ssh-agent)
 
-```bash
-# ssh with identity_file
-ssh -i ~/.ssh/corporate_key root@192.168.1.1
-
-# use default key
-ssh root@123.32.11.10
+# kill the currently running agent:
+ssh-agent -k
 ```
 
 ## Copy Public Key
@@ -87,6 +95,30 @@ $ cat ~/.ssh/id_rsa.pub | pbcopy
 
 ```bash
 ssh username@remote_host
+
+# ssh with identity_file
+ssh -i ~/.ssh/corporate_key root@192.168.1.1
+
+# use default key
+ssh root@123.32.11.10
+
 # without checking host
 ssh -o StrictHostKeyChecking=no username@remote_host 
 ```
+
+## Server-side
+
+Add pub-key to the server
+
+```bash
+# will create a .ssh directory and authorized_keys file if they didn't exist
+ssh-copy-id -i ~/.ssh/id_rsa.pub my-host-server
+```
+
+## Commands
+
+```bash
+scp my-host-server:~/Documents/manifest ~/Project/
+```
+
+After `scp`, we type the name of the server from the config file (or [username@ip-address](mailto:username@ip-address) of the server), the `:` sign, the path to the file on the server space, and after that the path on the local machine.
