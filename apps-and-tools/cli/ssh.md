@@ -1,12 +1,15 @@
 # 🛶 SSH
 
-## SSH Keys
+links
+
+- https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys#ssh-overview
+
+## .shh folder
 
 ### Structure
 
-/Users/current\_user/.ssh
-
-```
+```bash
+tree /Users/$USER/.ssh
 .
 ├── one_more_key
 ├── one_more_key.pub
@@ -16,22 +19,27 @@
 └── known_hosts
 ```
 
-### Setup (macOS)
+## Setup Instructions
 
-Create First Key
+Create Keys
 
 ```bash
+cd ~/.ssh
+
 # create key with rsa type, 4096 bits, with email in comment
-$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-keygen -t rsa -b 4096 -C "your_dev_email@example.com"
+
+ssh-keygen -t rsa -b 4096 -C "your_corporate_email@example.com"
+
+# edit config file
+nano ~/.ssh/config
 ```
 
-Edit Config
+example config
 
 ```bash
-$ nano ~/.ssh/config
-```
+cat ~/.ssh/config
 
-```
 Host github
   HostName github.com
   User main
@@ -49,39 +57,29 @@ Host bitbucket-corporate
   IdentitiesOnly yes
 ```
 
-Create second key
-
-```bash
-$ ssh-keygen -t rsa -b 4096 -C "your_corporate_email@example.com"
-# Generating public/private rsa key pair.
-# Enter file in which to save the key (/home/username/.ssh/id_rsa):
-# add path and name for key^
-$ /home/username/.ssh/corporate_key
-```
-
 Add passphrases for Keys to KeyChain (flag -K - depricated)
 
 ```bash
 ssh-add --apple-use-keychain ~/.ssh/id_rsa
 ssh-add --apple-use-keychain ~/.ssh/corporate_key
-```
 
-Change passphrase (if needed)
-
-```bash
+# change passphrase (if needed)
 ssh-keygen -p
 ```
 
 Use chosen key
 
-<pre class="language-bash"><code class="lang-bash"># ssh with identity_file
-<strong>ssh -i ~/.ssh/corporate_key root@192.168.1.1
-</strong><strong># use default
-</strong>ssh root@138.68.92.49</code></pre>
+```bash
+# ssh with identity_file
+ssh -i ~/.ssh/corporate_key root@192.168.1.1
+
+# use default key
+ssh root@123.32.11.10
+```
 
 ## Copy Public Key
 
-```
+```bash
 $ cat ~/.ssh/id_rsa.pub | pbcopy
 ```
 
@@ -92,7 +90,3 @@ ssh username@remote_host
 # without checking host
 ssh -o StrictHostKeyChecking=no username@remote_host 
 ```
-
-## Links
-
-doc - [https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys#ssh-overview](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys#ssh-overview)\\
