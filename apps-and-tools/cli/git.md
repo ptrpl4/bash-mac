@@ -333,12 +333,52 @@ $ git add README
 
 ![](../../aaa-assets/22668.png)
 
+````bash
+# keeping the state of the staging area and working tree
+git reset --soft @~1
+
+# keep only the state of the working tree
+git reset --mixed @~1
+
+# undo changes in working tree also
+git reset --hard @~1
+
+# shows a list of all the commits and in the repository (incl. deleted)
+git reflog
+````
+
+`--soft`. With `@~1` it undoes the last commit only but keeps the state of the staging area and working tree intact.
+`@` is an alias for `HEAD`
+
+`--mixed` (it's the default version of `git reset`) which will reset to a pointed commit and match the staging area, but keep the state of the working tree.
+
+`--hard` it would reset to the pointed commit and match the state of the staging area and also the working tree with that commit in the repository.
+
 ```bash
 # Unstaging a Staged File
 git reset HEAD testfile.md
+# OR
+git reset @ testfile.md
+# OR
+git restore --staged testfile.md
 
 # Unmodifying a Modified File
 git checkout -- CONTRIBUTING.md
+# OR
+git restore CONTRIBUTING.md
+```
+
+#### Revert
+
+`git revert` makes "mirrored" changes to the last commit and undoes all of them, so new commit will be the same as the commit before the last one.
+`git revert` command allows you to undo changes made in a previous commit without deleting that commit.
+
+```bash
+# make new revert commit from the current commit
+git revert @
+
+# Push the new revert commit to your remote repository
+git push origin main 
 ```
 
 ## Branch
