@@ -331,6 +331,8 @@ $ git add README
 
 ### How to Reset
 
+![[aaa-assets/67871.png]]
+
 ![[67871.png]]
 
 ```bash
