@@ -14,8 +14,10 @@ description: VCS - Version Control System
 
 commits
 
-* [https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
-* [https://conventionalcomments.org](https://conventionalcomments.org/)
+* https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
+* https://conventionalcomments.org
+* https://www.conventionalcommits.org/en/v1.0.0/
+* https://github.com/angular/angular/blob/68a6a07/CONTRIBUTING.md#commit
 * [https://www.youtube.com/watch?v=uBhpBOX8VYg](https://www.youtube.com/watch?v=uBhpBOX8VYg)
 
 hints and examples
