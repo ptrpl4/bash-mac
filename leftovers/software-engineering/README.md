@@ -76,7 +76,9 @@ lecture - [https://www.youtube.com/playlist?list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBs
 
 ![](<../../.gitbook/assets/image (3) (2).png>)
 
-## Methodology&#x20;
+## SDLC Methodology
+
+SDLC - Software development life cycle.
 
 ### Waterfall model
 
@@ -154,7 +156,7 @@ _For (**target users**) who wants (**needs**) (**Product X**) is a (**product ca
 
 #### Decision making
 
-Could be based on need of typical users types & typical user groups. We can create a virtual person representing a user group, write their main user stories and main anti-stories.&#x20;
+Could be based on need of typical users types & typical user groups. We can create a virtual person representing a user group, write their main user stories and main anti-stories.
 
 ### Activity-centered design (ACD)
 
