@@ -13,7 +13,7 @@ zsh & bash -  programs that runs in Terminal, interprets Unix commands, and inte
 * Explain Shell - [https://explainshell.com/explain?cmd=curl+-fsSL+example.org](https://explainshell.com/explain?cmd=curl+-fsSL+example.org)
 * Filesystem Hierarchy Standard - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)
 * Database and OS scripting - [https://ss64.com/](https://ss64.com)
-* 60 commands - [https://www.youtube.com/watch?v=gd7BXuUQ91w](https://www.youtube.com/watch?v=gd7BXuUQ91w)&#x20;
+* 60 commands - [https://www.youtube.com/watch?v=gd7BXuUQ91w](https://www.youtube.com/watch?v=gd7BXuUQ91w)
 
 ## Syntax
 
@@ -80,6 +80,24 @@ TOKEN="bblablatoken64"
 open https://main-url-$TASK.nl-k8s-stage.srv.local\?token=$TOKEN
 ```
 
+### pipe
+
+| pipe - connect output first command to input next command
+
+```bash
+# copy public key to clipboard 
+cat ~/.ssh/id_rsa.pub | pbcopy
+
+# find keyword in ls results
+ls ~/.ssh | grep digital
+
+# check last commands in history
+history | tail -20
+
+# grep all with "m"
+echo -e "Hmm...\nBrr...\nMmm..." | grep "m"
+```
+
 ## Permissions
 
 ```
@@ -106,13 +124,13 @@ cd ~
 
 # go up
 cd ..
+cd ../../../
 
 # go root
 cd /
 
 # go to previous dir
 cd -
-
 
 # ls - list directory contents
 
@@ -135,7 +153,7 @@ ls -latrh
 
 ### History
 
-stores in `.zsh_history` / `.bash_history`&#x20;
+stores in `.zsh_history` / `.bash_history`
 
 ```bash
 # show history
@@ -150,22 +168,17 @@ history -c
 echo "insert text here" > myfile.txt
 ```
 
-#### pipe
-
-&#x20;\| pipe - connect output first command to input next command
+### Navigation
 
 ```bash
-# copy public key to clipboard 
-cat ~/.ssh/id_rsa.pub | pbcopy
+# add dir to stack
+pushd
 
-# find keyword in ls results
-ls ~/.ssh | grep digital
+# check stack list
+dirs -v
 
-# check last commands in history
-history | tail -20
-
-# grep all with "m"
-echo -e "Hmm...\nBrr...\nMmm..." | grep "m"
+# delete 0 dir from stack and open it
+popd
 ```
 
 ### Multiple commands in one line
@@ -248,18 +261,18 @@ bash program.sh 1> log.txt 2> errors.txt
 ## Terminal Shortcuts
 
 * `Ctrl + r`  → fast history search
-* Ctrl+A → Go to front of line&#x20;
-* Ctrl+E → Go to end of line dsfkjewi j
-* Ctrl+C → Kill active process&#x20;
-* Ctrl+K → Exit shell&#x20;
-* Ctrl+L → Clear the screen&#x20;
-* Ctrl+Z → Put process in bg&#x20;
-* !! → Run previous command&#x20;
-* ! → Run prev matching cmd&#x20;
-* Ctrl+F → Go forward one character&#x20;
-* Ctrl+x Ctrl+e → Open line in SEDITOR&#x20;
+* Ctrl+A → Go to front of line
+* Ctrl+E → Go to end of line
+* Ctrl+C → Kill active process
+* Ctrl+K → Exit shell
+* Ctrl+L → Clear the screen
+* Ctrl+Z → Put process in bg
+* !! → Run previous command
+* ! → Run prev matching cmd
+* Ctrl+F → Go forward one character
+* Ctrl+x Ctrl+e → Open line in SEDITOR
 * Ctrl+B → Go back one character
-* Alf+F → Go forward one word&#x20;
+* Alf+F → Go forward one word
 * Alt+B → Go back one word
 
 ## Shell Scripts
@@ -272,7 +285,7 @@ null parameter `$0` is always the name of the script, and then follows user para
 
 `$#` total number of the parameters
 
-`$* , $@` - all parameters&#x20;
+`$* , $@` - all parameters
 
 Example
 
@@ -307,7 +320,7 @@ All parameters by words: Pepe 33
 
 #### syntax
 
-`function function_name {}`&#x20;
+`function function_name {}`
 
 or
 
@@ -376,7 +389,7 @@ It's a list of directory paths, separated by colons (`:`)
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 ```
 
-### alias - Aliases&#x20;
+### alias - Aliases
 
 ```bash
 # to save it in shell zsh - ~/.zshrc
