@@ -243,6 +243,12 @@ git push --force with lease
 ```shell
 # all commits order by desc
 git log
+# last 5 commits
+git log -n5 code.py
+
+# find commits
+git log --all --grep='README'
+
 # show patch -p or --patch
 git log -p -2
 # short changed info --stat
@@ -269,15 +275,18 @@ git reflog
 
 ### Amend last commit
 
-```bash
-# add some chaged in last commit --amend
-git commit -m 'Initial commit'
-git add forgotten_file.md
-# if commit messg still actual
-git commit --amend --no-edit
+It adds everything from the last commit to the staging area and tries to make a new commit (Date - not changed, hash - recreated)
 
-# example
-git commit README.md --amend -m 'update instructions' 
+```bash
+git add -A
+git commit -m 'feat: validation'
+
+# add some chaged in last commit
+git add forgotten_file.md
+git commit -a --amend -m 'feat: validation, registration' 
+
+# if commit messgage is actual
+git commit -a --amend --no-edit
 ```
 
 ### Remote
@@ -419,6 +428,14 @@ index c703f5f..891ccac 100644
 
 The lines `--- a/our-file +++ b/our-file` show that the changes in the first file are marked by the `-` sign and changes in the second one are marked by `+`
 Line `@@ -1 +1,2 @@` tell that in the output 1-st line from the first version of the file and 1-st and next 2 lines of the second version of the file
+
+### Blame
+
+```bash
+git blame
+```
+
+Show commit hash and last author on each line of a file.
 
 ## Branch
 
