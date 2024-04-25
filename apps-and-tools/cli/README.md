@@ -469,3 +469,14 @@ brew install htop
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
 ```
+
+### gping
+
+for debugging multiple hosts at once
+
+```bash
+brew install gping
+gping 1.1.1.1 8.8.8.8 192.168.100.1 192.168.100.38
+```
+
+source - [https://t.me/zhovner\_hub/1991](https://t.me/zhovner\_hub/1991)
