@@ -119,6 +119,7 @@
   * [JWT (JSON Web Token)](leftovers/web-development/jwt-json-web-token.md)
   * [Static/Dynamic sites](leftovers/web-development/untitled.md)
 * [😩 Other Tech](leftovers/other/README.md)
+  * [🐹 YAML](leftovers/other/yaml.md)
   * [🤗 Hugo](leftovers/other/hugo.md)
   * [🍁 My apps](leftovers/other/my-apps/README.md)
     * [💻 comfy macOS](leftovers/other/my-apps/comfy-macos/README.md)
