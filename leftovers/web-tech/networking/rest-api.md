@@ -1,5 +1,8 @@
 # REST API
 
+Representational State Transfer.
+This architectural style was developed to help easily build convenient web services. A service written with regard to REST rules is called **RESTful**. It is not a standard, but rather a set of useful recommendations
+
 ## Design rules
 
 ### HTTP Verbs
