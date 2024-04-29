@@ -11,20 +11,18 @@ What is operation system?
 
 ## Kernel
 
-What the kernel does&#x20;
+What the kernel does
 
-* manages processes (start, pause, stop, context switch)&#x20;
-* handles system calls&#x20;
-* manages memory&#x20;
+* manages processes (start, pause, stop, context switch)
+* handles system calls
+* manages memory
 * works with hardware (via drivers)
 
 <figure><img src="../../.gitbook/assets/изображение (17).png" alt=""><figcaption></figcaption></figure>
 
-
-
 ### POSIX
 
-POSIX stands for Portable Operating System Interface. It defines the application programming interfaces (APIs), along with command line shells and utility interfaces, for software compatibility with variants of Unix and other operating systems.&#x20;
+POSIX stands for Portable Operating System Interface. It defines the application programming interfaces (APIs), along with command line shells and utility interfaces, for software compatibility with variants of Unix and other operating systems.
 
 Compliance with POSIX is voluntary, and while many operating systems, including Linux, are mostly POSIX-compliant, systems such as macOS, AIX, HP-UX, and Solaris, are certified.
 
@@ -62,7 +60,7 @@ For Linux everything is file. Folder - file with list of inner files/folders.
 
 Permission set `-rwxrw-r--`
 
-the first **`-`** implies that we have selected a certain file. If it were a directory, `d` would have been used instead of the first `-`.&#x20;
+the first **`-`** implies that we have selected a certain file. If it were a directory, `d` would have been used instead of the first `-`.
 
 3 triplets of symbols. Each of them defines permissions for owner, group, and other users correspondingly. So, in the example, the owner can read, write and execute the file. The group can read and write, while the other can only read the file.
 
@@ -86,3 +84,31 @@ A **descriptor** is a non-negative number assigned to a file or other IO resourc
 * **Standard Input (stdin) - Descriptor 0:** is a channel where a program receives data for processing. In simple terms, stdin is like a "mailbox" where the program collects the incoming data it needs to work on. For example, when you type commands into a terminal, you're sending data through stdin to be processed by the system.
 * **Standard Output (stdout) - Descriptor 1**: This is where the program sends data after processing it.
 * **Standard Error (stderr) - Descriptor 2**: This stream is used for error messages and diagnostics.
+
+## Threads
+
+Threads in the context of Linux and operating systems in general are lightweight units of execution within a process that can operate independently. They are designed to enable concurrent execution of tasks, allowing for parallel processing and efficient resource utilization. Threads share the same memory space and resources with other threads in the process, which facilitates seamless data sharing and communication between threads.
+The internal structure of a thread includes a stack, register set, and thread-specific data. This structure is crucial for its operation, as it allows threads to maintain their execution context independently of other threads within the same process.
+## Process
+
+In the Unix context, a process is an instance of a program in execution. When a command is issued in Unix/Linux, it creates or starts a new process. Each process in the system is assigned a unique 5-digit ID number known as the process ID (PID). This PID is used by Unix to track each process, ensuring that at any given time, no two processes have the same PID.
+
+There are two main categories of processes in Unix:
+- **User processes**: These are operated in user mode.
+- **Kernel processes**: These are operated in kernel mode.
+
+The lifetime of a process can be divided into several states, each with specific characteristics that describe the process. These states include:
+- **Created**: The process is newly created by a system call and is not ready to run.
+- **User running**: The process is running in user mode, which means it is a user process.
+- **Kernel running**: The process is a kernel process running in kernel mode.
+- **Preempted**: When a process runs from kernel to user mode, it is said to be preempted.
+- **Ready to run in memory**: The process has reached a state where it is ready to run in memory and is waiting for the kernel to schedule it.
+- **Ready to run, swapped**: The process is ready to run but no empty main memory is present.
+- **Sleep, swapped**: The process has been swapped to secondary storage and is in a blocked state.
+- **Asleep in memory**: The process is in memory (not swapped to secondary storage) but is in a blocked state.
+
+Additionally, processes can be classified into different types, such as:
+- **Parent and Child process**: Each user process has a parent process, with most commands having the shell as their parent.
+- **Zombie process**: A process that has been killed but still shows its entry in the process status or the process table.
+- **Orphan process**: A child process that becomes an orphan when its parent process is killed before the termination of the child process.
+- **Daemon process**: System-related background processes that often run with root permissions and service requests from other processes.
