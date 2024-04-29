@@ -117,7 +117,7 @@
     * [CSRF](leftovers/web-tech/security/csrf.md)
   * [JSON](leftovers/web-tech/json.md)
   * [JWT (JSON Web Token)](leftovers/web-tech/jwt-json-web-token.md)
-  * [Static/Dynamic sites](leftovers/web-tech/untitled.md)
+  * [Static/Dynamic sites](leftovers/web-tech/static-dynamic-sites.md)
 * [😩 Other Tech](leftovers/other-tech/README.md)
   * [🐹 YAML](leftovers/other-tech/yaml.md)
   * [🤗 Hugo](leftovers/other-tech/hugo.md)
