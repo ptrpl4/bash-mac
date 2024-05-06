@@ -25,7 +25,7 @@ Hash tables have to support 3 functions:
 
 ## Hash Function
 
-![](../../aaa-assets/изображение%20(12).png)
+![](../../aaa-assets/hash-1.png)
 
 example
 
@@ -45,10 +45,10 @@ We can add same keyword to input value to make in changed
 
 ## Algoritms
 
-![](../../aaa-assets/изображение%20(15).png)
+![](../../aaa-assets/hash-3.png)
 
 ## SHA-1
 
 It is a string of 40 hexadecimal characters (0-9 and a-f) and is computed from the contents of a file or directory structure. The SHA-1 hash looks something like this: `24b9da6552252987aa493b52f8696cd6d3b00373`
 
-![](../../aaa-assets/изображение%20(14).png)
+![](../../aaa-assets/hash-2.png)
