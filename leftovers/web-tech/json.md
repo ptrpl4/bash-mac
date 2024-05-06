@@ -1,25 +1,31 @@
 ---
 description: JavaScript Object Notation
 ---
-
 # JSON
+
+#### links
+
+https://www.json.org/
 
 ## Description
 
-JSON является синтаксисом для сериализации\* объектов, массивов, чисел, строк логических значений и значения [`null`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global\_Objects/null). Он основывается на синтаксисе JavaScript, однако всё же отличается от него.
+JSON is a syntax for serialising objects, arrays, numbers, etc. 
+It is based on JavaScript syntax.
 
-\*_процесс перевода какой-либо_ [_структуры данных_](https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA\_%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80\_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85) _в последовательность_ [_битов_](https://ru.wikipedia.org/wiki/%D0%91%D0%B8%D1%82)__
+## Basic syntax and structure
 
-JSON основан на двух структурах данных:
+JSON text can be built on one of two structures:
 
-* Коллекция пар ключ/значение. В разных языках, эта концепция реализована как объект, запись, структура, словарь, хэш, именованный список или ассоциативный массив.
-* Упорядоченный список значений. В большинстве языков это реализовано как массив, вектор, список или последовательность.
+- a collection of the **key:value** pairs (associative array);
+- an orderly set of values (array or list).
 
-{% embed url="https://www.json.org/" %}
+### Example
 
-## Example
+Keys in an object are always strings, but values can be any of seven types of values, including another object or array.
 
-```javascript
+JSON does not support comments.
+
+```json
 {
   "firstName": "John",
   "lastName": "Smith",
