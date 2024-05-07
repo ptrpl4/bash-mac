@@ -70,6 +70,7 @@
 * [⚙️ Kubernetes aka k8s](apps-and-tools/kubernetes/README.md)
   * [⛑️ Helm](apps-and-tools/kubernetes/helm.md)
 * [🖇️ CI/CD](apps-and-tools/ci-cd/README.md)
+  * [↗️ GitHub actions](apps-and-tools/ci-cd/github-actions.md)
   * [🦊 GitLab CI/CD](apps-and-tools/ci-cd/gitlab-ci-cd.md)
   * [Jenkins](apps-and-tools/ci-cd/jenkins.md)
 * [💻 CLI](apps-and-tools/cli/README.md)
