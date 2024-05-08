@@ -6,7 +6,7 @@ description: YAML Ain't Markup Language
 
 Human-readable data serialization standard for all programming languages.
 
-### Basic data types <a href="#basic-data-types" id="basic-data-types"></a>
+### Basic data types
 
 * _integers_ like 15, 123
 * _strings_ like "15", 'Hello, YAML!', which may be enclosed either in double or single quotation marks
@@ -14,11 +14,23 @@ Human-readable data serialization standard for all programming languages.
 * _booleans_ (true or false)
 * _null type_ (null)
 
-YAML auto-detects the type of data, but users can specify the type they need using `!!`.&#x20;
+YAML auto-detects the type of data, but users can specify the type they need using `!!`.
 
-&#x20;`!!str yes`
+`!!str yes`
 
-### Maps <a href="#maps" id="maps"></a>
+#### comments
+
+```yaml
+# basic
+# comments
+
+published:
+  year: 1889 # inline comments
+  country: United Kingdom
+
+```
+
+### Maps
 
 Mapping consists of key-value pairs. Pairs are called _scalars._
 
