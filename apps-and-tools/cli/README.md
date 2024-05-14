@@ -403,10 +403,14 @@ It's a list of directory paths, separated by colons (`:`)
 
 `/opt/homebrew/bin` - created and maintained by Brew
 
-```
+```bash
 # a default $PATH looks like
 # search order from left /usr/local/bin to right /sbin
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+# update PATCH data for current shell session
+PATH=$PATH:/path-to-your-directory
+export PATH
 ```
 
 ### alias - Aliases
