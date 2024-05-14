@@ -421,9 +421,16 @@ nano ~/.bashrc
 
 # add alias, add ssh key, save file
 alias key='ssh-add --apple-use-keychain ~/.ssh/id_rsa'
+alias any-key='any-thing'
 
 # reset shell environment
 source ~/.bashrc
+
+# check current list of aliases
+alias
+
+# to remove (for aliases added by command, not file)
+unalias key
 ```
 
 ## OS programs
