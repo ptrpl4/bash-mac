@@ -74,10 +74,30 @@ long `--option` (dash-dash-option)
 
 ### variables
 
+[how-to-read-and-set-vars](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)
+
 ```bash
-TASK="project-1955"
+# set
+MY_TASK="project-1955"
 TOKEN="bblablatoken64"
-open https://main-url-$TASK.nl-k8s-stage.srv.local\?token=$TOKEN
+
+# check value
+echo $TASK
+
+# usage
+open https://main-url-$MY_TASK.nl-k8s-stage.srv.local\?token=$TOKEN
+
+# unset
+unset MY_TASK
+
+# check shell vars
+set | less
+
+# covert to env var
+export TASK
+
+# check env vars
+printenv | less
 ```
 
 ### pipe
@@ -144,7 +164,7 @@ ls -latrh
 * `cat` - concatenate and print files
 * `grep` - (**g**lobal **r**egular **e**xpression **p**rint) searching
 * `touch` - file creating (not main function, but typical)
-* `env` - current shell env vars. [link](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)
+* `env` - current shell env vars
 * `head` output the first part of textfiles
 * `tail` - output the last part of textfiles
 * `cp` & `mv` - copy & move. syntax - \<target file> \<destination>
