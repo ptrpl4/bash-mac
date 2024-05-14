@@ -203,15 +203,16 @@ popd
 
 ### Multiple commands in one line
 
-<pre class="language-bash"><code class="lang-bash"># No matter the first command run successfully or not, run the second command cmd2:
-<strong>cd; ls
-</strong><strong>
-</strong><strong># Only when the first command cmd1 run successfully, run the second command cmd2
-</strong><strong>cd &#x26;&#x26; ls
-</strong><strong>
-</strong># Only when the first command cmd1 failed to run, run the second command cmd2
+```bash
+# No matter the first command run successfully or not, run the second command cmd2:
+cd; ls
+
+# Only when the first command cmd1 run successfully, run the second command cmd2
+cd && ls
+
+# Only when the first command cmd1 failed to run, run the second command cmd2
 cd || ls
-</code></pre>
+```
 
 ### Rename
 
@@ -280,7 +281,7 @@ bash program.sh 1> log.txt 2> errors.txt
 
 ## Terminal Shortcuts
 
-* `Ctrl + r`  → fast history search
+* Ctrl+R → fast history search
 * Ctrl+A → Go to front of line
 * Ctrl+E → Go to end of line
 * Ctrl+C → Kill active process
@@ -326,7 +327,7 @@ echo "All parameters by words in var: $@"
 run
 
 ```bash
-bash personal_data.sh Pepe 13
+$ bash personal_data.sh Pepe 13
 
 stdout:
 You provided 2 facts about yourself!
@@ -378,7 +379,7 @@ Directive for the Linux program loader that specifies a program that will run th
 echo 'Hello, world!'
 ```
 
-## Run a shell script <a href="#run-a-shell-script" id="run-a-shell-script"></a>
+## Run a shell script
 
 * open the corresponding directory with file and type `bash hello_world.sh`
 * make the file executable by typing `chmod +x hello_world.sh`\
@@ -388,7 +389,7 @@ echo 'Hello, world!'
 
 * [https://github.com/ptrpl4/dotfiles](https://github.com/ptrpl4/dotfiles)
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/cli-1.png)
 
 ### PATH
 
