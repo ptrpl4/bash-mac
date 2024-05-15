@@ -1,7 +1,6 @@
 ---
 description: Bash/ZSH
 ---
-
 # 💻 CLI
 
 zsh & bash -  programs that runs in Terminal, interprets Unix commands, and interacts with OS
@@ -31,7 +30,6 @@ comment
 ### man
 
 SYNOPSIS - most common options
-
 OPTIONS - full list of options
 
 ```bash
@@ -49,19 +47,19 @@ command [params...] [-options…] | command_two <param> [-options…]
 cmd [param 1|param 2] 
 ```
 
-Square brackets`[]` means optional. \
-For 'say' program `-v` is an optional command like the others in example.
+Square brackets`[]` means optional
 
-Pipe `|` means "OR" when there can only be one of two options. \
+Pipe `|` means "OR" when there can only be one of two option
+
 `[-f file | string ...]` it could be OR file OR string, not both
 
-The value of an option is indicated by a space after the option value itself. If the option value contains special or space characters, it must be enclosed in quotation marks, double or single.
+The value of an option is indicated by a space after the option value itself. If the option value contains special or space characters, it must be enclosed in quotation marks, double or single
 
 ### params
 
 Required parameters are written in angle brackets \<param> \
 optional – in square brackets \[param]\
-To indicate that a parameter can be repeated, ellipses are used \[params...]\
+To indicate that a parameter can be repeated, ellipses are used \[params...]
 If only one of several parameters can be chosen, vertical bars are used: \[param 1|param 2]
 
 ### options
@@ -118,6 +116,113 @@ history | tail -20
 echo -e "Hmm...\nBrr...\nMmm..." | grep "m"
 ```
 
+### math
+
+#### Arithmetic operators
+
+| Op. | Function       | Description                                    | Example    | Result |
+| --- | -------------- | ---------------------------------------------- | ---------- | ------ |
+| +   | Addition       | Add two operands                               | $((10+3))  | 13     |
+| -   | Subtraction    | Subtract two operands                          | $((10-3))  | 7      |
+| *   | Multiplication | Multiply two operands                          | $((10*3))  | 30     |
+| /   | Division       | Return quotient after division                 | $((10/3))  | 3      |
+| %   | Modulo         | Return remainder after division                | $((10%3))  | 1      |
+| **  | Exponential    | Raise the first operand to the power of second | $((10**3)) | 1000   |
+
+```bash
+#!usr/bin/env/bash
+
+#Executing simple arithmetic operations
+echo $(( 10*5+15 ))
+echo $(( 40/6 ))
+```
+
+#### Operations with a variable
+| Operator | Function                   | Description                     | Example     | Result |
+| -------- | -------------------------- | ------------------------------- | ----------- | ------ |
+| +=       | Addition by constant       | Add two operands                | $((_x_+=3)) | 13     |
+| -=       | Subtraction by constant    | Subtract two operands           | $((_x_-=3)) | 7      |
+| *=       | Multiplication by constant | Multiply two operands           | $((_x_*=3)) | 30     |
+| /=       | Division by constant       | Return quotient after division  | $((_x_/=3)) | 3      |
+| %=       | Modulo by constant         | Return remainder after division | $((_x_%=3)) | 1      |
+
+```bash
+#!usr/bin/env/bash
+
+# Assigning value to variables
+val1=$(( 10*3-15 ))
+echo $val1
+
+# Arithmetic operations using constants
+# both `val=$(( 2 ))` and `$(( val = 2 ))` to assign values to vars
+echo $(( val1 *= 3 ))
+```
+
+
+#### Relational and logical operations
+
+`bc` utility provides us the ability to work with previously described operators as well as:
+- Relational operators
+- Logical or Boolean operators
+- Math functions
+- Conditional statements
+- Iterative statements
+
+| Op. | Example       | Evaluation logic                  | Result |
+| --- | ------------- | --------------------------------- | ------ |
+| &&  | bc <<< "5&&6" | 1; if all operands are non-zero   | 1      |
+| \|  | bc <<< "5\|6" | 1; if any one operand is non-zero | 1      |
+| !   | bc <<< "!5"   | 1; if the operand is 0            | 0      |
+
+```bash
+#!usr/bin/env/bash
+
+# syntax command argument <<< "input"
+# Less than operator
+bc <<< "10 < 1"
+
+# Is not equal to operator
+bc <<< "10 != 11"
+```
+
+#### Math library
+
+option `-l` enables the standard math library
+
+| Math func. | Explanation                                                        | Example             |
+| ---------- | ------------------------------------------------------------------ | ------------------- |
+| sine       | Takes radian value as operand and gives its sine value             | bc -l <<< "s(30)"   |
+| cosine     | Takes radian value as operand and gives its cosine value           | bc -l <<< "c(30)"   |
+| tan-1      | Gives the inverse tangent in radians                               | bc -l <<< "a(1)"    |
+| _ln_       | Gives the natural logarithm                                        | bc -l <<< "l(45)"   |
+| _e_        | Raises _e_(euler's number i.e. 2.7182) to the power of the operand | bc -l <<< "e(1)"    |
+| √          | Returns square root value                                          | bc -l <<< "sqrt(9)" |
+
+```bash
+#!usr/bin/env/bash
+
+#Arithmetic operation that returns a floating-point number
+bc -l <<< "(1 + 2)/7 * 2 ** 2"
+
+#Using sine and cosine functions
+bc -l <<< "s(1) + c(1)"
+
+#Using logarithmic and exponential functions
+bc -l <<< "e(1) + l(5)"
+
+#Finding the square root of a number
+bc -l <<< "sqrt(27)"
+
+#Converting binary 10 to octal
+bc -l <<< "ibase=2; obase=8; 10"
+
+#Converting decimal 5 to binary
+bc -l <<< "obase=2; 5"
+
+#Using scale to control length of floating-point numbers
+bc -l <<< "scale=3; a(30)"
+```
+
 ## Permissions
 
 ```
@@ -126,12 +231,12 @@ drwx------    38 my.username  staff   1.2K Mar  4 13:07 .zsh_sessions
 
 In addition to the user name and group, each file has associated access rights: r - read, w - write and x - execute. These permissions are set for three types of users: the Owner, users belonging to the same group (Group), and Other (those who are not included in the previous two groups).
 
-![](<../../.gitbook/assets/image (14) (1).png>)
+![](../../aaa-assets/cli-2.png)
 
 ## Built-in commands
 
-To display all available built-in system commands, type `man builtin`\
-To quit manual press q,  f (forward),  b (backward).
+To check all available built-in system commands, type `man builtin`
+To quit manual press q, f (forward), b (backward).
 
 ```bash
 # cd - change directory
@@ -305,13 +410,9 @@ null parameter `$0` is always the name of the script, and then follows user para
 #### syntax
 
 `$#` total number of the parameters
-
 `$* , $@` - all parameters
 
 Example
-
-.sh file
-
 `personal_data.sh`
 
 ```bash
@@ -342,9 +443,7 @@ All parameters by words: Pepe 33
 #### syntax
 
 `function function_name {}`
-
 or
-
 `function_name() {}`
 
 example
@@ -365,7 +464,7 @@ personal_data "Elden Lord" 200026
 
 ## therms
 
-`#!` - "shebang". \
+`#!` - "shebang"
 Directive for the Linux program loader that specifies a program that will run the script
 
 `#!/usr/bin/env python3` - python example
@@ -382,7 +481,7 @@ echo 'Hello, world!'
 ## Run a shell script
 
 * open the corresponding directory with file and type `bash hello_world.sh`
-* make the file executable by typing `chmod +x hello_world.sh`\
+* make the file executable by typing `chmod +x hello_world.sh`
   Then can run it `./hello_world.sh`
 
 ## Shell config
@@ -393,7 +492,7 @@ echo 'Hello, world!'
 
 ### PATH
 
-`$PATH` environment variable. It sets the directories that the shell searches for executable files\
+`$PATH` environment variable. It sets the directories that the shell searches for executable files
 It's a list of directory paths, separated by colons (`:`)
 
 `/bin` - default system executable files
@@ -460,7 +559,7 @@ sudo softwareupdate -i -a -R
 
 ## Third-party programs
 
-### **TLDR**
+### TLDR
 
 **TLDR** stands for **T**oo **L**ong **D**idn'**t R**ead -  a collection of simplified and community-driven man pages.
 
