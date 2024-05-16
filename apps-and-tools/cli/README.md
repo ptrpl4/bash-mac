@@ -403,11 +403,24 @@ bash program.sh 1> log.txt 2> errors.txt
 
 ## Shell Scripts
 
+### Therms
+
+`#!` - "shebang"
+Directive for the Linux program loader that specifies a program that will run the script
+
+`#!/usr/bin/env python3` - python example
+
+### Run a script
+
+* open the corresponding directory with file and type `bash hello_world.sh`
+* make the file executable by typing `chmod +x hello_world.sh`
+  Then can run it `./hello_world.sh`
+
 ### Positional parameters
 
 null parameter `$0` is always the name of the script, and then follows user parameters passed to a script
 
-#### syntax
+Syntax
 
 `$#` total number of the parameters
 `$* , $@` - all parameters
@@ -440,7 +453,7 @@ All parameters by words: Pepe 33
 
 ### Functions
 
-#### syntax
+syntax
 
 `function function_name {}`
 or
@@ -460,29 +473,85 @@ personal_data() {
 personal_data "Elden Lord" 200026
 ```
 
-## User-defined shell scripts
+### Case statement
 
-## therms
+case statement is easy to read when there are multiple conditional statements
 
-`#!` - "shebang"
-Directive for the Linux program loader that specifies a program that will run the script
-
-`#!/usr/bin/env python3` - python example
-
-## example
-
-`hello_world.sh`
-
-```no-highlight
+```bash
 #!/usr/bin/env bash
-echo 'Hello, world!'
+
+if [[ "${1}" == "" ]]; then
+	echo "No option was selected."
+
+elif [[ "${1}" == "1" ]]; then
+	echo "You selected '1'."
+
+elif [[ "${1}" == "2" ]]; then
+	echo "You selected '2'."
+
+elif [[ "${1}" == "3" ]]; then
+	echo "You selected '3'."
+    
+else
+	echo "Unknown number '${1}'."
+
+fi
+
+# same logic using case statement
+
+case "${1}" in
+
+    "")       # condition 
+        echo "No option was selected." 
+        ;; # end of the command
+    1)     
+        echo "You selected '1'." 
+        ;;
+    2)     
+        echo "You selected '2'." 
+        ;;
+    3)     
+        echo "You selected '3'." 
+        ;;
+    *)     # default case == else
+        echo "Unknown number '${1}'." 
+        ;;
+
+esac
 ```
 
-## Run a shell script
 
-* open the corresponding directory with file and type `bash hello_world.sh`
-* make the file executable by typing `chmod +x hello_world.sh`
-  Then can run it `./hello_world.sh`
+### Shift statement
+
+`shift` - command that helps to iterate within list of arguments in function. like `i++` statement
+
+example
+
+```bash
+#!/usr/bin/env bash
+
+answers=("a" "d" "c" "a" "a")
+total_score=0
+
+for (( i = 0; i < 5; i++));
+do
+    case "${1}" in
+
+        ${answers[i]})
+            ((total_score++))
+            ;;
+        "-"|"--") # `|` bitwise operator 'OR'
+            ;;
+        *)
+            ((total_score--))
+            ;;
+
+    esac
+    shift 1 ## equal i + 1
+done
+
+echo "Total score is: $total_score"
+```
 
 ## Shell config
 
