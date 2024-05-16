@@ -13,7 +13,7 @@ zsh & bash -  programs that runs in Terminal, interprets Unix commands, and inte
 * Filesystem Hierarchy Standard - [https://ru.wikipedia.org/wiki/FHS](https://ru.wikipedia.org/wiki/FHS)
 * Database and OS scripting - [https://ss64.com/](https://ss64.com)
 * 60 commands - [https://www.youtube.com/watch?v=gd7BXuUQ91w](https://www.youtube.com/watch?v=gd7BXuUQ91w)
-
+- ShellCheck - https://www.shellcheck.net/
 ## Syntax
 
 ### comments
@@ -435,7 +435,7 @@ echo "You provided $# facts about yourself!"
 echo "Your name is $1"
 echo "Your age is $2"
 echo "All parameters in one var: $*"
-echo "All parameters by words in var: $@"
+echo "$@" # All arguments passed to the script
 ```
 
 run
@@ -480,6 +480,8 @@ case statement is easy to read when there are multiple conditional statements
 ```bash
 #!/usr/bin/env bash
 
+# if example
+
 if [[ "${1}" == "" ]]; then
 	echo "No option was selected."
 
@@ -518,6 +520,21 @@ case "${1}" in
         ;;
 
 esac
+
+# syntax example
+case $variable in
+    condition-1 )
+        commands;;
+    condition-2 )
+        commands;;
+    condition-3 )
+        commands;;
+    condition-N )
+        commands;;
+    * )
+        commands;;
+esac
+
 ```
 
 
@@ -552,6 +569,16 @@ done
 
 echo "Total score is: $total_score"
 ```
+
+### Error handling
+
+default, bash does not halt the execution of the script. 
+if any command in the pipeline fails (returns a non-zero exit status), the entire pipeline is considered to have failed, even if some commands in the pipeline were successful
+
+`set -euo pipefail` # shell options
+	-exit on error
+	-undefined vars caused exit
+	-output will show last successful command 
 
 ## Shell config
 
