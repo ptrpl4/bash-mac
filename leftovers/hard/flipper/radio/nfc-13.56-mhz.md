@@ -1,4 +1,4 @@
-# NFC - 13.56 MHz
+# NFC 13.56 MHz
 
 NFC stands for Near Field Communication. It's a short-range (1-4 cm) wireless communication technology. NFC operates at frequencies of 13.56 MHz and allows for peer-to-peer communication, as well as communication between an NFC-enabled device and an NFC tag.
 It is a subset of HF RFID technology but has its own standards and protocols tailored for short-range communication and peer-to-peer data exchange.
@@ -31,4 +31,3 @@ Flipper Zero can read
 - MIFARE Classic 4K
 - MIFARE Classic Mini
 To read data stored in sectors, Flipper Zero has to find all 32 keys for 16 sectors (MIFARE Classic 1K), 80 keys for 40 sectors (MIFARE Classic 4K), and 10 keys for 5 sectors (MIFARE Classic Mini). For that, Flipper Zero uses keys from the **System dictionary**
-
