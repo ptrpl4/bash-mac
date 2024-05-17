@@ -1,4 +1,4 @@
-# RFID 125 kHz
+# RFID
 
 Radio Frequency Identification
 
@@ -7,9 +7,9 @@ RFID is a technology that uses electromagnetic fields to automatically identify 
 ### Operating Frequency
 
 - RFID systems operate at different frequencies, including 
-	- Low Frequency (LF) - 125 kHz and 134 kHz
-	- High Frequency (HF) - around 13.56 MHz (NFC)
-	- Ultra-High Frequency (UHF) - between 860 MHz and 960 MHz
+	- Low Frequency (LF) - 125 kHz and 134 kHz (range 1-10m)
+	- High Frequency (HF) - around 13.56 MHz (NFC) (range 1-4cm)
+	- Ultra-High Frequency (UHF) - between 860 MHz and 960 MHz (10-100m)
 
 - LF RFID commonly used for access control systems, animal tracking, and vehicle immobilization.
 - HF RFID used in applications such as contactless payment cards, electronic passports, and library book tracking.

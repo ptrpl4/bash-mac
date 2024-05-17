@@ -1,6 +1,6 @@
-# NFC
+# NFC - 13.56 MHz
 
-NFC stands for Near Field Communication. It's a short-range (1-4 cm) wireless communication technology. NFC operates at frequencies of 13.56 (MHz) and allows for peer-to-peer communication, as well as communication between an NFC-enabled device and an NFC tag.
+NFC stands for Near Field Communication. It's a short-range (1-4 cm) wireless communication technology. NFC operates at frequencies of 13.56 MHz and allows for peer-to-peer communication, as well as communication between an NFC-enabled device and an NFC tag.
 It is a subset of HF RFID technology but has its own standards and protocols tailored for short-range communication and peer-to-peer data exchange.
 
 ### Operating modes
