@@ -73,7 +73,7 @@
   * [↗️ GitHub actions](apps-and-tools/ci-cd/github-actions.md)
   * [🦊 GitLab CI/CD](apps-and-tools/ci-cd/gitlab-ci-cd.md)
   * [Jenkins](apps-and-tools/ci-cd/jenkins.md)
-* [💻 CLI](apps-and-tools/cli/README.md)
+* [💻 CLI](apps-and-tools/cli/cli.md)
   * [🛶 SSH](apps-and-tools/cli/ssh.md)
   * [📖 Git](apps-and-tools/cli/git.md)
   * [🍻 HomeBrew](apps-and-tools/cli/brew.md)

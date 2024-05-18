@@ -1,6 +1,3 @@
----
-description: Bash/ZSH
----
 # 💻 CLI
 
 zsh & bash -  programs that runs in Terminal, interprets Unix commands, and interacts with OS
@@ -20,7 +17,9 @@ zsh & bash -  programs that runs in Terminal, interprets Unix commands, and inte
 
 ```bash
 # one line
+
 git status # inline
+
 : '
 long
 comment
@@ -288,11 +287,6 @@ history
 history -c 
 ```
 
-```bash
-# create file and add text
-echo "insert text here" > myfile.txt
-```
-
 ### Navigation
 
 ```bash
@@ -361,7 +355,7 @@ echo "Also my favorite things are ..." >> diary.txt
 `>` overwrites the file, removing any old content.
 
 ```bash
-# rewriting the file content
+# rewrite/create file content
 echo "My new everlasting love is ..." > secret.txt
 ```
 
