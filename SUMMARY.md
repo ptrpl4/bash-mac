@@ -126,7 +126,7 @@
       * [NFC](leftovers/hard/flipper/radio/nfc-13.56-mhz.md)
       * [Sub-GHz](leftovers/hard/flipper/radio/sub-ghz-300-928-mhz.md)
       * [RFID 125 kHz](leftovers/hard/flipper/radio/rfid-125-khz.md)
-  * [🍇 Raspberry Pie](leftovers/hard/raspberry-pie.md)
+  * [🍇 Raspberry Pie](leftovers/hard/raspberry-pi.md)
 * [😩 Other Tech](leftovers/other-tech/README.md)
   * [🐹 YAML](leftovers/other-tech/yaml.md)
   * [🤗 Hugo](leftovers/other-tech/hugo.md)
