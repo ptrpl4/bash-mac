@@ -400,6 +400,8 @@ bash program.sh 1> log.txt 2> errors.txt
 * Ctrl+B → Go back one character
 * Alf+F → Go forward one word
 * Alt+B → Go back one word
+### Nano
+- Ctrl+K → delete a line
 
 ## Shell Scripts
 
@@ -568,6 +570,16 @@ do
 done
 
 echo "Total score is: $total_score"
+```
+
+### if-statement
+
+```bash
+# syntax
+if [conditions]; then
+   commands
+fi
+
 ```
 
 ### Error handling
