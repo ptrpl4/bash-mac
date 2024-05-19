@@ -222,6 +222,14 @@ bc -l <<< "obase=2; 5"
 bc -l <<< "scale=3; a(30)"
 ```
 
+### todo
+
+```bash
+# example with folder
+pwd >> ~/todo.txt
+echo "^delete if using in docker" >> ~/todo.txt
+```
+
 ## Permissions
 
 ```
@@ -260,6 +268,11 @@ cd -
 
 # l-longList a-all t-sortByTime r-sortReverse h-humanReadable
 ls -latrh
+
+# Disk Usage
+du -h -d 1 # (linux) --human-readable --max-depth=1
+du -hd 1 # (macos) only folders
+
 ```
 
 * `pwd` - **p**rint **w**orking **d**irectory
@@ -475,27 +488,6 @@ case statement is easy to read when there are multiple conditional statements
 
 ```bash
 #!/usr/bin/env bash
-
-# if example
-
-if [[ "${1}" == "" ]]; then
-	echo "No option was selected."
-
-elif [[ "${1}" == "1" ]]; then
-	echo "You selected '1'."
-
-elif [[ "${1}" == "2" ]]; then
-	echo "You selected '2'."
-
-elif [[ "${1}" == "3" ]]; then
-	echo "You selected '3'."
-    
-else
-	echo "Unknown number '${1}'."
-
-fi
-
-# same logic using case statement
 
 case "${1}" in
 
@@ -713,3 +705,9 @@ gping 1.1.1.1 8.8.8.8 192.168.100.1 192.168.100.38
 ```
 
 source - [https://t.me/zhovner\_hub/1991](https://t.me/zhovner\_hub/1991)
+
+### nmap
+
+```bash
+nmap -Pn 192.111.111.11
+```
