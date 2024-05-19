@@ -8,15 +8,11 @@ description: Интерпретируемый язык с неявной сил�
 
 ## Links
 
-Доки - [https://docs.python.org/3/genindex-all.html](https://docs.python.org/3/genindex-all.html)
-
-Доки - [https://docs.python.org/3/reference/index.html](https://docs.python.org/3/reference/index.html)
-
-Доки - [https://www.w3schools.com/python/python\_reference.asp](https://www.w3schools.com/python/python\_reference.asp)
-
-Виртуалка - [https://repl.it/languages/python3](https://repl.it/languages/python3)
-
-Статьи - [https://devpractice.ru/python/](https://devpractice.ru/python/)&#x20;
+- Доки - [https://docs.python.org/3/genindex-all.html](https://docs.python.org/3/genindex-all.html)
+- Доки - [https://docs.python.org/3/reference/index.html](https://docs.python.org/3/reference/index.html)
+- Доки - [https://www.w3schools.com/python/python\_reference.asp](https://www.w3schools.com/python/python\_reference.asp)
+- Виртуалка - [https://repl.it/languages/python3](https://repl.it/languages/python3)
+- Статьи - [https://devpractice.ru/python/](https://devpractice.ru/python/)&#x20;
 
 ## Основные типы данных
 
