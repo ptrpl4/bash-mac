@@ -1,4 +1,4 @@
-	# Compose
+# Compose
 
 ### File
 
@@ -73,7 +73,6 @@ docker compose start
 # remove
 docker compose down
 ```
-
 
 ## Dockge
 
