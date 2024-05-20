@@ -1,4 +1,4 @@
-# Compose
+	# Compose
 
 ### File
 
@@ -72,4 +72,41 @@ docker compose stop
 docker compose start
 # remove
 docker compose down
+```
+
+
+## Dockge
+
+- https://github.com/louislam/dockge
+
+```bash
+# Create directories that store your stacks and stores Dockge's stack
+mkdir -p /opt/stacks /opt/dockge
+cd /opt/dockge
+
+# Download the compose.yaml
+curl https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml --output compose.yaml
+
+# Start the server
+docker compose up -d
+
+# If you are using docker-compose V1 or Podman
+# docker-compose up -d
+```
+
+### Homeassistant
+
+```
+version: "3"
+services:
+  app:
+    container_name: homeassistant
+    image: ghcr.io/home-assistant/home-assistant:stable
+    restart: unless-stopped
+    volumes:
+      - /opt/stacks/hass/hass-config:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro
+    privileged: true
+    network_mode: host
 ```

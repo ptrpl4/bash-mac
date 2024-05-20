@@ -25,4 +25,3 @@ This [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-pr
 * [WebGL textures](https://developer.mozilla.org/en-US/docs/Web/API/WebGL\_API/Tutorial/Using\_textures\_in\_WebGL).
 * Images/video frames drawn to a canvas using [`drawImage()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage).
 * [CSS Shapes from images.](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS\_Shapes/Shapes\_From\_Images)
-

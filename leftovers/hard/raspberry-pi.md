@@ -38,7 +38,8 @@ sudo reboot
 # get url to connect
 rpi-connect signin
 
-# confirm url in account
+# then confirm url in account
+
 ```
 
 ## soft
@@ -63,4 +64,11 @@ sudo -u homeassistant -H -s
 cd /srv/homeassistant
 python3 -m venv .
 source bin/activate
+```
+
+## homebridge
+
+```bash
+# home
+cd /home/homebridge/
 ```
