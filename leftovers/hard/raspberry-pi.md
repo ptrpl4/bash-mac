@@ -5,6 +5,8 @@ links
 
 ## Commands
 
+### Linux
+
 ```bash
 # temperature check
 vcgencmd measure_temp
@@ -26,6 +28,13 @@ dpkg --get-selections
 sudo apt-get update
 # check outdated
 sudo apt-get -s dist-upgrade # --simulate
+```
+
+### Pi
+
+```bash
+# manage settings
+sudo raspi-config
 ```
 
 ## Connect
