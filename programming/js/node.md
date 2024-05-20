@@ -27,16 +27,18 @@ n lts # note! on macOS you probably should change app directory to avoid r/w res
 ```bash
 # install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
 # check
 nvm --version
 # instal node
-nvm install 16
+nvm install 18
+nvm install --lts
 # check installed
 nvm ls
 # choose installed
-nvm use 16
+nvm use 18
 # uninstall
-nvm uninstall 8
+nvm uninstall 12
 ```
 
 ### process.env

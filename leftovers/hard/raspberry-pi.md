@@ -21,6 +21,11 @@ hostname -I
 # check installed
 apt list --installed
 dpkg --get-selections
+
+# apt-get update
+sudo apt-get update
+# check outdated
+sudo apt-get -s dist-upgrade # --simulate
 ```
 
 ## Connect
@@ -38,7 +43,8 @@ sudo reboot
 # get url to connect
 rpi-connect signin
 
-# then confirm url in account
+# off screen sharing13
+rpi-connect vnc off
 
 ```
 
@@ -71,4 +77,7 @@ source bin/activate
 ```bash
 # home
 cd /home/homebridge/
+
+sudo hb-service stop # start / restart
+sudo hb-shell # shell
 ```

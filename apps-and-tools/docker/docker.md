@@ -185,3 +185,13 @@ COPY . .
 ENTRYPOINT ["python", "-m", "http.server"]
 CMD ["--directory", "directory", "8000"]
 ```
+
+## Helpers
+
+### run as non-root
+
+- https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
+```bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+```
