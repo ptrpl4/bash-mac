@@ -28,6 +28,11 @@ dpkg --get-selections
 sudo apt-get update
 # check outdated
 sudo apt-get -s dist-upgrade # --simulate
+
+# ports 
+## check open
+netstat -lntu
+
 ```
 
 ### Pi
