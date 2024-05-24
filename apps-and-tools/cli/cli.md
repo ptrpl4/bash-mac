@@ -651,6 +651,13 @@ softwareupdate -l
 sudo softwareupdate -i -a -R
 ```
 
+### Others
+```bash
+# secure check file info
+codesign -vvvv -R="anchor apple" /usr/libexec/rapportd
+
+```
+
 ## Third-party programs
 
 ### TLDR
