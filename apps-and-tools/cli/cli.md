@@ -274,6 +274,14 @@ ls -latrh
 # Disk Usage
 du -h -d 1 # (linux) --human-readable --max-depth=1
 du -hd 1 # (macos) only folders
+
+# ping
+ping google.com -c 5
+
+# telnet (only lan - no encryption)
+telnet <hostname/IP address> <port number>
+telnet www.example.com 80
+
 ```
 
 * `pwd` - **p**rint **w**orking **d**irectory
