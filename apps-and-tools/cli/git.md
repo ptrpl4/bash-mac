@@ -408,7 +408,7 @@ git push origin main
 The main commands:
 
 - `git diff` shows the difference between files in your staging area and modified files in the working tree;
-- `git diff --staged` shows the difference between files in the staging area and the last commit;
+- `git diff --staged` and `git diff --cached` shows the difference between files in the staging area and the last commit;
 - `git diff <commit1>..<commit2>` and `git diff <branch1>..<branch2>` show differences between commits and branches;
 - `git diff --stat` shows a short summary of the number of changes and names of files with those changes;
 
