@@ -282,6 +282,10 @@ ping google.com -c 5
 telnet <hostname/IP address> <port number>
 telnet www.example.com 80
 
+# seq - to gen sequences
+seq 10 # 1 2 3 4 5 6 7 8 9  10
+
+
 ```
 
 * `pwd` - **p**rint **w**orking **d**irectory
@@ -672,9 +676,14 @@ $ for i in 1 2 3 4 5 do
 $ for i in John Jack Mary do 
     echo "Here is $i" 
   done
+
+###
+# using seq (seq [start] [incr] [stop])
+for i in $(seq 1 2 5); do 
+    echo "Number: $i"
+  done
 ```
 
-```
 ### Error handling
 
 default, bash does not halt the execution of the script. 
