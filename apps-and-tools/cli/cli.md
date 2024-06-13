@@ -283,8 +283,7 @@ telnet <hostname/IP address> <port number>
 telnet www.example.com 80
 
 # seq - to gen sequences
-seq 10 # 1 2 3 4 5 6 7 8 9  10
-
+seq 10 # 1 2 3 4 5 6 7 8 9 10
 
 ```
 
@@ -673,15 +672,35 @@ $ for i in 1 2 3 4 5 do
 
 ###
 # example 2
-$ for i in John Jack Mary do 
+for i in John Jack Mary do 
     echo "Here is $i" 
-  done
+done
 
 ###
 # using seq (seq [start] [incr] [stop])
 for i in $(seq 1 2 5); do 
     echo "Number: $i"
   done
+```
+
+
+### while
+
+```bash
+# syntax
+while control-command
+do
+    command
+done
+
+###
+# example
+i=1
+while [ $i -le 3 ] do 
+	echo "I is $i" 
+    i=$(($i+1))
+done
+
 ```
 
 ### Error handling
