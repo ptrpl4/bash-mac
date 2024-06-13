@@ -651,6 +651,30 @@ else
     echo "Second number is greater"
 fi
 ```
+
+### for
+
+```bash
+# syntax
+for variable in set_of_values
+do
+    command
+done
+
+###
+# example
+$ for i in 1 2 3 4 5 do 
+    echo $i 
+  done
+
+###
+# example 2
+$ for i in John Jack Mary do 
+    echo "Here is $i" 
+  done
+```
+
+```
 ### Error handling
 
 default, bash does not halt the execution of the script. 
