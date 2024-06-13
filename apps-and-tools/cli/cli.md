@@ -242,6 +242,8 @@ In addition to the user name and group, each file has associated access rights: 
 
 ## Built-in commands
 
+#### examples
+
 To check all available built-in system commands, type `man builtin`
 To quit manual press q, f (forward), b (backward).
 
@@ -272,7 +274,6 @@ ls -latrh
 # Disk Usage
 du -h -d 1 # (linux) --human-readable --max-depth=1
 du -hd 1 # (macos) only folders
-
 ```
 
 * `pwd` - **p**rint **w**orking **d**irectory
@@ -287,6 +288,41 @@ du -hd 1 # (macos) only folders
 * `cp` & `mv` - copy & move. syntax - \<target file> \<destination>
 * `compgen -c | less` - all available commands
 * `file` - description of the type of the specified file. Works fine for files with no file extension
+
+### Test
+
+```bash
+test expression
+or
+[ expression ]
+```
+
+Test command options
+https://kapeli.com/cheat_sheets/Bash_Test_Operators.docset/Contents/Resources/Documents/index
+
+| **Option** | **Purpose**                                                      | **Syntax**                  |
+| ---------- | ---------------------------------------------------------------- | --------------------------- |
+| -eq        | True if two integers are equal                                   | `if [ INT1 -eq INT2 ]`      |
+| -ne        | True if two integers are not equal                               | `if [ INT1 -ne INT2 ]`      |
+| -gt        | True if the first integer is greater than the second             | `if [ INT1 -gt INT2 ]`      |
+| -ge        | True if the first integer is greater than or equal to the second | `if [ INT1 -ge INT2 ]`      |
+| -lt        | True if the first integer is smaller than the second             | `if [ INT1 -lt INT2 ]`      |
+| -le        | True if the first integer is smaller than or equal to the second | `if [ INT1 -le INT2 ]`      |
+| =          | True if two strings are equal                                    | `if [ STRING1 = STRING2 ]`  |
+| !=         | True if two strings are not equal                                | `if [ STRING1 != STRING2 ]` |
+| \>         | True if the first string is greater than the second              | `if [ STRING1 \> STRING2 ]` |
+| -z         | True if the string is null                                       | `if [ -z STRING ]`          |
+| -n         | True if the string is not null                                   | `if [ -n STRING ]`          |
+| -e         | True if file exists                                              | `if [ -e FILE ]`            |
+| -d         | True if the file is a directory                                  | `if [ -d FILE ]`            |
+| -s         | True if the file is not empty (non-zero file size)               | `if [ -s FILE ]`            |
+
+| Logical Operators |             |                         |
+| ----------------- | ----------- | ----------------------- |
+| Option            | Purpose     | Syntax                  |
+| !                 | Logical NOT | `if [ ! EXPR ]`         |
+| -a                | Logical AND | `if [ EXPR1 -a EXPR2 ]` |
+| -o                | Logical OR  | `if [ EXPR1 -o EXPR2 ]` |
 
 ### History
 
