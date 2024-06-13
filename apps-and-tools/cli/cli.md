@@ -602,8 +602,47 @@ if [conditions]; then
    commands
 fi
 
+###
+# elif
+if test-commands; then
+    consequent-commands
+elif more-test-commands; then
+    more-consequents
+else
+    some-more-consequents
+fi
 ```
 
+```bash
+# Checking the password entered by user
+
+echo "Enter password: "
+read input
+if [ $input = "Pass!@#" ]; then
+    echo "Correct password entered"
+fi
+
+###
+# add else block
+if [ $input = "Pass!@#" ]; then
+    echo "Correct password entered"
+else
+    echo "Incorrect password entered"
+fi
+
+###
+# elif
+num1=20;
+num2=10;
+
+if [ "$num1" -eq "$num2" ]; then
+    echo "Numbers are equal"
+elif [ "$num1" -gt "$num2" ]; then
+    echo "First number is greater"
+else
+    echo "Second number is greater"
+fi
+```
 ### Error handling
 
 default, bash does not halt the execution of the script. 
