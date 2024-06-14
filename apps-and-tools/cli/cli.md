@@ -222,15 +222,46 @@ bc -l <<< "obase=2; 5"
 bc -l <<< "scale=3; a(30)"
 ```
 
-### todo
+### File redirections
+
+`>>` appends new content to the file without removing the old information.
 
 ```bash
+# adding new information to a diary
+echo "Also my favorite things are ..." >> diary.txt
+
 # example with folder
 pwd >> ~/todo.txt
 echo "^delete if using in docker" >> ~/todo.txt
 ```
 
-## Permissions
+`>` overwrites the file, removing any old content.
+
+```bash
+# rewrite/create file content
+echo "My new everlasting love is ..." > secret.txt
+```
+
+#### stdout, stderr redirections
+
+```bash
+# program.sh
+echo "Just a normal message"
+echo "it will goes to stdout"
+# >&2 directs the "ERROR!" message to stderr, represented by descriptor 2
+echo "ERROR!" >&2
+echo "one more error" >&2
+echo "it will goes to stdout too"
+echo "one last error" >&2
+```
+
+```bash
+# 1> redirects all stdout (non-error) output to file
+# 2> redirects all stderr output to file
+bash program.sh 1> log.txt 2> errors.txt
+```
+
+## File Permissions
 
 ```
 drwx------    38 my.username  staff   1.2K Mar  4 13:07 .zsh_sessions
@@ -403,42 +434,9 @@ command="echo \$(date)"
 eval "$command"
 ```
 
-### File redirections
+## Shortcuts
 
-`>>` appends new content to the file without removing the old information.
-
-```bash
-# adding new information to a diary
-echo "Also my favorite things are ..." >> diary.txt
-```
-
-`>` overwrites the file, removing any old content.
-
-```bash
-# rewrite/create file content
-echo "My new everlasting love is ..." > secret.txt
-```
-
-#### stdout, stderr redirections
-
-```bash
-# program.sh
-echo "Just a normal message"
-echo "it will goes to stdout"
-# >&2 directs the "ERROR!" message to stderr, represented by descriptor 2
-echo "ERROR!" >&2
-echo "one more error" >&2
-echo "it will goes to stdout too"
-echo "one last error" >&2
-```
-
-```bash
-# 1> redirects all stdout (non-error) output to file
-# 2> redirects all stderr output to file
-bash program.sh 1> log.txt 2> errors.txt
-```
-
-## Terminal Shortcuts
+### macOS Terminal
 
 * Ctrl+R → fast history search
 * Ctrl+A → Go to front of line
