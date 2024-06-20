@@ -97,6 +97,38 @@ export TASK
 printenv | less
 ```
 
+
+### Glob patterns (Globbing)
+
+Typically globbing is about file names.
+
+| `*`            | Any character (except `/`) in any number, or no characters at all                              |
+| -------------- | ---------------------------------------------------------------------------------------------- |
+| `?`            | Any one character                                                                              |
+| `[]` or `{}`   | A group of characters like {file1, file3, file6} or a set of them like [0-9] [a-zA-Z] or [p1K] |
+| `[!]` or `[^]` | Negation of group or set of characters; is used with square brackets, like [!1-5]              |
+
+examples
+```bash
+rm file{1-6}
+
+cp ~/.* /mnt/usb/
+
+git add *.scm
+```
+
+Glob vs regex
+
+Some symbols have the same meaning. These are symbols like curly brackets `{}` and square brackets `[]`.
+
+`*` in glob means either zero or any number of characters
+`*` in regex means zero or more of the previous character
+
+`?` in glob means any one character
+`?` In regex means zero or only one of the previous characters
+
+`.` in regex means the same as what `?` means in globbing
+`.*` in regex means the same as `*` in glob patterns
 ### pipe
 
 | pipe - connect output first command to input next command
