@@ -13,7 +13,7 @@ description: Asynchronous event-driven JavaScript runtime
 
 ### Manage Node versions
 
-#### with n
+#### n
 
 ```bash
 # install with n (Node.js version management)
@@ -22,21 +22,27 @@ npm install -g n
 n lts # note! on macOS you probably should change app directory to avoid r/w restrictions
 ```
 
-#### with nvm
+#### nvm
 
 ```bash
-# install nvm
+
+# install nvm (check latest https://github.com/nvm-sh/nvm/releases)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
-# check
-nvm --version
 # instal node
 nvm install 18
 nvm install --lts
+
+# npm
+nvm install-latest-npm
+
 # check installed
 nvm ls
+nvm use 20
+
 # choose installed
 nvm use 18
+
 # uninstall
 nvm uninstall 12
 ```
