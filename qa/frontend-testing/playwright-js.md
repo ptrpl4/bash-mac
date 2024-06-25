@@ -1,18 +1,14 @@
----
-description: Code examples with JS
----
-
 # ▶ Playwright
 
-#### Links
+#### links
 
-FAQ - [https://applitools.com/blog/top-playwright-questions-answered](https://applitools.com/blog/top-playwright-questions-answered/)\
-Tutor - [https://testautomationu.applitools.com/js-playwright-tutorial](https://testautomationu.applitools.com/js-playwright-tutorial)\
-Basics - [https://testautomationu.applitools.com/playwright-intro/](https://testautomationu.applitools.com/playwright-intro/) \
-Webinar - [https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web](https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web/)\
-basic info about project and examples - [https://www.youtube.com/watch?v=ttODF00XWis\&list=PLPPEvQlTaJs2fm0m3586X3cjC7VGH0ThV](https://www.youtube.com/watch?v=ttODF00XWis\&list=PLPPEvQlTaJs2fm0m3586X3cjC7VGH0ThV)
+- FAQ - [https://applitools.com/blog/top-playwright-questions-answered](https://applitools.com/blog/top-playwright-questions-answered/)
+- Tutor - [https://testautomationu.applitools.com/js-playwright-tutorial](https://testautomationu.applitools.com/js-playwright-tutorial)
+- Basics - [https://testautomationu.applitools.com/playwright-intro/](https://testautomationu.applitools.com/playwright-intro/)
+- Webinar - [https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web](https://applitools.com/event/playwright-a-new-test-automation-framework-for-the-modern-web/)
+- basic info about project and examples - [https://www.youtube.com/watch?v=ttODF00XWis\&list=PLPPEvQlTaJs2fm0m3586X3cjC7VGH0ThV](https://www.youtube.com/watch?v=ttODF00XWis\&list=PLPPEvQlTaJs2fm0m3586X3cjC7VGH0ThV)
 
-## Basics
+## basics
 
 Playwright is using Chrome DevTools Protocol (CDP) to communicate with Chromium. For Firefox (Juggler) and Safari (Webinspector Protocol) implemented new protocols similar to the chrome one.
 
@@ -35,22 +31,21 @@ npm i -D @playwright/test
 npx playwright install
 ```
 
-#### File structure
+#### helper
 
-`./tests/example.spec.ts` - Example end-to-end test\
-`./playwright.config.ts` - Playwright Test configuration
-
-```javascript
-// example test
-const { test, expect } = require('@playwright/test');
-
-test('check load of main page', async ({ page }) => {
-  await page.goto('https://google.com/');
-  await expect(page).toHaveTitle(/Google/); // Expect a title "contain" a substring
-});
+```bash
+# check that browsers are installed
+npx playwright install
 ```
 
-### playwright runner
+#### file structure
+
+`./tests/example.spec.ts` - Example end-to-end test
+`./playwright.config.ts` - Playwright configuration
+
+## runner
+
+### test
 
 ```bash
 # run all
@@ -69,13 +64,12 @@ npx playwright test --debug
 npx playwright test --list
 ```
 
-### playwright config
+## config
 
 `playwright.config.ts`
 
-docs - https://playwright.dev/docs/test-configuration
-
-config example - [https://github.com/raptatinha/tau-introduction-to-playwright/blob/chapter-2/playwright.config.ts](https://github.com/raptatinha/tau-introduction-to-playwright/blob/chapter-2/playwright.config.ts)
+- docs - https://playwright.dev/docs/test-configuration
+- [config example](https://github.com/raptatinha/tau-introduction-to-playwright/blob/chapter-2/playwright.config.ts)
 
 ```javascript
 import { defineConfig, devices } from '@playwright/test';
@@ -235,6 +229,8 @@ export default defineConfig({
 });
 ```
 
+## tests
+
 ### code snippets
 
 ```javascript
@@ -343,15 +339,13 @@ test.describe.skip('Test Case', () => {
   });
 ```
 
-## Built in functions
+### built in functions
 
-### test func.
-
-`test()`
+#### test
 
 takes two arguments: a string representing the title of the test, and an async function that defines the test itself. The async function receives an object with fixtures and optional TestInfo as its argument.
 
-#### test() methods
+methods
 
 `test.describe` is a method that declares a group of tests.\
 It takes two arguments: a string that represents the title of the group, and the second argument is a callback function that contains all the tests belonging to this group. When `test.describe` is called, it immediately runs the callback function and any tests added in this callback will belong to this group.
@@ -379,14 +373,14 @@ test.describe('Pay button appearance', () => { // declare group of tests
   });
 ```
 
-### expect func.
+#### expect
 
 `expect()`
 
 To make an assertion, call `expect(value)` and choose a matcher that reflects the expectation. There are many generic matchers like `toEqual`, `toContain`, and `toBeTruthy` that can be used to assert any conditions.\
 [https://playwright.dev/docs/test-assertions](https://playwright.dev/docs/test-assertions)
 
-## POM
+### POM
 
 #### structure
 
