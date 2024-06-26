@@ -88,6 +88,7 @@
   * [⛅ Google Cloud Logging](apps-and-tools/logs/google-cloud-logging.md)
 * [📈 Metrics](apps-and-tools/metrics/README.md)
   * [Prometheus & Grafana](apps-and-tools/metrics/prometheus-and-grafana.md)
+* [💅 AI](apps-and-tools/ai.md)
 
 ## leftovers
 
