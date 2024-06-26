@@ -353,7 +353,6 @@ seq 10 # 1 2 3 4 5 6 7 8 9 10
 * `stat` - display file or file system status
 * `hier` or `man hier` - layout of filesystems
 * `cat` - concatenate and print files
-* `grep` - (**g**lobal **r**egular **e**xpression **p**rint) searching
 * `touch` - file creating (not main function, but typical)
 * `env` - current shell env vars
 * `head` output the first part of textfiles
@@ -478,6 +477,24 @@ echo first
 
 set | grep first
 # stdout > first=second
+```
+
+### grep
+
+global regular expression print
+
+```bash
+# -i ignore-case flag
+grep -i 'error text' log.txt
+
+# get line number
+grep -n 'critical Error occured' log.txt
+
+# -v, --invert-match (hide selected from results)
+grep -i error log.txt | grep -v CORS
+
+# -w, --word-regexp
+echo "something" | grep -w something
 ```
 
 ## Shortcuts
