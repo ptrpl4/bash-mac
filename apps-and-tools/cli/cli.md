@@ -74,7 +74,7 @@ long `--option` (dash-dash-option)
 [how-to-read-and-set-vars](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)
 
 ```bash
-# set
+# set shell var
 MY_TASK="project-1955"
 TOKEN="bblablatoken64"
 
@@ -102,11 +102,10 @@ printenv | less
 
 Typically globbing is about file names.
 
-| `*`            | Any character (except `/`) in any number, or no characters at all                              |
-| -------------- | ---------------------------------------------------------------------------------------------- |
-| `?`            | Any one character                                                                              |
-| `[]` or `{}`   | A group of characters like {file1, file3, file6} or a set of them like [0-9] [a-zA-Z] or [p1K] |
-| `[!]` or `[^]` | Negation of group or set of characters; is used with square brackets, like [!1-5]              |
+- `*` - Any character (except `/`) in any number, or no characters at all
+- `?` -  Any one character
+- `[]` or `{}` - A group of characters {file1, file3, file6} or a set [0-9] [a-zA-Z] or [p1K]
+- `[!]` or `[^]` - Negation of group or set of characters; is used with square brackets, like [!1-5]
 
 examples
 ```bash
@@ -466,6 +465,21 @@ command="echo \$(date)"
 eval "$command"
 ```
 
+### read
+
+reads the contents of STDIN and saving as shell var
+
+```
+read first
+# stdin > second
+
+echo first
+# stdout > second
+
+set | grep first
+# stdout > first=second
+```
+
 ## Shortcuts
 
 ### macOS Terminal
@@ -741,7 +755,47 @@ if any command in the pipeline fails (returns a non-zero exit status), the entir
 `set -euo pipefail` # shell options
 	-exit on error
 	-undefined vars caused exit
-	-output will show last successful command 
+	-output will show last successful command
+
+### Read User Input
+
+```bash
+#!/bin/bash
+
+echo Write Mario
+
+read mario
+
+# OR with one line
+# read -p "Write Mario: " mario
+
+echo "It's me, $mario"
+```
+
+### Read file
+
+read lines from file
+
+```bash
+#!/bin/bash
+
+filename='example.txt'
+while read line; do
+    echo "Your line:  $line"
+done < "$filename"
+```
+
+get lines from file and save to another file
+
+```bash
+filename='example.txt'
+output='junior.txt'
+
+while read line; do
+    echo "Your line:  $line" >> junior.txt
+done < "$filename"
+```
+
 
 ## Shell config
 
