@@ -481,20 +481,41 @@ set | grep first
 
 ### grep
 
-global regular expression print
+global regular expression print.
+prints lines with found text
+
+flags
+- `-A <n>` shows the entry and n lines A(fter)
+- `-B <n>` shows the entry and n lines B(efore)
+- `-C <n>` shows n lines before and after C(ontext)
 
 ```bash
 # -i ignore-case flag
-grep -i 'error text' log.txt
+grep -i "error text" log.txt
 
 # get line number
-grep -n 'critical Error occured' log.txt
+grep -n "critical Error occured" log.txt
 
 # -v, --invert-match (hide selected from results)
 grep -i error log.txt | grep -v CORS
 
 # -w, --word-regexp
 echo "something" | grep -w something
+
+# find with context
+grep -C10 "error" logs.txt
+
+# recursive search in ALL files in current folder and SUBFOLDERS
+grep -r "Monday"
+# stdout >> "calendar.txt: Blabla Monday Bla"
+
+# -h, --no-filename (hide filenames from output)
+grep -rh "Monday" 
+# stdout >> "Blabla Monday Bla"
+
+# grep "regexp" filename.abc
+grep "^A" names.txt
+
 ```
 
 ## Shortcuts
