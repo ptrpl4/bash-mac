@@ -38,6 +38,8 @@ emulator @Pixel_3a_API_34_extension_level_7_arm64-v8a -memory 1024 -partition-si
 
 #### Using local sockets
 
+link - https://developer.android.com/studio/run/emulator-networking
+
 use 10.0.2.2
 
 ```
