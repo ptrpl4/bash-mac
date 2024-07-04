@@ -294,8 +294,15 @@ bash program.sh 1> log.txt 2> errors.txt
 
 ## File Permissions
 
-```
-drwx------    38 my.username  staff   1.2K Mar  4 13:07 .zsh_sessions
+`drwx------    38 my.username  staff   1.2K Mar  4 13:07 .zsh_sessions`
+
+```bash
+# check prmissions
+ls -l echo.txt 
+-rw-r--r--@ 1 my.user  staff  24 Jun 27 21:15 echo.txt
+
+# change owner
+chown superman:marvel ./save_the_world.txt
 ```
 
 In addition to the user name and group, each file has associated access rights: r - read, w - write and x - execute. These permissions are set for three types of users: the Owner, users belonging to the same group (Group), and Other (those who are not included in the previous two groups).
@@ -576,6 +583,27 @@ echo 'Linux Ubuntu' | tr -d 'u'
 echo 'Repeated  spaces in  line' | tr -s [:space:]
 # Repeated spaces in line
 
+```
+
+### chown
+
+`chown user <option> /path/to/file`
+
+### chmod
+
+`chmod permissions filename`
+
+```bash
+chmod 751 modify_it_now.exe
+
+# modifying user permissions
+chmod u=rwx modify_it_now.exe
+
+# modifying group permissions
+chmod g=r+x modify_it_now.exe
+
+# modifying other permissions
+chmod o=r+w modify_it_now.exe
 ```
 
 ## Shortcuts
