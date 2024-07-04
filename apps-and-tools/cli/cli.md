@@ -636,6 +636,27 @@ tail -4 ascii_cat.txt
 tail -f logs.txt
 ```
 
+### which
+
+show paths to the executables
+
+```bash
+which node npm python3 zsh
+# /usr/local/bin/node
+# /usr/local/bin/npm
+# /opt/homebrew/bin/python3
+# /opt/homebrew/bin/zsh
+
+# find all exec
+which -a node npm python3 zsh 
+# /usr/local/bin/node
+# /usr/local/bin/npm
+# /opt/homebrew/bin/python3
+# /usr/bin/python3
+# /opt/homebrew/bin/zsh
+# /bin/zsh
+```
+
 ## Shortcuts
 
 ### macOS Terminal
@@ -961,7 +982,7 @@ done < "$filename"
 
 ### PATH
 
-`$PATH` environment variable. It sets the directories that the shell searches for executable files
+`$PATH` environment variable. It contains the directories that the shell searches for executable files
 It's a list of directory paths, separated by colons (`:`)
 
 `/bin` - default system executable files
