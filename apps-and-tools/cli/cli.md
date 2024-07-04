@@ -381,6 +381,11 @@ seq 10 # 1 2 3 4 5 6 7 8 9 10
 * `compgen -c | less` - all available commands
 * `file` - description of the type of the specified file. Works fine for files with no file extension
 
+### mv
+
+```bash
+mv secret.txt ./secrets
+```
 ### Test
 
 ```bash
