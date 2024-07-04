@@ -302,6 +302,19 @@ In addition to the user name and group, each file has associated access rights: 
 
 ![](../../aaa-assets/cli-2.png)
 
+## Multiple commands in one line
+
+```bash
+# No matter the first command run successfully or not, run the second command cmd2:
+cd; ls
+
+# Only when the first command cmd1 run successfully, run the second command cmd2
+cd && ls
+
+# Only when the first command cmd1 failed to run, run the second command cmd2
+cd || ls
+```
+
 ## Built-in commands
 
 #### examples
@@ -421,19 +434,6 @@ dirs -v
 popd
 ```
 
-### Multiple commands in one line
-
-```bash
-# No matter the first command run successfully or not, run the second command cmd2:
-cd; ls
-
-# Only when the first command cmd1 run successfully, run the second command cmd2
-cd && ls
-
-# Only when the first command cmd1 failed to run, run the second command cmd2
-cd || ls
-```
-
 ### Rename
 
 ```bash
@@ -515,6 +515,66 @@ grep -rh "Monday"
 
 # grep "regexp" filename.abc
 grep "^A" names.txt
+
+```
+
+### wc
+
+prints X newlines, X words, X bytes counts for file
+
+```bash
+wc echo.txt 
+# stdout >> 3       5      24 echo.txt
+
+echo "Hello world" | wc
+```
+
+If you do not specify any files and run `wc` - terminal will read standard data input. When you finish, go to a new line and press the `Ctrl + D` key combination.
+### cut
+
+command to cut out a part of the text from a file or printed via standard input
+
+text parts may be denoted by
+- characters `-c` 
+- fields `-f`
+- bytes `-b`
+- split text by separator `-d` (`TAB` by default)
+syntax
+`cut <options> <file path>`
+
+```bash
+# Winter: white: Weather: cold
+# Spring: green: Snow:melted
+# Summer: bright: Temperature: hot
+# Autumn: yellow: Leaves: cool
+
+cut -d ':' -f 1 seasons.txt
+# Winter
+# Spring
+# Summer
+# Autumn
+
+echo "The sky is blue" | cut -d ' ' -f 1
+# The
+```
+### tr
+
+can translate, squeeze, and delete characters from standard input, writing to standard output. The program processes the text character by character
+
+`tr <options>... <set1> <set2>`
+
+- `-d` delete
+- `-s` remove duplicates
+
+```bash
+echo lalala | tr a o
+# lololo
+
+echo 'Linux Ubuntu' | tr -d 'u'
+# Linx Ubnt
+
+echo 'Repeated  spaces in  line' | tr -s [:space:]
+# Repeated spaces in line
 
 ```
 
