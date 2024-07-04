@@ -380,8 +380,11 @@ seq 10 # 1 2 3 4 5 6 7 8 9 10
 * `cp` & `mv` - copy & move. syntax - \<target file> \<destination>
 * `compgen -c | less` - all available commands
 * `file` - description of the type of the specified file. Works fine for files with no file extension
+* `less` - interactive reader
 
 ### mv
+
+move files/folders
 
 ```bash
 mv secret.txt ./secrets
@@ -609,6 +612,28 @@ chmod g=r+x modify_it_now.exe
 
 # modifying other permissions
 chmod o=r+w modify_it_now.exe
+```
+
+### cat head tail
+
+```bash
+# one file
+cat unix_cat.txt 
+
+# multiple
+cat unix_cat.txt ascii_cat.txt
+
+# first 6 lines
+head -n6 ascii_cat.txt
+
+# first 8 characters
+head -c 8 unix_cat.txt
+
+# last 4 lines
+tail -4 ascii_cat.txt
+
+# tail --follow display the last lines in the file realtime (for logs)
+tail -f logs.txt
 ```
 
 ## Shortcuts
