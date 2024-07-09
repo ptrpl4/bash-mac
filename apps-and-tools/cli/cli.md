@@ -1025,14 +1025,46 @@ unalias key
 
 ## OS programs
 
-### ps - Processes
+### Processes
+
+Signals
+
+|              |                                                                                                                                                                                        |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SIGTERM (15) | Terminate signal. The default signal sent by the kernel to a process requesting it to terminate. It is a safe method of terminating processes since it allows the process to clean up. |
+| SIGINT (2)   | Interrupt signal. This signal performs the same function as pressing Ctrl+C on a terminal. It usually terminates the program.                                                          |
+| SIGKILL (9)  | Kill signal. Signal is not sent to the target process, the kernel directly terminates the process and so this signal cannot be ignored by the process.                                 |
+| SIGSTOP (19) | Stop signal. It causes a process to pause without terminating it. Similar to SIGKILL, this signal isn't directly sent to the target process and hence cannot be ignored.               |
+| SIGHUP (1)   | Hang up signal. It's used to reload a process.                                                                                                                                         |
 
 ```bash
 # report a snapshot of the current processes
-ps 
+ps
+
+# get list of signals
+kill -l
 
 # turn off proccess
-kill 123321
+kill 5642 5789 6754
+
+# Using the full name of the signal
+kill -SIGINT 5642
+
+# Using the short name of the signal
+kill -INT 5642
+
+# Using the signal number
+kill -2 5642
+
+# Sends SIGTERM signal to all the Firefox processes
+pkill firefox
+
+# Sends SIGKILL (9) signal to all the Firefox processes
+pkill -9 firefox
+
+# Sends SIGKILL signal to all the Chrome processes belonging to the user "jane":
+pkill -SIGKILL -u jane chrome
+
 ```
 
 ### MacOS - softwareupdate
