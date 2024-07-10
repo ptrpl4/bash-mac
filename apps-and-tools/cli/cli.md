@@ -367,6 +367,12 @@ telnet www.example.com 80
 # seq - to gen sequences
 seq 10 # 1 2 3 4 5 6 7 8 9 10
 
+# sort -r --reversed, -u --uniqe, -h --human-numeric-sort
+#  -f --ignore-case, 
+cat text.txt | sort
+
+# uniq -i --ignore-case, -c --count, -D --all-repeated,
+
 ```
 
 * `pwd` - **p**rint **w**orking **d**irectory
