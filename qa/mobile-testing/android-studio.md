@@ -2,7 +2,7 @@
 
 #### links
 
-* [https://developer..android.com/studio/run/emulator-commandline](https://developer.android.com/studio/run/emulator-commandline)
+* [emulator-commandline](https://developer.android.com/studio/run/emulator-commandline)
 
 #### shell config
 
