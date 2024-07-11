@@ -663,6 +663,53 @@ which -a node npm python3 zsh
 # /bin/zsh
 ```
 
+### find
+
+```bash
+find dotfiles -name .bashrc
+# dotfiles/.bashrc
+# dotfiles/backups/2024-03-08/.bashrc
+
+find dotfiles -name ".*rc"
+# dotfiles/.bashrc
+# dotfiles/.zshrc
+# dotfiles/backups/2024-03-08/.bashrc
+# dotfiles/backups/2024-03-08/.zshrc
+
+## flags
+find dotfiles -type f # - files
+find dotfiles -type d # - dirs
+find dotfiles -size +2G # by size
+find ./project -size -500M -size +10M -type f
+find /home -empty # empty dirs
+```
+
+`-exec` option
+
+syntax `-exec command {} \;`
+
+- `command` denotes the command you wish to execute on the search results. For example, `rm`, `mv`, `cp`
+- the `{}` refers to the search results
+- the `\;` denotes that the command ends.
+
+```bash
+find ./ -name "*.pdf" -exec cp {} ./documents \;
+find ./ -type f -name 'test*' -exec mv {} {}.renamed \;
+find ./tmp/test -type f -name '*.png' -exec mv {} ./tmp/pics \;
+find ./ -type f -exec chmod 755 {} \;
+
+
+# with grep
+find ./tmp -type f -exec grep -i cat {} \;
+find ./tmp -type f -exec grep -i cat {} \+ # result with filepath
+
+# with rm
+find ./test -type f -name "*.txt" -exec rm {} \;
+find ./tmp -type f -mtime +7 -exec rm {} \;
+# -mtime means data was modified `n*24` hours ago, (7*24)
+
+```
+
 ## Shortcuts
 
 ### macOS Terminal
