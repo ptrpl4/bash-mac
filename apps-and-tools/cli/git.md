@@ -423,6 +423,9 @@ index c703f5f..891ccac 100644
  Now you are
 +here
 '
+
+# check diff with master
+git show master
 ```
 
 The lines `--- a/our-file +++ b/our-file` show that the changes in the first file are marked by the `-` sign and changes in the second one are marked by `+`
