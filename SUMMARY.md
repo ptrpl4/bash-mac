@@ -78,6 +78,7 @@
   * [📖 Git](apps-and-tools/cli/git.md)
   * [🍻 HomeBrew](apps-and-tools/cli/brew.md)
   * [Make](apps-and-tools/cli/make.md)
+  * [Linux](apps-and-tools/cli/linux.md)
 * [🚚 Proxy Servers](apps-and-tools/proxy-servers/proxy-servers.md)
   * [🟩 NGINX](apps-and-tools/proxy-servers/nginx.md)
   * [⚖️ Load Balancers](apps-and-tools/proxy-servers/load-balancers.md)
