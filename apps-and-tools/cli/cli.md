@@ -712,22 +712,38 @@ find ./tmp -type f -mtime +7 -exec rm {} \;
 
 ## Shortcuts
 
-### macOS Terminal
+good to read - https://jvns.ca/blog/2024/07/08/readline/
+good to know - https://www.man7.org/linux/man-pages/man3/readline.3.html#EDITING_COMMANDS
 
-* Ctrl+R → fast history search
+### basics
+
+```bash
+# list of all the ctrl codes that your terminal supports
+stty -a
+```
+
+text:
+* Ctrl+W → delete the previous word
+* Ctrl+U → delete the whole line
 * Ctrl+A → Go to front of line
 * Ctrl+E → Go to end of line
-* Ctrl+C → Kill active process
-* Ctrl+K → Exit shell
 * Ctrl+L → Clear the screen
-* Ctrl+Z → Put process in bg
+* Ctrl+F → Go forward one character
+* Ctrl+B → Go back one character
+* Option+mouse-left-click → move the cursor
+* Option+right-arrow → Go forward one word (macOS)
+* Option+left-arrow → Go back one word (macOS)
+
+history:
+* Ctrl+R → fast history search
 * !! → Run previous command
 * ! → Run prev matching cmd
-* Ctrl+F → Go forward one character
-* Ctrl+x Ctrl+e → Open line in SEDITOR
-* Ctrl+B → Go back one character
-* Alf+F → Go forward one word
-* Alt+B → Go back one word
+
+process:
+* Ctrl+C → Kill active process
+* Ctrl+Z → Put process in bg.
+* Ctrl+K → Exit shell
+
 ### Nano
 - Ctrl+K → delete a line
 
