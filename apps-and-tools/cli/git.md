@@ -268,6 +268,9 @@ git log --no-merges
 # branches and changes
 git log --oneline --decorate
 
+# last 15, only names
+git log --oneline --format="%s" -n15
+
 # Reference logs
 git reflog
 ```
