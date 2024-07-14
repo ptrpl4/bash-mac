@@ -5,11 +5,13 @@ links:
 
 ## Components
 
-- **Workflows** - are composed of jobs that can be started by an event or by scheduling them to run at a specific time. Defined by a YAML file in the `.github/workflows` folder.
-- **Job** - a set of steps that run inside the same virtual machine runner, or inside a container. By default, they are executed in parallel. Each step is either a shell script that will be executed, or an _action_ that will be run. Steps are executed in order and are dependent on each other. Since each step is executed on the same runner, you can share data from one step to another.
-- **Events** - triggers an execution of a Workflow. It could be an internal GitHub event (push, release, fork, new issues with specific label, or a pull request), a scheduled event (triggered at a specific time), or an external event (triggered by a webhook call to the GitHub API).
-- **Actions** - (usually) created by public community  snippets for solving popular tasks in Workflows.
-- **Runners** - is a virtual machine that runs a job. The runner is responsible for looking for the available jobs, then executes each job at a time. After the job is finished running, the runner reports the progress and logs of the job to GitHub.
+- Workflows - composed of jobs that can be started by an event or at a specific time. 
+  Defined by a YAML file in the `.github/workflows` folder.
+- Job - set of steps inside the same virtual machine runner, or container. 
+  By default executed in parallel. Each step is a shell script or an _action_ that will be run. Steps are executed in order and are dependent on each other. Since each step is executed on the same runner, you can share data from one step to another.
+- Events - triggers an execution of a Workflow. Internal GitHub event, a scheduled event (triggered at a specific time), or an external event (triggered by a webhook).
+- Actions - (usually) created by public community snippets for solving popular tasks in Workflows.
+- Runners - is a virtual machine that runs a job.
 
 ## Logic
 
@@ -78,7 +80,7 @@ jobs:
           node-version: ${{ matrix.version }}
 ```
 
-### Actions
+## Actions
 
 - `uses` : This value takes the format of `action-name/version` or `github-repo-owner/repo-name`.
 - `with` : The value is an input if the action requires one.
@@ -94,4 +96,116 @@ steps:
    uses: user/repo-name@branch/version/commit-name
    with: #inputs
      fetch-depth: 0
+```
+
+## Environment variable
+
+### Scopes
+
+1. Workflow level: available to all jobs and all steps within those jobs
+2. Job level: can only be accessed by all steps within the specific job
+3. Step level: can only be accessed by a specific step
+
+### Access types
+
+1. Interpolation
+   syntax `${{ ... }}`
+   example `echo ${{ env.VARIABLE }}` 
+2. Variable reference
+   syntax `$VARNAME`
+   example `echo $VARIABLE`
+
+```yaml
+name: environment_variable_tutorial
+on: [push] 
+env:
+  # This custom environment variable is available to all the jobs and steps
+  TOPIC: Envs and secrets   
+jobs:
+  job1:
+    env:
+      # This custom environment variable is available for all the steps
+      section: Dev tools   
+    runs-on: ubuntu-latest 
+    steps:
+      - name: step 1
+        env:
+          # This custom environment variable is available to only this specific step
+          platform: the platform
+        # Referencing the environment variables
+        run: echo "Welcome to the ${{ env.TOPIC }} topic from $section section at $platform"
+```
+
+### Default environment variable
+
+[list](https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables) 
+
+good practice to incorporate environment variables when using actions to access the file system rather than using hard-coded file paths
+
+| Def. env var      | Description                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| GITHUB_ ACTOR     | Returns GitHub username or app name that started the workflow|
+| GITHUB_REPOSITORY | Returns name of the repository and owner                     |
+| GITHUB_REF        | will return Branch or tag ref that triggered the workflow    |
+
+```yaml
+name: env_tutorial
+on: [push] 
+
+jobs:
+  job1:
+    runs-on: macos-latest 
+    steps:
+      - name: step 1
+        run: |
+          echo "The job ID is $GITHUB_JOB"   
+          echo "The name of the event triggered by the workflow is $GITHUB_EVENT_NAME"  
+          echo "The name of the workflow is $GITHUB_WORKFLOW" 
+          echo "The runner of the workflow is $RUNNER_OS"
+```
+
+### Secrets
+
+1. Secret names must contain alphanumeric characters ([a-z], [A-Z], [0-9]).
+2. Secret names cannot contain space. Underscores (_) are allowed.
+3. Secret names cannot begin with a number.
+4. Secret names are not case-sensitive.
+
+Secret Types:
+
+1. Environment
+2. Repository
+3. Organizational-level
+
+examples:
+
+```yaml
+name: secret_workflow_repository
+
+on: [push]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step with a secret
+        run: |
+          echo "Hello World"
+          echo "This is a secret value: ${{ secrets.SECRET_VALUE }}"
+```
+
+```yaml
+name: secret_workflow_environment
+
+on: [push]
+
+jobs:
+  job1:
+    environment: production_secret
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Commands with a Secret
+        run: |
+          echo "Hello World!"
+          echo "This is a secret value: ${{ secrets.SECRET_VAL }}"
 ```
