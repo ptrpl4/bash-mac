@@ -26,6 +26,18 @@ comment
 '
 ```
 
+### quotes
+
+```bash
+# ''
+echo 'inside $SINGLE \\quotes\\ everything will be a `string`'
+
+# "" will suppress both word splitting and globbing
+# will process special characters like `$`, `\`, and `` ` ``
+echo "$HOME"
+# /Users/admin
+```
+
 ### man
 
 SYNOPSIS - most common options
