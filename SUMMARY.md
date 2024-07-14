@@ -142,3 +142,4 @@
   * [🏦 Hash](leftovers/other-tech/hash.md)
   * [🤓 regexp](leftovers/other-tech/regexp.md)
   * [🧊 Blockchain](leftovers/other-tech/blockchain.md)
+  * [Video games](leftovers/other-tech/video-games.md)
