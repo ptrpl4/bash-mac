@@ -1,19 +1,15 @@
----
-description: Personal Wiki Space
----
-
 # 🍞 README
 
 ### Greetings!
 
-Hi, its my personal Wiki Space.
+Hi, this is my personal Tech Wiki.
 
-New content in english, old content may contain notes in russian. \
-Main themes - programming languages, testing frameworks, tools and other tech stuff.
+New materials will be in English, older materials may contain notes in Russian, but translation is already underway.
+Main themes - programming languages - python, go, js, also testing frameworks and patterns, hardware devices like flipper zero, developer utilities and other fascinating tech stuff!
 
 ***
 
-<mark style="color:red;">Most of this content is written as a way to memorize and may contain errors and reductions</mark>
+Most of this content is written as a way to memorize and may contain errors and reductions
 
 ### Links
 
@@ -21,4 +17,4 @@ Created with [gitbook.com](https://gitbook.com)
 
 Hosted on [github.com](http://github.com)
 
-My contacts [ptrpl4.github.io](https://ptrpl4.github.io/)
+My contacts [ptrpl4.github.io](https://ptrpl4.github.io)
