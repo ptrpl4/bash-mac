@@ -109,6 +109,61 @@ echo $(( 9 / 2 ))  # You might expect 4.5
 echo $(( 9 / 2.5 ))
 # => bash: 9 / 2.5 : syntax error: invalid arithmetic operator (error token is ".5 ")
 ```
+
+### Curly Braces
+
+Single curly braces are used for expansion.
+
+```bash
+echo h{a,e,i,o,u}p
+# => hap hep hip hop hup
+echo "I am "{cool,great,awesome}
+# => I am cool I am great I am awesome
+
+echo {01..10}
+# => 01 02 03 04 05 06 07 08 09 10
+echo {01..10..3}
+# => 01 04 07 10
+```
+
+### Dollar Braces
+
+```bash
+# I want to say 'bananaification'
+fruit=banana
+echo $fruitification
+# => "" No output, because $fruitification is not a variable.
+echo ${fruit}ification
+# => bananaification
+```
+
+### Single square brackets 
+
+alternative to the built-in `test` command
+
+```bash
+VAR1=2
+VAR2=3
+
+if [ $VAR1 -lt $VAR2 ]
+then
+    echo "$VAR2 is greater than $VAR1"
+else
+    echo "$VAR1 is greater than $VAR2"
+fi
+```
+
+### Double square brackets
+
+```bash
+name="Alice"
+
+[[ $name = *c* ]] && echo "Name includes c"
+
+echo $?
+
+# Since string Alice contains the letter — c, the output will be 0
+```
 ### man
 
 SYNOPSIS - most common options
