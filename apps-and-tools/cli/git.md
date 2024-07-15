@@ -23,7 +23,9 @@ hints and examples
 
 * [https://wiki.nikiv.dev/programming/version-control/git](https://wiki.nikiv.dev/programming/version-control/git)
 
-<figure><img src="../../.gitbook/assets/git-1.png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/git-1.png)
+
+## Basics
 
 ### fast start
 
@@ -46,6 +48,29 @@ git push origin master
 
 # check status
 git status
+```
+
+### Semantic Commit Messages
+
+Format: `<type>(<scope>): <subject>`
+`(<scope>)` - optional
+
+Examples
+
+```bash
+# feat: add hat wobble
+# ^--^  ^------------^
+# |     |
+# |     +-> Summary in present tense.
+# |
+# +-------> Type: chore, docs, feat, fix, refactor, style, test.
+# 
+# chore-(project's maintenance or improvement)
+
+git commit -m 'test(e2e): add e2e for existing user scenario'
+git commit -m 'test(config): update config for existing user scenario'
+git commit -m 'chore: up playwright version to v1.41.2'
+git commit -m 'docs: update readme for playwright local run'
 ```
 
 ### config
@@ -72,12 +97,6 @@ git config --list --local
 git config --global alias.staash 'stash --all'
 git config --global alias.script !any-script.sh
 ```
-
-#### file stage
-
-1. _committed_, i.e., the file is already saved in your local database;
-2. _modified_, i.e., there are some unsaved changes in files;
-3. and prepared (_staged_), i.e., a modified file is marked for inclusion in the next commit.
 
 ### .gitignore
 
@@ -114,7 +133,7 @@ The following rules apply to templates in the .gitignore file:
 
 #### contents
 
-- - **HEAD**: A reference to the currently checked-out branch or commit. It tells Git which branch you're currently working on.
+- **HEAD**: A reference to the currently checked-out branch or commit. It tells Git which branch you're currently working on.
 - **config**: Contains the configuration settings for the repository, including remote repository URLs and branch information.
 - **description**: Used by GitWeb to display a short description of the repository.
 - **hooks**: Contains client or server-side scripts to trigger actions at certain points in Git's execution.
@@ -167,7 +186,7 @@ email = ptrpl4@mail.co
 
 ## Basic commands
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/git-2.jpeg)
 
 ### Add
 
@@ -180,7 +199,6 @@ git add my_file.txt
 # adding all files from your directory
 git add -A
 
-
 ### Commit
 
 ```bash
@@ -188,41 +206,6 @@ git add -A
 git commit -a -m 'feat: add browser check'
 # or
 git ci -am 'feat: add browser check'
-```
-
-#### Semantic Commit Messages
-
-Format: `<type>(<scope>): <subject>`
-`<scope>` is optional
-
-```
-feat: add hat wobble
-^--^  ^------------^
-|     |
-|     +-> Summary in present tense.
-|
-+-------> Type: chore, docs, feat, fix, refactor, style, or test.
-```
-
-Types
-
-* `feat`:
-* `fix`: 
-* `docs`: 
-* `style`:
-* `refactor`:
-* `test`:
-* `chore`: (project's maintenance or improvement)
-
-Examples
-
-```
-test: add e2e for existing user scenario
-test: refactor e2e for existing user scenario
-
-chore: up playwright version to v1.41.2
-
-docs: update readme for playwright local run
 ```
 
 ### Push
@@ -342,7 +325,7 @@ $ git checkout v2.0.0
 $ git checkout -b version2 v2.0.0
 ```
 
-### How to Rename
+### file renaming
 
 ```bash
 $ git mv README.md README
@@ -352,9 +335,9 @@ $ git rm README.md
 $ git add README
 ```
 
-### How to Reset
+### reset
 
-![](../../aaa-assets/22668.png)
+![](../../aaa-assets/git-3.png)
 
 ````bash
 # keeping the state of the staging area and working tree
@@ -481,7 +464,7 @@ $ git push origin --delete bad-branch-name
 
 ### Merge and Rebase
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-04-16 at 14.30.13.jpeg" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/git-4.jpeg)
 
 `rebase` is better to use only for local branches to not mess with changes in remote repo. Git creates **new commits** for each commit in your branch, applying them on top of the main branch. This means the commit history of your branch is rewritten to start from the latest commit of the main branch.
 
@@ -511,7 +494,7 @@ git rebase -i main
 
 #### GitHub Flow
 
-<figure><img src="../../.gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/git-5.png)
 
 **long-live main branch + short-live feature branches**
 
@@ -521,7 +504,7 @@ Gitflow is a legacy Git workflow that was originally a disruptive and novel stra
 
 **develop => feature => develop => release branch => master + tag version**
 
-<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/git-6.png)
 
 link
 
