@@ -38,6 +38,77 @@ echo "$HOME"
 # /Users/admin
 ```
 
+### Single Parentheses
+
+will run the commands inside in a subshell
+
+```bash
+# (its like subshell, all changes left inside)
+MYVAR='mytext'
+(MYVAR=new-text-inside-parentheses; echo $MYVAR)
+# new-text-inside-parentheses
+echo $MYVAR
+# mytext
+```
+
+### Dollar Single Parentheses
+
+This is for interpolating a subshell command output into a string
+
+```bash
+intro="My name is $( whoami )"
+echo $intro
+# => My name is ryan
+
+# And just to prove that it's a subshell...
+a=5
+b=$( a=1000; echo $a )
+echo $b
+# => 1000
+echo $a
+# => 5
+```
+### Double parentheses
+
+```bash
+i=4
+((i += 6))"; echo $i
+# 10
+
+((1+1)) # result = 2 = exit code 0 (success)
+echo $?  # Check the exit code of the last command
+# 0
+
+MYVAR=$((10/2)); echo $MYVAR
+# 5
+
+# You can't use it in an expression
+a=(( 4 + 1 ))
+# => bash: syntax error near unexpected token '('
+```
+
+### Dollar Double Parentheses
+
+Double Parentheses + Arithmetic Interpolation
+
+```bash
+a=$(( 16 + 2 ))
+message="I don't want to brag, but I have like $(( a / 2 )) friends."
+echo $message
+# => I don't want to brag, but I have like 9 friends."
+
+b=$(( a *= 2 )) # You can even do assignments.  The last value calculated will be the output.
+echo $b
+# => 36
+echo $a
+# => 36
+
+echo $(( 9 / 2 ))  # You might expect 4.5
+# => 4
+
+echo $(( 9 / 2.5 ))
+# => bash: 9 / 2.5 : syntax error: invalid arithmetic operator (error token is ".5 ")
+```
 ### man
 
 SYNOPSIS - most common options
