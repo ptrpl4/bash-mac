@@ -2,12 +2,12 @@
 
 ## Theory
 
-<figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/docker-1.jpeg)
 
 container **image** - an artifact/package which includes all necessary information to run the container\
 **container** eviroment - running instance of an image
 
-<figure><img src="../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/docker-2.jpeg)
 
 **registry** - image storage. official docker - [https://hub.docker.com/](https://hub.docker.com/)
 
