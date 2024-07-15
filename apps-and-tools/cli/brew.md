@@ -17,8 +17,9 @@ or [https://github.com/Homebrew/brew/releases/latest](https://github.com/Homebre
 
 ### Add to shell
 
-<pre class="language-bash"><code class="lang-bash"><strong>(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zshrc
-</strong></code></pre>
+```bash
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zshrc
+```
 
 ### Where to find
 
