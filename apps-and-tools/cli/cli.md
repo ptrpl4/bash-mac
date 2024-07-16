@@ -527,6 +527,10 @@ cat text.txt | sort
 
 # uniq -i --ignore-case, -c --count, -D --all-repeated,
 
+# base64
+echo 'admin:123456' | base64 | pbcopy
+echo 'YWRtaW46MTIzNDU2Cg==' | base64 -d
+
 ```
 
 * `pwd` - **p**rint **w**orking **d**irectory
