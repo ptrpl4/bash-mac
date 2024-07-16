@@ -211,6 +211,20 @@ long `--option` (dash-dash-option)
 
 [how-to-read-and-set-vars](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)
 
+persistent environment variables:
+- `PATH` — A list of directories separated by colons
+- `TEMP` — The location where processes can store temporary files
+- `HOME` — The path to where the home directory is located
+- `USER` — The currently logged-in user
+- `EDITOR` — The default text editor
+- `SHELL` — The path of the current user’s shell, such as bash or zsh
+- `LANG` — The current locales settings.
+
+system files:
+- `/etc/environment` is a system-wide configuration file used to store path and locale settings in the form of name-value pairs.
+- `/etc/profile` is a startup script file. Commands in this file are executed after user login.
+- `~/.bashrc` is a user-specific startup script file that contains configurations specific to the terminal. Commands in this file are executed when you run a new bash terminal.
+
 ```bash
 # set shell var
 MY_TASK="project-1955"
@@ -228,14 +242,16 @@ unset MY_TASK
 # check shell vars
 set | less
 
-# covert to env var
+# convert existing shell var to env var
 export TASK
+
+# create env var
+export NEWVAR="wow i am"
 
 # check env vars
 printenv | less
 ```
-
-
+****
 ### Glob patterns (Globbing)
 
 Typically globbing is about file names.
@@ -848,6 +864,21 @@ find ./tmp -type f -mtime +7 -exec rm {} \;
 
 ```
 
+### less
+
+Open a file for interactive reading, allowing scrolling and search
+
+```bash
+set | less
+
+# shortcuts - Forward search for a string (press `n`/`N` to go tonext/previous match):
+	# /something
+# Backward search for a string (press `n`/`N` to go to next/previous match): 
+	# ?something
+# Open the current file in an editor 
+	# v
+```
+
 ## Shortcuts
 
 good to read - https://jvns.ca/blog/2024/07/08/readline/
@@ -1200,6 +1231,8 @@ It's a list of directory paths, separated by colons (`:`)
 
 `/opt/homebrew/bin` - created and maintained by Brew
 
+`/etc/paths` - system path
+
 ```bash
 # a default $PATH looks like
 # search order from left /usr/local/bin to right /sbin
@@ -1208,6 +1241,9 @@ It's a list of directory paths, separated by colons (`:`)
 # update PATCH data for current shell session
 PATH=$PATH:/path-to-your-directory
 export PATH
+
+# pretty print
+printenv PATH | tr ':' '\n'
 ```
 
 ### alias - Aliases
