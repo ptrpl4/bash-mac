@@ -540,7 +540,6 @@ cat text.txt | sort
 * `cp` & `mv` - copy & move. syntax - \<target file> \<destination>
 * `compgen -c | less` - all available commands
 * `file` - description of the type of the specified file. Works fine for files with no file extension
-* `less` - interactive reader
 
 ### mv
 
@@ -871,6 +870,8 @@ Open a file for interactive reading, allowing scrolling and search
 ```bash
 set | less
 
+ps aux | lessn
+
 # shortcuts - Forward search for a string (press `n`/`N` to go tonext/previous match):
 	# /something
 # Backward search for a string (press `n`/`N` to go to next/previous match): 
@@ -878,6 +879,16 @@ set | less
 # Open the current file in an editor 
 	# v
 ```
+
+### ps
+
+```bash
+ps -Af # -A All, -f more details, -L with threads
+
+ps -m # Sort processes by memory usage
+ps -r # Sort processes by CPU usage
+```
+
 
 ## Shortcuts
 
