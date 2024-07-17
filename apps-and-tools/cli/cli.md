@@ -13,8 +13,7 @@ zsh & bash -  programs that runs in Terminal, interprets Unix commands, and inte
 - ShellCheck - https://www.shellcheck.net/
 ## Syntax
 
-### comments
-
+### comments '# '
 ```bash
 # one line
 
@@ -24,9 +23,13 @@ git status # inline
 long
 comment
 '
+
+# comment with shell output
+echo 'my words'
+# stdout > my words
 ```
 
-### quotes
+### quotes ' ' " "
 
 ```bash
 # ''
@@ -38,7 +41,8 @@ echo "$HOME"
 # /Users/admin
 ```
 
-### Single Parentheses
+### parentheses
+#### single ( )
 
 will run the commands inside in a subshell
 
@@ -51,7 +55,7 @@ echo $MYVAR
 # mytext
 ```
 
-### Dollar Single Parentheses
+#### dollar single $( )
 
 This is for interpolating a subshell command output into a string
 
@@ -68,7 +72,7 @@ echo $b
 echo $a
 # => 5
 ```
-### Double parentheses
+#### double (( ))
 
 ```bash
 i=4
@@ -87,7 +91,7 @@ a=(( 4 + 1 ))
 # => bash: syntax error near unexpected token '('
 ```
 
-### Dollar Double Parentheses
+#### dollar double $(( ))
 
 Double Parentheses + Arithmetic Interpolation
 
@@ -110,7 +114,7 @@ echo $(( 9 / 2.5 ))
 # => bash: 9 / 2.5 : syntax error: invalid arithmetic operator (error token is ".5 ")
 ```
 
-### Curly Braces
+### curly braces { }
 
 Single curly braces are used for expansion.
 
@@ -126,7 +130,7 @@ echo {01..10..3}
 # => 01 04 07 10
 ```
 
-### Dollar Braces
+### dollar braces ${ }
 
 ```bash
 # I want to say 'bananaification'
@@ -137,7 +141,8 @@ echo ${fruit}ification
 # => bananaification
 ```
 
-### Single square brackets 
+### square brackets
+#### single \[ ]
 
 alternative to the built-in `test` command
 
@@ -153,7 +158,7 @@ else
 fi
 ```
 
-### Double square brackets
+#### double \[\[ ]]
 
 ```bash
 name="Alice"
@@ -166,8 +171,19 @@ echo $?
 ```
 ### man
 
-SYNOPSIS - most common options
-OPTIONS - full list of options
+**parameter** - argument or data that is passed to a command
+**options** - command line options or flags, that modify the operation. short `-o` (dash-o), long `--option` (dash-dash-option)
+
+syntax:
+- `<param>` - `< >` required param
+- `[param]` - `[ ]`optional param, only one
+- `[params...]` - `[...]` optional param, can be more than one `...`
+
+examples:
+- `fetch formula|cask [...]` fetch command optionally can take more than one params of formula or cask
+- `[-f file | string]` -f can take one of two parameters file or string
+- `[--user username]` `[-i interval]` optional options with params
+- `[-h]` option without param
 
 ```bash
 # man examples
@@ -178,35 +194,11 @@ say
 [-f file | string ...]
 
 # one more
-command [params...] [-options…] | command_two <param> [-options…]
+command [params...] [-options...] | command_two <param> [-options...]
 
 # another example
 cmd [param 1|param 2] 
 ```
-
-Square brackets`[]` means optional
-
-Pipe `|` means "OR" when there can only be one of two option
-
-`[-f file | string ...]` it could be OR file OR string, not both
-
-The value of an option is indicated by a space after the option value itself. If the option value contains special or space characters, it must be enclosed in quotation marks, double or single
-
-### params
-
-Required parameters are written in angle brackets \<param> \
-optional – in square brackets \[param]\
-To indicate that a parameter can be repeated, ellipses are used \[params...]
-If only one of several parameters can be chosen, vertical bars are used: \[param 1|param 2]
-
-### options
-
-`--options` are **command line options** or **flags**, that modify the operation
-
-short option `-o`
-
-long `--option` (dash-dash-option)
-
 ### variables
 
 [how-to-read-and-set-vars](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)
@@ -251,7 +243,7 @@ export NEWVAR="wow i am"
 # check env vars
 printenv | less
 ```
-****
+
 ### Glob patterns (Globbing)
 
 Typically globbing is about file names.
@@ -282,6 +274,7 @@ Some symbols have the same meaning. These are symbols like curly brackets `{}` a
 
 `.` in regex means the same as what `?` means in globbing
 `.*` in regex means the same as `*` in glob patterns
+
 ### pipe
 
 | pipe - connect output first command to input next command
@@ -478,7 +471,7 @@ cd || ls
 
 ## Built-in commands
 
-#### examples
+### examples
 
 To check all available built-in system commands, type `man builtin`
 To quit manual press q, f (forward), b (backward).
@@ -545,85 +538,17 @@ echo -n 'YWRtaW46MTIzNDU2' | base64 -d
 * `compgen -c | less` - all available commands
 * `file` - description of the type of the specified file. Works fine for files with no file extension
 
-### mv
+### Navigation and File Management
 
-move files/folders
-
-```bash
-mv secret.txt ./secrets
-```
-### Test
-
-```bash
-test expression
-or
-[ expression ]
-```
-
-Test command options
-https://kapeli.com/cheat_sheets/Bash_Test_Operators.docset/Contents/Resources/Documents/index
-
-| **Option** | **Purpose**                                                      | **Syntax**                  |
-| ---------- | ---------------------------------------------------------------- | --------------------------- |
-| -eq        | True if two integers are equal                                   | `if [ INT1 -eq INT2 ]`      |
-| -ne        | True if two integers are not equal                               | `if [ INT1 -ne INT2 ]`      |
-| -gt        | True if the first integer is greater than the second             | `if [ INT1 -gt INT2 ]`      |
-| -ge        | True if the first integer is greater than or equal to the second | `if [ INT1 -ge INT2 ]`      |
-| -lt        | True if the first integer is smaller than the second             | `if [ INT1 -lt INT2 ]`      |
-| -le        | True if the first integer is smaller than or equal to the second | `if [ INT1 -le INT2 ]`      |
-| =          | True if two strings are equal                                    | `if [ STRING1 = STRING2 ]`  |
-| !=         | True if two strings are not equal                                | `if [ STRING1 != STRING2 ]` |
-| \>         | True if the first string is greater than the second              | `if [ STRING1 \> STRING2 ]` |
-| -z         | True if the string is null                                       | `if [ -z STRING ]`          |
-| -n         | True if the string is not null                                   | `if [ -n STRING ]`          |
-| -e         | True if file exists                                              | `if [ -e FILE ]`            |
-| -d         | True if the file is a directory                                  | `if [ -d FILE ]`            |
-| -s         | True if the file is not empty (non-zero file size)               | `if [ -s FILE ]`            |
-
-| Logical Operators |             |                         |
-| ----------------- | ----------- | ----------------------- |
-| Option            | Purpose     | Syntax                  |
-| !                 | Logical NOT | `if [ ! EXPR ]`         |
-| -a                | Logical AND | `if [ EXPR1 -a EXPR2 ]` |
-| -o                | Logical OR  | `if [ EXPR1 -o EXPR2 ]` |
-
-### History
-
-stores in `.zsh_history` / `.bash_history`
-
-```bash
-# show history
-history
-
-# clear history
-history -c 
-```
-
-### Navigation
-
-```bash
-# add dir to stack
-pushd
-
-# check stack list
-dirs -v
-
-# delete 0 dir from stack and open it
-popd
-```
-
-### Rename
-
-```bash
-# rename
-touch file
-mv file renamed-file
-
-# make copy
-cp renamed-file renamed-file-copy
-```
-
-### rm - Delete
+- **cd**: Change directory.
+- **pwd**: Print working directory.
+- **ls**: List directory contents.
+- **mkdir**: Make directories.
+- **rmdir**: Remove directories.
+- **cp**: Copy files or directories.
+- **touch**: Change file timestamps or create empty files.
+- **ln**: Create links between files.
+#### rm
 
 ```bash
 rm folder/filename
@@ -632,195 +557,24 @@ rm folder/filename
 rm -rf foder/foldername
 ```
 
-### eval
+#### mv
 
-execute a string as a shell command
-
-```bash
-# example
-command="echo \$(date)"
-eval "$command"
-```
-
-### read
-
-reads the contents of STDIN and saving as shell var
-
-```
-read first
-# stdin > second
-
-echo first
-# stdout > second
-
-set | grep first
-# stdout > first=second
-```
-
-### grep
-
-global regular expression print.
-prints lines with found text
-
-flags
-- `-A <n>` shows the entry and n lines A(fter)
-- `-B <n>` shows the entry and n lines B(efore)
-- `-C <n>` shows n lines before and after C(ontext)
+move, rename files/folders
 
 ```bash
-# -i ignore-case flag
-grep -i "error text" log.txt
+# move
+mv secret.txt ./secrets
 
-# get line number
-grep -n "critical Error occured" log.txt
+# rename
+touch file
+mv file renamed-file
 
-# -v, --invert-match (hide selected from results)
-grep -i error log.txt | grep -v CORS
-
-# -w, --word-regexp
-echo "something" | grep -w something
-
-# find with context
-grep -C10 "error" logs.txt
-
-# recursive search in ALL files in current folder and SUBFOLDERS
-grep -r "Monday"
-# stdout >> "calendar.txt: Blabla Monday Bla"
-
-# -h, --no-filename (hide filenames from output)
-grep -rh "Monday" 
-# stdout >> "Blabla Monday Bla"
-
-# grep "regexp" filename.abc
-grep "^A" names.txt
-
+# make copy
+cp renamed-file renamed-file-copy
 ```
 
-### wc
 
-prints X newlines, X words, X bytes counts for file
-
-```bash
-wc echo.txt 
-# stdout >> 3       5      24 echo.txt
-
-echo "Hello world" | wc
-```
-
-If you do not specify any files and run `wc` - terminal will read standard data input. When you finish, go to a new line and press the `Ctrl + D` key combination.
-### cut
-
-command to cut out a part of the text from a file or printed via standard input
-
-text parts may be denoted by
-- characters `-c` 
-- fields `-f`
-- bytes `-b`
-- split text by separator `-d` (`TAB` by default)
-syntax
-`cut <options> <file path>`
-
-```bash
-# Winter: white: Weather: cold
-# Spring: green: Snow:melted
-# Summer: bright: Temperature: hot
-# Autumn: yellow: Leaves: cool
-
-cut -d ':' -f 1 seasons.txt
-# Winter
-# Spring
-# Summer
-# Autumn
-
-echo "The sky is blue" | cut -d ' ' -f 1
-# The
-```
-### tr
-
-can translate, squeeze, and delete characters from standard input, writing to standard output. The program processes the text character by character
-
-`tr <options>... <set1> <set2>`
-
-- `-d` delete
-- `-s` remove duplicates
-
-```bash
-echo lalala | tr a o
-# lololo
-
-echo 'Linux Ubuntu' | tr -d 'u'
-# Linx Ubnt
-
-echo 'Repeated  spaces in  line' | tr -s [:space:]
-# Repeated spaces in line
-
-```
-
-### chown
-
-`chown user <option> /path/to/file`
-
-### chmod
-
-`chmod permissions filename`
-
-```bash
-chmod 751 modify_it_now.exe
-
-# modifying user permissions
-chmod u=rwx modify_it_now.exe
-
-# modifying group permissions
-chmod g=r+x modify_it_now.exe
-
-# modifying other permissions
-chmod o=r+w modify_it_now.exe
-```
-
-### cat head tail
-
-```bash
-# one file
-cat unix_cat.txt 
-
-# multiple
-cat unix_cat.txt ascii_cat.txt
-
-# first 6 lines
-head -n6 ascii_cat.txt
-
-# first 8 characters
-head -c 8 unix_cat.txt
-
-# last 4 lines
-tail -4 ascii_cat.txt
-
-# tail --follow display the last lines in the file realtime (for logs)
-tail -f logs.txt
-```
-
-### which
-
-show paths to the executables
-
-```bash
-which node npm python3 zsh
-# /usr/local/bin/node
-# /usr/local/bin/npm
-# /opt/homebrew/bin/python3
-# /opt/homebrew/bin/zsh
-
-# find all exec
-which -a node npm python3 zsh 
-# /usr/local/bin/node
-# /usr/local/bin/npm
-# /opt/homebrew/bin/python3
-# /usr/bin/python3
-# /opt/homebrew/bin/zsh
-# /bin/zsh
-```
-
-### find
+#### find
 
 ```bash
 find dotfiles -name .bashrc
@@ -867,6 +621,276 @@ find ./tmp -type f -mtime +7 -exec rm {} \;
 
 ```
 
+### File Content and Text Processing
+
+- **cat**: Concatenate and display files.
+- **echo**: Display a line of text.
+- **sed**: Stream editor for filtering and transforming text.
+- **awk**: Pattern scanning and text processing language.
+
+#### read
+
+reads the contents of STDIN and saving as shell var
+
+```
+read first
+# stdin > second
+
+echo first
+# stdout > second
+
+set | grep first
+# stdout > first=second
+```
+
+#### cat head tail
+
+```bash
+# one file
+cat unix_cat.txt 
+
+# multiple
+cat unix_cat.txt ascii_cat.txt
+
+# first 6 lines
+head -n6 ascii_cat.txt
+
+# first 8 characters
+head -c 8 unix_cat.txt
+
+# last 4 lines
+tail -4 ascii_cat.txt
+
+# tail --follow display the last lines in the file realtime (for logs)
+tail -f logs.txt
+```
+
+#### grep
+
+global regular expression print.
+prints lines with found text
+
+flags
+- `-A <n>` shows the entry and n lines A(fter)
+- `-B <n>` shows the entry and n lines B(efore)
+- `-C <n>` shows n lines before and after C(ontext)
+
+```bash
+# -i ignore-case flag
+grep -i "error text" log.txt
+
+# get line number
+grep -n "critical Error occured" log.txt
+
+# -v, --invert-match (hide selected from results)
+grep -i error log.txt | grep -v CORS
+
+# -w, --word-regexp
+echo "something" | grep -w something
+
+# find with context
+grep -C10 "error" logs.txt
+
+# recursive search in ALL files in current folder and SUBFOLDERS
+grep -r "Monday"
+# stdout > "calendar.txt: Blabla Monday Bla"
+
+# -h, --no-filename (hide filenames from output)
+grep -rh "Monday" 
+# stdout > "Blabla Monday Bla"
+
+# grep "regexp" filename.abc
+grep "^A" names.txt
+
+```
+
+#### cut
+
+command to cut out a part of the text from a file or printed via standard input
+
+text parts may be denoted by
+- characters `-c` 
+- fields `-f`
+- bytes `-b`
+- split text by separator `-d` (`TAB` by default)
+syntax
+`cut <options> <file path>`
+
+```bash
+# Winter: white: Weather: cold
+# Spring: green: Snow:melted
+# Summer: bright: Temperature: hot
+# Autumn: yellow: Leaves: cool
+
+cut -d ':' -f 1 seasons.txt
+# Winter
+# Spring
+# Summer
+# Autumn
+
+echo "The sky is blue" | cut -d ' ' -f 1
+# The
+```
+
+### Shell Scripting
+
+- **return**: Exit a function or script with a status
+- **exit**: Exit the shell or terminate a script
+- **trap**: Run a command when a signal is received
+- **source**: Run commands from a file in the current shell session
+
+#### eval
+
+execute a string as a shell command
+
+```bash
+# example
+command="echo \$(date)"
+eval "$command"
+```
+
+### System and procceses
+
+#### uptime
+
+load average of the system for the last 1, 5, and 15 minutes
+
+```bash
+uptime                 
+# stdout > 13:42  up 8 days,  1:28, 3 users, load averages: 2.00 2.56 2.88
+```
+
+#### ps
+
+```bash
+ps -Af # -A All, -f more details, -L with threads
+
+ps -m # Sort processes by memory usage
+ps -r # Sort processes by CPU usage
+```
+
+### test
+
+```bash
+test expression
+or
+[ expression ]
+```
+
+Test command options
+https://kapeli.com/cheat_sheets/Bash_Test_Operators.docset/Contents/Resources/Documents/index
+
+| **Option** | **Purpose**                                                      | **Syntax**                  |
+| ---------- | ---------------------------------------------------------------- | --------------------------- |
+| -eq        | True if two integers are equal                                   | `if [ INT1 -eq INT2 ]`      |
+| -ne        | True if two integers are not equal                               | `if [ INT1 -ne INT2 ]`      |
+| -gt        | True if the first integer is greater than the second             | `if [ INT1 -gt INT2 ]`      |
+| -ge        | True if the first integer is greater than or equal to the second | `if [ INT1 -ge INT2 ]`      |
+| -lt        | True if the first integer is smaller than the second             | `if [ INT1 -lt INT2 ]`      |
+| -le        | True if the first integer is smaller than or equal to the second | `if [ INT1 -le INT2 ]`      |
+| =          | True if two strings are equal                                    | `if [ STRING1 = STRING2 ]`  |
+| !=         | True if two strings are not equal                                | `if [ STRING1 != STRING2 ]` |
+| \>         | True if the first string is greater than the second              | `if [ STRING1 \> STRING2 ]` |
+| -z         | True if the string is null                                       | `if [ -z STRING ]`          |
+| -n         | True if the string is not null                                   | `if [ -n STRING ]`          |
+| -e         | True if file exists                                              | `if [ -e FILE ]`            |
+| -d         | True if the file is a directory                                  | `if [ -d FILE ]`            |
+| -s         | True if the file is not empty (non-zero file size)               | `if [ -s FILE ]`            |
+
+| Logical Operators |             |                         |
+| ----------------- | ----------- | ----------------------- |
+| Option            | Purpose     | Syntax                  |
+| !                 | Logical NOT | `if [ ! EXPR ]`         |
+| -a                | Logical AND | `if [ EXPR1 -a EXPR2 ]` |
+| -o                | Logical OR  | `if [ EXPR1 -o EXPR2 ]` |
+
+### history
+
+stores in `.zsh_history` / `.bash_history`
+
+```bash
+# show history
+history
+
+# clear history
+history -c 
+```
+
+### wc
+
+prints X newlines, X words, X bytes counts for file
+
+```bash
+wc echo.txt 
+# stdout >> 3       5      24 echo.txt
+
+echo "Hello world" | wc
+```
+
+If you do not specify any files and run `wc` - terminal will read standard data input. When you finish, go to a new line and press the `Ctrl + D` key combination.
+### tr
+
+can translate, squeeze, and delete characters from standard input, writing to standard output. The program processes the text character by character
+
+`tr <options>... <set1> <set2>`
+
+- `-d` delete
+- `-s` remove duplicates
+
+```bash
+echo lalala | tr a o
+# lololo
+
+echo 'Linux Ubuntu' | tr -d 'u'
+# Linx Ubnt
+
+echo 'Repeated  spaces in  line' | tr -s [:space:]
+# Repeated spaces in line
+
+```
+
+### chown
+
+`chown user <option> /path/to/file`
+
+### chmod
+
+`chmod permissions filename`
+
+```bash
+chmod 751 modify_it_now.exe
+
+# modifying user permissions
+chmod u=rwx modify_it_now.exe
+
+# modifying group permissions
+chmod g=r+x modify_it_now.exe
+
+# modifying other permissions
+chmod o=r+w modify_it_now.exe
+```
+
+### which
+
+show paths to the executables
+
+```bash
+which node npm python3 zsh
+# /usr/local/bin/node
+# /usr/local/bin/npm
+# /opt/homebrew/bin/python3
+# /opt/homebrew/bin/zsh
+
+# find all exec
+which -a node npm python3 zsh 
+# /usr/local/bin/node
+# /usr/local/bin/npm
+# /opt/homebrew/bin/python3
+# /usr/bin/python3
+# /opt/homebrew/bin/zsh
+# /bin/zsh
+```
+
 ### less
 
 Open a file for interactive reading, allowing scrolling and search
@@ -883,16 +907,6 @@ ps aux | lessn
 # Open the current file in an editor 
 	# v
 ```
-
-### ps
-
-```bash
-ps -Af # -A All, -f more details, -L with threads
-
-ps -m # Sort processes by memory usage
-ps -r # Sort processes by CPU usage
-```
-
 
 ## Shortcuts
 
