@@ -528,8 +528,8 @@ cat text.txt | sort
 # uniq -i --ignore-case, -c --count, -D --all-repeated,
 
 # base64
-echo 'admin:123456' | base64 | pbcopy
-echo 'YWRtaW46MTIzNDU2Cg==' | base64 -d
+echo -n 'admin:123456' | base64 | pbcopy # -n Do not print newline char
+echo -n 'YWRtaW46MTIzNDU2' | base64 -d
 
 ```
 
