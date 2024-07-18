@@ -1,7 +1,6 @@
 ---
 description: Asynchronous event-driven JavaScript runtime
 ---
-
 # NodeJS
 
 ### Links
@@ -25,6 +24,8 @@ n lts # note! on macOS you probably should change app directory to avoid r/w res
 #### nvm
 
 ```bash
+mkdir nvm
+NVM_DIR="${HOME}/nvm"
 
 # install nvm (check latest https://github.com/nvm-sh/nvm/releases)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
