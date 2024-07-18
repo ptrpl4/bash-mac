@@ -519,11 +519,6 @@ seq 10 # 1 2 3 4 5 6 7 8 9 10
 cat text.txt | sort
 
 # uniq -i --ignore-case, -c --count, -D --all-repeated,
-
-# base64
-echo -n 'admin:123456' | base64 | pbcopy # -n Do not print newline char
-echo -n 'YWRtaW46MTIzNDU2' | base64 -d
-
 ```
 
 * `pwd` - **p**rint **w**orking **d**irectory
@@ -908,6 +903,17 @@ ps aux | lessn
 	# v
 ```
 
+### base64
+
+**Base64** is an encoding scheme for translating binary data to text using 64 ASCII symbols.
+
+![](../../aaa-assets/cli-3-base64.svg)
+
+```bash
+echo -n 'admin:123456' | base64 | pbcopy # -n Do not print newline char
+echo -n 'YWRtaW46MTIzNDU2' | base64 -d
+```
+
 ## Shortcuts
 
 good to read - https://jvns.ca/blog/2024/07/08/readline/
@@ -1171,7 +1177,6 @@ for i in $(seq 1 2 5); do
   done
 ```
 
-
 ### while
 
 ```bash
@@ -1239,7 +1244,6 @@ while read line; do
     echo "Your line:  $line" >> junior.txt
 done < "$filename"
 ```
-
 
 ## Shell config
 
