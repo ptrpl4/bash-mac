@@ -1,7 +1,6 @@
 ---
 description: Representational State Transfer
 ---
-
 # 🤼 REST API
 
 This architectural style was developed to help easily build convenient web services. A service written with regard to REST rules is called **RESTful**. It is not a standard, but rather a set of useful recommendations
@@ -21,8 +20,8 @@ This architectural style was developed to help easily build convenient web servi
 
 In the REST concept, interaction with resources is performed by calling the URL of the resource and four basic HTTP methods: `GET`, `POST`, `PUT`, `DELETE`.
 
-<figure><img src="../../../.gitbook/assets/68860.png" alt=""><figcaption></figcaption></figure>
+![](../../../aaa-assets/rest-api-1.png)
 
 ### Status Codes
 
-<figure><img src="../../../.gitbook/assets/86586.png" alt=""><figcaption></figcaption></figure>
+![](../../../aaa-assets/rest-api-2.png)
