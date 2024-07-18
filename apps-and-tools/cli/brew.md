@@ -31,11 +31,11 @@ Homebrew installs packages to their own directory and then symlinks their files
 ```bash
 # mac Apps
 brew --caskroom
-/opt/homebrew/Caskroom
+# => /opt/homebrew/Caskroom
 
 # installed packages (symlinks to /bin)
 brew --cellar
-/opt/homebrew/Cellar
+# => /opt/homebrew/Cellar
 ```
 
 ### Commands
@@ -62,7 +62,10 @@ brew list --formula
 brew list --cask
 
 # check deps
-brew uses --installed node
+brew uses --installed node # who uses node
+
+brew deps --installed # all packs with deps
+brew deps --installed --graph # nice graph
 
 # a diagram of packages and dependencies
 brew deps --tree --installed
