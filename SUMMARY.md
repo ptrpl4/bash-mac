@@ -24,7 +24,6 @@
   * [🖊️ Linter](programming/js/linter.md)
   * [Browser](programming/js/browser.md)
   * [NodeJS](programming/js/node.md)
-  * [NPM & Yarn](programming/js/npm-and-yarn.md)
   * [TypeScript](programming/js/typescript.md)
 * [🏃‍♂️ Go](programming/go.md)
 
