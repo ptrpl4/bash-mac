@@ -4,21 +4,19 @@
 
 #### Links
 
-{% embed url="https://hexlet.io/courses/intro_to_programming/lessons/types/theory_unit" %}
-
-[https://www.educative.io/answers/statically-v-dynamically-v-strongly-v-weakly-typed-languages](https://www.educative.io/answers/statically-v-dynamically-v-strongly-v-weakly-typed-languages)
+- hexlet.io/courses/intro_to_programming/lessons/types/theory_unit
+- educative.io/answers/statically-v-dynamically-v-strongly-v-weakly-typed-languages
 
 ### Type checking
 
-<figure><img src="../../.gitbook/assets/изображение (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/basic-knowledge-1.png)
 
-Static type-checking - checking types during compilation process.
+- Static type-checking - checking types during compilation process
+- Dynamic type-checking - checking types at run time
 
-Dynamc type-checking - checking types at run time.
+### Strong and weak typing
 
-### Strong and weak typing <a href="#firstheading" id="firstheading"></a>
-
-<figure><img src="../../.gitbook/assets/изображение (1) (1).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/basic-knowledge-2.png)
 
 Strong versus weak is about HOW SERIOUS DO YOU GET while checking the types.
 
@@ -39,9 +37,15 @@ var = var + "dot";   #type-error, string and int cannot be concatenated.
 print(var);
 ```
 
-<figure><img src="../../.gitbook/assets/изображение (9) (2) (1).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/basic-knowledge-3.png)
 
-## SOLID
+## Design principles
+
+- Don't Repeat Yourself (**DRY**)
+- You Ain't Gonna Need It (**YAGNI**)
+- Keep It Simple, Stupid (**KISS**)
+
+### SOLID
 
 [Single responsibility principle](https://en.wikipedia.org/wiki/Single\_responsibility\_principle)\
 A [class](https://en.wikipedia.org/wiki/Class\_\(computer\_programming\)) should only have a single responsibility, that is, only changes to one part of the software's specification should be able to affect the specification of the class.
