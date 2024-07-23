@@ -165,3 +165,20 @@ Can be used to improve an existing product
 ### A/B Testing
 
 Experiment to check user statistic in group A with half of users (current flow with no changes) and group B with second half (new flow that expects to increase some metrics).
+
+## Architectural patterns
+
+### MVC (Model-View-Controller)
+
+MVC is an architectural pattern separating an application into three logical components
+- Model is responsible for all data and its related logic;
+- View is responsible for presenting data to users or handling user interaction;
+- Controller informs the Model of the need for changes.
+
+### MVP (Model-View-Presenter)
+
+tbd
+
+### MVVM (Model-View-ViewModel)
+
+tbd
