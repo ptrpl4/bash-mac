@@ -1,12 +1,8 @@
----
-description: Cascading Style Sheets
----
-
 # CSS
 
 ## Basic syntax
 
-![](<../../../.gitbook/assets/изображение (3) (1) (1) (1) (1).png>)
+![](../../../aaa-assets/css-1.png)
 
 CSS syntax consists of two main parts: a **selector** and a **declaration block** that is put in curly brackets.
 
@@ -14,9 +10,9 @@ CSS syntax consists of two main parts: a **selector** and a **declaration block*
 selector { property: value; }
 ```
 
-[**https://qhmit.com/css/properties/**](https://qhmit.com/css/properties/)
+[qhmit.com/css/properties](https://qhmit.com/css/properties/)
 
-## **Selectors**
+## Selectors
 
 **Selector** indicates which HTML elements the styles will be applied to.
 
@@ -32,7 +28,7 @@ You can write multiple selectors separated by commas, and all styles specified i
 h1, p { color: red; }
 ```
 
-### **class Selector**
+### class Selector
 
 **CSS class Selector** is useful when you need to give a lot of different elements the same look. The name of the selector is taken from the value of the `class` attribute of the desired HTML tag. A dot `.` is placed in front of it so that the browser understands that this is a class selector.
 
@@ -140,7 +136,7 @@ color: #FFFF00;
 
 ## Margin and padding
 
-![](<../../../.gitbook/assets/image (10) (1).png>)
+![](../../../aaa-assets/css-2.png)
 
 There are four properties for setting margins/padding for each side of the element: top, right, bottom, left. Definitions can be stated in any CSS unit (px, em, %).
 
