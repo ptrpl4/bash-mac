@@ -1,12 +1,8 @@
----
-description: HyperText Markup Language
----
-
 # HTML
 
 Структура
 
-![](<../../../.gitbook/assets/изображение (2).png>)
+![](../../../aaa-assets/html-1.png)
 
 ## Sample
 
@@ -31,11 +27,19 @@ description: HyperText Markup Language
 </html>
 ```
 
-[https://www.w3schools.com/tags/tag\_head.asp](https://www.w3schools.com/tags/tag\_head.asp)
+- [https://www.w3schools.com/tags/tag\_head.asp](https://www.w3schools.com/tags/tag\_head.asp)
+- [https://www.w3schools.com/tags/ref\_keyboardshortcuts.asp](https://www.w3schools.com/tags/ref\_keyboardshortcuts.asp)
 
-[https://www.w3schools.com/tags/ref\_keyboardshortcuts.asp](https://www.w3schools.com/tags/ref\_keyboardshortcuts.asp)
+## Comments
 
-### Tags
+Comments can be used anywhere on the page **except** the `<title>` tag.
+
+```
+<!-- Any text -->
+```
+
+
+## Tags
 
 The first thing to say about **unpaired tags** is that they have _no content_.
 
@@ -55,9 +59,8 @@ Most common tags:
 <li> — list item;
 ```
 
-[https://www.w3schools.com/tags/default.asp](https://www.w3schools.com/tags/default.asp)
-
-[https://www.w3schools.com/tags/](https://www.w3schools.com/tags/)
+- [https://www.w3schools.com/tags/default.asp](https://www.w3schools.com/tags/default.asp)
+- [https://www.w3schools.com/tags/](https://www.w3schools.com/tags/)
 
 ### Audio tag
 
@@ -90,9 +93,9 @@ most commonly used attributes:
 * `loop` cycles the audio file
 * `muted` mutes the sound when playing an audio file
 
-![](<../../../.gitbook/assets/image (13).png>)
+![](../../../aaa-assets/html-2.png)
 
-### Attributes
+## Attributes
 
 The syntax of HTML attributes is also simple:\
 each consists of **names** and **values**. The following example shows the syntax of attributes.
@@ -112,14 +115,14 @@ all list - [https://www.w3schools.com/tags/ref\_attributes.asp](https://www.w3sc
 `enctype` — encoding type.\
 `http-equiv` — HTTP equivalent.
 
-### id attribute <a href="#id-attribute" id="id-attribute"></a>
+### id attribute
 
 * When creating a unique name, you can use only Latin alphabet characters (A-Z, a-z), numbers, hyphens, and underscores. For example, names `Navbar`, `nav_item` and `margin-b-40` will be correct.
 * The `id` name should not contain spaces. That is, names like `our products` will not be valid.
 * The `id` can be used for only one element; you will not be able to work with multiple elements that have identifiers with the same name.
 * Identifiers are case-sensitive: `id="FirstHeader"` and `id="firstheader"` are different identifiers.
 
-### class attribute <a href="#class-attribute" id="class-attribute"></a>
+### class attribute 
 
 When you need to give many different elements the same look, `class` attribute comes in handy. As a value, it takes any name you come up with. Unlike the `id` attribute, a web page can have many elements with the same value for the `class` attribute. Consider an example:
 
@@ -143,9 +146,9 @@ In this example, the p element has two classes at once: `black` and `big-text`.
 **Block-level elements** are mostly used to create the structure of web pages or logically divide an HTML document into parts.\
 [https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level\_elements#Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level\_elements#Elements)
 
-![](<../../../.gitbook/assets/изображение (6).png>)
+![](../../../aaa-assets/html-3.png)
 
-![](<../../../.gitbook/assets/изображение (7).png>)
+![](../../../aaa-assets/html-4.png)
 
 In HTML5, however, the elements are not just divided into block-level and inline, but also grouped by meaning and purpose, representing **categories of content**.
 
@@ -155,7 +158,7 @@ They can contain only data and other inline items. The exception to this rule is
 
 Before and after, the browser doesn't make a line break. Take a look at the behavior of inline elements and compare it with that of block-level elements:
 
-![](<../../../.gitbook/assets/изображение (8).png>)
+![](../../../aaa-assets/html-5.png)
 
 ## External CSS
 
@@ -180,7 +183,7 @@ CSS styles can be written directly in HTML markup instead of a separate file. Su
   </head>
 ```
 
-### Connecting JavaScript <a href="#connecting-javascript-to-html" id="connecting-javascript-to-html"></a>
+## Connecting JavaScript
 
 ```markup
 <!DOCTYPE html>
@@ -195,11 +198,11 @@ CSS styles can be written directly in HTML markup instead of a separate file. Su
 </html>
 ```
 
-### DOM <a href="#briefly-about-dom" id="briefly-about-dom"></a>
+## DOM 
 
 **DOM** (**Document Object Model)** is the representation of an HTML document as a tree structure that various programs can work with.
 
-![](<../../../.gitbook/assets/image (11).png>)
+![](../../../aaa-assets/html-6.png)
 
 ## Fonts
 
@@ -208,12 +211,4 @@ CSS styles can be written directly in HTML markup instead of a separate file. Su
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap" 
           rel="stylesheet">
   </head>
-```
-
-## Comments
-
-Comments can be used anywhere on the page **except** the `<title>` tag.
-
-```
-<!-- Any text -->
 ```

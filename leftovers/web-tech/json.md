@@ -1,6 +1,3 @@
----
-description: JavaScript Object Notation
----
 # JSON
 
 #### links

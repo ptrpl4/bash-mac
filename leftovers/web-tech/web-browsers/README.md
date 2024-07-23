@@ -1,12 +1,11 @@
 # 🎠 Web Browsers
 
-[https://v8.dev/](https://v8.dev/)links
+#### links
 
-rendering - [https://saucelabs.com/resources/blog/how-cross-browser-testing-and-rendering-engines-work-together](https://saucelabs.com/resources/blog/how-cross-browser-testing-and-rendering-engines-work-together)
-
-JavaScript Engines - [https://www.geeksforgeeks.org/introduction-to-javascript-engines/](https://www.geeksforgeeks.org/introduction-to-javascript-engines/)
-
-V8 - [https://nodejs.dev/en/learn/the-v8-javascript-engine/](https://nodejs.dev/en/learn/the-v8-javascript-engine/)
+- [https://v8.dev/](https://v8.dev/)
+- rendering - [https://saucelabs.com/resources/blog/how-cross-browser-testing-and-rendering-engines-work-together](https://saucelabs.com/resources/blog/how-cross-browser-testing-and-rendering-engines-work-together)
+- JavaScript Engines - [https://www.geeksforgeeks.org/introduction-to-javascript-engines/](https://www.geeksforgeeks.org/introduction-to-javascript-engines/)
+- V8 - [https://nodejs.dev/en/learn/the-v8-javascript-engine/](https://nodejs.dev/en/learn/the-v8-javascript-engine/)
 
 ## Browser engines
 
@@ -31,4 +30,3 @@ JavaScript is generally considered an interpreted language, but modern JavaScrip
 [JavaScriptCore](https://developer.apple.com/documentation/javascriptcore) - Safari
 
 [ChakraCore](https://github.com/chakra-core/ChakraCore) - Edge (dead)
-
