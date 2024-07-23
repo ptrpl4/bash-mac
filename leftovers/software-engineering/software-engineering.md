@@ -1,7 +1,3 @@
----
-description: how and why
----
-
 # 👯 Software Engineering
 
 What is Program And what is Product
@@ -10,71 +6,58 @@ If we're talking about the final product (for the business, for the customer), i
 
 Frederick P. Brooks suggested that it would take 3 times as long as the program itself. But that was in 1975...
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-06-03 at 20.51.24.png" alt="" width="563"><figcaption><p>Evolution of the programming systems product</p></figcaption></figure>
+![](../../aaa-assets/software-engineering-1.jpeg)
+Evolution of the programming systems product
 
 ### src
 
-lecture - [https://www.youtube.com/playlist?list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBsg2Mb](https://www.youtube.com/playlist?list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBsg2Mb)
+- lecture - youtube.com/playlist?list=PLlb7e2G7aSpSidTs7HuqUX\_NeslBsg2Mb
 
 ## Requirements to requirements
 
-• Singularity (1 req = one piece of text)
-
-• Completeness (req is final)
-
-• Consistency (1 req can’t be against 2 req)
-
-• Atomicity (req can’t be divided)
-
-• Traceability (by whom, for what)
-
-• Relevance (we need it)
-
-* Feasibility (We can do it)
-
-• Unambiguity (only one meaning)
-
-• Mandatory (why we need it, if no?)
-
-• Verifiability (we can see, measure changes)
+- Singularity (1 req = one piece of text)
+- Completeness (req is final)
+- Consistency (1 req can’t be against 2 req)
+- Atomicity (req can’t be divided)
+- Traceability (by whom, for what)
+- Relevance (we need it)
+- Feasibility (We can do it)
+- Unambiguity (only one meaning)
+- Mandatory (why we need it, if no?)
+- Verifiability (we can see, measure changes)
 
 ## Requirements analysis
 
-• Feasibility analysis of requirements&#x20;
-
-• Prioritization of requirements&#x20;
-
-• Requirements planing&#x20;
-
-• Creating a dictionary of terms&#x20;
-
-• Creating a context diagram&#x20;
-
-• Creation of user interface and technical prototypes
+- Feasibility analysis of requirements
+- Prioritization of requirements
+- Requirements planing
+- Creating a dictionary of terms
+- Creating a context diagram
+- Creation of user interface and technical prototypes
 
 ## Project components
 
 ### Components
 
-* Money
-* Time
-* People
-* Features
-* Quality
+- Money
+- Time
+- People
+- Features
+- Quality
 
 ### Priority
 
-* Must
-* Want
-* Skip
+- Must
+- Want
+- Skip
 
-## Product specification&#x20;
+## Product specification
 
-<img src="../../.gitbook/assets/image (2).png" alt="" data-size="original">
+![](../../aaa-assets/software-engineering-2.jpeg)
 
 ## Processes
 
-![](<../../.gitbook/assets/image (3) (2).png>)
+![](../../aaa-assets/software-engineering-3.png)
 
 ## SDLC Methodology
 
@@ -82,15 +65,15 @@ SDLC - Software development life cycle.
 
 ### Waterfall model
 
-<figure><img src="../../.gitbook/assets/изображение (9).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/software-engineering-4.png)
 
 ### Spiral model
 
-<figure><img src="../../.gitbook/assets/изображение (10).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/software-engineering-5.png)
 
 ### Agile Methodology
 
-link - [https://agilemanifesto.org/](https://agilemanifesto.org/)
+- link - [https://agilemanifesto.org/](https://agilemanifesto.org/)
 
 #### Manifesto for Agile Software Development
 
@@ -122,15 +105,15 @@ link - [http://www.extremeprogramming.org](http://www.extremeprogramming.org/)
 
 link - [http://www.extremeprogramming.org/rules.html](http://www.extremeprogramming.org/rules.html)
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/software-engineering-6.png)
 
 #### Main practices of XP
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/software-engineering-7.png)
 
 ## Therms
 
-### **Bus Factor**
+### Bus Factor
 
 Bus factor refers to the number of key people on a team who, if they were suddenly hit by a metaphorical bus, would significantly impact the team's ability to function or complete a project.
 
@@ -140,7 +123,7 @@ Bus factor refers to the number of key people on a team who, if they were sudden
 
 ## UI/UX
 
-<figure><img src="../../.gitbook/assets/DcFiTc0XkAA5djT_auto_x2.jpg" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/software-engineering-8.jpg)
 
 ## Design Strategy
 
@@ -162,9 +145,9 @@ Could be based on need of typical users types & typical user groups. We can crea
 
 User-based design
 
-* focus on the actions that are taken to solve the problem&#x20;
-* there may be many users&#x20;
-* users may not know what they want&#x20;
+* focus on the actions that are taken to solve the problem
+* there may be many users
+* users may not know what they want
 * people adapt well to technology
 
 ### Data-driven design
@@ -173,7 +156,12 @@ Data-based design
 
 Can be used to improve an existing product
 
-[https://designlab.com/blog/what-is-data-driven-design](https://designlab.com/blog/what-is-data-driven-design)&#x20;
+[https://designlab.com/blog/what-is-data-driven-design](https://designlab.com/blog/what-is-data-driven-design)
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-01 at 15.19.16_auto_x2.jpg" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/software-engineering-9.jpg)
 
+## Product Discovery
+
+### A/B Testing
+
+Experiment to check user statistic in group A with half of users (current flow with no changes) and group B with second half (new flow that expects to increase some metrics).

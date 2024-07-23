@@ -1,28 +1,24 @@
----
-description: Structured Query Language
----
-
 # 📑 SQL
 
 ## Basics
 
 links:
 
-[https://tproger.ru/translations/sql-recap/](https://tproger.ru/translations/sql-recap/) - recap \[ru]\
-[https://postgrespro.ru/docs/postgresql/12/index](https://postgrespro.ru/docs/postgresql/12/index) - docs \[ru]\
-[https://geekbrains.ru/chapters/1157](https://geekbrains.ru/chapters/1157) - course\
-[https://www.youtube.com/playlist?list=PLtPJ9lKvJ4oh5SdmGVusIVDPcELrJ2bsT](https://www.youtube.com/playlist?list=PLtPJ9lKvJ4oh5SdmGVusIVDPcELrJ2bsT) - lections
+- [recap (ru)](https://tproger.ru/translations/sql-recap/)
+- [docs (ru)](https://postgrespro.ru/docs/postgresql/12/index)
+- [course (ru)](https://geekbrains.ru/chapters/1157)
+- [lectures](https://www.youtube.com/playlist?list=PLtPJ9lKvJ4oh5SdmGVusIVDPcELrJ2bsT)
 
 #### Therms
 
-СУБД - система управления базами данных\
-RDBMS - Relational Database Management System
+- СУБД - система управления базами данных
+- RDBMS - Relational Database Management System
 
-#### Правила проектирования:
+#### Правила проектирования
 
 * Правило №1: Все элементы внутри ячеек должны быть атомарными (ячейка содержит только одно значение, не несколько).
 * Правило №2 Все строки должны быть различными.
-* Правило №3 Любое поле таблицы, не входящее в состав первичного ключа,функционально полно зависит от первичного ключа.
+* Правило №3 Любое поле таблицы, не входящее в состав первичного ключа, функционально полно зависит от первичного ключа.
 * Правило №4 Все предыдущие правила, и плюс то, что любой функциональный атрибут зависит только от первичного ключа.
 
 #### Comments
@@ -61,7 +57,7 @@ SOURCE <path_of_.sql_file>;
 DROP DATABASE <database_name>;
 ```
 
-#### **Ограничения целостности при использовании CREATE TABLE**
+#### Ограничения целостности при использовании CREATE TABLE
 
 Может понадобиться создать ограничения для определённых столбцов в таблице. При создании таблицы можно задать следующие ограничения:
 
@@ -157,9 +153,9 @@ SELECT <col_name1>, <col_name2>, …
 
 В запросе можно задавать следующие условия:
 
-* сравнение текста;
-* сравнение численных значений;
-* логические операции AND (и), OR (или) и NOT (отрицание)
+- сравнение текста;
+- сравнение численных значений;
+- логические операции AND (и), OR (или) и NOT (отрицание)
 
 #### GROUP BY
 
@@ -213,8 +209,8 @@ SELECT <col_name1>, <col_name2>, …
 Оператор `LIKE` используется в `WHERE`, чтобы задать шаблон поиска похожего значения.\
 Есть два свободных оператора, которые используются в `LIKE`:
 
-* `%` (ни одного, один или несколько символов);
-* `_` (один символ).
+- `%` (ни одного, один или несколько символов)
+- `_` (один символ)
 
 ```sql
 SELECT <col_name1>, <col_name2>, …
@@ -224,7 +220,7 @@ SELECT <col_name1>, <col_name2>, …
 
 #### IN
 
-С помощью `IN` можно указать несколько значений для оператора `WHERE`:
+С помощью `IN` можно указать несколько значений для оператора `WHERE`
 
 ```sql
 SELECT <col_name1>, <col_name2>, …
@@ -234,16 +230,17 @@ SELECT <col_name1>, <col_name2>, …
 
 #### JOIN
 
-JOIN used to join two or more tables by using common attributes within them.
+JOIN used to join two or more tables by using common attributes within them
 
-![](<../../../.gitbook/assets/image (9) (1).png>)
+![](../../../aaa-assets/sql-1.png)
 
-<pre class="language-sql"><code class="lang-sql"><strong>-- JOIN = INNER JOIN
-</strong><strong>
-</strong><strong>SELECT &#x3C;col_name1>, &#x3C;col_name2>, …
-</strong>  FROM &#x3C;table_name1>
-  JOIN &#x3C;table_name2>
-  ON &#x3C;table_name1.col_namex> = &#x3C;table2.col_namex>;
+```sql
+-- JOIN = INNER JOIN
+
+SELECT <col_name1>, <col_name2>, …
+  FROM <table_name1>
+  JOIN <table_name2>
+  ON <table_name1.col_namex> = <table2.col_namex>;
 
 -- One more example
 SELECT p.name AS product_name,
@@ -259,7 +256,7 @@ FROM products LEFT OUTER JOIN product_types
 ON products.type_id = product_types.id
 
 -- FULL OUTER JOIN - Join everything in all tables
-</code></pre>
+```
 
 ### Aggregate functions
 
@@ -273,7 +270,7 @@ ON products.type_id = product_types.id
 
 ## Subquery
 
-[https://www.w3resource.com/sql/subqueries/nested-subqueries.php](https://www.w3resource.com/sql/subqueries/nested-subqueries.php)
+- [info](https://www.w3resource.com/sql/subqueries/nested-subqueries.php)
 
 An SQL Subquery, is a SELECT query within another query. It is also known as Inner query or Nested query and the query containing it is the outer query.
 
@@ -300,15 +297,15 @@ SELECT job_id,AVG(salary)
 * DQl – Data Query Language
 * DCL – Data Control Language
 
-<figure><img src="../../../.gitbook/assets/изображение (5) (2).png" alt=""><figcaption></figcaption></figure>
+![](../../../aaa-assets/sql-2.png)
 
 ## Scheme
 
 example scheme for online shop
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2024-01-31 at 15.42.36.png" alt=""><figcaption></figcaption></figure>
+![](../../../aaa-assets/sql-3.png)
 
-## Transaction - TCL <a href="#sql_transactions" id="sql_transactions"></a>
+## Transaction - TCL
 
 A transaction is a unit or sequence of work that is performed on a database. Transactions are accomplished in a logical order, whether in a manual fashion by a user or automatically by some sort of a database program.
 
@@ -319,7 +316,7 @@ A transaction is a unit or sequence of work that is performed on a database. Tra
 * Isolation − enables transactions to operate independently of and transparent to each other.
 * Durability − ensures that the result or effect of a committed transaction persists in case of a system failure.
 
-#### Transactional Control Commands <a href="#transactional_control_commands" id="transactional_control_commands"></a>
+#### Transactional Control Commands
 
 Transactional control commands are only used with the DML Commands such as - INSERT, UPDATE and DELETE. They cannot be used while creating tables or dropping them because these operations are automatically committed in the database. Following commands are used to control transactions.
 
@@ -327,5 +324,3 @@ Transactional control commands are only used with the DML Commands such as - INS
 * ROLLBACK − to roll back the changes.
 * SAVEPOINT − creates points within the groups of transactions in which to ROLLBACK.
 * SET TRANSACTION − Places a name on a transaction.
-
-\

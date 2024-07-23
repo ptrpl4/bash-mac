@@ -1,6 +1,6 @@
 # Semantic versioning
 
-The basic structure of semantic versioning, also known as [semver](https://semver.org/), goes like this:&#x20;
+The basic structure of semantic versioning, also known as [semver](https://semver.org/), goes like this:
 
 `Major.Minor.Patch`
 
