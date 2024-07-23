@@ -1,6 +1,6 @@
 # 🪨 Monolith and Microservices
 
-## Monolith&#x20;
+## Monolith
 
 * all components part of single unit
 * deployed and developed as one unit
