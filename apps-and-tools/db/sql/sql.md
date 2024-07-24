@@ -1,13 +1,16 @@
 # 📑 SQL
 
+Structured Query Language - [domain-specific programming language](https://www.jetbrains.com/mps/concepts/domain-specific-languages/) / [data manipulation language](https://www.techopedia.com/definition/1179/data-manipulation-language-dml) designed to handle data in tables.
+
 ## Basics
 
-links:
+#### links
 
 - [recap (ru)](https://tproger.ru/translations/sql-recap/)
 - [docs (ru)](https://postgrespro.ru/docs/postgresql/12/index)
 - [course (ru)](https://geekbrains.ru/chapters/1157)
 - [lectures](https://www.youtube.com/playlist?list=PLtPJ9lKvJ4oh5SdmGVusIVDPcELrJ2bsT)
+- [database-design-101](https://hyperskill.org/blog/post/database-design-101)
 
 #### Therms
 
@@ -21,6 +24,14 @@ links:
 * Правило №3 Любое поле таблицы, не входящее в состав первичного ключа, функционально полно зависит от первичного ключа.
 * Правило №4 Все предыдущие правила, и плюс то, что любой функциональный атрибут зависит только от первичного ключа.
 
+### Syntax
+
+It's necessary to end each SQL statement with a semicolon, also known as a statement terminator.
+
+```sql
+SELECT * FROM Census;
+```
+
 #### Comments
 
 ```sql
@@ -33,6 +44,16 @@ Multiline
 comment
  */
 ```
+
+## SQL Command types
+
+* DDL – Data Definition Language
+* DML – Data Manipulation Language
+* TCL – Transaction Control Language
+* DQl – Data Query Language
+* DCL – Data Control Language
+
+![](../../../aaa-assets/sql-2.png)
 
 ## Define - DDL
 
@@ -57,7 +78,7 @@ SOURCE <path_of_.sql_file>;
 DROP DATABASE <database_name>;
 ```
 
-#### Ограничения целостности при использовании CREATE TABLE
+### Ограничения целостности при использовании CREATE TABLE
 
 Может понадобиться создать ограничения для определённых столбцов в таблице. При создании таблицы можно задать следующие ограничения:
 
@@ -67,7 +88,7 @@ DROP DATABASE <database_name>;
 
 Можно задать больше одного первичного ключа. В этом случае получится составной первичный ключ.
 
-#### Сведения о таблице
+### Сведения о таблице
 
 Можно просмотреть различные сведения (тип значений, является ключом или нет) о столбцах
 
@@ -75,28 +96,9 @@ DROP DATABASE <database_name>;
 DESCRIBE <table_name>; 
 ```
 
-### View
-
-`View` — это виртуальная таблица SQL, созданная в результате выполнения выражения. Она содержит строки и столбцы и очень похожа на обычную SQL-таблицу. `View` всегда показывает самую свежую информацию из базы данных.
-
-**Создание**
-
-```sql
-CREATE VIEW <view_name> AS
-  SELECT <col_name1>, <col_name2>, …
-  FROM <table_name>
-  WHERE <condition>; 
-```
-
-**Удаление**
-
-```sql
-DROP VIEW <view_name>; 
-```
-
 ## Manipulation - DML
 
-#### INSERT
+### INSERT
 
 ```sql
 INSERT INTO <table_name> (<col_name1>, <col_name2>, <col_name3>, …)
@@ -107,7 +109,7 @@ INSERT INTO <table_name>
 VALUES (<value1>, <value2>, <value3>, …); 
 ```
 
-#### UPDATE
+### UPDATE
 
 ```sql
 UPDATE <table_name>
@@ -115,7 +117,7 @@ SET <col_name1> = <value1>, <col_name2> = <value2>, ...
 WHERE <condition>; 
 ```
 
-#### DELETE
+### DELETE
 
 ```sql
 DELETE FROM <table_name>
@@ -124,7 +126,7 @@ WHERE ID = 2;
 DELETE FROM <table_name>
 ```
 
-#### DROP
+### DROP
 
 ```sql
 DROP TABLE <table_name>; 
@@ -132,7 +134,7 @@ DROP TABLE <table_name>;
 
 ## Query - DQL
 
-#### SELECT
+### SELECT
 
 ```sql
 SELECT <col_name1>, <col_name2>, …
@@ -157,7 +159,7 @@ SELECT <col_name1>, <col_name2>, …
 - сравнение численных значений;
 - логические операции AND (и), OR (или) и NOT (отрицание)
 
-#### GROUP BY
+### GROUP BY
 
 Оператор `GROUP BY` часто используется с агрегатными функциями, такими как `COUNT`, `MAX`, `MIN`, `SUM` и `AVG`, для группировки выходных значений.
 
@@ -167,7 +169,7 @@ SELECT <col_name1>, <col_name2>, …
   GROUP BY <col_namex>; 
 ```
 
-#### HAVING
+### HAVING
 
 Ключевое слово `HAVING` было добавлено в SQL потому, что `WHERE` не может быть использовано для работы с агрегатными функциями.
 
@@ -184,7 +186,7 @@ GROUP BY hair
 HAVING COUNT(*) BETWEEN 50 AND 300;
 ```
 
-#### ORDER BY
+### ORDER BY
 
 `ORDER BY` используется для сортировки результатов запроса по убыванию или возрастанию, отсортирует по возрастанию, если не будет указан способ сортировки `ASC` или `DESC`.
 
@@ -194,7 +196,7 @@ SELECT <col_name1>, <col_name2>, …
   ORDER BY <col_name1>, <col_name2>, … ASC|DESC; 
 ```
 
-#### BETWEEN
+### BETWEEN
 
 `BETWEEN` используется для выбора значений данных из определённого промежутка. Могут быть использованы числовые и текстовые значения, а также даты.
 
@@ -204,7 +206,7 @@ SELECT <col_name1>, <col_name2>, …
   WHERE <col_namex> BETWEEN <value1> AND <value2>; 
 ```
 
-#### LIKE
+### LIKE
 
 Оператор `LIKE` используется в `WHERE`, чтобы задать шаблон поиска похожего значения.\
 Есть два свободных оператора, которые используются в `LIKE`:
@@ -218,7 +220,7 @@ SELECT <col_name1>, <col_name2>, …
   WHERE <col_namex> LIKE <pattern>; 
 ```
 
-#### IN
+### IN
 
 С помощью `IN` можно указать несколько значений для оператора `WHERE`
 
@@ -228,7 +230,7 @@ SELECT <col_name1>, <col_name2>, …
   WHERE <col_namen> IN (<value1>, <value2>, …); 
 ```
 
-#### JOIN
+### JOIN
 
 JOIN used to join two or more tables by using common attributes within them
 
@@ -289,15 +291,24 @@ SELECT job_id,AVG(salary)
     GROUP BY job_id);
 ```
 
-## Command types
+## View
 
-* DDL – Data Definition Language
-* DML – Data Manipulation Language
-* TCL – Transaction Control Language
-* DQl – Data Query Language
-* DCL – Data Control Language
+`View` — это виртуальная таблица SQL, созданная в результате выполнения выражения. Она содержит строки и столбцы и очень похожа на обычную SQL-таблицу. `View` всегда показывает самую свежую информацию из базы данных.
 
-![](../../../aaa-assets/sql-2.png)
+**Создание**
+
+```sql
+CREATE VIEW <view_name> AS
+  SELECT <col_name1>, <col_name2>, …
+  FROM <table_name>
+  WHERE <condition>; 
+```
+
+**Удаление**
+
+```sql
+DROP VIEW <view_name>; 
+```
 
 ## Scheme
 
@@ -309,14 +320,14 @@ example scheme for online shop
 
 A transaction is a unit or sequence of work that is performed on a database. Transactions are accomplished in a logical order, whether in a manual fashion by a user or automatically by some sort of a database program.
 
-#### ACID
+### ACID
 
 * Atomicity − ensures that all operations within the work unit are completed successfully. Otherwise, the transaction is aborted at the point of failure and all the previous operations are rolled back to their former state.
 * Consistency − ensures that the database properly changes states upon a successfully committed transaction.
 * Isolation − enables transactions to operate independently of and transparent to each other.
 * Durability − ensures that the result or effect of a committed transaction persists in case of a system failure.
 
-#### Transactional Control Commands
+### Transactional Control Commands
 
 Transactional control commands are only used with the DML Commands such as - INSERT, UPDATE and DELETE. They cannot be used while creating tables or dropping them because these operations are automatically committed in the database. Following commands are used to control transactions.
 
