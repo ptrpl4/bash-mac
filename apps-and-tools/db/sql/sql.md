@@ -15,7 +15,10 @@ Structured Query Language - [domain-specific programming language](https://www.j
 #### Therms
 
 - СУБД - система управления базами данных
+  DBMS - Database Management System
 - RDBMS - Relational Database Management System
+- schema describes how you organize the data
+- Metadata holds structural and statistical information
 
 #### Правила проектирования
 
@@ -262,7 +265,7 @@ ON products.type_id = product_types.id
 
 ### Aggregate functions
 
-Эти функции используются для получения совокупного результата, относящегося к рассматриваемым данным. Ниже приведены общеупотребительные агрегированные функции:
+Эти функции используются для получения совокупного результата, относящегося к рассматриваемым данным
 
 * `COUNT (col_name)` — возвращает количество строк;
 * `SUM (col_name)` — возвращает сумму значений в данном столбце;
@@ -295,18 +298,14 @@ SELECT job_id,AVG(salary)
 
 `View` — это виртуальная таблица SQL, созданная в результате выполнения выражения. Она содержит строки и столбцы и очень похожа на обычную SQL-таблицу. `View` всегда показывает самую свежую информацию из базы данных.
 
-**Создание**
-
 ```sql
+-- Create
 CREATE VIEW <view_name> AS
   SELECT <col_name1>, <col_name2>, …
   FROM <table_name>
-  WHERE <condition>; 
-```
+  WHERE <condition>;
 
-**Удаление**
-
-```sql
+-- Delete
 DROP VIEW <view_name>; 
 ```
 
@@ -331,7 +330,40 @@ A transaction is a unit or sequence of work that is performed on a database. Tra
 
 Transactional control commands are only used with the DML Commands such as - INSERT, UPDATE and DELETE. They cannot be used while creating tables or dropping them because these operations are automatically committed in the database. Following commands are used to control transactions.
 
-* COMMIT − to save the changes.
-* ROLLBACK − to roll back the changes.
-* SAVEPOINT − creates points within the groups of transactions in which to ROLLBACK.
-* SET TRANSACTION − Places a name on a transaction.
+- COMMIT − to save the changes
+- ROLLBACK − to roll back the changes
+- SAVEPOINT − creates points within the groups of transactions in which to ROLLBACK
+- SET TRANSACTION − Places a name on a transaction
+
+## Data types
+
+### Numerical
+
+- `INTEGER` - range of mathematical integers (usually from -2147483648 to +2147483647)
+- `DECIMAL` - 
+	- Scale is - count of digits to the right of the decimal point
+	- Precision - total count of digits in the number
+- `FLOAT`
+
+![](../../../aaa-assets/sql-4.svg)
+
+### Text
+
+- `VARCHAR(n)` - represents a string of symbols of varying lengths not longer than `n`
+
+### Boolean
+- `BOOLEAN`
+	- `TRUE`
+	- `FALSE`
+
+### Example
+
+```sql
+CREATE TABLE census (
+    id INTEGER,
+    name VARCHAR(20),
+    birth_place_latitude REAL,
+    year_income DECIMAL(20,2),
+    is_parent BOOLEAN
+);
+```
