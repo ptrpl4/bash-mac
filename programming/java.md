@@ -2,9 +2,10 @@
 
 ## Writing, compiling and running Java programs
 
-![Main logic](<../../.gitbook/assets/1 (2) (2).jpg>)
 
-![JVM, JRE and JDK](<../../.gitbook/assets/JVM-JRE-JDK  (1).jpg>)
+![Main logic](../aaa-assets/java-1.jpg)
+
+![JVM, JRE and JDK](../aaa-assets/java-2.jpg)
 
 * **JVM** executes compiled Java programs;
 * **JRE** includes **JVM** and standard libraries: it is needed **to run** Java programs;
@@ -14,7 +15,7 @@
 
 * To insert a live template into your code, you can use **Code | Insert Live Template** or **Ctrl(⌘)+J.**
 
-## **Terminal commands**
+## Terminal commands
 
 ### create + run
 
@@ -64,13 +65,13 @@ System.out.println('3'); // printing a character that represents a digit
 * a name cannot start with a digit;
 * a name must not be a keyword (`class`, `static`, `int` are illegal names).
 
-### Naming conventions for variables <a href="#naming-conventions-for-variables" id="naming-conventions-for-variables"></a>
+### Naming conventions for variables
 
 * if a variable name is a single word it should be in lowercase (for instance: `number`, `price`);
 * if a variable name includes multiple words it should be in `lowerCamelCase`, i.e. the first word should be in lowercase and each word after the first should have its first letter written in uppercase (for instance: `numberOfCoins`);
 * variable names should not start with `_` and `$` characters, although they are allowed;
 
-### Alternative forms of declaration:
+### Alternative forms of declaration
 
 * Standart
 
@@ -116,7 +117,7 @@ System.out.println(10 % 3) // prints 1, because 10 divided by 3 leaves a remaind
 System.out.println(1 + 3 * 4 - 2); // prints 11
 ```
 
-### Unary operators <a href="#unary-operators" id="unary-operators"></a>
+### Unary operators
 
 ```java
 System.out.println(+5); // prints 5
@@ -124,9 +125,9 @@ System.out.println(-8);  // prints -8
 System.out.println(-(100 + 4)); // prints -104
 ```
 
-### The precedence order <a href="#the-precedence-order" id="the-precedence-order"></a>
+### The precedence order 
 
-{% embed url="https://introcs.cs.princeton.edu/java/11precedence/" %}
+https://introcs.cs.princeton.edu/java/11precedence/
 
 * parentheses
 * unary plus/minus
@@ -137,7 +138,7 @@ System.out.println(-(100 + 4)); // prints -104
 
 The Java programming language supports three kinds of comments.
 
-### **End-of-line comments** <a href="#strong-end-of-line-comments-strong" id="strong-end-of-line-comments-strong"></a>
+### End-of-line comments
 
 text from `//`
 
@@ -152,7 +153,7 @@ class Program {
 }
 ```
 
-### **Multi-line comments** <a href="#strong-multi-line-comments-strong" id="strong-multi-line-comments-strong"></a>
+### Multi-line comments
 
 text from `/*` and the nearest `*/`
 
@@ -166,7 +167,7 @@ class Program {
 }
 ```
 
-### **Documentation comments** <a href="#strong-java-strong-strong-documentation-comments-strong" id="strong-java-strong-strong-documentation-comments-strong"></a>
+### Documentation comments
 
 text from `/**` to `*/`
 
@@ -216,7 +217,7 @@ n += 1; // 11
 n -= 1; // 10
 ```
 
-### Prefix and postfix forms <a href="#prefix-and-postfix-forms" id="prefix-and-postfix-forms"></a>
+### Prefix and postfix forms 
 
 **Prefix increment:**
 
@@ -263,7 +264,7 @@ System.out.println(++ch); // 'M'
 System.out.println(--ch); // 'L'
 ```
 
-### Escape sequences <a href="#escape-sequences" id="escape-sequences"></a>
+### Escape sequences 
 
 * `'\n'` is the newline character;
 * `'\t'` is the tab character;
@@ -308,7 +309,7 @@ char theFifthChar = s.charAt(4); // 'a' has the index 4
 char theLastChar = s.charAt(s.length() - 1); // 'l' has the index 6
 ```
 
-### Useful methods of strings <a href="#useful-methods-of-strings" id="useful-methods-of-strings"></a>
+### Useful methods of strings 
 
 * `isEmpty()` returns `true` if the string is empty, otherwise - `false`;
 * `toUpperCase()` returns a new string in uppercase;
@@ -331,7 +332,7 @@ boolean startsWith = textInUpperCase.startsWith("THE"); // true
 String noWhitespaces = textInUpperCase.replace(" ", ""); // "THESIMPLETEXTSTRING"
 ```
 
-### Exceptions <a href="#exceptions-when-processing-strings" id="exceptions-when-processing-strings"></a>
+### Exceptions 
 
 **`NullPointerException`**.\
 If a string is `null` and you call a method of the string, it throws `NullPointerException`.
@@ -349,7 +350,7 @@ String s = "ab";
 char c = s.charAt(2); // it throws StringIndexOutOfBoundsException because indexing starts with 0
 ```
 
-### Concatenating strings <a href="#concatenating-strings" id="concatenating-strings"></a>
+### Concatenating strings 
 
 ```java
 String firstName = "John";
@@ -374,7 +375,7 @@ String result1 = shortString + number + 50; // the result is "str10050"
 String result2 = number + 50 + shortString; // The result2 is 150str,
 ```
 
-### How to compare strings correctly? <a href="#how-to-compare-strings-correctly" id="how-to-compare-strings-correctly"></a>
+### How to compare strings correctly? 
 
 Since `String` is a reference type you shouldn't compare strings using `==` or `!=` operators. In these case, only addresses will be compared, but not actual values.
 

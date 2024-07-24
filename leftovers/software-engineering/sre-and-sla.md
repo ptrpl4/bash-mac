@@ -1,8 +1,6 @@
----
-description: Site Reliability Engineering
----
-
 # 🔧 SRE and SLA
+
+Site Reliability Engineering
 
 ### Culture
 
@@ -10,19 +8,19 @@ Product Results/Metrics
 
 Incremental Product updates
 
-Automatisation&#x20;
+Automatisation
 
 ### Tech
 
 Monitoring/Alerting
 
-Implementing Best Practice&#x20;
+Implementing Best Practice
 
 ### Organisation
 
 In team - Anyone can do Anything (+knowledge sharing)
 
-<figure><img src="../../../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/sre-and-sla-1.png)
 
 ## SLA
 
@@ -36,4 +34,4 @@ Service Level Objectives - is an agreement within an SLA about a specific metric
 
 Service Level Indicator - measures compliance with an SLO.
 
-<figure><img src="../../../.gitbook/assets/image (8) (3).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/sre-and-sla-2.png)

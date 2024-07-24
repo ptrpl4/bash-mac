@@ -2,7 +2,7 @@
 
 A list in Python may contain any objects as its elements, including other lists – they are called **nested lists**.
 
-### Accessing elements of nesting lists <a href="accessing-elements-of-nesting-lists" id="accessing-elements-of-nesting-lists"></a>
+### Accessing elements of nesting lists 
 
 ```
 nested_letters  = ['a', 'b', ['c', 'd'], 'e']
@@ -26,16 +26,16 @@ lists = [0, [1, [2, 3]]]
 print(lists[1][1][0])   # 2
 ```
 
-### Matrices <a href="matrices" id="matrices"></a>
+### Matrices 
 
-![](<../../.gitbook/assets/image (15).png>)
+![](../../aaa-assets/nested-lists-1.png)
 
 ```
 M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 #M[1][2] = 6
 ```
 
-### Nested list comprehension <a href="nested-list-comprehension" id="nested-list-comprehension"></a>
+### Nested list comprehension 
 
 ```
 # original list

@@ -1,8 +1,6 @@
----
-description: YAML Ain't Markup Language
----
-
 # 🐹 YAML
+
+YAML Ain't Markup Language
 
 Human-readable data serialization standard for all programming languages.
 

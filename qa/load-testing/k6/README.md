@@ -2,11 +2,10 @@
 
 ### links
 
-docs - [https://k6.io/docs](https://k6.io/docs)
+- docs - [https://k6.io/docs](https://k6.io/docs)
+- learn - [https://github.com/grafana/k6-learn](https://github.com/grafana/k6-learn/)
 
-learn - [https://github.com/grafana/k6-learn](https://github.com/grafana/k6-learn/)
-
-### therms
+## therms
 
 VU - virtual user (single thread or instance that attempts to simulate a real end user)
 
@@ -53,7 +52,7 @@ running (0m33.6s), 00/10 VUs, 187 complete and 0 interrupted iterations
 default ✓ [======================================] 10 VUs  30s
 ```
 
-### Typical setup
+## Typical setup
 
 grafana for metrics + k6 for load test
 

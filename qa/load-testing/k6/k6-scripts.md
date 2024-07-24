@@ -2,7 +2,7 @@
 
 #### links
 
-official examples - [https://k6.io/docs/examples](https://k6.io/docs/examples)&#x20;
+official examples - [https://k6.io/docs/examples](https://k6.io/docs/examples)
 
 ```javascript
 // Single request

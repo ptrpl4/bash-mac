@@ -14,9 +14,9 @@ project\_folder
 
 ### common modules
 
-requests -&#x20;
+requests 
 
-pprint -&#x20;
+pprint 
 
 ```
 from pprint import pprint
@@ -29,5 +29,4 @@ def pretty_print(msg, indent=2):
 
 json -&#x20;
 
-pytest -&#x20;
-
+pytest 

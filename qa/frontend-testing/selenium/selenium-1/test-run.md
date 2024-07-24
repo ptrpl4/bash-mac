@@ -4,6 +4,6 @@
 
 `$ pipenv run python -m pytest`
 
-## `Basic python`
+## Basic python
 
 `$  python -m pytest`

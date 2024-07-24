@@ -1,8 +1,8 @@
 # CSRF
 
-### **links**
+#### links
 
-****[**https://developer.mozilla.org/en-US/docs/Glossary/CSRF**](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)****
+algorithms**](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)
 
 **CSRF** (Cross-Site Request Forgery) is an attack that impersonates a trusted user and sends a website unwanted commands.
 

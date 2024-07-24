@@ -4,7 +4,7 @@
 
 ### root
 
-![](<../../../../.gitbook/assets/image (22).png>)
+![](../../../../aaa-assets/comfy-macos-1.png)
 
 * **Applications**: Contains all the applications installed on Mac
 * **Library**: Stores fonts and other items used by applications

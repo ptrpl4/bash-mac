@@ -12,7 +12,5 @@ def test_code_function():
 
 #### links
 
-doc - [https://docs.pytest.org/en/stable/contents.html](https://docs.pytest.org/en/stable/contents.html)
-
-tutor - [https://testautomationu.applitools.com/pytest-tutorial/](https://testautomationu.applitools.com/pytest-tutorial/)
-
+- doc - [https://docs.pytest.org/en/stable/contents.html](https://docs.pytest.org/en/stable/contents.html)
+- tutor - [https://testautomationu.applitools.com/pytest-tutorial/](https://testautomationu.applitools.com/pytest-tutorial/)

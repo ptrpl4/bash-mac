@@ -1,8 +1,6 @@
----
-description: What have I done?
----
-
 # 👨‍🎓 I (don't) know
+
+What have I done?
 
 ## I know pretty much about
 

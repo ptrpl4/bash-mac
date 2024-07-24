@@ -1,14 +1,12 @@
----
-description: test/behavior-driven development
----
-
 # 😎 TDD, BDD etc
+
+test/behavior-driven development
 
 ## TDD
 
 test-driven development
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/tdd-bdd-1.png)
 
 #### process
 
@@ -18,7 +16,7 @@ create unit test => run test (failed) => create feature code =>  run test (succe
 
 behavior-driven development
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/tdd-bdd-2.jpeg)
 
 * BDD encourages creating a ubiquitous language in the software development process, facilitating communication inside the team and organization.
 * BDD is a user-centric approach. The process starts by thinking of scenarios from the user's perspective. This helps to ensure that the team delivers what brings the most value for the end user.
@@ -32,10 +30,10 @@ When the user tries to add an item with a due date of April 5th
 The addition of the new item should fail
 ```
 
-## **Acceptance TDD**&#x20;
+## Acceptance TDD
 
 ATDD is very similar to BDD. The difference between ATDD and BDD is that ATDD mainly focuses on accuracy of requirements, vs. BDD primarily focuses on user behavior.
 
-## **Developer TDD**&#x20;
+## Developer TDD
 
 DTDD is simply the basic TDD approach where the developer writes the unit test before writing enough production code to fulfill those tests.

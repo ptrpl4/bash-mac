@@ -6,21 +6,19 @@ The global object provides variables and functions that are available anywhere. 
 
 In a browser it is named `window`, for Node.js it is `global`, for other environments it may have another name.
 
-
-
-![](<../../.gitbook/assets/изображение (9) (1).png>)
+![](../../aaa-assets/browser-1.png)
 
 ## Browser events
 
 [https://developer.mozilla.org/en-US/docs/Web/Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 
-### Mouse events <a href="#mouse-events" id="mouse-events"></a>
+### Mouse events
 
 * `click` is the event that occurs when a user clicks on an item with the left mouse button;
 * `dblclick` is responsible for events occurring after double clicking with the left mouse button;
 * `contextmenu` is when a user clicks on an element with the right mouse button.
 
-### Keyboard events <a href="#keyboard-events" id="keyboard-events"></a>
+### Keyboard events 
 
 * `keydown` is the event that occurs when the user presses a key;
 * `keyup` is the event that happens when the any key is released;
@@ -40,7 +38,7 @@ document.getElementById("myBtn").addEventListener("keypress", function() {
 });
 ```
 
-### Key Codes <a href="#key-codes" id="key-codes"></a>
+### Key Codes 
 
 Javascript has a property `event.code` that allows you to get the code for the specific keyboard character. Each key has its own code which depends on its location on the keyboard:
 
@@ -50,7 +48,7 @@ Javascript has a property `event.code` that allows you to get the code for the s
 
 Use `event.code` when you do not care about case and vice versa, use `event.key` when you care about case.
 
-### Event handling <a href="#event-handling" id="event-handling"></a>
+### Event handling 
 
 ```javascript
 document.addEventListener("keydown", function(event) {
@@ -68,7 +66,7 @@ document.addEventListener("keydown", function(event) {
 });
 ```
 
-## Audio Object <a href="#step-title" id="step-title"></a>
+## Audio Object 
 
 `Audio Object` can be created by using the following syntax:
 

@@ -1,8 +1,6 @@
----
-description: a way of making new lists
----
-
 # List comprehension
+
+The way to create new lists
 
 ### basic syntax
 
@@ -41,4 +39,3 @@ text = ["function", "is", "a", "synonym", "of", "occupation"]
 words_tion = [word for word in text if word.endswith("tion")]
 # result: ["function", "occupation"]
 ```
-

@@ -25,4 +25,3 @@ pipenv install
 # run app
 pipenv run python main.py
 ```
-

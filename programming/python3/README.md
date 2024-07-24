@@ -1,10 +1,8 @@
----
-description: Интерпретируемый язык с неявной сильной динамической типизацией
----
-
 # 🐍 Python
 
-## <img src="../../.gitbook/assets/image (18).png" alt="" data-size="original">
+Интерпретируемый язык с неявной сильной динамической типизацией
+
+![](../../aaa-assets/python-1.png)
 
 ## Links
 
@@ -12,7 +10,7 @@ description: Интерпретируемый язык с неявной сил�
 - Доки - [https://docs.python.org/3/reference/index.html](https://docs.python.org/3/reference/index.html)
 - Доки - [https://www.w3schools.com/python/python\_reference.asp](https://www.w3schools.com/python/python\_reference.asp)
 - Виртуалка - [https://repl.it/languages/python3](https://repl.it/languages/python3)
-- Статьи - [https://devpractice.ru/python/](https://devpractice.ru/python/)&#x20;
+- Статьи - [https://devpractice.ru/python/](https://devpractice.ru/python/)
 
 ## Основные типы данных
 
@@ -142,7 +140,7 @@ print(single_element_list)  # ['danger!']
 
 `len()` - функция для возврата длинны списка
 
-### _Slices (срезы/подмножества)_
+### Slices (срезы/подмножества)
 
 ```
 listname[0:5] # от 1 до 4
@@ -233,7 +231,7 @@ b  # 100
 `"This is a string."`\
 `'This is also a string.'`
 
-#### **The str. format() method**
+#### The str. format() method
 
 ```python
 print('Mix {}, {} and a {} to make an ideal omelet.'.format('2 eggs', '30 g of milk', 'pinch of salt'))
@@ -256,7 +254,7 @@ multi-line
 string''')
 ```
 
-#### Formatted string literals (f-strinngs)
+#### Formatted string literals (f-strings)
 
 ```python
 hundred_percent_number = 1823
@@ -305,7 +303,7 @@ whitespace_string.strip()  # "hey"
 normal_string.strip("is")  # "ncomprehensibilitie"
 ```
 
-### Словари (_dict)_
+### Словари (_dict)
 
 Вид:
 
@@ -434,7 +432,7 @@ _именованный блок кода с одной определенной
 `#import all func`\
 `from fileName import *`
 
-### **Встроенные (built-in)**
+### Встроенные (built-in)
 
 [https://docs.python.org/3/library/functions.html](https://docs.python.org/3/library/functions.html) -полный список
 
@@ -642,7 +640,7 @@ class Dog:
 
 All instances of the class would be identical to one another. Most of the time that is not what we want. To customize the initial state of an instance, the **`__init__`** method is used.
 
-### def \_\_init\_\_() <a href="#def-__init__" id="def-__init__"></a>
+### def __init__()
 
 The `__init__` method is a **constructor**. Constructors are a concept from the object-oriented programming. A class can have one and only one constructor. If `__init__` is defined within a class, it is automatically invoked when we create a new class instance.
 
@@ -686,7 +684,7 @@ River.get_info(volga)
 
 Classes in Python have two types of attributes: class attributes and instance attributes. You should already know what class attributes are so here we'll focus on the instance attributes. **Instance attributes** are defined within methods and they store instance-specific information.
 
-### Class attribute <a href="#class-attribute" id="class-attribute"></a>
+### Class attribute
 
 **Class attributes** are defined within the class but outside of any methods. Their value is the same for all instances of that class so you could consider them as the sort of "default" values for all objects.
 
@@ -745,7 +743,7 @@ print(my_tesla.get_descriptive_name())
 `#можем обратиться и к атрибуту`\
 `OtherClass.ClassName.class_attribute`
 
-### Summary <a href="#summary" id="summary"></a>
+### Summary
 
 If classes are an abstraction, a template for similar objects, a **class instance** is a sort of example of that class, a particular object that follows the structure outlined in the class. In your program, you can create as many objects of your class as you need.
 
@@ -864,7 +862,7 @@ Importantly, loop `else` runs if and only if the loop is exited normally (withou
 
 [https://docs.python.org/3/reference/compound\_stmts.html#the-for-statement](https://docs.python.org/3/reference/compound\_stmts.html#the-for-statement)
 
-### **while**
+### while
 
 цикл, проверяющий условие. условием к примеру может быть непустой список
 
@@ -962,7 +960,7 @@ printer()  # Yesterday is printed as expected
 print(local_phrase)  # NameError is raised
 ```
 
-### LEGB rule <a href="#legb-rule" id="legb-rule"></a>
+### LEGB rule 
 
 A variable resolution in Python follows the **LEGB rule**. That means that the interpreter looks for a name in the following order:
 
@@ -1111,11 +1109,11 @@ NAME = 'super_package'
 
 Это, хотя и небольшой, но уже полноценный пакет. Его можно импортировать так же, как мы импортировали бы модуль:
 
-#### Абсолютные импорты <a href="#absolyutnye-importy" id="absolyutnye-importy"></a>
+#### Абсолютные импорты
 
 Абсолютный импорт выглядит как указание полного пути до модуля, включающего все пакеты и _подпакеты (subpackages)_ — да, любой пакет может содержать не только модули, но и вложенные пакеты! Полные пути гарантируют однозначность: интерпретатору всегда понятно, что и откуда импортируется, и читать такие импорты проще.
 
-#### Относительные импорты <a href="#otnositelnye-importy" id="otnositelnye-importy"></a>
+#### Относительные импорты
 
 Относительные импорты выглядят так:
 

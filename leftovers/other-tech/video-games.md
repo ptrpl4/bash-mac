@@ -1,6 +1,7 @@
 # Video Games
 
 ## Technologies
+
 ### VSync
 
 Vertical Synchronization -is a technique to synchronize the frame rate of a game or application with the refresh rate of a monitor.

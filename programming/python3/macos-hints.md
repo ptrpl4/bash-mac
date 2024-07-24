@@ -13,6 +13,3 @@ echo "alias python=/usr/bin/python3" >> ~/.zshrc
 # open new term. session and check results
 python --version && pip --version
 ```
-
-
-

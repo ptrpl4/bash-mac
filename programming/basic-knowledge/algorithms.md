@@ -36,9 +36,9 @@ my_list = [1, 3, 5, 7, 9]
 print(binary_search(my_list,3)) # expect 1
 ```
 
-## Logarithm helper <a href="#firstheading" id="firstheading"></a>
+## Logarithm helper
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 14.04.43.jpeg" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/algorithms-1.jpeg)
 
 ## Big _O_ notation
 

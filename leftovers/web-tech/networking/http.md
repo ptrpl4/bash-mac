@@ -1,14 +1,12 @@
----
-description: Hypertext Transfer Protocol
----
-
 # 🔧 HTTP
 
-links
+Hypertext Transfer Protocol
+
+#### links
 
 * Methods - [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 
-![pic by hyperskill](<../../../.gitbook/assets/image (18) (1).png>)
+![](../../../aaa-assets/http-1.png)
 
 ## Basics
 
@@ -22,9 +20,19 @@ In the HTTP protocol, all messages consist of text strings. Both requests and re
 
 The **start line** and the **header** are required attributes, so the other parts may be empty.
 
-## **Status codes**
+## Status codes
 
-<table data-header-hidden><thead><tr><th width="226.9054581894219"></th><th></th></tr></thead><tbody><tr><td><strong>1xx: Informational</strong></td><td>Codes beginning with "1" are called information codes. They report on how client requests are processed.</td></tr><tr><td><strong>2xx: Success</strong></td><td>Messages of this class inform that the action requested by the client has been successfully accepted for processing.</td></tr><tr><td><strong>3xx: Redirection</strong></td><td>It means further action must be taken in order to complete the request.</td></tr><tr><td><strong>4xx: Client Error</strong></td><td>It reports errors on the client's side.</td></tr><tr><td><strong>5xx: Server Error</strong></td><td>The code indicates that the operation was unsuccessful due to the fault of the server.</td></tr></tbody></table>
+
+- 1xx: Informational 
+  Codes beginning with "1" are called information codes. They report on how client requests are processed.
+- 2xx: Success
+  Messages of this class inform that the action requested by the client has been successfully accepted for processing.
+- 3xx: Redirection 
+  It means further action must be taken in order to complete the request.
+- 4xx: Client Error 
+  It reports errors on the client's side.
+- 5xx: Server Error 
+  The code indicates that the operation was unsuccessful due to the fault of the server.
 
 ## HTTP Headers
 
@@ -50,9 +58,11 @@ HTTP methods have certain properties that define how they interact with server r
 
 The **HTTP `OPTIONS` method** requests permitted communication options for a given URL or server. A client can specify a URL with this method, or an asterisk (`*`) to refer to the entire server.
 
-#### [Preflighted requests in CORS](https://developer.mozilla.org/en-US/docs/Glossary/XHR\_\(XMLHttpRequest\)#preflighted\_requests\_in\_cors) <a href="#preflighted_requests_in_cors" id="preflighted_requests_in_cors"></a>
+#### Preflighted requests in CORS
 
-In [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), a [preflight request](https://developer.mozilla.org/en-US/docs/Glossary/Preflight\_request) is sent with the `OPTIONS` method so that the server can respond if it is acceptable to send the request.&#x20;
+- https://developer.mozilla.org/en-US/docs/Glossary/XHR_(XMLHttpRequest)#preflighted_requests_in_cors
+
+In [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), a [preflight request](https://developer.mozilla.org/en-US/docs/Glossary/Preflight\_request) is sent with the `OPTIONS` method so that the server can respond if it is acceptable to send the request.
 
 example
 
@@ -108,4 +118,4 @@ another CORS doc - [cors-mechanism.md](../web-browsers/cors-mechanism.md "mentio
 * HTTP/2.0, published in 2015, sought to tackle the HOL blocking issue. It implemented ‘request multiplexing’, a strategy to eliminate HOL blocking at the application layer. As illustrated in the diagram below, HTTP/2.0 introduced the concept of HTTP ‘streams’. This abstraction allows the multiplexing of different HTTP exchanges onto the same TCP connection, freeing us from the need to send each stream in order. However, HOL blocking could still occur at the transport (TCP) layer.
 * HTTP/3.0 made its debut with a draft published in 2020. Positioned as the successor to HTTP/2.0, it replaces TCP with [QUIC](https://en.wikipedia.org/wiki/QUIC) as the underlying transport protocol. This effectively eliminates HOL blocking at the transport layer. QUIC is based on UDP. It introduces streams as first-class citizens at the transport layer. QUIC streams share the same QUIC connection, requiring no additional handshakes or slow starts to create new ones. QUIC streams are delivered independently. It means that in most cases packet loss in one stream doesn't impact others.
 
-<figure><img src="../../../.gitbook/assets/27299.jpeg" alt=""><figcaption></figcaption></figure>
+![](../../../aaa-assets/http-2.jpeg)

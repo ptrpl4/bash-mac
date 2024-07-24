@@ -1,10 +1,8 @@
----
-description: Framework for static websites
----
-
 # 🤗 Hugo
 
-links
+Framework for static websites
+
+#### links
 
 * [https://gohugo.io/](https://gohugo.io/)
 

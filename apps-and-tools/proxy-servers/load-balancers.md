@@ -8,7 +8,7 @@ description: Traffic distributor
 
 Load balancing is a critical component of modern IT infrastructure, enabling the distribution of workloads across multiple computing resources to ensure efficient and reliable service delivery.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+load-balancers-1
 
 ### Workload Distribution
 

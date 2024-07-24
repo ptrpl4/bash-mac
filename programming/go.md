@@ -2,17 +2,12 @@
 
 #### links
 
-tour - [https://go.dev/tour](https://go.dev/tour)
-
-examples - [https://gobyexample.com/](https://gobyexample.com/)
-
-Language Specification - [https://go.dev/ref/spec](https://go.dev/ref/spec)
-
-sandbox - [https://go.dev/play/](https://go.dev/play/)
+- tour - [https://go.dev/tour](https://go.dev/tour)
+- examples - [https://gobyexample.com/](https://gobyexample.com/)
+- Language Specification - [https://go.dev/ref/spec](https://go.dev/ref/spec)
+- sandbox - [https://go.dev/play/](https://go.dev/play/)
 
 ## Basics
-
-
 
 ./hello.go
 

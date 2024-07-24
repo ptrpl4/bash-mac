@@ -18,7 +18,7 @@ What the kernel does
 * manages memory
 * works with hardware (via drivers)
 
-<figure><img src="../../.gitbook/assets/изображение (17).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/unix-based-os-1.png)
 
 ### POSIX
 
@@ -30,7 +30,7 @@ Compliance with POSIX is voluntary, and while many operating systems, including 
 
 For Linux everything is file. Folder - file with list of inner files/folders.
 
-<figure><img src="../../.gitbook/assets/изображение (18).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/unix-based-os-2.png)
 
 ## File modes and permissions
 
@@ -77,7 +77,7 @@ The most common sets presented as octal numbers are as follows:
 | **Write**   | One can change the contents of the file | One can rename files                                          |
 | **Execute** | One can run a file                      | One can have access to files                                  |
 
-## Descriptor <a href="#what-is-a-descriptor" id="what-is-a-descriptor"></a>
+## Descriptor
 
 A **descriptor** is a non-negative number assigned to a file or other IO resource.
 
@@ -89,6 +89,7 @@ A **descriptor** is a non-negative number assigned to a file or other IO resourc
 
 Threads in the context of Linux and operating systems in general are lightweight units of execution within a process that can operate independently. They are designed to enable concurrent execution of tasks, allowing for parallel processing and efficient resource utilization. Threads share the same memory space and resources with other threads in the process, which facilitates seamless data sharing and communication between threads.
 The internal structure of a thread includes a stack, register set, and thread-specific data. This structure is crucial for its operation, as it allows threads to maintain their execution context independently of other threads within the same process.
+
 ## Process
 
 In the Unix context, a process is an instance of a program in execution. When a command is issued in Unix/Linux, it creates or starts a new process. Each process in the system is assigned a unique 5-digit ID number known as the process ID (PID). This PID is used by Unix to track each process, ensuring that at any given time, no two processes have the same PID.

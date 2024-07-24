@@ -14,9 +14,7 @@ Key benefits of blockchain include:
 
 ## How
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-
+![](../../aaa-assets/blockchain-1.png)
 
 Creating a new transaction in a blockchain involves several steps:
 

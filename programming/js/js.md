@@ -1,19 +1,13 @@
----
-description: >-
-  JS is a lightweight, interpreted, or just-in-time compiled programming
-  language
-coverY: 0
----
-
 # 🔞 JavaScript
+
+a lightweight, interpreted, or just-in-time compiled programming
+  language
 
 #### Links
 
-Styleguide - [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)&#x20;
-
-ESLint statically analyzes your code - [https://eslint.org/](https://eslint.org)&#x20;
-
-Online IDE - [https://replit.com/](https://replit.com/)
+- Styleguide - [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
+- ESLint statically analyzes your code - [https://eslint.org/](https://eslint.org)
+- Online IDE - [https://replit.com/](https://replit.com/)
 
 #### Comments
 
@@ -98,7 +92,7 @@ is included literally in this string`
 
 #### Strings
 
-Strings are immutable in JavaScript. Methods like replace() and toUpperCase() return new strings: they do not modify the string on which they are invoked.&#x20;
+Strings are immutable in JavaScript. Methods like replace() and toUpperCase() return new strings: they do not modify the string on which they are invoked.
 
 ```javascript
 let s = "hello"; // Start with some lowercase text 
@@ -108,7 +102,7 @@ s // => "hello": the original string has not  changed
 
 Strings can also be treated like read-only arrays
 
-#### &#x20;Template Literals (ES 6)
+#### Template Literals (ES 6)
 
 ```javascript
 let name = "Bill";
@@ -164,15 +158,15 @@ companies.length // check length
 
 ### Other object types
 
-A Set object represents a set of values.&#x20;
+A Set object represents a set of values.
 
-A Map object represents a mapping from keys to values.&#x20;
+A Map object represents a mapping from keys to values.
 
-Various “typed array” types facilitate operations on arrays of bytes and other binary data.&#x20;
+Various “typed array” types facilitate operations on arrays of bytes and other binary data.
 
-The RegExp type represents textual patterns and enables sophisticated matching, searching, and replacing operations on strings.&#x20;
+The RegExp type represents textual patterns and enables sophisticated matching, searching, and replacing operations on strings.
 
-The Date type represents dates and times and supports rudimentary date arithmetic.&#x20;
+The Date type represents dates and times and supports rudimentary date arithmetic.
 
 Error and its subtypes represent errors that can arise when executing JavaScript code.
 
@@ -180,7 +174,7 @@ Error and its subtypes represent errors that can arise when executing JavaScript
 
 Operators act on values (the operands) to produce a new value.
 
-#### _typeof_ operator <a href="#em-typeof-em-operator" id="em-typeof-em-operator"></a>
+#### _typeof_ operator 
 
 ```javascript
 console.log(typeof(9)); // number
@@ -230,9 +224,9 @@ the `==` equality operator is deprecated in favor of the strict equality operato
 
 ### Boolean and logical operators
 
-#### Comparison operators <a href="#step-title" id="step-title"></a>
+#### Comparison operators 
 
-[**https://hyperskill.org/learn/step/8580**](https://hyperskill.org/learn/step/8580)
+[https://hyperskill.org/learn/step/8580](https://hyperskill.org/learn/step/8580)
 
 There are only three of them in JavaScript: logical AND (`&&`), logical OR (`||`) and NOT (`!`).
 
@@ -289,7 +283,7 @@ Remember the order of arithmetic operations. If there are several numbers before
 3 + 10 + "1" // "131", not "3101"
 ```
 
-#### Numeric conversion <a href="#numeric-conversion" id="numeric-conversion"></a>
+#### Numeric conversion 
 
 When converting a string to a number, spaces and characters `\n,`  at the beginning and the end of the string are cut off. If the string turns out to be empty, the result will be `0`. The boolean type behaves as expected: `false` turns into `0`, `true` turns into `1`.
 
@@ -305,7 +299,7 @@ true + 43 // 44
 +"85"     // 85
 ```
 
-#### Boolean conversion <a href="#boolean-conversion" id="boolean-conversion"></a>
+#### Boolean conversion 
 
 The rules for using this function are simple: values that imply "empty", like `0` or an empty string `""` turn into `false`. All other values turn into `true`.
 
@@ -378,9 +372,9 @@ fetch('https://domain.com/api/v1/purchases?limit=50&offset=50',
   .then((data) => data)
 ```
 
-## **user-defined** Functions
+## user-defined Functions
 
-### **default style**
+### default style
 
 ```javascript
 function plus1(x) { // Define a function named "plus1" with parameter "x"
@@ -396,7 +390,7 @@ let square = function (x) { // Functions are values and can be assigned to vars
 square (plus1(y)) // => 16: invoke two functions in one expression
 ```
 
-### **arrow functions** style
+### arrow functions style
 
 Arrow functions are most commonly used when you want to pass an unnamed function as an argument to another function.
 
@@ -552,7 +546,7 @@ req.open("GET", "http://www.example.org/example.txt");
 req.send();
 ```
 
-## Promises <a href="#promises-in-javascript" id="promises-in-javascript"></a>
+## Promises 
 
 a Promise is an object. There are 3 states of the Promise object:
 
@@ -560,7 +554,7 @@ a Promise is an object. There are 3 states of the Promise object:
 * **Resolved:** Completed Promise
 * **Rejected:** Failed Promise
 
-![](<../../.gitbook/assets/изображение (1) (3).png>)
+![](../../aaa-assets/js-1.png)
 
 It takes two parameters, one for success (resolve) and one for fail (reject):
 
@@ -674,7 +668,7 @@ console.log(original + " factorial is " + factorial);
 
 ## XHR vs fetch
 
-<figure><img src="../../.gitbook/assets/85825.png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/js-2.png)
 
 Instead of having to write code like this
 

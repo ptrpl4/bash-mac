@@ -1,8 +1,6 @@
----
-description: What is Hashing
----
-
 # 🏦 Hash
+
+What is Hashing
 
 #### links
 

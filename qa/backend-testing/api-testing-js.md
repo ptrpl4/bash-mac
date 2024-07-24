@@ -1,7 +1,3 @@
----
-description: Generic info about JS API test tools and frameworks
----
-
 # API Testing - JS
 
 ## Most Common Tools
@@ -27,17 +23,18 @@ Assertion library
 
 example test
 
-<pre class="language-javascript"><code class="lang-javascript">const { describe, it } = require('mocha');
+```js
+const { describe, it } = require('mocha');
 const request = require('supertest');
 
 const testData = {
 
-<strong>describe('GET /cards', function(){
-</strong>    it('get user cards', function(done) {
+describe('GET /cards', function(){
+    it('get user cards', function(done) {
         request('https://wallet.site.com')
         .get('/api/v1/cards')
         .set('authorization', 'Bearer token')
         .expect(200, done);
     })
 })
-</code></pre>
+```
