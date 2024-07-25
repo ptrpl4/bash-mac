@@ -6,11 +6,9 @@ A pipeline is composed of independent jobs that run scripts, grouped into stages
 
 #### Links
 
-doc - [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
-
-examples - [https://docs.gitlab.com/ee/ci/examples/](https://docs.gitlab.com/ee/ci/examples/)
-
-guides - [https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/doc/development/cicd/templates.md](https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/doc/development/cicd/templates.md#development-guide-for-gitlab-cicd-templates)
+- doc - [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
+- examples - [https://docs.gitlab.com/ee/ci/examples/](https://docs.gitlab.com/ee/ci/examples/)
+- guides - [https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/doc/development/cicd/templates.md](https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/doc/development/cicd/templates.md#development-guide-for-gitlab-cicd-templates)
 
 #### Filename
 
@@ -131,7 +129,6 @@ build_image:
 
 ### Docker
 
-doc - [https://app.gitbook.com/s/-LcfwXJnDmljkkxrOjKD/\~/changes/5SZzGUfIdp4URfMFYILq/tools/ci-cd/gitlab-pipelines#info](gitlab-ci-cd.md#info)
 
 ```yaml
 # build, and push to registry

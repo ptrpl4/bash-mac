@@ -42,6 +42,7 @@ echo "$HOME"
 ```
 
 ### parentheses
+
 #### single ( )
 
 will run the commands inside in a subshell
@@ -169,6 +170,7 @@ echo $?
 
 # Since string Alice contains the letter — c, the output will be 0
 ```
+
 ### man
 
 **parameter** - argument or data that is passed to a command
@@ -199,6 +201,7 @@ command [params...] [-options...] | command_two <param> [-options...]
 # another example
 cmd [param 1|param 2] 
 ```
+
 ### variables
 
 [how-to-read-and-set-vars](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux)

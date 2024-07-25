@@ -1,10 +1,6 @@
----
-description: Virtual Machine vs Docker
----
-
 # VM vs Docker
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
+![](../../aaa-assets/vm-vs-docker-1.jpeg)
 
 Docker virtualized only application layer on top of current user OS.
 

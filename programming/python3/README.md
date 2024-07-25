@@ -436,7 +436,7 @@ _именованный блок кода с одной определенной
 
 [https://docs.python.org/3/library/functions.html](https://docs.python.org/3/library/functions.html) -полный список
 
-![in Python 3.8.2](<../../.gitbook/assets/image (20).png>)
+![in Python 3.8.2](../../aaa-assets/python-2.png)
 
 `print()`
 
@@ -866,7 +866,7 @@ Importantly, loop `else` runs if and only if the loop is exited normally (withou
 
 цикл, проверяющий условие. условием к примеру может быть непустой список
 
-![](<../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png>)
+![](../../aaa-assets/python-3.png)
 
 ```python
 def print_numbers(last_number):

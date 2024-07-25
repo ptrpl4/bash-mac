@@ -1,7 +1,6 @@
----
-description: The Missing Package Manager for macOS (or Linux)
----
 # 🍻 HomeBrew
+
+The Missing Package Manager for macOS (or Linux)
 
 ### links
 

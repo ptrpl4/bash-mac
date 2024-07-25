@@ -1,9 +1,9 @@
 # Make
 
-## Links
+#### Links
 
-[https://www.gnu.org/software/make/manual/make.html](https://www.gnu.org/software/make/manual/make.html) \
-[https://opensource.com/article/18/8/what-how-makefile](https://opensource.com/article/18/8/what-how-makefile)
+- [https://www.gnu.org/software/make/manual/make.html](https://www.gnu.org/software/make/manual/make.html) \
+- [https://opensource.com/article/18/8/what-how-makefile](https://opensource.com/article/18/8/what-how-makefile)
 
 ## Make
 

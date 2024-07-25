@@ -25,4 +25,3 @@ Ways to safe Radis data
 
 * Snapshots (RDB) (take time, may lose newest data)
 * Append Only File (AOF) - logfile updated on every change
-

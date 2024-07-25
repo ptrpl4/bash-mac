@@ -1,7 +1,8 @@
 # ⛅ Google Cloud
 
-links:\
-[https://cloud.google.com/logging/docs](https://cloud.google.com/logging/docs)
+#### links
+
+- [https://cloud.google.com/logging/docs](https://cloud.google.com/logging/docs)
 
 ## Queries
 
@@ -10,5 +11,3 @@ links:\
 ```
 "response" AND "successful" AND NOT "error"
 ```
-
-\
