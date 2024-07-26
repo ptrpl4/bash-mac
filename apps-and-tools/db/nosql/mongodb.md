@@ -1,6 +1,7 @@
 # MongoDB
 
 MongoDB is a schema-less DB that uses flexible "key-value" pairs, called documents for data storage.
+It centers around the CAP theorem (Consistency, Availability, and Partition).
 
 - All data in MongoDB is stored as JSON documents (though technically, in **b**inary J**SON** format – **BSON**) grouped by collections.
 - Documents in the same collection may have different fields. One document can have fields of different data types, the data does not need to be reduced to the same type.

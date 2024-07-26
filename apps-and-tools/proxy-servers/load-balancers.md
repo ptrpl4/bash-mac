@@ -1,7 +1,3 @@
----
-description: Traffic distributor
----
-
 # ⚖️ Load Balancers
 
 ### About
@@ -34,3 +30,7 @@ load-balancers-1
 * **NGINX**: Initially a web server, now also functions as a reverse proxy and load balancer, offering advanced load balancing capabilities.
 * **Envoy**: A modern, high-performance edge and service proxy with advanced load balancing, observability, and dynamic configuration capabilities.
 * **Traefik**: A cloud-native reverse proxy and load balancer built for modern containerized environments, offering automatic service discovery and dynamic configuration .
+
+## load-balancing algorithms
+
+![](../../aaa-assets/load-balancers-1.jpg)

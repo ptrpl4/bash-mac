@@ -1,7 +1,3 @@
----
-description: web, reverse, load
----
-
 # 🟩 NGINX
 
 #### links

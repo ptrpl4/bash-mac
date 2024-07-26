@@ -22,6 +22,7 @@ The **start line** and the **header** are required attributes, so the other part
 
 ## Status codes
 
+![](../../../aaa-assets/http-3.jpg)
 
 - 1xx: Informational 
   Codes beginning with "1" are called information codes. They report on how client requests are processed.
@@ -60,6 +61,9 @@ The **HTTP `OPTIONS` method** requests permitted communication options for a giv
 
 #### Preflighted requests in CORS
 
+links
+
+- another CORS doc - [cors-mechanism](../web-browsers/cors-mechanism.md)
 - https://developer.mozilla.org/en-US/docs/Glossary/XHR_(XMLHttpRequest)#preflighted_requests_in_cors
 
 In [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), a [preflight request](https://developer.mozilla.org/en-US/docs/Glossary/Preflight\_request) is sent with the `OPTIONS` method so that the server can respond if it is acceptable to send the request.
@@ -80,21 +84,17 @@ Access-Control-Request-Headers: Content-Type
 
 The server now can respond if it will accept a request under these circumstances. In this example, the server response says that:
 
-[`Access-Control-Allow-Origin`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+- [`Access-Control-Allow-Origin`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+  The `https://foo.example` origin is permitted to request the `bar.example/resources/post-here/` URL via the following:
 
-The `https://foo.example` origin is permitted to request the `bar.example/resources/post-here/` URL via the following:
+- [`Access-Control-Allow-Methods`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+  [`POST`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST), [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET), and `OPTIONS` are permitted methods for the URL. (This header is similar to the [`Allow`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Allow)response header, but used only for [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).)
 
-[`Access-Control-Allow-Methods`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+- [`Access-Control-Allow-Headers`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
+  Any script inspecting the response is permitted to read the values of the `X-PINGOTHER` and `Content-Type` headers.
 
-[`POST`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST), [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET), and `OPTIONS` are permitted methods for the URL. (This header is similar to the [`Allow`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Allow)response header, but used only for [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).)
-
-[`Access-Control-Allow-Headers`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-
-Any script inspecting the response is permitted to read the values of the `X-PINGOTHER` and `Content-Type` headers.
-
-[`Access-Control-Max-Age`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
-
-The above permissions may be cached for 86,400 seconds (1 day).
+- [`Access-Control-Max-Age`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
+  The above permissions may be cached for 86,400 seconds (1 day).
 
 ```
 HTTP/1.1 204 No Content
@@ -109,13 +109,15 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-another CORS doc - [cors-mechanism.md](../web-browsers/cors-mechanism.md "mention")
+## HTTP 1-3
 
-## HTTP/1.1, HTTP/2, and HTTP/3
-
-* HTTP/1.0 was finalized and formally documented in 1996. This version had a key limitation: each request to the same server required a separate TCP connection.
-* HTTP/1.1 arrived next in 1997. It introduced the concept of a ‘persistent connection’, which means a TCP connection could be left open for reuse. Despite this enhancement, HTTP/1.1 couldn’t fix the issue of ‘Head-of-Line’ (HOL) blocking. In simple terms, HOL blocking happens when all parallel request slots in a browser are filled, forcing subsequent requests to wait until previous ones are complete.
-* HTTP/2.0, published in 2015, sought to tackle the HOL blocking issue. It implemented ‘request multiplexing’, a strategy to eliminate HOL blocking at the application layer. As illustrated in the diagram below, HTTP/2.0 introduced the concept of HTTP ‘streams’. This abstraction allows the multiplexing of different HTTP exchanges onto the same TCP connection, freeing us from the need to send each stream in order. However, HOL blocking could still occur at the transport (TCP) layer.
-* HTTP/3.0 made its debut with a draft published in 2020. Positioned as the successor to HTTP/2.0, it replaces TCP with [QUIC](https://en.wikipedia.org/wiki/QUIC) as the underlying transport protocol. This effectively eliminates HOL blocking at the transport layer. QUIC is based on UDP. It introduces streams as first-class citizens at the transport layer. QUIC streams share the same QUIC connection, requiring no additional handshakes or slow starts to create new ones. QUIC streams are delivered independently. It means that in most cases packet loss in one stream doesn't impact others.
+* HTTP/1.0 - 1996
+  was finalized and formally documented in . This version had a key limitation: each request to the same server required a separate TCP connection.
+* HTTP/1.1 - 1997
+  It introduced the concept of a ‘persistent connection’, -  a TCP connection could be left open for reuse. Despite this enhancement, HTTP/1.1 couldn’t fix the issue of ‘Head-of-Line’ (HOL) blocking. In simple terms, HOL blocking happens when all parallel request slots in a browser are filled, forcing subsequent requests to wait until previous ones are complete.
+* HTTP/2.0 - 2015
+  It implemented ‘request multiplexing’, a strategy to eliminate HOL blocking at the application layer, introduced the concept of HTTP ‘streams’. This abstraction allows the multiplexing of different HTTP exchanges onto the same TCP connection, freeing us from the need to send each stream in order. However, HOL blocking could still occur at the transport (TCP) layer.
+* HTTP/3.0 2020
+  replaces TCP with [QUIC](https://en.wikipedia.org/wiki/QUIC) as the underlying transport protocol. This effectively eliminates HOL blocking at the transport layer. QUIC is based on UDP. It introduces streams as first-class citizens at the transport layer. QUIC streams share the same QUIC connection, requiring no additional handshakes or slow starts to create new ones. QUIC streams are delivered independently. It means that in most cases packet loss in one stream doesn't impact others.
 
 ![](../../../aaa-assets/http-2.jpeg)

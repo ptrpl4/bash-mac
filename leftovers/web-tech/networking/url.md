@@ -1,7 +1,3 @@
----
-description: Uniform Resource Locator
----
-
 # URL
 
 URL address has a certain structure based on the following template:
@@ -19,3 +15,7 @@ Now let's look at this template in more detail:
 * `<path>` indicates the exact address of a particular file or page;
 * `<request parameters>` are parameters transmitted to the server. Depending on request parameters, the site may slightly change its display. For example, it is possible to sort the items of a list in a different order;
 * `<anchor>` allows you to connect to a specific part of a web page or document.
+
+## URL, URI, URN
+
+![](../../../aaa-assets/url-1.jpg)

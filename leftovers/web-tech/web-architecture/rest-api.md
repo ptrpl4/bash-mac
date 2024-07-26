@@ -5,6 +5,13 @@ description: Representational State Transfer
 
 This architectural style was developed to help easily build convenient web services. A service written with regard to REST rules is called **RESTful**. It is not a standard, but rather a set of useful recommendations
 
+## Pros
+
+- Uses standard HTTP methods like GET, POST, PUT, DELETE for CRUD operations.
+- Works well when you need simple, uniform interfaces between separate services/applications.
+- Caching strategies are straightforward to implement.
+- The downside is it may require multiple roundtrips to assemble related data from separate endpoints.
+
 ## Design rules
 
 ### Six REST principles
