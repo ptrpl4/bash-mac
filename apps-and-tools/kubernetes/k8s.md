@@ -2,6 +2,10 @@
 
 Also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 
+#### services
+- Google Kubernetes Engine (GKE)
+- AWS Fargate
+
 ## Components
 
 ![](../../aaa-assets/k8s-1.png)

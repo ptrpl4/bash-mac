@@ -1,18 +1,41 @@
 # 🐋 Docker
 
+A technology that provides virtualisation of isolated and independent containers on a single operating system.
+
 ## Theory
+
+### Container
+
+Container allows application to work in almost any environment, providing quick deployments and reproducible builds. Containers allow to run applications on non-native OS.
 
 ![](../../aaa-assets/docker-1.jpeg)
 
-container **image** - an artifact/package which includes all necessary information to run the container\
-**container** eviroment - running instance of an image
+- container **image** - an artifact/package which includes all necessary information to run the container\
+- **container** environment - running instance of an image
 
 ![](../../aaa-assets/docker-2.jpeg)
 
-**registry** - image storage. official docker - [https://hub.docker.com/](https://hub.docker.com/)
+- **registry** - image storage. 
+- official docker registry- [https://hub.docker.com/](https://hub.docker.com/)
 
-**Isolated docker network** - docker network for containers. containers clold communicate using container name instead ip:port connections\
+**Isolated docker network** - docker network for containers. containers cloud communicate using container name instead ip:port connections\
 it automatically used in docker-compose
+
+#### Namespaces
+
+Namespaces limiting what containers can see and access.  Containers create namespaces that the particular container will use and have multiple namespaces that present different information about the OS. 
+
+**MNT** namespace limits the mounted file systems a container can use, **USER** namespace is used to isolate users in each container.
+
+#### Control groups
+
+Also called cgroups. It is a Linux kernel feature that isolates, prioritizes, and calculates the resource usage (CPU, memory, disk I/O, network, etc.) of a set of processes. 
+
+Control groups can also impose strict limits on usage, ensure that containers use only the resources they need and, if necessary, set limits on the resources a container can use.
+
+#### Isolated Union file system
+
+Isolated Union file systems used in containers are stackable. This system helps avoid duplication of data every time you deploy a new container.
 
 ### Inside container
 
