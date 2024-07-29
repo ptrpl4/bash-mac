@@ -2,38 +2,36 @@
 
 A technology that provides virtualisation of isolated and independent containers on a single operating system.
 
+#### links
+
+- docker registry- [https://hub.docker.com/](https://hub.docker.com)
+
 ## Theory
 
-### Container
-
-Container allows application to work in almost any environment, providing quick deployments and reproducible builds. Containers allow to run applications on non-native OS.
-
-![](../../aaa-assets/docker-1.jpeg)
-
-- container **image** - an artifact/package which includes all necessary information to run the container\
-- **container** environment - running instance of an image
+### Therms
 
 ![](../../aaa-assets/docker-2.jpeg)
 
-- **registry** - image storage. 
-- official docker registry- [https://hub.docker.com/](https://hub.docker.com/)
+- Container **Image** - an artefact(file) which includes all necessary information to run a piece of software, including the code, runtime, libraries, environment variables, and configuration files
+- **Registry** - image storage
+- **Container** - running instances of Container Image
+- Container **environment** - context and settings in which a containerized application runs
+- **Isolated docker network** - network for containers
+  containers cloud communicate using container name instead ip:port connections. It automatically used in docker-compose
 
-**Isolated docker network** - docker network for containers. containers cloud communicate using container name instead ip:port connections\
-it automatically used in docker-compose
-
-#### Namespaces
+### Namespaces
 
 Namespaces limiting what containers can see and access.  Containers create namespaces that the particular container will use and have multiple namespaces that present different information about the OS. 
 
 **MNT** namespace limits the mounted file systems a container can use, **USER** namespace is used to isolate users in each container.
 
-#### Control groups
+### Control groups
 
 Also called cgroups. It is a Linux kernel feature that isolates, prioritizes, and calculates the resource usage (CPU, memory, disk I/O, network, etc.) of a set of processes. 
 
 Control groups can also impose strict limits on usage, ensure that containers use only the resources they need and, if necessary, set limits on the resources a container can use.
 
-#### Isolated Union file system
+### Isolated Union file system
 
 Isolated Union file systems used in containers are stackable. This system helps avoid duplication of data every time you deploy a new container.
 
@@ -46,11 +44,13 @@ layers of images
 
 if smthg changes - inside container will be updated/changed only image layers with changes
 
-## Container operations
+## Docker commands
+
+### Basics and examples
 
 ```bash
 # docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
-# -d run the container in detached mode (in the background)
+# -d run the container in detached(background) mode 
 # -p 80:80 binds port 80 of the host to port 80 in the container
 docker run -d -p 80:80 docker/getting-started
 
@@ -98,9 +98,46 @@ docker network ls
 docker exec -it 87sd7v8sd7f8 /bin/bash
 ```
 
-## Image operations
+### container commands
 
-### build
+```bash
+# only create not run container with unique ID and a name
+docker container create hello-world
+# => 5a30b370e9dfc147f5438380d60ff4b1c43869a752f2ef481b6cf0adb33dae83
+# run created container
+docker container start c6c7b4c22dfa
+
+# list all
+docker container ls -a
+# only running
+docker container ls
+
+# run(create and run) new container in pseudo-TTY background mode
+docker container run -t -d ubuntu # -t allocate a pseudo-teletypewriter
+# run in intaractive mode
+docker container run -it ubuntu
+
+# interact with running container
+docker container exec 9faa5154097e ls
+
+
+# stop
+docker container stop 9faa5154097e
+
+# rm
+docker container rm 9faa5154097e
+```
+
+### run
+
+flags
+
+```bash
+# make session -interactive and allocate -terminal interface for container
+docker run -it ubuntu
+```
+
+## Image operations
 
 ```bash
 # docker pull [OPTIONS] NAME[:TAG|@DIGEST]
