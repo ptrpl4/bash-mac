@@ -14,9 +14,10 @@ A technology that provides virtualisation of isolated and independent containers
 
 - Container **Image** - an artefact(file) which includes all necessary information to run a piece of software, including the code, runtime, libraries, environment variables, and configuration files
 - **Registry** - image storage
+- **Dockerfile** - set of instructions how to build Image. Each instruction creates a layer in the image, contributing to the final structure of the container environment  
 - **Container** - running instances of Container Image
 - Container **environment** - context and settings in which a containerized application runs
-- **Isolated docker network** - network for containers
+- **Isolated Docker Network** - network for containers
   containers cloud communicate using container name instead ip:port connections. It automatically used in docker-compose
 
 ### Namespaces
@@ -245,6 +246,50 @@ COPY . .
 ENTRYPOINT ["python", "-m", "http.server"]
 CMD ["--directory", "directory", "8000"]
 ```
+
+### Common Dockerfile Instructions
+
+1. FROM:
+	- **Purpose**: Specifies the base image to use for the subsequent instructions.
+	- **Syntax**: 
+	- `FROM <image>[:<tag>]`
+	- `FROM ubuntu:20.04`
+2. RUN:  
+	- **Purpose**: Executes a command in a new layer on top of the current image and commits the result.
+	- **Syntax**: `RUN <command>`
+	- `RUN apt-get update && apt-get install -y python3`
+3. **COPY**:
+	- **Purpose**: Copies files or directories from the host filesystem to the image.
+	- **Syntax**: `COPY <src> <dest>`
+	- `COPY . /app`
+4. **ADD**:
+	- **Purpose**: Similar to `COPY`, but also supports remote URLs and unpacking compressed files.
+	- **Syntax**: `ADD <src> <dest>`
+	- `ADD myapp.tar.gz /app`
+5. **CMD**:
+	- **Purpose**: Specifies the default command to run when a container is started.
+	- **Syntax**: `CMD ["executable","param1","param2"]`
+	- `CMD ["python3", "app.py"]`
+6. **ENTRYPOINT**:
+	- **Purpose**: Configures a container to run as an executable.
+	- **Syntax**: `ENTRYPOINT ["executable","param1","param2"]`
+	- `ENTRYPOINT ["python3", "app.py"]`
+7. **ENV**:
+	- **Purpose**: Sets environment variables.
+	- **Syntax**: `ENV <key>=<value>`
+	- `ENV APP_ENV=production`
+8. **EXPOSE**:
+	- **Purpose**: Informs Docker that the container listens on the specified network ports at runtime.
+	- **Syntax**: `EXPOSE <port> [<port>/<protocol>]`
+	- `EXPOSE 80`
+9. **VOLUME**:
+	- **Purpose**: Creates a mount point with the specified path and marks it as holding externally mounted volumes.
+	- **Syntax**: `VOLUME ["/path/to/dir"]`
+	- `VOLUME ["/data"]`
+10. **WORKDIR**:
+	- **Purpose**: Sets the working directory for any subsequent `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions.
+	- **Syntax**: `WORKDIR /path/to/workdir`
+	- `WORKDIR /app`
 
 ## Helpers
 
