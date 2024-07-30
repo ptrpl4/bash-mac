@@ -12,11 +12,15 @@ A technology that provides virtualisation of isolated and independent containers
 
 ![](../../aaa-assets/docker-2.jpeg)
 
-- Container **Image** - an artefact(file) which includes all necessary information to run a piece of software, including the code, runtime, libraries, environment variables, and configuration files
+images and layers
+- Container **Image** - an artefact(collection of layers that are stored and managed by Docker)
+  includes all necessary information to run a software, including code, runtime, libraries, env vars, config files
 - **Registry** - image storage
-- **Dockerfile** - set of instructions how to build Image. Each instruction creates a layer in the image, contributing to the final structure of the container environment  
-- **Container** - running instances of Container Image
-- Container **environment** - context and settings in which a containerized application runs
+- **Dockerfile** - set of instructions to build Image from layers. Each instruction creates a layer in the image
+
+containers and environment
+- **Container** - running instance of Container Image
+- Container **environment** - context and settings in which a containerised application runs
 - **Isolated Docker Network** - network for containers
   containers cloud communicate using container name instead ip:port connections. It automatically used in docker-compose
 
@@ -44,6 +48,15 @@ layers of images
 * application image
 
 if smthg changes - inside container will be updated/changed only image layers with changes
+
+### Docker on macOS
+
+Docker requires a Linux kernel to function, and this requirement is met on macOS using a lightweight virtual machine.
+
+- Docker daemon (`dockerd`) runs inside VM. It manages images, containers, networks, and volumes.
+- hypervisor (either Apple’s Hypervisor.framework or qemu) runs the VM that contains the Docker daemon and containers
+- Docker images and containers are stored inside the VM, they are managed through the Docker CLI.
+- Docker volumes can be mapped to directories on macOS host using the `-v` or `--mount` options in Docker commands.
 
 ## Docker commands
 
@@ -140,6 +153,18 @@ docker run -it ubuntu
 
 ## Image operations
 
+### pull
+
+process
+
+- Docker requests the metadata (manifests) of the specified image. 
+- identifies the layers
+- Each layer is then downloaded individually (in parallel).
+	- If any layer already exists on the local machine, it will be skipped. 
+- Each downloaded layer is stored in Docker's local storage.
+  The storage location depends on the storage driver being used. with the `overlay2` driver layers are stored under `/var/lib/docker/overlay2/`.
+- Once all layers are downloaded and stored, Docker assembles them into a complete image
+
 ```bash
 # docker pull [OPTIONS] NAME[:TAG|@DIGEST]
 docker pull nginx:1.23
@@ -147,7 +172,7 @@ docker pull nginx:1.23
 # docker images [OPTIONS] [REPOSITORY[:TAG]]
 docker images
 
-# delete image
+# delete
 docker image rm <image-id>
 
 # -t name the image . look for the Dockerfile in the current directory
@@ -156,6 +181,9 @@ docker build -t my-app:1.0 .
 # example when file not in root folder
 docker build --file build/Dockerfile --tag ci-cd-test-app:1.0  .
 # dont forget "." in the end!
+
+# get detailed image info
+docker inspect ff095b82
 ```
 
 ### Network

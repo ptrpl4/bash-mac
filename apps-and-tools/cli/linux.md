@@ -2,6 +2,15 @@
 
 ## Built-in commands
 
+## Basics
+
+```bash
+apt-get update
+apt-get upgrade
+
+# check OS version
+cat /etc/os-release
+```
 ### Cron
 
 links:
