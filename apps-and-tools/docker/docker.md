@@ -282,57 +282,93 @@ CMD ["--directory", "directory", "8000"]
 
 1. FROM:
 	- **Purpose**: Specifies the base image
-	- **Syntax**: 
-	- `FROM <image>[:<tag>]`
-	`FROM ubuntu:20.04 as base`
+	  `FROM <image>[:<tag>]`
+	  `FROM ubuntu:20.04 as base`
 2. RUN:  
 	- Purpose: Executes a command in a new layer on top of the current image and commits the result.
-	- Syntax: `RUN <command>`
-	`RUN apt-get update && apt-get install -y python3`
+	  `RUN <command>`
+	  `RUN apt-get update && apt-get install -y python3`
+```dockerfile
+# multiline commands
+apt-get update -y \
+&& apt-get upgrade -y \
+&& apt-get install iputils-ping -y \
+&& apt-get install net-tools -y
+```
 3. COPY:
 	- Purpose: Copies files or directories from the host filesystem to the image.
-	- Syntax: `COPY <src> <dest>`
-	`COPY . /app`
+	  `COPY <src> <dest>`
+	  `COPY . /app`
 4. ADD:
 	- Purpose: Similar to `COPY`, but also supports remote URLs and unpacking compressed files.
-	- Syntax: `ADD <src> <dest>`
-	`ADD myapp.tar.gz /app`
+	  `ADD <src> <dest>`
+	  `ADD myapp.tar.gz /app`
 5. CMD:
 	- Purpose: Specifies the default command to run when a container is started.
-	- Syntax: `CMD ["executable","param1","param2"...]`
-	`CMD ["python3", "app.py"]`
-	or
-	``CMD echo Hello Students.`` # Run command By default `/bin/sh -c`
+	  `CMD ["executable","param1","param2"...]`
+	  `CMD ["python3", "app.py"]`
+	  or
+	  `CMD echo Hello Students. # Run command By default /bin/sh -c`
 1. ENTRYPOINT:
 	- Purpose: Configures a container to run as an executable.
-	- Syntax: `ENTRYPOINT ["executable","param1","param2"]`
-	`ENTRYPOINT ["python3", "app.py"]`
+	  `ENTRYPOINT ["executable","param1","param2"]`
+	  `ENTRYPOINT ["python3", "app.py"]`
 7. ENV:
 	- Purpose: Sets environment variables.
-	- Syntax: `ENV <key>=<value>`
-	`ENV APP_ENV=production`
+	  `ENV <key>=<value>`
+	  `ENV APP_ENV=production`
 8. EXPOSE:
 	- Purpose: Informs Docker that the container listens on the specified network ports at runtime.
-	- Syntax: `EXPOSE <port> [<port>/<protocol>]`
-	`EXPOSE 80`
+	  `EXPOSE <port> [<port>/<protocol>]`
+	  `EXPOSE 80`
 9. VOLUME:
 	- Purpose: Creates a mount point with the specified path and marks it as holding externally mounted volumes.
-	- Syntax: `VOLUME ["/path/to/dir"]`
-	`VOLUME ["/data"]`
+	  `VOLUME ["/path/to/dir"]`
+	  `VOLUME ["/data"]`
 10. WORKDIR:
 	- Purpose: Sets the working directory for any subsequent `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions.
-	- Syntax: `WORKDIR /path/to/workdir`
-	`WORKDIR /app`
-11. LABEL:
+	  `WORKDIR /path/to/workdir`
+	  `WORKDIR /app`
+1. LABEL:
     - Purpose: define [labels to specify metadata](https://docs.docker.com/engine/reference/builder/#label)
-    - Syntax: `LABEL key=value`
-    `LABEL "application_environment"="development"`
+      `LABEL key=value`
+      `LABEL "application_environment"="development"`
+
+### run
+
+allows to execute commands or a set of commands during an image build time
+
+#### options
+
+`--mount` option [to create mounts](https://docs.docker.com/engine/reference/builder/#run---mount) that you can access at the build time to bind files, store cache, etc. This option has several types and each provides a specific feature. Among those types are:
+- **bind**: binds files or directories to the build container
+- **cache**: caches directories for compilers and package managers
+- **tmpfs**: for mounting tmpfs in the build container
+- **secret**: gives access to secure files
+- **ssh**: gives access to SSH keys via SSH agents
+
+```
+FROM ubuntu:22.04
+
+LABEL author=HyperUser
+
+RUN --mount=type=cache,target=/var/cache/apt/archives \
+  apt-get update -y \
+  && apt-get upgrade -y \
+  && apt-get install iputils-ping -y \
+  && apt-get install net-tools -y
+
+ENTRYPOINT ["/bin/bash"]
+```
+
+This configuration can speed up the build process because Docker can use cache from the target directory in case it needs to rebuild the `RUN` layer in later builds.
 
 ## Helpers
 
 ### run as non-root
 
 - https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
+
 ```bash
 sudo groupadd docker
 sudo usermod -aG docker $USER
