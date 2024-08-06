@@ -1,23 +1,24 @@
 # 🍁 My apps
 
-### Web Browser
+## macOS
 
-#### macOS
+### Safari
 
-Safari + AppleKeyChain
+extensions:
+- blockers
+	- [wipr](https://apps.apple.com/my/app/wipr/id1320666476?mt=12)
+	- [hush](https://apps.apple.com/my/app/hush-nag-blocker/id1544743900)
+- [raindrop](https://apps.apple.com/my/app/save-to-raindrop-io/id1549370672)
+- [dark reader](https://apps.apple.com/my/app/dark-reader-for-safari/id1438243180)
 
-Firefox + Firefox Passwords
+### Firefox
 
-#### iOS/iPadOS
-
-Safari + AppleKeyChain
-
-#### Android
-
-Firefox + Firefox Passwords
+extensions:
+- [dark reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader)
+- [private-relay](https://addons.mozilla.org/en-US/firefox/addon/private-relay)
+- [raindrop](https://addons.mozilla.org/en-US/firefox/addon/raindropio)
+- [ublock origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
 
 ### Notes
 
-#### macOS/iOS/iPadOS
-
-[NotePlan](https://noteplan.co)
+- [NotePlan](https://noteplan.co)
