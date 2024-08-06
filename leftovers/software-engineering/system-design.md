@@ -21,7 +21,27 @@ Things to consider in designing the system:
 
 ## Sub-Processes
 
-Discovery - preparation, research
+Short version of project stages architect-view
+
+- RFI - Request for Information (project requirements are not fully defined)
+- RFP - Request For Proposal (project requirements are more or less clear)
+	- Discussion, questions
+	- High-level design
+	- Agreement
+- Discovery - preparation, research, prioritisation
+	- Artefacts
+		- Teams
+		- Goals
+		- Timings
+		- Tools (platforms, frameworks, programming langs, db, etc.)
+		- func. requirements
+		- non-func. requirements
+- Construction - Planing, Development, Testing
+	- Architect goals
+		- check that func. requirements in compliance
+		- check that non-func. requirements in compliance
+- Deployment - release
+- Analytic/Metrics/Support - checking results
 
 ## Solution/Application/Service Architecture
 
@@ -93,3 +113,82 @@ The model consists of four main types of diagrams, each representing a different
     - **Focus**: Usually consists of UML class diagrams or similar representations that show the structure and relationships of classes or code elements.
     - **Elements**: Classes, methods, properties, and their relationships within a component.
     - **Example**: A UML class diagram showing the classes in a particular module, their attributes, methods, and how they inherit or interact with each other.
+
+## Project requirements
+
+### Functional
+
+as example, depends on project:
+1. User Authentication and Authorization
+2. Data Management
+3. Business Process Workflows
+4. Reporting and Analytics
+5. Integration with Third-Party Systems
+6. User Interface Design
+7. Transaction Management
+8. Communication Features
+9. Compliance and Auditing
+10. Document Management
+11. Localization Support
+12. Error Handling
+13. Search and Filter Capabilities
+14. Scheduling and Notifications
+15. User Preferences and Settings
+
+### Non-Functional
+
+Prioritisation depends on project
+
+list:
+1. Performance
+   - Response Time
+   - Throughput
+   - Load Handling
+2. Scalability  
+   - Vertical Scalability (Increasing resources)
+   - Horizontal Scalability (Adding more nodes)
+3. Security  
+   - Data Encryption
+   - Data Privacy
+   - Auditing and Logging
+4. Reliability  
+   - Availability (Uptime)
+   - Mean Time Between Failures (MTBF)
+   - Mean Time to Repair (MTTR)
+5. Usability  
+   - User Interface Design
+   - Accessibility
+   - Learnability
+6. Maintainability  
+   - Code Quality
+   - Modularity
+   - Documentation
+   - Ease of Upgrades
+7. Portability  
+   - Platform Independence
+   - Hardware Independence
+   - Compatibility with Different Operating Systems
+8. Interoperability  
+   - Integration with Other Systems
+   - API Standards Compliance
+9. Compliance  
+   - Regulatory Compliance
+   - Industry Standards Compliance
+10. Backup and Recovery  
+    - Data Backup Frequency
+    - Disaster Recovery Time
+11. Localization  
+    - Multi-language Support
+    - Regional Settings Adaptation
+12. Capacity  
+    - Storage Capacity
+    - Maximum Concurrent Users
+13. Flexibility  
+    - Configurability
+    - Extensibility
+14. Efficiency  
+    - Resource Utilization (CPU, Memory)
+    - Energy Consumption
+15. Supportability  
+    - Diagnostic Tools
+    - Troubleshooting Capabilities
