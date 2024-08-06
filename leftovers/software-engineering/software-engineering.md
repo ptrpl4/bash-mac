@@ -57,6 +57,45 @@ Evolution of the programming systems product
 
 ## Processes
 
+### RFI RFP RFQ
+
+RFI (Request for Information)
+- **Purpose:** The RFI is an initial exploratory document sent out to potential vendors or service providers to gather information about their capabilities, experience, products, and services.
+- **When to Use:** This stage is used when the project requirements are not fully defined, and you need more information to understand what solutions are available in the market.
+- **Content:** The RFI typically includes a set of questions focused on understanding the vendor's experience, technology, capabilities, and possible solutions they might offer.
+- **Outcome:** The responses to an RFI help narrow down the list of vendors who are capable of meeting the project's needs and guide the development of more detailed project requirements.
+
+RFP (Request for Proposal)
+- **Purpose:** The RFP is a more detailed document that invites vendors to propose specific solutions or services in response to a well-defined set of requirements.
+- **When to Use:** This stage is used when the project requirements are clear, and you are ready to evaluate specific solutions or proposals from vendors.
+- **Content:** The RFP typically includes detailed information about the project, the scope of work, deliverables, timelines, and evaluation criteria. Vendors are expected to submit comprehensive proposals that outline how they would approach the project, including technical details, methodologies, timelines, and pricing.
+- **Outcome:** The responses to an RFP are evaluated based on predefined criteria, and a shortlist of vendors is usually created. This stage often involves negotiations and discussions to refine the proposals before making a final selection.
+
+RFQ (Request for Quotation)
+- **Purpose:** The RFQ is focused on obtaining detailed pricing information from vendors for specific products or services. It is usually more transactional than the RFP.
+- **When to Use:** This stage is used when the project requirements are fully defined, and you need to get precise cost estimates from vendors.
+- **Content:** The RFQ includes detailed specifications of the goods or services required, and vendors are expected to provide itemized quotes or bids.
+- **Outcome:** The responses to an RFQ are compared primarily based on price, although factors like delivery time and terms of service may also be considered. The vendor with the best combination of cost and terms is usually selected.
+
+RFIs (Request for Information Supplement)
+- **Purpose:** Sometimes, after receiving an RFI or RFP response, an organization may issue an RFI Supplement to clarify or request additional details from vendors.
+- **When to Use:** This stage is used when initial responses are incomplete or when the organization needs further details to make a more informed decision.
+- **Outcome:** The additional information helps the organization finalize its vendor shortlist or refine project requirements.
+
+### Discovery
+
+Main objectives are to understand the problem or opportunity, define the project’s goals, gather detailed requirements, identify constraints and risks, and explore feasible solutions.
+
+Key Activities
+1. **Stakeholder Engagement:** Conduct interviews and workshops to gather input.
+2. **Requirement Analysis:** Document and prioritize functional and non-functional requirements.
+3. **Current State Assessment:** Analyze existing systems and processes.
+4. **Solution Exploration:** Evaluate potential technologies and approaches.
+5. **Risk Assessment:** Identify and assess project risks.
+6. **Documentation:** Compile findings into a discovery report.
+7. **Review and Approval:** Present findings to stakeholders for feedback and approval.
+### Development
+
 ![](../../aaa-assets/software-engineering-3.png)
 
 ## SDLC Methodology
