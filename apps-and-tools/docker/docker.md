@@ -5,6 +5,8 @@ A technology that provides virtualisation of isolated and independent containers
 #### links
 
 - docker registry- [https://hub.docker.com/](https://hub.docker.com)
+- [web-sandbox](https://labs.play-with-docker.com)
+- [guide(ru)](https://my-js.org/docs/guide/docker/) 
 
 ## Theory
 
@@ -184,6 +186,7 @@ docker build --file build/Dockerfile --tag ci-cd-test-app:1.0  .
 
 # get detailed image info
 docker inspect ff095b82
+docker inspect ubuntu:v1 --format='{{json .Config}}'
 ```
 
 ### Network
@@ -278,46 +281,52 @@ CMD ["--directory", "directory", "8000"]
 ### Common Dockerfile Instructions
 
 1. FROM:
-	- **Purpose**: Specifies the base image to use for the subsequent instructions.
+	- **Purpose**: Specifies the base image
 	- **Syntax**: 
 	- `FROM <image>[:<tag>]`
-	- `FROM ubuntu:20.04`
+	`FROM ubuntu:20.04 as base`
 2. RUN:  
-	- **Purpose**: Executes a command in a new layer on top of the current image and commits the result.
-	- **Syntax**: `RUN <command>`
-	- `RUN apt-get update && apt-get install -y python3`
-3. **COPY**:
-	- **Purpose**: Copies files or directories from the host filesystem to the image.
-	- **Syntax**: `COPY <src> <dest>`
-	- `COPY . /app`
-4. **ADD**:
-	- **Purpose**: Similar to `COPY`, but also supports remote URLs and unpacking compressed files.
-	- **Syntax**: `ADD <src> <dest>`
-	- `ADD myapp.tar.gz /app`
-5. **CMD**:
-	- **Purpose**: Specifies the default command to run when a container is started.
-	- **Syntax**: `CMD ["executable","param1","param2"]`
-	- `CMD ["python3", "app.py"]`
-6. **ENTRYPOINT**:
-	- **Purpose**: Configures a container to run as an executable.
-	- **Syntax**: `ENTRYPOINT ["executable","param1","param2"]`
-	- `ENTRYPOINT ["python3", "app.py"]`
-7. **ENV**:
-	- **Purpose**: Sets environment variables.
-	- **Syntax**: `ENV <key>=<value>`
-	- `ENV APP_ENV=production`
-8. **EXPOSE**:
-	- **Purpose**: Informs Docker that the container listens on the specified network ports at runtime.
-	- **Syntax**: `EXPOSE <port> [<port>/<protocol>]`
-	- `EXPOSE 80`
-9. **VOLUME**:
-	- **Purpose**: Creates a mount point with the specified path and marks it as holding externally mounted volumes.
-	- **Syntax**: `VOLUME ["/path/to/dir"]`
-	- `VOLUME ["/data"]`
-10. **WORKDIR**:
-	- **Purpose**: Sets the working directory for any subsequent `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions.
-	- **Syntax**: `WORKDIR /path/to/workdir`
-	- `WORKDIR /app`
+	- Purpose: Executes a command in a new layer on top of the current image and commits the result.
+	- Syntax: `RUN <command>`
+	`RUN apt-get update && apt-get install -y python3`
+3. COPY:
+	- Purpose: Copies files or directories from the host filesystem to the image.
+	- Syntax: `COPY <src> <dest>`
+	`COPY . /app`
+4. ADD:
+	- Purpose: Similar to `COPY`, but also supports remote URLs and unpacking compressed files.
+	- Syntax: `ADD <src> <dest>`
+	`ADD myapp.tar.gz /app`
+5. CMD:
+	- Purpose: Specifies the default command to run when a container is started.
+	- Syntax: `CMD ["executable","param1","param2"...]`
+	`CMD ["python3", "app.py"]`
+	or
+	``CMD echo Hello Students.`` # Run command By default `/bin/sh -c`
+1. ENTRYPOINT:
+	- Purpose: Configures a container to run as an executable.
+	- Syntax: `ENTRYPOINT ["executable","param1","param2"]`
+	`ENTRYPOINT ["python3", "app.py"]`
+7. ENV:
+	- Purpose: Sets environment variables.
+	- Syntax: `ENV <key>=<value>`
+	`ENV APP_ENV=production`
+8. EXPOSE:
+	- Purpose: Informs Docker that the container listens on the specified network ports at runtime.
+	- Syntax: `EXPOSE <port> [<port>/<protocol>]`
+	`EXPOSE 80`
+9. VOLUME:
+	- Purpose: Creates a mount point with the specified path and marks it as holding externally mounted volumes.
+	- Syntax: `VOLUME ["/path/to/dir"]`
+	`VOLUME ["/data"]`
+10. WORKDIR:
+	- Purpose: Sets the working directory for any subsequent `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions.
+	- Syntax: `WORKDIR /path/to/workdir`
+	`WORKDIR /app`
+11. LABEL:
+    - Purpose: define [labels to specify metadata](https://docs.docker.com/engine/reference/builder/#label)
+    - Syntax: `LABEL key=value`
+    `LABEL "application_environment"="development"`
 
 ## Helpers
 
