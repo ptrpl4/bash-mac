@@ -3,7 +3,7 @@
 ## Browser
 
 * open address bar\
-  **cmd-L**&#x20;
+  **cmd-L**
 * Delete a line from the address autocomplete list\
   **shift-delete**
 
@@ -14,7 +14,7 @@ browsers, Finder etc.
 * switch to next tab / reverse\
   **control-tab** / **control-tab-shift**
 * close window\
-  **cmd-shift-w**&#x20;
+  **cmd-shift-w**
 
 ## System (macOS)
 

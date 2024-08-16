@@ -22,7 +22,7 @@ Traceback (most recent call last):
 StopIteration
 ```
 
-Example with for&#x20;
+Example with for
 
 ```
 >>> a = (i**2 for i in range(1,5))

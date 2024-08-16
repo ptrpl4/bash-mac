@@ -31,7 +31,7 @@ Transparency enables inspection. Inspection without transparency is misleading a
 
 #### Inspection
 
-The Scrum artifacts and the progress toward agreed goals must be inspected frequently and diligently to detect potentially undesirable variances or problems.&#x20;
+The Scrum artifacts and the progress toward agreed goals must be inspected frequently and diligently to detect potentially undesirable variances or problems.
 
 Inspection enables adaptation. Inspection without adaptation is considered pointless. Scrum events are designed to provoke change.
 
@@ -105,7 +105,7 @@ The Product Owner ensures that attendees are prepared to discuss the most import
 
 **Topic One: Why is this Sprint valuable?**
 
-The Product Owner proposes how the product could increase its value and utility in the current Sprint. The whole Scrum Team then collaborates to define a Sprint Goal that communicates why the Sprint is valuable to stakeholders.&#x20;
+The Product Owner proposes how the product could increase its value and utility in the current Sprint. The whole Scrum Team then collaborates to define a Sprint Goal that communicates why the Sprint is valuable to stakeholders.
 
 **Topic Two: What can be Done this Sprint?**
 
@@ -153,9 +153,9 @@ The Product Backlog is an emergent, ordered list of what is needed to improve th
 
 Headed by the Product Owner.
 
-Product Backlog items that can be Done by the Scrum Team within one Sprint are deemed ready for selection in a Sprint Planning event. They usually acquire this degree of transparency after refining activities.&#x20;
+Product Backlog items that can be Done by the Scrum Team within one Sprint are deemed ready for selection in a Sprint Planning event. They usually acquire this degree of transparency after refining activities.
 
-#### Product Backlog refinement&#x20;
+#### Product Backlog refinement
 
 Is the act of breaking down and further defining Product Backlog items into smaller more precise items. This is an ongoing activity to add details, such as a description, order, and size.
 
@@ -173,7 +173,7 @@ Sprint items could be sorted by status on **Kanban** board during the Sprint.
 
 **Commitment: Sprint Goal**
 
-The Sprint Goal is the single objective for the Sprint.&#x20;
+The Sprint Goal is the single objective for the Sprint.
 
 The Sprint Goal is created during the Sprint Planning event and then added to the Sprint Backlog.  If the work turns out to be different than they expected, they collaborate with the Product Owner to negotiate the scope of the Sprint Backlog within the Sprint without affecting the Sprint Goal.
 

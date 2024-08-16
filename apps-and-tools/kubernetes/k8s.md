@@ -29,7 +29,7 @@ K8s cluster contains of:
 * At least one **Master Node** (virtual or physical machine)
 * Multiple **Worker Nodes** with **kubelet** process ("node agent") on it.
 
-**kubelet** - allows running application processes and communicate&#x20;
+**kubelet** - allows running application processes and communicate
 
 **Apps** are running on Worker Nodes.
 
@@ -50,7 +50,7 @@ On Master Node are running **Main k8s Processes** to run and manage cluster. Bet
 * etcd
   * key-value storage\
     storing info and configs. etcd snapshots are using for backup
-  * makes snapshots for recovering proccees&#x20;
+  * makes snapshots for recovering proccees
 
 ### Pod
 

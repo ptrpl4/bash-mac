@@ -57,7 +57,7 @@ default ✓ [======================================] 10 VUs  30s
 grafana for metrics + k6 for load test
 
 * run grafana docker setup
-* add grafana address to k6 docker config&#x20;
+* add grafana address to k6 docker config
 * run k6 docker setup
 
 example structure

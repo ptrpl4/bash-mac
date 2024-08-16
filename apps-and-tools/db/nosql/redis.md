@@ -18,7 +18,7 @@ Redis Modules
 
 * RediSearch
 * SerisGraph
-* RedisTImeSeries&#x20;
+* RedisTImeSeries
 * RedisJSON
 
 Ways to safe Radis data

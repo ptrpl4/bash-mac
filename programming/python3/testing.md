@@ -27,6 +27,6 @@ def pretty_print(msg, indent=2):
     pprint(msg, indent=indent)
 ```
 
-json -&#x20;
+json
 
 pytest 

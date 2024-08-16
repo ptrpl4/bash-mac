@@ -9,7 +9,7 @@
 
 ## Browser engines
 
-### Web/Layout/Rendering engine&#x20;
+### Web/Layout/Rendering engine
 
 Essentially, rendering engines are responsible for displaying content on screen based on the HTML and CSS in a site's code.
 
@@ -25,7 +25,7 @@ JavaScript is generally considered an interpreted language, but modern JavaScrip
 
 [V8](https://v8.dev/) - Google Chrome, Chrmium-based browsers and **Node.js**
 
-[SpiderMonkey](https://spidermonkey.dev) - Mozilla Firefox &#x20;
+[SpiderMonkey](https://spidermonkey.dev) - Mozilla Firefox 
 
 [JavaScriptCore](https://developer.apple.com/documentation/javascriptcore) - Safari
 

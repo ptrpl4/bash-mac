@@ -30,7 +30,7 @@ CNP Types:
 
 * **CIT** - Customer Initiated Transaction
 * **MIT** - Merchant Initiated Transaction
-* **COF** - Card On File&#x20;
+* **COF** - Card On File
 
 **3DS** - 3 Domain Server
 
@@ -61,7 +61,7 @@ CNP Types:
 
 ### Online Payments
 
-Payments type:&#x20;
+Payments type:
 
 * CIT - triggered by Customer
 * MIT - triggered by Merchant
@@ -81,7 +81,7 @@ PCI-DSS Compliance rules include:
 
 MCC - four-digit number that classifies the type of goods or services a business offers
 
-Tokenization - when used Digital Account Number instead of Primary Account Number.&#x20;
+Tokenization - when used Digital Account Number instead of Primary Account Number.
 
 #### Apple Pay Payment
 

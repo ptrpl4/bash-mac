@@ -1,6 +1,3 @@
----
-description: VCS - Version Control System
----
 # 📖 Git
 
 #### links
@@ -470,10 +467,10 @@ $ git push origin --delete bad-branch-name
 
 Typical steps and cases for work with feature branch
 
-1. `rebase` feature branch on top of main branch locally&#x20;
-   1. &#x20;`feature` will have all history from `main` and all new feature commits on top
-2. `merge` feature branch into main branch (`squash` commit preferred) when work is done&#x20;
-   1. main branch will save original commit history and add one "merge commit" on top (squashing case)&#x20;
+1. `rebase` feature branch on top of main branch locally
+   1. `feature` will have all history from `main` and all new feature commits on top
+2. `merge` feature branch into main branch (`squash` commit preferred) when work is done
+   1. main branch will save original commit history and add one "merge commit" on top (squashing case)
    2. main branch will save original commit history (because of step 1.) and will have all commit from feature branch on top (no squashing case)
 
 ```bash

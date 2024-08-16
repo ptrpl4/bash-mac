@@ -20,7 +20,7 @@ JWTs can be signed using a secret (with the **HMAC** algorithm) or a public/priv
 
 ## Payload (JWT Claims Set)
 
-Contains the claims. Claims are statements about an entity (typically, the user) and additional data. There are three types of claims:&#x20;
+Contains the claims. Claims are statements about an entity (typically, the user) and additional data. There are three types of claims:
 
 * _registered_
 * _public_

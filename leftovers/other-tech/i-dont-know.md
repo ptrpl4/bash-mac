@@ -18,7 +18,7 @@ What have I done?
 
 * Load testing
   * k6
-* Tools and Services&#x20;
+* Tools and Services
   * k8s
   * kibana
   * gcloud

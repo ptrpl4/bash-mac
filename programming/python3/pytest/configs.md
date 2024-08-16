@@ -21,7 +21,7 @@ link -  [https://docs.pytest.org/en/stable/customize.html](https://docs.pytest.o
 
 link - [https://docs.pytest.org/en/stable/reference.html#command-line-flags](https://docs.pytest.org/en/stable/reference.html#command-line-flags)
 
-Example - pytest.ini&#x20;
+Example - pytest.ini
 
 ```
 [pytest]

@@ -40,8 +40,8 @@ The **start line** and the **header** are required attributes, so the other part
 An HTTP header consists of several fields, each with a specific role and meaning.
 
 * _Host_: This is the domain name of the server.
-* _Content-Length_: This field in the request or response header plays a crucial role in data transfer. It specifically indicates the size of the body of the request or response in bytes. This helps the receiver understand when the current message ends and potentially prepare for the next one, especially in cases where multiple HTTP messages are being sent over the same connection.&#x20;
-* _Connection_: This field is crucial in HTTP persistent connections, where a single TCP connection is used to send and receive multiple HTTP requests and responses.&#x20;
+* _Content-Length_: This field in the request or response header plays a crucial role in data transfer. It specifically indicates the size of the body of the request or response in bytes. This helps the receiver understand when the current message ends and potentially prepare for the next one, especially in cases where multiple HTTP messages are being sent over the same connection.
+* _Connection_: This field is crucial in HTTP persistent connections, where a single TCP connection is used to send and receive multiple HTTP requests and responses.
 * _Content-type_: This field tells the client the format of the data it’s receiving.
 * _Content-encoding_: This field indicates the compression format used for the data. For example, if the client sees ‘_gzip’_ encoding, it knows it needs to decompress the data.
 
@@ -51,7 +51,7 @@ HTTP protocols define various methods or ‘verbs’ to perform different action
 
 HTTP methods have certain properties that define how they interact with server resources. Two such properties are whether they're 'non-mutating' and 'idempotent.'
 
-**non-mutating** method doesn't alter any server resources.&#x20;
+**non-mutating** method doesn't alter any server resources.
 
 **idempotent** method produces the same result, regardless of how many times it's repeated
 
