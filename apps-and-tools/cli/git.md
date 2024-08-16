@@ -409,28 +409,21 @@ index c703f5f..891ccac 100644
  Now you are
 +here
 '
-<<<<<<< Updated upstream
-
 # check diff with master
 git show master
-=======
->>>>>>> Stashed changes
 ```
 
 The lines `--- a/our-file +++ b/our-file` show that the changes in the first file are marked by the `-` sign and changes in the second one are marked by `+`
 Line `@@ -1 +1,2 @@` tell that in the output 1-st line from the first version of the file and 1-st and next 2 lines of the second version of the file
 
-<<<<<<< Updated upstream
-### Blame
+## Blame
+
+Show commit hash and last author on each line of a file.
 
 ```bash
 git blame
 ```
 
-Show commit hash and last author on each line of a file.
-
-=======
->>>>>>> Stashed changes
 ## Branch
 
 ### Basics
