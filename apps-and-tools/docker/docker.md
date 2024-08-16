@@ -212,11 +212,29 @@ script:
 
 ## Dockerfile
 
-ref - [https://docs.docker.com/engine/reference/builder](https://docs.docker.com/engine/reference/builder)
+-  [full reference/](https://docs.docker.com/engine/reference/
 
-#### Example
+Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.
 
-```docker
+### Syntax
+
+```dockerfile
+# Comment
+INSTRUCTION arguments
+```
+
+### .dockerignore
+
+exclude files or directories from the build context. This helps avoid sending unwanted files and directories to the builder, improving build speed, especially when using a remote builder.
+
+```dockerignore
+# test
+node_modules
+bar
+```
+### Examples
+
+```dockerfile
 FROM node
 
 ENV MONGO_DB_USERNAME=admin \
@@ -239,7 +257,7 @@ CMD ["node", "server.js"]
 
 #### Python + Pipenv example <a href="#remove-a-container-using-the-cli" id="remove-a-container-using-the-cli"></a>
 
-```docker
+```dockerfile
 FROM python:3.9-slim as base
 
 # Setup env
