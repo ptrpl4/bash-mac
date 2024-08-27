@@ -7,6 +7,7 @@ A technology that provides virtualisation of isolated and independent containers
 - docker registry- [https://hub.docker.com/](https://hub.docker.com)
 - [web-sandbox](https://labs.play-with-docker.com)
 - [guide(ru)](https://my-js.org/docs/guide/docker/) 
+- [basics (ru)](https://doka.guide/tools/docker/)
 
 ## Theory
 
@@ -15,13 +16,13 @@ A technology that provides virtualisation of isolated and independent containers
 ![](../../aaa-assets/docker-2.jpeg)
 
 images and layers
-- Container **Image** - an artefact(collection of layers that are stored and managed by Docker)
+- **Dockerfile** - set of instructions to build Image from layers. Each instruction creates a layer in the final image.
+- Container **Image** - already builded artefact (collection of docker layers)
   includes all necessary information to run a software, including code, runtime, libraries, env vars, config files
 - **Registry** - image storage
-- **Dockerfile** - set of instructions to build Image from layers. Each instruction creates a layer in the image
 
 containers and environment
-- **Container** - running instance of Container Image
+- **Container** - instance of Container Image
 - Container **environment** - context and settings in which a containerised application runs
 - **Isolated Docker Network** - network for containers
   containers cloud communicate using container name instead ip:port connections. It automatically used in docker-compose
@@ -62,16 +63,22 @@ Docker requires a Linux kernel to function, and this requirement is met on macOS
 
 ## Docker commands
 
+Run docker desktop to create socket `~/.docker/docker.sock` for communication with docker daemon.
+
+`open -a Docker` for macOS
+
 ### Basics and examples
 
 ```bash
 # docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
-# -d run the container in detached(background) mode 
+
+# -d detached(background) mode 
 # -p 80:80 binds port 80 of the host to port 80 in the container
 docker run -d -p 80:80 docker/getting-started
 
 # --interactive, --tty creating an interactive shell
 docker run -i -t ubuntu bash
+
 # --detach, -p bind port, Assign a name to the container
 docker run -d -p 3000:3000 --name myapp-new redis:4.0
 
@@ -90,10 +97,6 @@ docker run -d \
     --name ci-cd-app \
     --net ci-cd-test-project_default \
     ci-cd-app:1.0
-
-# docker ps [OPTIONS] 
-# -a include stopped
-docker ps -a 
 
 # start/stop container
 docker stop <the-container-id>
@@ -123,10 +126,14 @@ docker container create hello-world
 # run created container
 docker container start c6c7b4c22dfa
 
-# list all
+# list all include stopped (alias to docker ps)
 docker container ls -a
 # only running
 docker container ls
+# show size
+docker container ls -s -a
+# filter
+docker ps --filter status=running
 
 # run(create and run) new container in pseudo-TTY background mode
 docker container run -t -d ubuntu # -t allocate a pseudo-teletypewriter
@@ -136,12 +143,11 @@ docker container run -it ubuntu
 # interact with running container
 docker container exec 9faa5154097e ls
 
-
 # stop
 docker container stop 9faa5154097e
 
 # rm
-docker container rm 9faa5154097e
+docker container rm 9faa5154097e # or docker rm
 ```
 
 ### run
