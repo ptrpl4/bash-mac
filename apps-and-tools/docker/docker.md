@@ -1,4 +1,4 @@
-yy# 🐋 Docker
+# 🐋 Docker
 
 A technology that provides virtualisation of isolated and independent containers on a single operating system.
 
@@ -150,9 +150,9 @@ docker run -d \
     ci-cd-app:1.0
 ```
 
-## Image operations
+### Image operations
 
-### pull
+#### pull
 
 process
 
@@ -210,7 +210,9 @@ script:
 
 ## Dockerfile
 
--  [full reference](https://docs.docker.com/engine/reference/)
+- [full reference](https://docs.docker.com/engine/reference/)
+- [linter](https://github.com/michaellzc/vscode-hadolint)
+- [Auditing](https://docs.docker.com/scout/)
 
 Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.
 
@@ -353,6 +355,16 @@ apt-get update -y \
     - Purpose: define [labels to specify metadata](https://docs.docker.com/engine/reference/builder/#label)
       `LABEL key=value`
       `LABEL "application_environment"="development"`
+
+#### Best practices
+
+- avoid the `apt-get upgrade` command. It can bring upgrades that can affect the environment you use.
+- Minimise RUN instruction layers
+- use alpine images if applicable
+- Remove unnecessary packages after installation
+- use `--no-install-recommends` for `apt-get install`
+- Use the exec form
+
 
 ### RUN
 
