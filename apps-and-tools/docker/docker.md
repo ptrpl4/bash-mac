@@ -1,4 +1,4 @@
-# 🐋 Docker
+yy# 🐋 Docker
 
 A technology that provides virtualisation of isolated and independent containers on a single operating system.
 
@@ -70,6 +70,57 @@ Run docker desktop to create socket `~/.docker/docker.sock` for communication wi
 ### Basics and examples
 
 ```bash
+# start/stop container
+docker stop <the-container-id>
+docker start <the-container-id>
+
+# get logs from container (if container runs in -d mode for example)
+# docker logs [OPTIONS] CONTAINER
+docker logs 87sd7v8sd7f8
+
+#stop and delete container
+docker stop <the-container-id>
+docker rm <the-container-id>
+
+# check docker network
+docker network ls
+
+# exec smthg inside container
+docker exec -it 87sd7v8sd7f8 /bin/bash
+
+# only create not run container with unique ID and a name
+docker container create hello-world
+# => 5a30b370e9dfc147f5438380d60ff4b1c43869a752f2ef481b6cf0adb33dae83
+
+# run created container
+docker container start c6c7b4c22dfa
+
+# list all include stopped (alias to docker ps)
+docker ls -a
+# only running
+docker ls
+# show size
+docker ls -s -a
+# filter
+docker ps --filter status=running
+
+docker ps -a --format "table {{.Names}}\\t{{.Command}}" --last 1
+
+# interact with running container
+docker container exec 9faa5154097e ls
+
+# stop
+docker container stop 9faa5154097e
+
+# rm
+docker container rm 9faa5154097e # or docker rm
+```
+
+### run
+
+flags
+
+```bash
 # docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 # -d detached(background) mode 
@@ -97,66 +148,6 @@ docker run -d \
     --name ci-cd-app \
     --net ci-cd-test-project_default \
     ci-cd-app:1.0
-
-# start/stop container
-docker stop <the-container-id>
-docker start <the-container-id>
-
-# get logs from container (if container runs in -d mode for example)
-# docker logs [OPTIONS] CONTAINER
-docker logs 87sd7v8sd7f8
-
-#stop and delete container
-docker stop <the-container-id>
-docker rm <the-container-id>
-
-# check docker network
-docker network ls
-
-# exec smthg inside container
-docker exec -it 87sd7v8sd7f8 /bin/bash
-```
-
-### container commands
-
-```bash
-# only create not run container with unique ID and a name
-docker container create hello-world
-# => 5a30b370e9dfc147f5438380d60ff4b1c43869a752f2ef481b6cf0adb33dae83
-# run created container
-docker container start c6c7b4c22dfa
-
-# list all include stopped (alias to docker ps)
-docker container ls -a
-# only running
-docker container ls
-# show size
-docker container ls -s -a
-# filter
-docker ps --filter status=running
-
-# run(create and run) new container in pseudo-TTY background mode
-docker container run -t -d ubuntu # -t allocate a pseudo-teletypewriter
-# run in intaractive mode
-docker container run -it ubuntu
-
-# interact with running container
-docker container exec 9faa5154097e ls
-
-# stop
-docker container stop 9faa5154097e
-
-# rm
-docker container rm 9faa5154097e # or docker rm
-```
-
-### run
-
-flags
-
-```bash
-# make session -interactive and allocate -terminal interface for container
-docker run -it ubuntu
 ```
 
 ## Image operations
@@ -179,6 +170,7 @@ docker pull nginx:1.23
 
 # docker images [OPTIONS] [REPOSITORY[:TAG]]
 docker images
+docker images --format='{{.Repository}}\t{{.Tag}}\t{{.Size}}' | head -4
 
 # delete
 docker image rm <image-id>
@@ -218,9 +210,11 @@ script:
 
 ## Dockerfile
 
--  [full reference/](https://docs.docker.com/engine/reference/
+-  [full reference](https://docs.docker.com/engine/reference/)
 
 Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.
+
+Each instruction is executed in isolation from the others
 
 ### Syntax
 
@@ -329,12 +323,14 @@ apt-get update -y \
 	  `ADD myapp.tar.gz /app`
 5. CMD:
 	- Purpose: Specifies the default command to run when a container is started.
+	  [cmd vs entrypoint](https://docs.docker.com/reference/dockerfile/#understand-how-cmd-and-entrypoint-interact)
 	  `CMD ["executable","param1","param2"...]`
 	  `CMD ["python3", "app.py"]`
 	  or
 	  `CMD echo Hello Students. # Run command By default /bin/sh -c`
 1. ENTRYPOINT:
 	- Purpose: Configures a container to run as an executable.
+	  [cmd vs entrypoint](https://docs.docker.com/reference/dockerfile/#understand-how-cmd-and-entrypoint-interact)
 	  `ENTRYPOINT ["executable","param1","param2"]`
 	  `ENTRYPOINT ["python3", "app.py"]`
 7. ENV:
@@ -358,13 +354,15 @@ apt-get update -y \
       `LABEL key=value`
       `LABEL "application_environment"="development"`
 
-### run
+### RUN
 
 allows to execute commands or a set of commands during an image build time
 
 #### options
 
-`--mount` option [to create mounts](https://docs.docker.com/engine/reference/builder/#run---mount) that you can access at the build time to bind files, store cache, etc. This option has several types and each provides a specific feature. Among those types are:
+`--mount` option [to create mounts](https://docs.docker.com/engine/reference/builder/#run---mount) that you can access at the build time to bind files, store cache, etc.
+
+types:
 - **bind**: binds files or directories to the build container
 - **cache**: caches directories for compilers and package managers
 - **tmpfs**: for mounting tmpfs in the build container
