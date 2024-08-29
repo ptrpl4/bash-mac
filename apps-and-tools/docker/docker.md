@@ -20,6 +20,7 @@ images and layers
 - Container **Image** - already builded artefact (collection of docker layers)
   includes all necessary information to run a software, including code, runtime, libraries, env vars, config files
 - **Registry** - image storage
+- **Docker Compose** - orchestration tool
 
 containers and environment
 - **Container** - instance of Container Image
@@ -31,11 +32,12 @@ containers and environment
 
 Namespaces limiting what containers can see and access.  Containers create namespaces that the particular container will use and have multiple namespaces that present different information about the OS. 
 
-**MNT** namespace limits the mounted file systems a container can use, **USER** namespace is used to isolate users in each container.
+- **MNT** namespace limits the mounted file systems a container can use
+- **USER** namespace is used to isolate users in each container
 
 ### Control groups
 
-Also called cgroups. It is a Linux kernel feature that isolates, prioritizes, and calculates the resource usage (CPU, memory, disk I/O, network, etc.) of a set of processes. 
+Also called **cgroups**. Linux kernel feature that isolates, prioritizes, and calculates the resource usage (CPU, memory, disk I/O, network, etc.) of a set of processes. 
 
 Control groups can also impose strict limits on usage, ensure that containers use only the resources they need and, if necessary, set limits on the resources a container can use.
 
@@ -43,9 +45,9 @@ Control groups can also impose strict limits on usage, ensure that containers us
 
 Isolated Union file systems used in containers are stackable. This system helps avoid duplication of data every time you deploy a new container.
 
-### Inside container
+### Layers
 
-layers of images
+Container consist of layers
 
 * linux base image
 * application image
@@ -54,18 +56,17 @@ if smthg changes - inside container will be updated/changed only image layers wi
 
 ### Docker on macOS
 
-Docker requires a Linux kernel to function, and this requirement is met on macOS using a lightweight virtual machine.
+Docker requires a Linux kernel to work, and on macOS using a lightweight virtual machine.
 
 - Docker daemon (`dockerd`) runs inside VM. It manages images, containers, networks, and volumes.
+- Docker desktop needs to create socket `~/.docker/docker.sock` for communication with docker daemon.
 - hypervisor (either Apple’s Hypervisor.framework or qemu) runs the VM that contains the Docker daemon and containers
 - Docker images and containers are stored inside the VM, they are managed through the Docker CLI.
 - Docker volumes can be mapped to directories on macOS host using the `-v` or `--mount` options in Docker commands.
 
-## Docker commands
+## Commands
 
-Run docker desktop to create socket `~/.docker/docker.sock` for communication with docker daemon.
-
-`open -a Docker` for macOS
+`open -a Docker` for Docker Desktop on macOS
 
 ### Basics and examples
 
@@ -75,7 +76,6 @@ docker stop <the-container-id>
 docker start <the-container-id>
 
 # get logs from container (if container runs in -d mode for example)
-# docker logs [OPTIONS] CONTAINER
 docker logs 87sd7v8sd7f8
 
 #stop and delete container
@@ -396,6 +396,19 @@ ENTRYPOINT ["/bin/bash"]
 ```
 
 This configuration can speed up the build process because Docker can use cache from the target directory in case it needs to rebuild the `RUN` layer in later builds.
+
+## Container orchestration
+
+Orchestration is the automated configuration, management, and coordination of computer systems, applications, and services.
+
+Container orchestration automates the deployment, management, scaling, and networking of containers.
+
+- Docker Compose
+	- Primarily designed for running multi-container applications on a **single host**. It simplifies the process of defining and running applications with multiple containers using a simple YAML file.
+
+- Kubernetes
+	-  A robust orchestration platform that manages containers across **multiple nodes**(servers). It is suitable for large-scale applications and can handle complex deployments.
+
 
 ## Helpers
 

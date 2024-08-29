@@ -63,7 +63,7 @@
     * [MongoDB](apps-and-tools/db/nosql/mongodb.md)
     * [Redis](apps-and-tools/db/nosql/redis.md)
 * [🐋 Docker](apps-and-tools/docker/docker.md)
-  * [Compose](apps-and-tools/docker/compose.md)
+  * [Compose](apps-and-tools/docker/docker-compose.md)
   * [🗄️ Docker Volumes](apps-and-tools/docker/docker-volumes.md)
   * [VM vs Docker](apps-and-tools/docker/vm-vs-docker.md)
 * [⚙️ Kubernetes aka k8s](apps-and-tools/kubernetes/k8s.md)

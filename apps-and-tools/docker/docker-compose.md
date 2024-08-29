@@ -1,4 +1,10 @@
-# Compose
+# Docker Compose
+
+An Orchestration Tool for defining and running multi-container Docker applications on a single host machine.
+
+#### links
+
+- [doc](https://docs.docker.com/compose/)
 
 ### File
 

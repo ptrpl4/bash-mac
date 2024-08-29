@@ -1,7 +1,3 @@
----
-description: The way to save data from container to host
----
-
 # 🗄 Docker Volumes
 
 ![](../../aaa-assets/docker-volumes-1.png)
