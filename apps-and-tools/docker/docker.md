@@ -187,14 +187,94 @@ docker inspect ff095b82
 docker inspect ubuntu:v1 --format='{{json .Config}}'
 ```
 
-### Network
+## Network
 
+Allows containers to communicate with each other and external resources through the network. It works with the help of network drivers.
+
+### Drivers
+
+- `bridge` - default. [Bridge networks](https://docs.docker.com/network/bridge/) are isolated from the Docker host. Typically used when applications run in standalone containers and communicate on the same host\
+  `docker network create <network-name>`
+- `host`: A [host networks](https://docs.docker.com/network/host/) is used for standalone containers. It removes network isolation between the container and the Docker host to use the host’s networking configurations directly, container doesn't get its own IP address.\
+  Offers better performance when making a large number of requests with different ports. It doesn't require NAT(Network address translation) which saves time.
+  Docker automatically creates a host network and you can't create more.
+- `overlay`: [Overlay networks](https://docs.docker.com/network/overlay/) connect multiple Docker daemons and enable swarm services to communicate with each other. You can also use overlay networks to facilitate communication between a swarm service and a standalone container, or between two standalone containers on different Docker daemons. This strategy removes the need to do OS-level routing between containers.\
+  Useful when you want containers on different hosts to communicate with one another. Docker manages to route itself and provides secure communication between containers when encryption is enabled.
+  `docker network create -d overlay --attachable <network-name>`
+- ipvlan
+- macvlan
+
+### Inspecting
+
+`docker network inspect <network-name>`
+
+```json
+[
+    {
+        "Name": "hs-bridge",
+        "Id": "ac6211a0597ae3da32fbba251b1a141df3bf88b8e2a31afdf8ea3a84b56659fb",
+        "Created": "2022-11-03T15:55:46.780000757Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.19.0.0/16",
+                    "Gateway": "172.19.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+    "dfeffe32841f8a630095a9701581ff791302f1cf0533131fbd8464b7344c622c": {
+        "Name": "hs-ubuntu",
+        "EndpointID": "6f1a9ced6bb3c10f232d86b7081e759b9658b478ba68d45c66547f9eade5d9f2",
+        "MacAddress": "02:42:ac:13:00:02",
+        "IPv4Address": "172.19.0.2/16",
+        "IPv6Address": ""
+    },
+        "Options": {},
+        "Labels": {}
+    }
+]
+```
+
+ - IPAM(IP Address Management). 
+   includes subnet and default gateway. In this case, based on the values of subnet the containers will receive IP addresses in the range of 172.19.0.2 - 172.19.255.254
+ 
+
+### Commands
+  
 ```bash
-# check current
-docker network
+# check avaliable
+docker network ls
 
-# create new network - docker network create [OPTIONS] NETWORK
+# create new network
 docker network create mongo-network
+
+# create container and specify network
+docker create --name hs-ubuntu-v1 --network hs-bridge ubuntu:v1
+
+# run container and specify network
+docker run -d -it --name hs-ubuntu-v2 --network hs-bridge ubuntu:v1
+
+# attach an already-running container to a network
+docker network connect <network-name> <container-name>
+
+# disconnect
+docker network disconnect <network-name> <container-name>
+
+# list containers with network info
+docker ps -a --format '{{ .ID }} {{ .Names }} {{ json .Networks }}'
 ```
 
 ### Docker on remote pc
