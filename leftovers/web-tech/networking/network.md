@@ -25,6 +25,19 @@ IEEE - институт инженеров электротехнике и эл�
 IAB - совет по архитектуре интернета\
 W3C - консорциум интернета
 
+## IPv4 Subnet
+
+Example - `"Subnet": "172.19.0.0/16", "Gateway": "172.19.0.1"`
+
+IPv4 addresses are 4 blocks of 8 bits. For _172.19.0.0/16_ first 16 bits (2 sections) are constant and the rest is dynamic. 
+
+_172.19.0-255.0-255_ - **Range** of IPs 
+_172.19.0.0_ -  **Subnet Address**
+_172.19.0.1_ - **Default Gateway**
+_172.19.255.255_ - **Broadcast Address**. 
+
+Devices will receive IPs in the range of _172.19.0.2-172.19.255.254._
+
 ## OSI Model
 
 **OSI** stands for **Open Systems Interconnection**. The OSI model provides a visual representation of how each communication layer is built on top of another
