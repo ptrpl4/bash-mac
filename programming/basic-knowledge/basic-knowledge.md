@@ -88,6 +88,15 @@ Each element of a class has a visibility option
 - `#` (Protected) – element can be accessed by classes that have a generalisation (or inheritance) relationship with its class;
 - `~` (Package) – element can be accessed by classes that are located in the same package.
 
+## Class relationships
+
+- Generalization (inheritance) - one class could be described as a child class which assumes and could use methods of a parent class
+- Dependency – change in one class can affect another class
+- Realization – the relationship between the blueprint class and the object containing its respective implementation level details
+- Association - instances of one class are connected to instances of another
+	- Aggregation - one class as a part of the other
+	- Composition - classes share lifespan
+
 #### Association relationships
 
 Type of relationship, indicates that instances of one class are connected to instances of another.
