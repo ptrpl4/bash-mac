@@ -1,11 +1,13 @@
 # 🤓 Basic Knowledge
 
-## Statically v. dynamically v. strongly v. weakly typed languages
-
 #### Links
 
 - hexlet.io/courses/intro_to_programming/lessons/types/theory_unit
 - educative.io/answers/statically-v-dynamically-v-strongly-v-weakly-typed-languages
+
+## Typing
+
+Statically vs dynamically vs strongly vs weakly typed languages
 
 ### Type checking
 
@@ -61,3 +63,33 @@ A [class](https://en.wikipedia.org/wiki/Class\_\(computer\_programming\)) should
 
 [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency\_inversion\_principle)\
 One should "depend upon abstractions, \[not] concretions."
+
+## OOP
+
+Object-Oriented Paradigm
+
+### Class Diagram
+
+In the Unified Model Language (UML), Class Diagram is a visual representation of an object-oriented structure
+
+#### Elements
+
+- Classes
+- Class attributes
+- Class methods
+- Class relationships
+
+#### Visibility options
+
+Each element of a class has a visibility option
+
+- `+` (Public) – element can be accessed by any class in the system;
+- `-` (Private) – element can be accessed only by a class that owns it;
+- `#` (Protected) – element can be accessed by classes that have a generalisation (or inheritance) relationship with its class;
+- `~` (Package) – element can be accessed by classes that are located in the same package.
+
+#### Association relationships
+
+Type of relationship, indicates that instances of one class are connected to instances of another.
+
+![](../../aaa-assets/basic-knowledge-4.png)
