@@ -4,17 +4,18 @@ What have I done?
 
 ## I know pretty much about
 
-* Stuff related to web development quality assurance processes (test-plans, test-cases, testing approaches and techniques, typical issues and bottlenecks)
+* Web development quality assurance. Test-plans, test-cases, testing approaches and techniques, UAC, typical issues and bottlenecks
+* Web development.  System architecture, UI-UX patterns microservices, REST-API, message brokers, SQL/noSQL DB, Docker, CI/CD process
 * What happens between servers and clients (sockets, TCP, UDP, HTTP, data exchange)
 * How browsers works (JS-engine, html, css, DOM, websockets, CORS, localStorage, sessionStorage, cookies)
-* How web-apps works (microservices, REST-API, message brokers, SQL/noSQL DB, Docker)
 * How to test web-apps on client side and server side (Selenium, Playwright, Postman)
 * How to manage develop team (Agile, Scrum, XP, SAFe, TDD, BDD)
-* How to prepare tech documentation for developed/planned products
+* How to prepare tech documentation for developed/planned products and new features
 * How to deliver stable features for stable product (SLA, SLO, SLI)
 * How app should look and work (UI/UX Guidelines and best practices)
+* How to conduct a/b test and implement new changes based on results
 
-## I know a bit about
+## I know about
 
 * Load testing
   * k6
@@ -29,12 +30,14 @@ What have I done?
 * Programming
   * python
   * js
+  * bash
 * How to test mobile applications
 * How to perform load testing
 
 ## I want know more about
 
 * Security testing best practices
+* Team Lead
 * Golang
 * All stuff from previous sections 🤓
 
