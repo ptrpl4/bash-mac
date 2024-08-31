@@ -1,10 +1,6 @@
----
-description: >-
-  A regular expression (regex or regexp for short) is a sequence of characters
-  that describes a common pattern for a set of strings.
----
-
 # 🤓 regexp
+
+A regular expression (regex or regexp for short) is a sequence of characters that describes a common pattern for a set of strings.
 
 #### links
 
