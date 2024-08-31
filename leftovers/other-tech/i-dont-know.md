@@ -5,7 +5,7 @@ What have I done?
 ## I know pretty much about
 
 * Web development quality assurance. Test-plans, test-cases, testing approaches and techniques, UAC, typical issues and bottlenecks
-* Web development.  System architecture, UI-UX patterns microservices, REST-API, message brokers, SQL/noSQL DB, Docker, CI/CD process
+* Web development.  System architecture, UI-UX patterns microservices, git, REST-API, message brokers, SQL/noSQL DB, Docker, CI/CD
 * What happens between servers and clients (sockets, TCP, UDP, HTTP, data exchange)
 * How browsers works (JS-engine, html, css, DOM, websockets, CORS, localStorage, sessionStorage, cookies)
 * How to test web-apps on client side and server side (Selenium, Playwright, Postman)
