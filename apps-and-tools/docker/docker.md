@@ -187,6 +187,20 @@ docker inspect ff095b82
 docker inspect ubuntu:v1 --format='{{json .Config}}'
 ```
 
+### Registry
+
+```bash
+docker login --username johndoe --password mypassword
+
+docker pull hello-world
+
+docker tag hello-world:latest johndoe/hello-world:v1.0
+
+docker push johndoe/hello-world:v1.0
+
+docker pull docker.io/johndoe/hello-world:v1.0
+```
+
 ## Network
 
 Allows containers to communicate with each other and external resources through the network. It works with the help of network drivers.
