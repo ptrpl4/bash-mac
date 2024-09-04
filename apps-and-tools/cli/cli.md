@@ -917,6 +917,16 @@ echo -n 'admin:123456' | base64 | pbcopy # -n Do not print newline char
 echo -n 'YWRtaW46MTIzNDU2' | base64 -d
 ```
 
+### chsh
+
+Change user's login shell.
+
+```sh
+echo $SHELL
+
+chsh -s /bin/bash
+```
+
 ## Shortcuts
 
 good to read - https://jvns.ca/blog/2024/07/08/readline/
