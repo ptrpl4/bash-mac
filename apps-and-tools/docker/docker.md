@@ -491,6 +491,30 @@ ENTRYPOINT ["/bin/bash"]
 
 This configuration can speed up the build process because Docker can use cache from the target directory in case it needs to rebuild the `RUN` layer in later builds.
 
+###  Single-stage build
+
+Uses one FROM statement, final image could be big in case of many layers or unnessesary data
+
+### Multi-stage build
+
+Uses multiple FROM statements. Final build will be based on image from last FROM statement.
+
+```dockerfile
+# Stage 1: Building the application
+FROM node:14 as builder
+WORKDIR /app
+COPY package.json .
+RUN npm install
+COPY . .
+RUN npm run build
+
+# Stage 2: Creating the final image
+FROM nginx:1.21
+COPY --from=builder /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
 ## Container orchestration
 
 Orchestration is the automated configuration, management, and coordination of computer systems, applications, and services.
