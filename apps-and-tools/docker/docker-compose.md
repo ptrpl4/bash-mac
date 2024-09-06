@@ -43,7 +43,7 @@ volumes:
     driver: local
 ```
 
-one more
+web app + redis
 
 ```yaml
 version: "3.9"  # optional since v1.27.0
@@ -61,6 +61,30 @@ services:
     image: redis
 volumes:
   logvolume01: {}
+```
+server, db, app
+
+```yaml
+version: '3'
+services:
+  web:
+    image: nginx
+    ports:
+      - "8020:80"
+    volumes:
+      - ./web:/usr/share/nginx/html
+    db:
+      image: postgres
+      environment:
+        POSTGRES_USER: admin
+        POSTGRES_PASSWORD: admin
+        POSTGRES_DB: test_db
+    app:
+      image: my-custom-website
+      environment:
+        DATABASE_URL: postgres://admin:admin@db:4321/test_db
+        depends_on:
+          - db
 ```
 
 ### Commands
