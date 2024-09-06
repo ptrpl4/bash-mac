@@ -207,6 +207,17 @@ Experiment to check user statistic in group A with half of users (current flow w
 
 ## Architectural patterns
 
+### Three-tier architecture
+
+Client-server software architecture approach performing as a relation between three logical components where each has its role.
+
+Tiers
+- presentation
+- application
+- data access.
+
+It's a high-level architecture pattern that focuses on the overall structure of the application.
+
 ### MVC (Model-View-Controller)
 
 MVC is an architectural pattern separating an application into three logical components
