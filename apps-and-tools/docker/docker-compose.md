@@ -4,9 +4,18 @@ An Orchestration Tool for defining and running multi-container Docker applicatio
 
 #### links
 
-- [doc](https://docs.docker.com/compose/)
+- https://docs.docker.com/compose/
+- https://docs.docker.com/reference/compose-file/
 
-### File
+## Structure
+
+### Elements
+
+#### services
+
+#### volumes
+
+### Examples
 
 `docker-compose.yml`
 
@@ -87,7 +96,7 @@ services:
           - db
 ```
 
-### Commands
+## Commands
 
 notes:
 
