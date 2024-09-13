@@ -9,11 +9,92 @@ An Orchestration Tool for defining and running multi-container Docker applicatio
 
 ## Structure
 
-### Elements
+Docker Compose has several top-level elements that provide a structured approach to defining and managing multi-container applications. These attributes include version, services, networks, volumes, configs, secrets, and extensions.
+
+### Top-level Elements
 
 #### services
 
+Docker defines each container as a separate service with their own configuration options. The image the container should use, any environment variables that need to be established, and any ports that need to be opened can all be specified in services section.
+
+```yaml
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: example
+      POSTGRES_DB: exampledb
+```
+
+##### image
+
+image attribute specifies the Docker image that serves as the foundation for your services, including the operating system, libraries, and dependencies necessary for its functionality
+
+##### build
+
+build attribute enables customization of your services with a build context and an optional Dockerfile. The end result is a tailored container image made for the application's specific requirements.
+
+##### environment
+
+environment attribute sets container environment variables that you can use for configuring application settings or providing dynamic information essential for the service during runtime.
+
+##### ports
+
+enables external access to specific endpoints for communication and interaction with external systems.
+
+syntax - <host>:<container>
+
+```yaml
+ports:
+      - 80:80
+```
+
+##### volumes
+
+volumes attribute mounts directories or named volumes from the host machine into service containers to provide persistent data sharing and storage across services.
+
+##### depends_on
+
+depends_on attribute defines service dependencies in Docker Compose to make sure services start in the correct order. This is necessary to ensure availability for interaction with other services.
+
+##### networks
+
+facilitate isolated communication between services.
+
+##### command
+
+command attribute overrides the default container image command and allows you to specify custom commands for the service startup.
+
 #### volumes
+
+Persistent data stores implemented by the container engine.
+
+```yaml
+services:
+  backend:
+    image: example/database
+    volumes:
+      - db-data:/etc/data
+
+  backup:
+    image: backup-service
+    volumes:
+      - db-data:/var/lib/backup/data
+
+volumes:
+  db-data:
+```
+
+#### configs
+
+#### secrets
+
+#### extensions
 
 ### Examples
 
