@@ -90,12 +90,11 @@ CMD ["--directory", "directory", "8000"]
 
 ## Common Dockerfile Instructions
 
-1. FROM:
-	- **Purpose**: Specifies the base image
+FROM: - Specifies the base image
 	  `FROM <image>[:<tag>]`
 	  `FROM ubuntu:20.04 as base`
-2. RUN:  
-	- Purpose: Executes a command in a new layer on top of the current image and commits the result.
+
+RUN: - Executes a command in a new layer on top of the current image and commits the result.
 	  `RUN <command>`
 	  `RUN apt-get update && apt-get install -y python3`
 ```dockerfile
@@ -105,44 +104,47 @@ apt-get update -y \
 && apt-get install iputils-ping -y \
 && apt-get install net-tools -y
 ```
-3. COPY:
-	- Purpose: Copies files or directories from the host filesystem to the image.
-	  `COPY <src> <dest>`
-	  `COPY . /app`
-4. ADD:
-	- Purpose: Similar to `COPY`, but also supports remote URLs and unpacking compressed files.
+
+COPY: - Copies files or directories from the host filesystem to the image.
+
+```dockerfile
+COPY [OPTIONS] <src> ... <dest>
+COPY [OPTIONS] ["<src>", ... "<dest>"]
+```
+
+ADD: - Similar to `COPY`, but also supports remote URLs and unpacking compressed files.
 	  `ADD <src> <dest>`
 	  `ADD myapp.tar.gz /app`
-5. CMD:
-	- Purpose: Specifies the default command to run when a container is started.
+
+CMD: - Specifies the default command to run when a container is started.
 	  [cmd vs entrypoint](https://docs.docker.com/reference/dockerfile/#understand-how-cmd-and-entrypoint-interact)
 	  `CMD ["executable","param1","param2"...]`
 	  `CMD ["python3", "app.py"]`
 	  or
 	  `CMD echo Hello Students. # Run command By default /bin/sh -c`
-1. ENTRYPOINT:
-	- Purpose: Configures a container to run as an executable.
+
+ENTRYPOINT: - Configures a container to run as an executable.
 	  [cmd vs entrypoint](https://docs.docker.com/reference/dockerfile/#understand-how-cmd-and-entrypoint-interact)
 	  `ENTRYPOINT ["executable","param1","param2"]`
 	  `ENTRYPOINT ["python3", "app.py"]`
-7. ENV:
-	- Purpose: Sets environment variables.
+
+ENV: - Sets environment variables.
 	  `ENV <key>=<value>`
 	  `ENV APP_ENV=production`
-8. EXPOSE:
-	- Purpose: Informs Docker that the container listens on the specified network ports at runtime.
+
+EXPOSE: - Informs Docker that the container listens on the specified network ports at runtime.
 	  `EXPOSE <port> [<port>/<protocol>]`
 	  `EXPOSE 80`
-9. VOLUME:
-	- Purpose: Creates a mount point with the specified path and marks it as holding externally mounted volumes.
+
+VOLUME: - Creates a mount point with the specified path and marks it as holding externally mounted volumes.
 	  `VOLUME ["/path/to/dir"]`
 	  `VOLUME ["/data"]`
-10. WORKDIR:
-	- Purpose: Sets the working directory for any subsequent `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions.
+
+WORKDIR: - Sets the working directory for any subsequent `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions.
 	  `WORKDIR /path/to/workdir`
 	  `WORKDIR /app`
-1. LABEL:
-    - Purpose: define [labels to specify metadata](https://docs.docker.com/engine/reference/builder/#label)
+
+LABEL: - define [labels to specify metadata](https://docs.docker.com/engine/reference/builder/#label)
       `LABEL key=value`
       `LABEL "application_environment"="development"`
 
@@ -156,11 +158,11 @@ apt-get update -y \
 - Use the exec form
 
 
-## RUN
+### RUN
 
 allows to execute commands or a set of commands during an image build time
 
-### options
+#### options
 
 `--mount` option [to create mounts](https://docs.docker.com/engine/reference/builder/#run---mount) that you can access at the build time to bind files, store cache, etc.
 
@@ -186,6 +188,27 @@ ENTRYPOINT ["/bin/bash"]
 ```
 
 This configuration can speed up the build process because Docker can use cache from the target directory in case it needs to rebuild the `RUN` layer in later builds.
+
+### COPY
+
+link - https://docs.docker.com/reference/dockerfile/#copy
+
+```yaml
+FROM ubuntu:22.04
+ 
+LABEL author=HyperUser
+  
+Copy demo.txt /demo/
+ 
+ENTRYPOINT ["ls", "-l", "demo/demo.txt"]
+```
+
+### ADD
+
+ similar to `COPY` it comes with two additional features:
+
+- The source can be a **remote URL** including git repositories. 
+- The source can also be a `tar` archive of `identity`, `gzip`, `bzip2`, or `xz`compression formats.
 
 ## Single-stage build
 

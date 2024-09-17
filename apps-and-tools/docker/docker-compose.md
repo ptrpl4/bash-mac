@@ -9,9 +9,9 @@ An Orchestration Tool for defining and running multi-container Docker applicatio
 
 ## Structure
 
-Docker Compose has several top-level elements that provide a structured approach to defining and managing multi-container applications. These attributes include version, services, networks, volumes, configs, secrets, and extensions.
+Docker Compose has several top-level elements that provide a structured approach to defining and managing multi-container applications.
 
-### Top-level Elements
+### Elements
 
 #### services
 
@@ -47,7 +47,7 @@ environment attribute sets container environment variables that you can use for 
 
 enables external access to specific endpoints for communication and interaction with external systems.
 
-syntax - <host>:<container>
+syntax - `<host>:<container>`
 
 ```yaml
 ports:
@@ -62,9 +62,47 @@ volumes attribute mounts directories or named volumes from the host machine into
 
 depends_on attribute defines service dependencies in Docker Compose to make sure services start in the correct order. This is necessary to ensure availability for interaction with other services.
 
+```yaml
+version: '3'
+services:
+  webapp:
+    image: 'nginx:latest'
+    ports:
+      - '80:80'
+    depends_on:
+      - database
+  database:
+    image: 'mysql:latest'
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-password
+    ports:
+      - '3306:3306'
+```
+
 ##### networks
 
 facilitate isolated communication between services.
+
+```yaml
+version: '3'
+services:
+  webapp:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    networks:
+      - mynetwork
+  database:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
+```
 
 ##### command
 
@@ -103,13 +141,12 @@ volumes:
 example:
 
 ```yaml
-version: '3'
+version: '3' # optional since v1.27.0
 services:
-  # uncomment to start one apps with compose file
-  # my-app:
-  #   image: ci-cd-app:1.0
-  #   ports:
-  #   - 3000:3000
+  my-app:
+    image: ci-cd-app:1.0
+    ports:
+      - 3000:3000
   mongodb:
     image: mongo
     ports:
@@ -155,7 +192,7 @@ volumes:
 server, db, app
 
 ```yaml
-version: '3'
+version: '3' # optional since v1.27.0
 services:
   web:
     image: nginx
